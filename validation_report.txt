@@ -1,0 +1,39 @@
+==================================================================
+INCIDENCE MATRIX VALIDATION REPORT
+==================================================================
+Run timestamp   : 2026-03-19T10:04:57
+Script          : validate_incidence.py
+Dataset root    : C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD
+
+KEY NUMBERS
+----------------------------------------
+Scenes processed       : 10,295
+Parse errors skipped   : 40
+Classes validated      : 22
+Off-diagonal cells     : 462
+Max off-diag discrepancy: 0
+Max diagonal discrepancy: 0
+
+CHECKS
+----------------------------------------
+  [PASS] Diagonal == scene_frequency for every class (tolerance ±1)
+         max discrepancy = 0 scene(s)
+  [PASS] Off-diagonal C[i,j] == cooccurrence_raw[i,j] for every pair
+         max discrepancy = 0  |  mismatched cells = 0
+  [PASS] C = X^T @ X is symmetric (Gram matrix property)
+         guaranteed by construction; failure would indicate a numpy bug
+  [PASS] Total scenes in expected range [10,000 – 10,500]
+         actual: 10,295
+
+  4/4 checks passed
+
+VERDICT
+----------------------------------------
+  INDEPENDENT VALIDATION PASSED —
+  co-occurrence matrix is mathematically confirmed via two
+  independent algorithms
+  
+  Algorithm 1 (cooccurrence.py):  nested-loop pair enumeration
+  Algorithm 2 (this script):      incidence matrix  C = X^T @ X
+  Both produce identical off-diagonal counts, confirming correctness.
+==================================================================

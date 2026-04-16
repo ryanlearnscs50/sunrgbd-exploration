@@ -1,0 +1,5 @@
+run_timestamp,check_name,result,detail
+2026-03-19T10:04:57,Diagonal == scene_frequency for every class (tolerance ±1),PASS,max discrepancy = 0 scene(s)
+2026-03-19T10:04:57,"Off-diagonal C[i,j] == cooccurrence_raw[i,j] for every pair",PASS,max discrepancy = 0  |  mismatched cells = 0
+2026-03-19T10:04:57,C = X^T @ X is symmetric (Gram matrix property),PASS,guaranteed by construction; failure would indicate a numpy bug
+2026-03-19T10:04:57,"Total scenes in expected range [10,000 – 10,500]",PASS,"actual: 10,295"

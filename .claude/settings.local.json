@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import json; print\\(''json ok''\\)\")",
+      "Bash(py --version)",
+      "Bash(py -c \"import json; print\\(''json ok''\\)\")",
+      "Bash(py:*)",
+      "Bash(python conditional_probability.py)",
+      "Bash(MPLBACKEND=Agg python conditional_probability.py)",
+      "Bash(MPLBACKEND=Agg python validate_incidence.py 2>&1)",
+      "Bash(python -c \"import pandas as pd; df=pd.read_csv\\(r''C:\\\\sunrgbd-exploration\\\\validation_cell_comparison.csv''\\); print\\(f''Rows: {len\\(df\\)}, non-zero discrepancies: {\\(df.discrepancy != 0\\).sum\\(\\)}''\\)\")",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(cp cluster_profiles.png cluster_profiles_t005.png)",
+      "Bash(cp cluster_assignments.csv cluster_assignments_t005.csv)",
+      "Bash(cp cluster_summary.csv cluster_summary_t005.csv)"
+    ]
+  }
+}
