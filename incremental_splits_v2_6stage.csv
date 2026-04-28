@@ -1,0 +1,527 @@
+stage,scene_type,scene,classes_present
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0450,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0458,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU0065,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU0075,curtain
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU0534,lamp|bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU0960,lamp|bed|curtain|mirror
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU0968,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU1135,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU1136,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU1164,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU1184,bed|curtain
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU1193,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001101_2014-06-15_17-47-04_260595134347_rgbf000155-resize,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001102_2014-06-15_17-48-39_260595134347_rgbf000361-resize,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002766_2014-06-22_19-18-39_094959634447_rgbf000059-resize,curtain
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\home_ac\home_ac_scan2_2012_aug_22\0011706-001225423950,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\home_bksh\home_bksh_oct_30_2012_scan2_erika\0011995-000523019540,bed|curtain
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\home_han\apartment_han_oct_31_2012_scan1_erika\0002668-000111206088,lamp|curtain
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_casarural\casarural_scan1_2012_july_22\0001369-000157210007,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_grenoble\scan1_2012_july_11\0000008-000416091003,lamp|bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_hkust\hk_hotel_1\0003157-000105843528,lamp|curtain
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_mr\scan1\0002408-000128110001,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_nips2012\nips_1\0003770-000126339970,lamp
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_nips2012\nips_1\0007838-000262716574,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_pittsburg\hotel_pittsburg_scan1_2012_dec_12\0007076-000237263175,mirror
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_sf\scan1\0007675-000371477997,mirror
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_uc\scan2\0007644-000403144989,mirror
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_ucla_jx\ucla_hotel_1\0000790-000026444124,lamp
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_ucla_jx\ucla_hotel_1\0003743-000125517420,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_umd\maryland_hotel1\0000699-000023394168,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hyatt_cambridge\hyatt_cambridge\0011342-000380138472,lamp|bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_dorm_masseeh_wm\dorm_masseeh_wm_oct_29_2012_scan1_erika\0000671-000030809585,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_dorm_masseeh_xc\dorm_masseeh_xc_oct_29_2012_scan1_erika\0000006-000000268176,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_dorm_next_552\dorm_next_552_oct_30_2012_scan1_erika\0000266-000012467952,mirror
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_16\16_1\0007499-000251336484,bed|curtain
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_16\16_1\0008977-000300906648,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_4\4_1\0006346-000212759167,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85h\h4_1\0003493-000117054855,
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85h\h4_1\0003610-000120976227,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85k1\scan_1\0004079-000136688603,bed
+Stage 1 – Bedroom,bedroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85k2\k1\0005051-000169302963,
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU0155,box|picture
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU0169,cabinet
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU0584,curtain
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\NYUdata\NYU1300,cabinet|picture|lamp|sofa
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001123_2014-06-15_18-21-10_260595134347_rgbf000084-resize,sofa|curtain
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_42_28-1311000073,
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\home_ac\home_ac_scan1_2012_aug_22\0000625-000136847000,lamp|bed
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\home_ac\home_ac_scan1_2012_aug_22\0000833-000143778000,
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\home_at\home_at_scan1_2013_jan_1\0004207-000141102360,sofa|curtain
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\home_puigpunyen\home_puigpunyent_scan4_2012_dec_23\0022165-000743094406,
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_florence_jx\florence_hotel_another_room\0001208-000040577128,
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_sf\scan2\0000463-000058026001,sofa
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_uc\scan2\0002058-000215875000,cabinet|box|lamp|curtain
+Stage 2 – Living Room,living_room,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\hotel_ucla_ant\hotel_room_ucla_scan1_2012_oct_05\0007840-000262798956,
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0117,
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0142,
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0160,cabinet|keyboard
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0173,paper|monitor|keyboard
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0207,monitor|keyboard
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0209,monitor
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0210,paper|monitor|keyboard
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0264,box|keyboard
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0425,monitor
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv1\b3dodata\img_0445,monitor|keyboard
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000643_2014-06-08_16-59-43_260595134347_rgbf000183-resize,picture|keyboard
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000969_2014-06-08_16-36-08_260595134347_rgbf000118-resize,picture
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\brown_bm_3\brown_bm_3\0003939-000132254136,cabinet
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_46_ted_lab2\ted_lab_a\0000455-000015427707,cabinet
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_ne47_huge_office\ne47_floor2_office_2\0004002-000134110640,
+Stage 3 – Office,office,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w16\kresge_back\0013206-000569680886,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000063_2014-04-29_14-38-52_094959634447_rgbf000101-resize,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003123_2014-05-12_10-37-47_094959634447_rgbf000100-resize,cabinet
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003224_2014-05-14_13-27-48_094959634447_rgbf003166-resize,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003252_2014-05-14_14-17-26_094959634447_rgbf004170-resize,box
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003253_2014-05-14_14-26-17_094959634447_rgbf002903-resize,door|paper
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003477_2014-05-21_15-28-00_094959634447_rgbf000101-resize,cabinet
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003615_2014-05-23_18-03-30_094959634447_rgbf000100-resize,box|keyboard
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_22-16_01_41-1311000073,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-14_34_16-1311000073,door|box
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-14_34_58-1311000073,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-15_47_03-1311000073,door
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-15_59_41-1311000073,cabinet
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\harvard_conf_big\hv_conf_big_1\0000291-000009753156,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_1_375\classroom_1375_nov_6_2012_scan1_erika\0003202-000139798264,cabinet
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_26_100\classroom_26100_nov_2_2012_scan1_erika\0001687-000072417784,cabinet|box
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_262\262_1\0000803-000026946864,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_262\262_1\0001417-000047525688,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_262\262_1\0003643-000122132304,door|curtain
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_g431\g431_1\0005035-000168724155,door
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_g449\g449_1\0004972-000166608036,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_lounge_d4_bill\d4_lounge_vision_1\0000567-000019137636,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_34_302\classroom_34302_oct_30_2012_scan1_erika\0000445-000018674310,light
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_34_302\classroom_34302_oct_30_2012_scan1_erika\0000646-000026952762,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_34_302\classroom_34302_oct_30_2012_scan1_erika\0001679-000070288950,door
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_36_144\classroom_36144_nov_2_2012_scan1_erika\0000939-000038107692,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_36_144\classroom_36144_nov_2_2012_scan1_erika\0001332-000053960760,door
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_36_144\classroom_36144_nov_2_2012_scan1_erika\0002487-000104737500,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_6_120\classroom_6120_nov_2_2012_scan1_erika\0000851-000037485288,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w20_athena\sc_athena_oct_29_2012_scan1_erika\0001979-000083421324,door|mirror
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_14_35_0,
+Stage 4 – Classroom,classroom,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_15_49_38,
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000101_2014-05-14_21-58-34_260595134347_rgbf000151-resize,paper|keyboard
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002682_2014-06-13_16-17-56_094959634447_rgbf000151-resize,shelf|book
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002685_2014-06-13_16-20-06_094959634447_rgbf000151-resize,door|sofa
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002694_2014-06-13_16-35-17_094959634447_rgbf000151-resize,
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002868_2014-06-01_15-14-24_094959634447_rgbf000150-resize,
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002902_2014-06-03_18-02-52_094959634447_rgbf000150-resize,door|monitor|keyboard
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_26-14_12_35-1311000073,door|desk|book|monitor|keyboard
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_27-14_36_44-1311000073,book
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_27-14_40_33-1311000073,door|shelf|book
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_27-14_45_30-1311000073,cabinet|book|paper
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_27-14_48_24-1311000073,shelf
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_27-15_16_56-1311000073,book|keyboard
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_28-15_31_37-1311000073,box|monitor
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_28-15_33_13-1311000073,
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_28-15_33_26-1311000073,desk
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_28-15_35_15-1311000073,sofa
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_28-15_46_40-1311000073,shelf|desk
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_28-15_46_59-1311000073,shelf|desk
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_22-16_04_09-1311000073,desk
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_22-16_04_20-1311000073,
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_22-18_39_16-1311000073,desk|paper|monitor|keyboard
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_22-18_40_19-1311000073,cabinet|shelf|keyboard
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_22-18_42_46-1311000073,shelf|book
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_22-18_47_26-1311000073,book
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_23-15_18_30-1311000073,
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_23-15_47_33-1311000073,desk|lamp
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_23-15_54_32-1311000073,shelf|book
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_23-15_56_18-1311000073,book
+Stage 5 – Library,library,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_16_59-1311000073,shelf|book
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_13-56-35_260595134347,chair|table|window|door|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_13-56-51_260595134347,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_13-57-08_260595134347,chair|table|door|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_13-58-10_260595134347,chair|table|window|door|box
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-15-08_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-15-27_260595134347,chair|table|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-15-49_260595134347,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-16-01_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-16-18_260595134347,chair|table|window|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-16-32_260595134347,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-21-16_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-22-04_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-22-15_260595134347,chair|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-22-54_260595134347,chair|table|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-23-46_260595134347,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-25-13_260595134347,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-25-27_260595134347,table|door|light|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-25-46_260595134347,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-25-58_260595134347,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-26-11_260595134347,chair|table|window|box
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-26-24_260595134347,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-26-38_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-26-51_260595134347,chair|table|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-27-12_260595134347,chair|table|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-27-23_260595134347,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-27-40_260595134347,
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-27-54_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-28-20_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-28-37_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-28-50_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-29-07_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-29-24_260595134347,chair|table|window|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-29-51_260595134347,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-30-10_260595134347,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-30-24_260595134347,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\align_kv2\2014-12-18_16-30-39_260595134347,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000466_2014-06-09_19-34-54_260595134347_rgbf000218-resize,chair|table|door|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000469_2014-06-09_19-42-10_260595134347_rgbf000081-resize,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000470_2014-06-09_19-42-40_260595134347_rgbf000094-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000471_2014-06-09_19-43-57_260595134347_rgbf000121-resize,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000472_2014-06-09_19-45-12_260595134347_rgbf000076-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000473_2014-06-09_19-45-40_260595134347_rgbf000085-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000475_2014-06-09_20-30-32_260595134347_rgbf000106-resize,chair|picture
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000476_2014-06-09_20-37-04_260595134347_rgbf000072-resize,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000477_2014-06-09_20-37-26_260595134347_rgbf000111-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000478_2014-06-09_20-38-54_260595134347_rgbf000130-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000480_2014-06-09_20-40-17_260595134347_rgbf000125-resize,chair|table|door|cabinet|shelf|book
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000482_2014-06-09_20-41-12_260595134347_rgbf000101-resize,chair|table|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000484_2014-06-09_20-46-30_260595134347_rgbf000143-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000485_2014-06-09_20-46-54_260595134347_rgbf000157-resize,chair|table|window|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000486_2014-06-09_20-47-20_260595134347_rgbf000143-resize,chair|table|counter|light
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000487_2014-06-09_20-47-43_260595134347_rgbf000173-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000488_2014-06-09_20-49-03_260595134347_rgbf000143-resize,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000492_2014-06-09_21-00-52_260595134347_rgbf000155-resize,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000493_2014-06-09_21-01-18_260595134347_rgbf000196-resize,chair|table|paper
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000494_2014-06-09_21-02-17_260595134347_rgbf000199-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000509_2014-06-09_15-40-26_260595134347_rgbf000099-resize,chair|table|curtain
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000510_2014-06-09_15-40-46_260595134347_rgbf000094-resize,chair|table|curtain
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000511_2014-06-09_15-41-14_260595134347_rgbf000073-resize,chair|table|curtain
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000512_2014-06-09_15-41-31_260595134347_rgbf000086-resize,chair|table|door|curtain
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000513_2014-06-09_15-47-17_260595134347_rgbf000131-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000550_2014-06-08_22-11-00_260595134347_rgbf000179-resize,chair|table|window|door|cabinet|desk|box|picture|paper|bottle
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000855_2014-06-09_19-44-33_260595134347_rgbf000115-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000856_2014-06-09_19-46-13_260595134347_rgbf000220-resize,chair|bed
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000857_2014-06-09_19-46-52_260595134347_rgbf000070-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000858_2014-06-09_20-23-52_260595134347_rgbf000124-resize,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000860_2014-06-09_20-30-52_260595134347_rgbf000115-resize,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000861_2014-06-09_20-37-56_260595134347_rgbf000099-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000862_2014-06-09_20-38-30_260595134347_rgbf000147-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000863_2014-06-09_20-44-02_260595134347_rgbf000152-resize,cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000864_2014-06-09_20-44-43_260595134347_rgbf000129-resize,table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000865_2014-06-09_20-45-08_260595134347_rgbf000137-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000866_2014-06-09_20-45-42_260595134347_rgbf000139-resize,table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000867_2014-06-09_20-46-07_260595134347_rgbf000128-resize,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000868_2014-06-09_20-49-52_260595134347_rgbf000064-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000869_2014-06-09_20-50-18_260595134347_rgbf000060-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000870_2014-06-09_20-50-37_260595134347_rgbf000044-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000871_2014-06-09_20-50-55_260595134347_rgbf000085-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000872_2014-06-09_20-51-10_260595134347_rgbf000119-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000873_2014-06-09_20-51-31_260595134347_rgbf000092-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000874_2014-06-09_20-52-10_260595134347_rgbf000049-resize,chair|table|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000875_2014-06-09_20-52-41_260595134347_rgbf000100-resize,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000876_2014-06-09_21-01-50_260595134347_rgbf000179-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000877_2014-06-09_21-02-47_260595134347_rgbf000098-resize,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000896_2014-06-09_15-46-59_260595134347_rgbf000111-resize,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000912_2014-06-08_18-44-06_260595134347_rgbf000141-resize,chair|table|door|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\000913_2014-06-08_18-44-31_260595134347_rgbf000118-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001075_2014-06-08_22-18-00_260595134347_rgbf000088-resize,chair|table|door|shelf
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001185_2014-06-17_15-53-11_260595134347_rgbf000098-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001187_2014-06-17_15-53-48_260595134347_rgbf000063-resize,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001409_2014-06-19_16-21-08_260595134347_rgbf000105-resize,chair|table|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001410_2014-06-19_16-21-31_260595134347_rgbf000019-resize,chair|table|paper|sofa|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001423_2014-06-19_16-45-03_260595134347_rgbf000081-resize,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001425_2014-06-19_16-45-40_260595134347_rgbf000051-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001539_2014-06-20_17-00-36_260595134347_rgbf000070-resize,chair|table|window|cabinet|desk|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001541_2014-06-20_17-01-45_260595134347_rgbf000075-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001543_2014-06-20_17-02-15_260595134347_rgbf000080-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001544_2014-06-20_17-02-35_260595134347_rgbf000045-resize,chair|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001547_2014-06-20_17-04-08_260595134347_rgbf000083-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001548_2014-06-20_17-04-20_260595134347_rgbf000051-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001549_2014-06-20_17-04-59_260595134347_rgbf000073-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001550_2014-06-20_17-05-15_260595134347_rgbf000052-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001551_2014-06-20_17-05-49_260595134347_rgbf000060-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\001593_2014-06-20_11-13-04_260595134347_rgbf000102-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002045_2014-06-24_20-31-10_260595134347_rgbf000040-resize,lamp|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002068_2014-06-24_21-43-31_260595134347_rgbf000024-resize,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002069_2014-06-24_21-45-10_260595134347_rgbf000071-resize,table|mirror|light
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002070_2014-06-24_21-45-45_260595134347_rgbf000059-resize,chair|table|window|door|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002071_2014-06-24_21-46-01_260595134347_rgbf000048-resize,chair|table|window|curtain|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002097_2014-06-25_19-52-30_260595134347_rgbf000072-resize,chair|table|window|box|paper|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002099_2014-06-25_19-54-40_260595134347_rgbf000081-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002100_2014-06-25_19-54-56_260595134347_rgbf000059-resize,chair|table|window|light
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002119_2014-06-25_20-33-47_260595134347_rgbf000089-resize,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002120_2014-06-25_20-34-00_260595134347_rgbf000087-resize,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002121_2014-06-25_20-34-28_260595134347_rgbf000112-resize,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002122_2014-06-25_20-35-24_260595134347_rgbf000114-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002123_2014-06-25_20-35-38_260595134347_rgbf000071-resize,chair|table|window|curtain
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002124_2014-06-25_20-36-04_260595134347_rgbf000083-resize,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002126_2014-06-25_20-36-43_260595134347_rgbf000044-resize,chair|table|light
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002149_2014-06-25_21-25-28_260595134347_rgbf000151-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002152_2014-06-25_21-26-41_260595134347_rgbf000085-resize,chair|table|window|pillow|curtain|bottle|mirror
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002175_2014-06-24_21-48-43_260595134347_rgbf000107-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002487_2014-06-28_20-43-21_260595134347_rgbf000162-resize,chair|table|window|lamp|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002565_2014-06-24_13-57-19_094959634447_rgbf000071-resize,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002609_2014-06-24_14-30-49_094959634447_rgbf000058-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002661_2014-06-13_15-48-41_094959634447_rgbf000151-resize,chair|table|picture
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002699_2014-06-22_11-26-42_094959634447_rgbf000123-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002700_2014-06-22_11-27-02_094959634447_rgbf000124-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002701_2014-06-22_11-27-34_094959634447_rgbf000075-resize,chair|table|window|cabinet|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002702_2014-06-22_11-27-56_094959634447_rgbf000141-resize,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\002703_2014-06-22_11-28-20_094959634447_rgbf000038-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003355_2014-05-20_14-07-17_094959634447_rgbf000099-resize,chair|table|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003356_2014-05-20_14-07-41_094959634447_rgbf000050-resize,chair|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003357_2014-05-20_14-08-03_094959634447_rgbf000050-resize,chair|table|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003358_2014-05-20_14-08-34_094959634447_rgbf000081-resize,chair|table|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003359_2014-05-20_14-08-56_094959634447_rgbf000050-resize,chair|table|box|bottle
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003360_2014-05-20_14-09-20_094959634447_rgbf000100-resize,chair|window|shelf
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003361_2014-05-20_14-11-22_094959634447_rgbf000101-resize,chair|table|door|curtain
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003362_2014-05-20_14-11-46_094959634447_rgbf000100-resize,chair|table|window|mirror|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003363_2014-05-20_14-12-11_094959634447_rgbf000050-resize,chair|table|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003364_2014-05-20_14-12-34_094959634447_rgbf000101-resize,chair|table|window|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003365_2014-05-20_14-13-00_094959634447_rgbf000050-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003366_2014-05-20_14-14-14_094959634447_rgbf002543-resize,chair|table|window|door|picture|light
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003367_2014-05-20_14-21-24_094959634447_rgbf000050-resize,chair|mirror
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003376_2014-05-20_14-29-08_094959634447_rgbf000102-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003377_2014-05-20_14-29-32_094959634447_rgbf000101-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003378_2014-05-20_14-29-57_094959634447_rgbf000100-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003379_2014-05-20_14-30-21_094959634447_rgbf000101-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003383_2014-05-20_14-41-21_094959634447_rgbf000101-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003384_2014-05-20_14-41-43_094959634447_rgbf000101-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003385_2014-05-20_14-42-03_094959634447_rgbf000100-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003386_2014-05-20_14-42-52_094959634447_rgbf003138-resize,chair|table|window|light
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003488_2014-05-21_15-49-28_094959634447_rgbf000100-resize,counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003489_2014-05-21_15-49-49_094959634447_rgbf000101-resize,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003490_2014-05-21_15-50-11_094959634447_rgbf000101-resize,chair|table|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003491_2014-05-21_15-50-30_094959634447_rgbf000100-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003492_2014-05-21_15-50-55_094959634447_rgbf000828-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003493_2014-05-21_15-53-53_094959634447_rgbf002564-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003494_2014-05-21_16-01-32_094959634447_rgbf000100-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003495_2014-05-21_16-01-51_094959634447_rgbf000100-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003496_2014-05-21_16-02-09_094959634447_rgbf000101-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003497_2014-05-21_16-02-30_094959634447_rgbf000101-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003498_2014-05-21_16-02-52_094959634447_rgbf001746-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003550_2014-05-23_10-18-52_094959634447_rgbf000102-resize,chair|table|paper
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003551_2014-05-23_10-19-15_094959634447_rgbf000100-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003552_2014-05-23_10-19-37_094959634447_rgbf000101-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003555_2014-05-23_10-24-07_094959634447_rgbf000100-resize,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003556_2014-05-23_10-24-31_094959634447_rgbf000101-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003557_2014-05-23_10-25-16_094959634447_rgbf006128-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003559_2014-05-23_10-38-14_094959634447_rgbf002823-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003560_2014-05-23_10-43-39_094959634447_rgbf001248-resize,chair|table|window|box|light
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003562_2014-05-23_10-53-19_094959634447_rgbf000101-resize,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003563_2014-05-23_10-53-42_094959634447_rgbf000101-resize,table|window|door|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003564_2014-05-23_10-54-14_094959634447_rgbf000100-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003565_2014-05-23_10-54-31_094959634447_rgbf000101-resize,table|box
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003566_2014-05-23_10-56-32_094959634447_rgbf000101-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003568_2014-05-23_10-57-49_094959634447_rgbf005713-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003569_2014-05-23_11-07-34_094959634447_rgbf000101-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003571_2014-05-23_11-08-14_094959634447_rgbf000100-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003572_2014-05-23_11-08-31_094959634447_rgbf000101-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003573_2014-05-23_11-11-53_094959634447_rgbf000101-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003574_2014-05-23_11-12-12_094959634447_rgbf000100-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003575_2014-05-23_11-12-43_094959634447_rgbf002136-resize,table|box
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003576_2014-05-23_11-16-29_094959634447_rgbf000101-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003577_2014-05-23_11-16-52_094959634447_rgbf000101-resize,chair|table|bottle
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003578_2014-05-23_11-17-26_094959634447_rgbf000100-resize,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003579_2014-05-23_11-17-44_094959634447_rgbf000101-resize,table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003663_2014-05-24_15-10-19_094959634447_rgbf000100-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003664_2014-05-24_15-10-36_094959634447_rgbf000101-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003665_2014-05-24_15-10-55_094959634447_rgbf000101-resize,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\kv2\kinect2data\003666_2014-05-24_15-11-17_094959634447_rgbf000101-resize,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_24-09_14_34-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_24-09_15_20-1311000073,chair|table|lamp
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_24-09_15_44-1311000073,shelf|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_24-09_17_23-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_24-09_18_00-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_24-11_23_11-1311000073,chair|table|window|pillow
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_24-13_07_51-1311000073,chair|desk|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_24-13_08_55-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_24-13_29_02-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_24-13_45_31-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_25-17_45_01-1311000073,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_25-17_45_23-1311000073,chair|table|window|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_25-17_45_39-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_25-17_45_51-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_24_02-1311000073,chair|table|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_24_14-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_24_26-1311000073,chair|table|window|picture
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_27_53-1311000073,chair|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_28_18-1311000073,chair|table|window|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_28_33-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_28_58-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_29_12-1311000073,chair|table|window|paper
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_29_27-1311000073,chair|table|window|paper
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_29_43-1311000073,chair|table|window|paper
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_29_59-1311000073,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_30_13-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_30_51-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_31_04-1311000073,chair|table|window|paper
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_31_20-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_31_34-1311000073,chair|table|window|book|paper
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_31_53-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_32_04-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_32_16-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_32_29-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_29-16_32_42-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_01_53-1311000073,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_02_08-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_02_22-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_05_04-1311000073,chair|table|picture
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_05_19-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_05_37-1311000073,chair|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_05_54-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_07_19-1311000073,chair|table|desk
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_09_54-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_28_53-1311000073,chair|table|box|bag
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_31_03-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_31_16-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_31_32-1311000073,chair|table|window|box
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_31_46-1311000073,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_33_05-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_33_21-1311000073,chair|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_33_34-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_33_49-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_37_37-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_37_51-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_40_42-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_40_55-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\lg\2014_10_30-15_41_27-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_21_34-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_21_53-1311000073,chair|table|window|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_22_08-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_22_23-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_22_41-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_23_20-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_25_07-1311000073,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_38_30-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_43_05-1311000073,chair|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_43_19-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_43_45-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_44_04-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_44_24-1311000073,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_44_42-1311000073,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_44_58-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_45_27-1311000073,chair|table|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_45_47-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_46_06-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_46_22-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_47_06-1311000073,window|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_47_21-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-18_47_55-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-19_05_05-1311000073,chair|table|bag
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-19_05_23-1311000073,chair|table|shelf
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-19_05_38-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-19_05_53-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-19_06_09-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-19_06_23-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-19_06_40-1311000073,chair|table|box
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-19_07_03-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_21-19_07_19-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_23-15_06_47-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_23-15_07_03-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_23-15_07_14-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_23-15_07_30-1311000073,chair|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_23-15_51_49-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_23-15_52_59-1311000073,chair|table|window|picture
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_04_39-1311000073,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_13_35-1311000073,chair|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_13_49-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_14_06-1311000073,chair|table|curtain
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_14_23-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_14_40-1311000073,chair|table|curtain
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_23_55-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_24_08-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_24_21-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_24_38-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\sa\2014_10_24-21_25_55-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-13_59_13-1311000073,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_15_12-1311000073,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_15_52-1311000073,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_16_06-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_21_48-1311000073,chair|paper
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_22_11-1311000073,
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_22_23-1311000073,chair|table|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_22_42-1311000073,chair|table|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_23_17-1311000073,chair|table|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_24_21-1311000073,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_25_55-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_26_16-1311000073,chair|table|book
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_26_34-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_26_47-1311000073,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_27_00-1311000073,table|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_29_09-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_29_23-1311000073,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\realsense\shr\2014_12_18-16_29_39-1311000073,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\harvard_c10\hv_c10_1\0000004-000000124850,chair|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\harvard_c10\hv_c10_1\0000086-000002940194,chair|table|window|paper|lamp|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\harvard_c10\hv_c10_1\0000497-000016715270,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\harvard_c10\hv_c10_1\0001018-000034177106,chair|table|window|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\harvard_c10\hv_c10_2\0000086-000002875992,chair|table|window|desk|curtain
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\harvard_c10\hv_c10_2\0000703-000023555364,chair|table|window|paper
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\harvard_c10\hv_c10_2\0000804-000026940480,chair|table|window|paper
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0000022-000000735667,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0000175-000005863615,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0001557-000052182727,table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0001900-000063678715,chair|table|mirror
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0002091-000070080271,table|shelf|box|counter|cup
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0003433-000115058743,table|shelf
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0003653-000122432263,cabinet|desk|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0003889-000130342039,chair|table|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0006172-000206859067,
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0008585-000287766691,chair|table|sofa|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0008665-000290447971,chair|table|desk
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_32_bar\bar_1\0011913-000399307939,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_46_4conf_2\bcs_floor4_conf_a\0000110-000004012618,chair|table|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_46_4conf_2\bcs_floor4_conf_a\0000477-000016312990,chair|table|door|picture
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_46_4conf_2\bcs_floor4_conf_a\0000706-000023988154,chair|table|box|picture|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_46_5lounge\bcs_floor5_lounge\0001852-000062292503,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_46_5lounge\bcs_floor5_lounge\0001982-000066649583,chair|table|window|door|box|monitor
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_46_6lounge\bcs_floor6_low_lounge\0001837-000061754773,chair|window|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_76_4kitchen\76-4kitchen1\0000911-000030670188,chair|table|window|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_76_4kitchen\76-4kitchen1\0001124-000037809096,chair|cabinet
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_lab_hj\lab_hj_hall5_nov_2_2012_scan1_erika\0000956-000038476368,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_lab_hj\lab_hj_hall5_nov_2_2012_scan1_erika\0001007-000040353264,chair|table|window|door|light
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_lab_hj\lab_hj_hall5_nov_2_2012_scan1_erika\0001077-000043135092,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_lab_hj\lab_hj_tea_nov_2_2012_scan1_erika\0001280-000051815736,table|door|cabinet|picture
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_lab_hj\lab_hj_tea_nov_2_2012_scan1_erika\0001444-000058552452,table|door|box|picture|curtain
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_lab_hj\lab_hj_tea_nov_2_2012_scan1_erika\0001576-000064551816,door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_ne47_2corridor\ne47_floor2_corridor\0002426-000081343536,chair|table|window|cabinet|bottle
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_ne47_2corridor\ne47_floor2_corridor\0002503-000083924268,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_ne47_2corridor\ne47_floor2_corridor\0002554-000085633584,chair|table|picture
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_basement\wg_big_lounge_1\0002178-000072997848,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_basement\wg_big_lounge_1\0002322-000077824152,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_basement\wg_big_lounge_1\0002480-000083119680,chair|table|picture
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_basement\wg_big_lounge_1\0002872-000096257952,chair|table|picture
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_basement\wg_big_lounge_1\0003091-000103597956,chair|table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_basement\wg_big_lounge_1\0003478-000116568648,table|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_basement\wg_big_lounge_1\0005285-000177165576,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\sun3ddata\mit_w85_basement\wg_big_lounge_1\0005590-000187387956,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_13_56_35,chair|table|door|shelf
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_13_56_51,chair|table|window|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_13_57_8,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_13_58_10,chair|table|window|door|bottle|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_15_11,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_15_27,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_15_49,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_16_18,chair|table|window|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_16_3,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_16_32,chair|table|window|door|counter
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_21_35,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_22_15,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_22_4,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_22_55,chair
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_23_46,chair|door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_25_14,door
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_25_28,window|sofa
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_25_46,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_25_56,chair|table|window|counter|light
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_26_11,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_26_24,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_26_38,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_26_51,chair|shelf
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_27_12,chair|table|bag
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_27_23,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_27_41,chair|table|shelf
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_27_54,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_28_21,chair|table|shelf|box
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_28_37,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_28_50,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_29_24,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_29_51,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_29_7,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_30_11,chair|table|window
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_30_25,chair|table
+Stage 6 – Dining Area,dining_area,C:\Users\ryana\Downloads\SUNRGBD\SUNRGBD\xtion\xtion_align_data\2014_12_18_16_30_40,window
