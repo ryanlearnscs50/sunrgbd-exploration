@@ -497,85 +497,81 @@ print("  NOTE: Stage 3 in v1 is 'Kitchen/Utility'; Stage 3 in v2 is 'Classroom'.
 print("  The scene type choice changes the comparison — see the data directly.")
 
 # ---------------------------------------------------------------------------
-# 10. Ordering sweep — find the stage sequence that maximises total scenes
+# 10. Ordering sweep — find the stage sequence that keeps every stage viable
 # ---------------------------------------------------------------------------
 # MOTIVATION: condition (b) eliminates scenes that contain "future" classes.
-# A common class assigned to a late stage becomes forbidden in ALL earlier
-# stages, destroying more training data than necessary.  We exhaustively try
-# every permutation of stage scene types to find the ordering that loses the
-# fewest scenes total.
+# Classes that are common across ALL room types (chair 57%, table 46%, window,
+# door) are catastrophic when assigned to late stages — they become forbidden
+# in EVERY earlier stage, collapsing those stages to single-digit counts.
 #
-# The class-to-scene-type assignments are FIXED (determined by lift in section 6).
-# Only the stage NUMBER (position in sequence) changes across permutations.
+# SCORING CRITERION — maximise the MINIMUM surviving stage count.
+# We do NOT optimise for total scenes; we optimise so that no individual
+# stage collapses.  A split where stages survive [200, 200, 300] is far better
+# than [5, 5, 1400] even though the second has more total scenes.
+#
+# The class-to-scene-type assignments are FIXED (determined by lift in
+# section 6).  Only the stage NUMBER (position in the sequence) changes.
 #
 # PATTERN: itertools.permutations generates all n! orderings.
 #   3-stage: 3! =   6 permutations — trivial
-#   6-stage: 6! = 720 permutations — still fast; apply_strict_filter is just
-#            boolean pandas operations on a 10k-row dataframe
+#   6-stage: 6! = 720 permutations — fast; apply_strict_filter is just
+#            boolean pandas operations on a 10k-row dataframe.
 
 def sweep_orderings(stage_scene_types, stage_classes_dict):
-    """Try every permutation; return list sorted by total surviving scenes (desc)."""
+    """
+    Try every permutation.  Return list sorted by:
+      primary   — min(survived per stage), descending   [no stage collapses]
+      tiebreak  — total survived, descending
+    """
     rows = []
     for perm in _permutations(stage_scene_types):
         split_def  = build_split_def(list(perm), stage_classes_dict)
         stats, csv = apply_strict_filter(presence_df, split_def)
+        min_surv   = min(s["survived"] for s in stats)
         total      = sum(s["survived"] for s in stats)
         rows.append({
             "ordering":       list(perm),
+            "min_survived":   min_surv,
             "total_survived": total,
             "stats":          stats,
             "csv_rows":       csv,
         })
-    rows.sort(key=lambda r: -r["total_survived"])
+    rows.sort(key=lambda r: (-r["min_survived"], -r["total_survived"]))
     return rows
 
 
-def print_sweep_results(sweep_rows, original_order, split_name, top_n=None):
-    show = sweep_rows if top_n is None else sweep_rows[:top_n]
-    n_perms  = len(sweep_rows)
-    n_stages = len(original_order)
-    current_total = next(r["total_survived"] for r in sweep_rows
-                         if r["ordering"] == list(original_order))
-
-    print(f"\n{'=' * 76}")
-    print(f"ORDERING SWEEP — {split_name}  ({n_stages}! = {n_perms} permutations, ranked by total scenes)")
-    print(f"{'=' * 76}")
-    print(f"  {'Rank':<5}  {'Stage 1 → 2 → ... → N':<52}  {'Total':>6}  {'vs current':>10}")
-    print("  " + "-" * 80)
-
-    for rank, row in enumerate(show, 1):
-        order_str  = " → ".join(row["ordering"])
-        delta      = row["total_survived"] - current_total
-        delta_str  = f"+{delta}" if delta >= 0 else str(delta)
-        is_best    = rank == 1
-        is_current = row["ordering"] == list(original_order)
-        if is_best and is_current:
-            flag = "  ← BEST = current"
-        elif is_best:
-            flag = "  ← BEST"
-        elif is_current:
-            flag = "  ← current"
-        else:
-            flag = ""
-        print(f"  {rank:<5}  {order_str:<52}  {row['total_survived']:>6,}  {delta_str:>+10}{flag}")
-
-    best = sweep_rows[0]
-    print(f"\n  Best ordering: {' → '.join(best['ordering'])}")
-    print(f"  Per-stage breakdown:")
+def print_best_ordering(best, default_order, split_name):
+    """Print a concise summary of the best ordering vs the default."""
+    default_order = list(default_order)
+    print(f"\n{'=' * 72}")
+    print(f"BEST ORDERING — {split_name}")
+    print(f"  Criterion: maximise the minimum surviving stage count")
+    print(f"{'=' * 72}")
+    print(f"\n  Default ordering : {' → '.join(default_order)}")
+    print(f"  Best ordering    : {' → '.join(best['ordering'])}")
+    changed = best["ordering"] != default_order
+    print(f"  Ordering changed : {'YES' if changed else 'NO — default is already optimal'}")
+    print(f"\n  Per-stage survival breakdown (best ordering):")
+    print(f"  {'Stage':<35}  {'Total':>7}  {'Survived':>9}  {'% Lost':>7}")
+    print("  " + "-" * 65)
     for s in best["stats"]:
-        print(f"    {s['stage']:<35}  survived={s['survived']:,}  lost={s['pct_lost']:.1f}%")
+        flag = "  *** UNVIABLE ***" if s["survived"] < UNVIABLE_THRESHOLD else ""
+        print(f"  {s['stage']:<35}  {s['total']:>7,}  {s['survived']:>9,}  "
+              f"{s['pct_lost']:>6.1f}%{flag}")
+    print(f"\n  Minimum stage count : {best['min_survived']:,}")
+    print(f"  Total surviving     : {best['total_survived']:,}")
 
 
 print("\nRunning ordering sweeps (testing all permutations)...")
 sweep_3 = sweep_orderings(STAGE_SCENE_TYPES_3, stage_classes_3)
 sweep_6 = sweep_orderings(STAGE_SCENE_TYPES_6, stage_classes_6)
 
-print_sweep_results(sweep_3, STAGE_SCENE_TYPES_3, "3-STAGE")
-print_sweep_results(sweep_6, STAGE_SCENE_TYPES_6, "6-STAGE", top_n=15)
+print_best_ordering(sweep_3[0], STAGE_SCENE_TYPES_3, "3-STAGE")
+print_best_ordering(sweep_6[0], STAGE_SCENE_TYPES_6, "6-STAGE")
 
 # Best orderings for downstream use
-best_rows_3 = sweep_3[0]["csv_rows"]
-best_rows_6 = sweep_6[0]["csv_rows"]
+best_3 = sweep_3[0]
+best_6 = sweep_6[0]
 
 # ---------------------------------------------------------------------------
 # 11. Save all CSVs
@@ -595,10 +591,10 @@ df_all.to_csv(OUTPUT_DIR / "incremental_splits_v2_all.csv",    index=False)
 pd.DataFrame(stats_3).to_csv(SPLITS_DIR / "split_stats_v2_3stage.csv", index=False)
 pd.DataFrame(stats_6).to_csv(SPLITS_DIR / "split_stats_v2_6stage.csv", index=False)
 
-# Best-ordering CSVs — saved only if the best ordering differs from default
+# Best-ordering CSVs
 cols = ["stage", "scene_type", "scene", "classes_present"]
-df_3_best = pd.DataFrame(best_rows_3, columns=cols)
-df_6_best = pd.DataFrame(best_rows_6, columns=cols)
+df_3_best = pd.DataFrame(best_3["csv_rows"], columns=cols)
+df_6_best = pd.DataFrame(best_6["csv_rows"], columns=cols)
 df_all_best = pd.concat([
     df_3_best.assign(split="SceneType-3stage-bestorder"),
     df_6_best.assign(split="SceneType-6stage-bestorder"),
@@ -608,8 +604,231 @@ df_3_best.to_csv(OUTPUT_DIR  / "incremental_splits_v2_3stage_bestorder.csv",  in
 df_6_best.to_csv(OUTPUT_DIR  / "incremental_splits_v2_6stage_bestorder.csv",  index=False)
 df_all_best.to_csv(OUTPUT_DIR / "incremental_splits_v2_all_bestorder.csv",    index=False)
 
-pd.DataFrame(sweep_3[0]["stats"]).to_csv(SPLITS_DIR / "split_stats_v2_3stage_bestorder.csv", index=False)
-pd.DataFrame(sweep_6[0]["stats"]).to_csv(SPLITS_DIR / "split_stats_v2_6stage_bestorder.csv", index=False)
+stats_3_best = pd.DataFrame(best_3["stats"])
+stats_6_best = pd.DataFrame(best_6["stats"])
+stats_3_best.to_csv(SPLITS_DIR / "split_stats_v2_3stage_bestorder.csv", index=False)
+stats_6_best.to_csv(SPLITS_DIR / "split_stats_v2_6stage_bestorder.csv", index=False)
+
+# ---------------------------------------------------------------------------
+# 12. Generate markdown analysis report for the best orderings
+# ---------------------------------------------------------------------------
+
+def lift_table_rows(selected_classes, lift_df, stage_scene_types, class_stage):
+    """Return list of formatted markdown table rows for the lift section."""
+    pivot = (
+        lift_df[lift_df["scene_type"].isin(stage_scene_types)]
+        .pivot(index="class", columns="scene_type", values="lift")
+        .reindex(columns=stage_scene_types, fill_value=0.0)
+    )
+    rows = []
+    for cls in selected_classes:
+        assigned = class_stage.get(cls, "?")
+        cells = []
+        for s in stage_scene_types:
+            val = pivot.at[cls, s] if cls in pivot.index else 0.0
+            bold = "**" if s == assigned else ""
+            cells.append(f"{bold}{val:.3f}{bold}")
+        rows.append(f"| {cls} | {' | '.join(cells)} | {assigned} |")
+    return rows
+
+
+def make_best_order_report(best_3, best_6, stage_classes_3, stage_classes_6,
+                           selected_classes, lift_df, presence_df, stats_3, stats_6):
+    """Return a markdown string for the best-ordering analysis report."""
+
+    ord3 = best_3["ordering"]
+    ord6 = best_6["ordering"]
+
+    # Rebuild class_stage dicts for the best orderings (assignments are same,
+    # just use the fixed stage_classes dicts)
+    cs3 = {cls: stype for stype, clslist in stage_classes_3.items() for cls in clslist}
+    cs6 = {cls: stype for stype, clslist in stage_classes_6.items() for cls in clslist}
+
+    # Scene type counts
+    type_counts = presence_df["scene_type"].value_counts()
+
+    def stage_defs_table(ordering, stage_classes_dict):
+        rows = []
+        for i, stype in enumerate(ordering, 1):
+            n = int(type_counts.get(stype, 0))
+            classes_str = ", ".join(stage_classes_dict[stype])
+            rows.append(f"| Stage {i} – {stype.replace('_', ' ').title()} "
+                        f"| {stype} ({n:,} scenes) | {classes_str} |")
+        return "\n".join(rows)
+
+    def survival_table(stats):
+        rows = []
+        for s in stats:
+            flag = " ***" if s["survived"] < UNVIABLE_THRESHOLD else ""
+            rows.append(f"| {s['stage']} | {s['scene_type']} | "
+                        f"{s['total']:,} | {s['survived']:,}{flag} | {s['pct_lost']:.1f}% |")
+        return "\n".join(rows)
+
+    def comparison_table(default_stats, best_stats):
+        rows = []
+        for d, b in zip(default_stats, best_stats):
+            delta = b["survived"] - d["survived"]
+            arrow = f"+{delta}" if delta >= 0 else str(delta)
+            rows.append(f"| {d['scene_type']} | {d['survived']:,} | "
+                        f"{b['survived']:,} | {arrow} |")
+        return "\n".join(rows)
+
+    lt3  = "\n".join(lift_table_rows(selected_classes, lift_df, ord3, cs3))
+    hdr3 = " | ".join(s.replace("_", " ").title() for s in ord3)
+    lt6  = "\n".join(lift_table_rows(selected_classes, lift_df, ord6, cs6))
+    hdr6 = " | ".join(s.replace("_", " ").title() for s in ord6)
+
+    sep3 = "|".join(["---|"] * (len(ord3) + 2))
+    sep6 = "|".join(["---|"] * (len(ord6) + 2))
+
+    default_order_3 = STAGE_SCENE_TYPES_3
+    default_order_6 = STAGE_SCENE_TYPES_6
+
+    changed_3 = ord3 != list(default_order_3)
+    changed_6 = ord6 != list(default_order_6)
+
+    md = f"""# Best-Ordering Split Analysis Report — V2 (Ordering-Optimised)
+
+**Dataset:** SUN RGB-D · 10,295 scenes · Top-24 classes (wall/floor/ceiling excluded)
+
+**Optimisation criterion:** Maximise the minimum surviving stage count.
+We do not optimise for total scenes. A split where every stage has a reasonable
+number of scenes is far more useful than one where a few stages have thousands
+and others have single-digit counts.
+
+---
+
+## What "Best Ordering" Means
+
+The **class-to-scene-type assignments** (determined by lift, section 6 of the script)
+are fixed. Only the **stage number** — which scene type appears first, second, etc.
+— changes across the ordering sweep.
+
+The strict filter says: Stage-N training data must contain **zero classes from any later
+stage**. This makes stage position critical: a class assigned to a late stage becomes
+forbidden in *all* earlier stages. Common classes like `chair` (57% of scenes) and
+`table` (46%) are catastrophic when placed in a late stage — they contaminate and
+eliminate most scenes from every earlier stage.
+
+The ordering sweep tests all n! permutations and picks the one where no single stage
+collapses.
+
+---
+
+## 1. Best Ordering — 3-Stage Split
+
+**Default ordering:** {" → ".join(default_order_3)}
+**Best ordering:**    {" → ".join(ord3)}
+**Ordering changed:** {"YES" if changed_3 else "NO — default is already optimal"}
+
+### Lift Table (best ordering column sequence)
+
+| Class | {hdr3} | Assigned to |
+{sep3}
+{lt3}
+
+Bold = assigned stage (highest lift subject to capacity).
+
+### Stage Definitions
+
+| Stage | Scene type | Classes assigned by lift |
+|---|---|---|
+{stage_defs_table(ord3, stage_classes_3)}
+
+### Survival Results
+
+| Stage | Scene type | Total scenes | Surviving | % Lost |
+|---|---|---|---|---|
+{survival_table(best_3["stats"])}
+
+*** UNVIABLE — fewer than {UNVIABLE_THRESHOLD} scenes.
+
+**Minimum stage count: {best_3["min_survived"]:,}**
+**Total surviving: {best_3["total_survived"]:,}**
+
+### Comparison with Default Ordering
+
+| Scene type | Default survived | Best ordering survived | Change |
+|---|---|---|---|
+{comparison_table(stats_3, best_3["stats"])}
+
+---
+
+## 2. Best Ordering — 6-Stage Split
+
+**Default ordering:** {" → ".join(default_order_6)}
+**Best ordering:**    {" → ".join(ord6)}
+**Ordering changed:** {"YES" if changed_6 else "NO — default is already optimal"}
+
+### Lift Table (best ordering column sequence)
+
+| Class | {hdr6} | Assigned to |
+{sep6}
+{lt6}
+
+Bold = assigned stage.
+
+### Stage Definitions
+
+| Stage | Scene type | Classes assigned by lift |
+|---|---|---|
+{stage_defs_table(ord6, stage_classes_6)}
+
+### Survival Results
+
+| Stage | Scene type | Total scenes | Surviving | % Lost |
+|---|---|---|---|---|
+{survival_table(best_6["stats"])}
+
+*** UNVIABLE — fewer than {UNVIABLE_THRESHOLD} scenes.
+
+**Minimum stage count: {best_6["min_survived"]:,}**
+**Total surviving: {best_6["total_survived"]:,}**
+
+### Comparison with Default Ordering
+
+| Scene type | Default survived | Best ordering survived | Change |
+|---|---|---|---|
+{comparison_table(stats_6, best_6["stats"])}
+
+---
+
+## 3. Why Common Classes Drive the Ordering
+
+The dominant effect is always the stage position of **generic, ubiquitous classes**:
+
+| Class | Overall frequency | Assigned scene type |
+|---|---|---|
+| chair | {presence_df["chair"].mean()*100:.1f}% of all scenes | {cs3.get("chair", "?")} |
+| table | {presence_df["table"].mean()*100:.1f}% of all scenes | {cs3.get("table", "?")} |
+| window | {presence_df["window"].mean()*100:.1f}% of all scenes | {cs3.get("window", "?")} |
+| door | {presence_df["door"].mean()*100:.1f}% of all scenes | {cs3.get("door", "?")} |
+
+When the scene type containing `chair` and `table` is placed in Stage 1, those classes
+are never future-forbidden for any subsequent stage. Every scene that contains a chair
+or table is eligible for later stages. Placing that scene type last is the single biggest
+cause of early-stage collapse in the default ordering.
+
+---
+
+## 4. Remaining Limitations
+
+The ordering sweep is the maximum improvement available **within the current
+strict-filter framework**. If survival counts are still too low after reordering,
+the root cause is the strict filter itself — see Options A–C in
+`split_analysis_report_v2.md`.
+"""
+    return md
+
+
+report_md = make_best_order_report(
+    best_3, best_6, stage_classes_3, stage_classes_6,
+    selected_classes, lift_df, presence_df, stats_3, stats_6,
+)
+
+report_path = SPLITS_DIR / "split_analysis_report_v2_bestorder.md"
+report_path.write_text(report_md, encoding="utf-8")
+print(f"\n  Saved: split_analysis_report_v2_bestorder.md")
 
 print(f"\n{'=' * 72}")
 print("SAVED FILES")
@@ -624,6 +843,7 @@ print(f"  incremental_splits_v2_3stage.csv        ({len(df_3):,} rows)")
 print(f"  incremental_splits_v2_6stage.csv        ({len(df_6):,} rows)")
 print(f"  incremental_splits_v2_all.csv           ({len(df_all):,} rows)")
 print(f"  --- best ordering (from sweep) ---")
+print(f"  split_analysis_report_v2_bestorder.md")
 print(f"  split_stats_v2_3stage_bestorder.csv")
 print(f"  split_stats_v2_6stage_bestorder.csv")
 print(f"  incremental_splits_v2_3stage_bestorder.csv  ({len(df_3_best):,} rows)")
