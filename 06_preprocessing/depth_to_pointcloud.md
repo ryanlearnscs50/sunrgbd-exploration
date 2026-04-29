@@ -157,11 +157,6 @@ weight(p, q) = exp( −‖p−q‖²/(2σ_s²) )   ← spatial proximity
              × exp( −‖I_p−I_q‖²/(2σ_r²) ) ← intensity (range) similarity
 ```
 
-A **cross-bilateral** filter uses the RGB image's intensities for the range
-weight while filling the depth map. This means:
-- Pixels on the same side of a colour edge get high weight → smooth fill
-- Pixels across a colour edge (where a real depth discontinuity likely exists)
-  get low weight → edge is preserved
 
 The SUN RGB-D toolbox applies this iteratively at multiple scales (coarse-to-fine
 inpainting) so that large holes are also filled.
@@ -176,15 +171,6 @@ inpainting) so that large holes are also filled.
 The depth sensor and the RGB camera are separate physical devices mounted a few
 centimetres apart. Their images are not naturally aligned — a pixel at (u, v)
 in the RGB image does not correspond to pixel (u, v) in the raw depth image.
-
-Alignment (also called **registration** or **rectification**) involves:
-
-1. **Intrinsic calibration:** Each camera has its own fx, fy, cx, cy.
-2. **Extrinsic calibration:** A 3×3 rotation R and 3D translation t describing
-   the rigid-body transform from the depth camera frame to the RGB camera frame.
-3. **Reprojection:** Each depth pixel is back-projected to 3D using the depth
-   camera intrinsics, transformed by (R, t), then re-projected to 2D using the
-   RGB camera intrinsics.
 
 SUN RGB-D performs this alignment during dataset creation. The
 `intrinsics.txt` file in each scene folder stores the **RGB camera intrinsics**,
@@ -252,14 +238,6 @@ In SUN RGB-D's own toolbox the convention is:
 - +Y: up (after flipping)
 - +Z: forward
 
-This is also what the Open3D visualiser in `preprocessing_viz.py` applies
-(`-xyz[:, 1]` for the vertical axis in 3D plots).
-
-> For more complex sensor rigs (cameras tilted or mounted at angles), the full
-> rotation from camera to world uses the **extrinsic matrix** — a 4×4
-> homogeneous transform. For axis-aligned Kinect captures (camera roughly
-> horizontal), the Y-flip is sufficient.
-
 ---
 
 ## Step 8 — Outlier Removal
@@ -268,17 +246,6 @@ Back-projected depth maps always contain stray points — "noise" that appears
 as isolated points floating in mid-air, caused by sensor noise at hole
 boundaries, mixed pixels at object edges, or small depth errors.
 
-**Statistical outlier removal** (Open3D `remove_statistical_outlier`):
-
-For each point, compute the mean distance to its k nearest neighbours.
-Points where this mean distance is more than `std_ratio` standard deviations
-above the global mean are removed.
-
-```python
-pcd_clean, _ = pcd.remove_statistical_outlier(nb_neighbors=20, std_ratio=2.0)
-```
-
-Typical parameters for indoor RGBD scenes: `nb_neighbors=20`, `std_ratio=2.0`.
 
 ---
 
@@ -348,15 +315,3 @@ Raw RGB image  +  Raw depth PNG (uint16, 0.1 mm units)
 | Depth scale | 10,000 raw units = 1 metre | Dataset convention (0.1 mm per unit) |
 | Depth range | ~0.5 m – 7 m (Kinect v1/v2) | Sensor hardware limit |
 | `depth_bfx` | Bilateral-filtered depth, pre-aligned to RGB | Provided in dataset |
-
----
-
-## References
-
-- Song, S., Lichtenberg, S., & Xiao, J. (2015). **SUN RGB-D: A RGB-D Scene
-  Understanding Benchmark Suite.** CVPR 2015.
-- Kopf, J. et al. (2007). **Joint Bilateral Upsampling.** ACM SIGGRAPH 2007.
-  *(Cross-bilateral filtering principle used for depth hole filling.)*
-- Hartley, R. & Zisserman, A. (2004). **Multiple View Geometry in Computer
-  Vision** (2nd ed.). Cambridge University Press.
-  *(Pinhole camera model, intrinsic matrix, back-projection.)*
