@@ -1,0 +1,93 @@
+========================================================================
+TR3D Pipeline Trace  --  SUN RGB-D  (CPU, no MinkowskiEngine)
+========================================================================
+
+-- STEP 0: Input ---------------------------------------------------
+  Raw point cloud : (50000, 6)  xin[0.0,6.0] m  rgbin[0,1]
+  RGB image       : (1, 3, 480, 640)  [batch, C, H, W]
+
+-- STEP 1: Voxelization --------------------------------------------
+  Voxel size : 0.02 m  (2 cm cubes)
+  Raw points ? unique voxels : 50,000 ? 49,956  (99.9% of points kept)
+  SparseTensor.coordinates   : (49956, 4)  [batch, x_vox, y_vox, z_vox]  dtype=int
+  SparseTensor.features      : (49956, 3)  [r, g, b per voxel]  dtype=float
+  Voxel grid extent          : x<=299  y<=299  z<=299  voxel units
+
+-- STEP 2: Backbone (sparse 3-D U-Net) -----------------------------
+  Scale 0: 49,956 voxels  x   32 channels    coords (49956, 4)
+  Scale 1:  6,245 voxels  x   64 channels    coords (6245, 4)
+  Scale 2:    781 voxels  x  128 channels    coords (781, 4)
+  Scale 3:     98 voxels  x  256 channels    coords (98, 4)
+
+-- STEP 2b: Feature Fusion [TR3D+FF only] --------------------------
+  2-D image FPN feature map : (1, 256, 60, 80)  [batch, 256, H/8, W/8]
+  Sampled per-voxel 2-D feat: (49956, 256)  via bilinear sampling at projected (u,v)
+  After 1x1 compression     : (49956, 64)  ? added residually to 3-D sparse features at scale 0
+  (Plain TR3D skips this step entirely)
+
+-- STEP 3: Neck (3-D Feature Pyramid Network) ----------------------
+  FPN output level 0:  6,245 voxels  x  128 channels  (classes ? [3, 4, 6, 7, 9])
+  FPN output level 1:    781 voxels  x  128 channels  (classes ? [0, 1, 2, 5, 8])
+
+-- STEP 4: Head (per-voxel bbox + cls prediction) ------------------
+  n_classes   = 10  |  n_reg_outs = 6
+  label2level = [1, 1, 1, 0, 0, 1, 0, 0, 1, 0]
+    Level 0 (fine):   classes [3, 4, 6, 7, 9]  ? chair, toilet, dresser, night_stand, bathtub
+    Level 1 (coarse): classes [0, 1, 2, 5, 8]  ? bed, table, sofa, desk, bookshelf
+
+  Level 0:
+    Input features      : (6245, 128)
+    Voxel centres (m)   : (6245, 3)  xin[0.00,1.48]
+    bbox_pred           : (6245, 6)  [Dx,Dy,Dz, w,h,l]
+      Dxyz range        : [-0.065, 0.165] m
+      sizes (exp) range : [0.964, 1.172] m
+    cls_pred (logits)   : (6245, 10)  [10 classes per voxel]
+    cls_pred (sigmoid)  : min=0.476  max=0.558
+
+  Level 1:
+    Input features      : (781, 128)
+    Voxel centres (m)   : (781, 3)  xin[0.00,0.74]
+    bbox_pred           : (781, 6)  [Dx,Dy,Dz, w,h,l]
+      Dxyz range        : [-0.119, 0.095] m
+      sizes (exp) range : [0.950, 1.063] m
+    cls_pred (logits)   : (781, 10)  [10 classes per voxel]
+    cls_pred (sigmoid)  : min=0.460  max=0.527
+
+-- STEP 5: Decode predictions ? 3-D bounding boxes ----------------
+  Total voxels (all FPN levels): 7,026
+  all_bbox shape               : (7026, 6)
+  all_cls shape                : (7026, 10)
+
+  Decoded 3-D boxes : (7026, 6)  [cx, cy, cz, w, h, l]
+  After score_thr=0.01  : 7,026 / 7,026 candidate voxels kept
+  After 3-D NMS (simulated): ~351 final detections
+  Output per detection: (cx, cy, cz, w, h, l)  +  class label  +  score
+
+========================================================================
+SHAPE SUMMARY  (follow this table top to bottom to trace the data)
+========================================================================
+  0. Raw input          : point cloud (50000, 6), image (1, 3, 480, 640)
+  1. After voxelisation : coords (49956, 4)  feats (49956, 3)
+  2. Backbone scale 0   : 49,956 voxels x  32 ch
+  2. Backbone scale 1   :  6,245 voxels x  64 ch
+  2. Backbone scale 2   :    781 voxels x 128 ch
+  2. Backbone scale 3   :     98 voxels x 256 ch
+  2b. FF sampled 2-D   : (49956, 256)  ? compressed (49956, 64)  [+FF only]
+  3. Neck FPN level 0  :  6,245 voxels x 128 ch
+  3. Neck FPN level 1  :    781 voxels x 128 ch
+  4. Head level 0 out : bbox (6245, 6)  cls (6245, 10)
+  4. Head level 1 out : bbox (781, 6)  cls (781, 10)
+  5. Decoded boxes      : (7026, 6)
+  5. After score thr    : 7,026 candidates
+  5. After 3-D NMS      : ~351 final detections  (cx, cy, cz, w, h, l, label, score)
+
+Key concepts used:
+  Sparse tensor      -- store only occupied voxels, not the full grid
+  Voxelisation       -- snap continuous xyz to a 2cm grid, deduplicate
+  Stride-2 sparse    -- halves resolution, 8x fewer voxels per level (3D)
+  FPN top-down       -- merge semantics (deep) + spatial detail (shallow)
+  1x1 sparse conv    -- per-voxel projection, no spatial mixing
+  Label2level        -- each class predicted at its natural FPN scale
+  TR3DAssigner       -- assigns GT boxes to voxels by level + proximity
+  exp(log_size)      -- guarantees box sizes are always positive
+  3-D NMS            -- removes duplicate detections by axis-aligned IoU

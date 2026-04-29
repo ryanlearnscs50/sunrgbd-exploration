@@ -14,9 +14,27 @@ Run:
     python trace_pipeline.py
 """
 
+import sys
+import io
 import torch
 import torch.nn as nn
 import numpy as np
+
+# Tee stdout to both terminal and a file
+_output_path = "trace_pipeline_output.txt"
+_file_out = open(_output_path, "w", encoding="utf-8")
+
+class _Tee:
+    def __init__(self, *streams):
+        self.streams = streams
+    def write(self, data):
+        for s in self.streams:
+            s.write(data)
+    def flush(self):
+        for s in self.streams:
+            s.flush()
+
+sys.stdout = _Tee(sys.__stdout__, _file_out)
 
 # -- SUN RGB-D model config (from configs/sunrgbd/tr3d_sunrgbd.py) ----------
 N_CLASSES          = 10      # bed, table, sofa, chair, toilet,
@@ -554,3 +572,8 @@ print("  Label2level        -- each class predicted at its natural FPN scale")
 print("  TR3DAssigner       -- assigns GT boxes to voxels by level + proximity")
 print("  exp(log_size)      -- guarantees box sizes are always positive")
 print("  3-D NMS            -- removes duplicate detections by axis-aligned IoU")
+
+# Close the output file and restore stdout
+sys.stdout = sys.__stdout__
+_file_out.close()
+print(f"\nOutput saved to: {_output_path}")
