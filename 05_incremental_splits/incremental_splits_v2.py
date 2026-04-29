@@ -56,6 +56,7 @@ import json
 import pathlib
 import re
 import sys
+from itertools import permutations as _permutations
 
 import pandas as pd
 
@@ -496,7 +497,88 @@ print("  NOTE: Stage 3 in v1 is 'Kitchen/Utility'; Stage 3 in v2 is 'Classroom'.
 print("  The scene type choice changes the comparison — see the data directly.")
 
 # ---------------------------------------------------------------------------
-# 10. Save all CSVs
+# 10. Ordering sweep — find the stage sequence that maximises total scenes
+# ---------------------------------------------------------------------------
+# MOTIVATION: condition (b) eliminates scenes that contain "future" classes.
+# A common class assigned to a late stage becomes forbidden in ALL earlier
+# stages, destroying more training data than necessary.  We exhaustively try
+# every permutation of stage scene types to find the ordering that loses the
+# fewest scenes total.
+#
+# The class-to-scene-type assignments are FIXED (determined by lift in section 6).
+# Only the stage NUMBER (position in sequence) changes across permutations.
+#
+# PATTERN: itertools.permutations generates all n! orderings.
+#   3-stage: 3! =   6 permutations — trivial
+#   6-stage: 6! = 720 permutations — still fast; apply_strict_filter is just
+#            boolean pandas operations on a 10k-row dataframe
+
+def sweep_orderings(stage_scene_types, stage_classes_dict):
+    """Try every permutation; return list sorted by total surviving scenes (desc)."""
+    rows = []
+    for perm in _permutations(stage_scene_types):
+        split_def  = build_split_def(list(perm), stage_classes_dict)
+        stats, csv = apply_strict_filter(presence_df, split_def)
+        total      = sum(s["survived"] for s in stats)
+        rows.append({
+            "ordering":       list(perm),
+            "total_survived": total,
+            "stats":          stats,
+            "csv_rows":       csv,
+        })
+    rows.sort(key=lambda r: -r["total_survived"])
+    return rows
+
+
+def print_sweep_results(sweep_rows, original_order, split_name, top_n=None):
+    show = sweep_rows if top_n is None else sweep_rows[:top_n]
+    n_perms  = len(sweep_rows)
+    n_stages = len(original_order)
+    current_total = next(r["total_survived"] for r in sweep_rows
+                         if r["ordering"] == list(original_order))
+
+    print(f"\n{'=' * 76}")
+    print(f"ORDERING SWEEP — {split_name}  ({n_stages}! = {n_perms} permutations, ranked by total scenes)")
+    print(f"{'=' * 76}")
+    print(f"  {'Rank':<5}  {'Stage 1 → 2 → ... → N':<52}  {'Total':>6}  {'vs current':>10}")
+    print("  " + "-" * 80)
+
+    for rank, row in enumerate(show, 1):
+        order_str  = " → ".join(row["ordering"])
+        delta      = row["total_survived"] - current_total
+        delta_str  = f"+{delta}" if delta >= 0 else str(delta)
+        is_best    = rank == 1
+        is_current = row["ordering"] == list(original_order)
+        if is_best and is_current:
+            flag = "  ← BEST = current"
+        elif is_best:
+            flag = "  ← BEST"
+        elif is_current:
+            flag = "  ← current"
+        else:
+            flag = ""
+        print(f"  {rank:<5}  {order_str:<52}  {row['total_survived']:>6,}  {delta_str:>+10}{flag}")
+
+    best = sweep_rows[0]
+    print(f"\n  Best ordering: {' → '.join(best['ordering'])}")
+    print(f"  Per-stage breakdown:")
+    for s in best["stats"]:
+        print(f"    {s['stage']:<35}  survived={s['survived']:,}  lost={s['pct_lost']:.1f}%")
+
+
+print("\nRunning ordering sweeps (testing all permutations)...")
+sweep_3 = sweep_orderings(STAGE_SCENE_TYPES_3, stage_classes_3)
+sweep_6 = sweep_orderings(STAGE_SCENE_TYPES_6, stage_classes_6)
+
+print_sweep_results(sweep_3, STAGE_SCENE_TYPES_3, "3-STAGE")
+print_sweep_results(sweep_6, STAGE_SCENE_TYPES_6, "6-STAGE", top_n=15)
+
+# Best orderings for downstream use
+best_rows_3 = sweep_3[0]["csv_rows"]
+best_rows_6 = sweep_6[0]["csv_rows"]
+
+# ---------------------------------------------------------------------------
+# 11. Save all CSVs
 # ---------------------------------------------------------------------------
 df_3   = pd.DataFrame(rows_3,  columns=["stage", "scene_type", "scene", "classes_present"])
 df_6   = pd.DataFrame(rows_6,  columns=["stage", "scene_type", "scene", "classes_present"])
@@ -509,9 +591,25 @@ df_3.to_csv(OUTPUT_DIR  / "incremental_splits_v2_3stage.csv",  index=False)
 df_6.to_csv(OUTPUT_DIR  / "incremental_splits_v2_6stage.csv",  index=False)
 df_all.to_csv(OUTPUT_DIR / "incremental_splits_v2_all.csv",    index=False)
 
-# Stage stats for downstream use
+# Stage stats for default ordering (for v1 comparison in print section)
 pd.DataFrame(stats_3).to_csv(SPLITS_DIR / "split_stats_v2_3stage.csv", index=False)
 pd.DataFrame(stats_6).to_csv(SPLITS_DIR / "split_stats_v2_6stage.csv", index=False)
+
+# Best-ordering CSVs — saved only if the best ordering differs from default
+cols = ["stage", "scene_type", "scene", "classes_present"]
+df_3_best = pd.DataFrame(best_rows_3, columns=cols)
+df_6_best = pd.DataFrame(best_rows_6, columns=cols)
+df_all_best = pd.concat([
+    df_3_best.assign(split="SceneType-3stage-bestorder"),
+    df_6_best.assign(split="SceneType-6stage-bestorder"),
+], ignore_index=True)
+
+df_3_best.to_csv(OUTPUT_DIR  / "incremental_splits_v2_3stage_bestorder.csv",  index=False)
+df_6_best.to_csv(OUTPUT_DIR  / "incremental_splits_v2_6stage_bestorder.csv",  index=False)
+df_all_best.to_csv(OUTPUT_DIR / "incremental_splits_v2_all_bestorder.csv",    index=False)
+
+pd.DataFrame(sweep_3[0]["stats"]).to_csv(SPLITS_DIR / "split_stats_v2_3stage_bestorder.csv", index=False)
+pd.DataFrame(sweep_6[0]["stats"]).to_csv(SPLITS_DIR / "split_stats_v2_6stage_bestorder.csv", index=False)
 
 print(f"\n{'=' * 72}")
 print("SAVED FILES")
@@ -519,10 +617,17 @@ print(f"{'=' * 72}")
 print(f"  scene_labels.csv               ({len(presence_df):,} rows)")
 print(f"  scene_type_class_lift.csv")
 print(f"  class_stage_assignments_v2.csv")
+print(f"  --- default ordering ---")
 print(f"  split_stats_v2_3stage.csv")
 print(f"  split_stats_v2_6stage.csv")
-print(f"  incremental_splits_v2_3stage.csv   ({len(df_3):,} rows)")
-print(f"  incremental_splits_v2_6stage.csv   ({len(df_6):,} rows)")
-print(f"  incremental_splits_v2_all.csv      ({len(df_all):,} rows)")
+print(f"  incremental_splits_v2_3stage.csv        ({len(df_3):,} rows)")
+print(f"  incremental_splits_v2_6stage.csv        ({len(df_6):,} rows)")
+print(f"  incremental_splits_v2_all.csv           ({len(df_all):,} rows)")
+print(f"  --- best ordering (from sweep) ---")
+print(f"  split_stats_v2_3stage_bestorder.csv")
+print(f"  split_stats_v2_6stage_bestorder.csv")
+print(f"  incremental_splits_v2_3stage_bestorder.csv  ({len(df_3_best):,} rows)")
+print(f"  incremental_splits_v2_6stage_bestorder.csv  ({len(df_6_best):,} rows)")
+print(f"  incremental_splits_v2_all_bestorder.csv     ({len(df_all_best):,} rows)")
 
 print("\nDone.")
