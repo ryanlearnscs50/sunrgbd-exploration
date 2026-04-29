@@ -1,0 +1,7 @@
+stage,scene_type,classes,future_cls,total,survived,pct_lost
+Stage 1 – Dining Area,dining_area,"table, counter, window, chair","bag, bed, book, bottle, box, cabinet, cup, curtain, desk, door, keyboard, lamp, light, mirror, monitor, paper, picture, pillow, shelf, sofa",395,223,43.5
+Stage 2 – Classroom,classroom,"bottle, light, door, bag","bed, book, box, cabinet, cup, curtain, desk, keyboard, lamp, mirror, monitor, paper, picture, pillow, shelf, sofa",1021,434,57.5
+Stage 3 – Library,library,"pillow, shelf, desk, book","bed, box, cabinet, cup, curtain, keyboard, lamp, mirror, monitor, paper, picture, sofa",376,230,38.8
+Stage 4 – Bedroom,bedroom,"bed, curtain, mirror, lamp","box, cabinet, cup, keyboard, monitor, paper, picture, sofa",1082,461,57.4
+Stage 5 – Living Room,living_room,"sofa, cabinet, box, picture","cup, keyboard, monitor, paper",524,402,23.3
+Stage 6 – Office,office,"keyboard, monitor, paper, cup",(none),1040,1040,0.0
