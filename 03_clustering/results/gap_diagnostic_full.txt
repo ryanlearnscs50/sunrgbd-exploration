@@ -1,0 +1,910 @@
+==========================================================================================
+GAP STATISTIC DIAGNOSTIC — FULL BREAKDOWN
+SUN RGB-D co-occurrence clustering  |  Jaccard threshold=0.10  |  B=20 null datasets
+
+NOTATION GUIDE:
+  W_k           = within-cluster inertia when k-means is fit on REAL data
+  W_k^(b)       = inertia when k-means is fit on NULL dataset number b
+                  (b) is an INDEX label, not a power  —  W_k^(b) != W_k^b
+  log(W_k^(b))  = log of that single null-dataset inertia
+  mean_b[...]   = average of the 20 values  log(W_k^(1)), ..., log(W_k^(20))
+  Gap(k)        = mean_b[log(W_k^(b))] - log(W_k)
+  sk            = std(log W_k^(b)) * sqrt(1 + 1/B)  [uncertainty correction]
+==========================================================================================
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : CHAIR
+Scenes      : 4416  |  Features (12): table, window, door, cabinet, shelf, desk, box, picture, book, paper, sofa, monitor
+Chosen k    : 3  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            7.790635                  7.874573   +0.0839    0.0134
+   3            7.523753                  7.640564   +0.1168    0.0299  <- CHOSEN k
+   4            7.437691                  7.477720   +0.0400    0.0216
+   5            7.300114                  7.371762   +0.0716    0.0292
+   6            7.226808                  7.283347   +0.0565    0.0271
+   7            7.112862                  7.204098   +0.0912    0.0335
+   8            7.033180                  7.110090   +0.0769    0.0338
+   9            7.001795                  7.033340   +0.0315    0.0357
+  10            6.904710                  6.968724   +0.0640    0.0356
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0839  >=  Gap(3)-sk(3)=+0.0869  =>  False
+  k=3: Gap(3)=+0.1168  >=  Gap(4)-sk(4)=+0.0185  =>  True   <- CHOSEN HERE
+  k=4: Gap(4)=+0.0400  >=  Gap(5)-sk(5)=+0.0425  =>  False
+  k=5: Gap(5)=+0.0716  >=  Gap(6)-sk(6)=+0.0295  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.0565  >=  Gap(7)-sk(7)=+0.0578  =>  False
+  k=7: Gap(7)=+0.0912  >=  Gap(8)-sk(8)=+0.0431  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=+0.0769  >=  Gap(9)-sk(9)=-0.0042  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=+0.0315  >=  Gap(10)-sk(10)=+0.0284  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=3 vs k=4):
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  7.640564
+    mean_b[ log(W_4^(b)) ]  [null avg at k=4]  =  7.477720
+    log(W_3)  [real data]                          =  7.523753
+    log(W_4)  [real data]                          =  7.437691
+    Gap(3) = 7.640564 - 7.523753 = +0.116811
+    Gap(4) = 7.477720 - 7.437691 = +0.040029
+    sk(4)                                          =  0.021577
+    Gap(4) - sk(4)                              =  +0.018452
+    Gap(3) >= Gap(4) - sk(4)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : TABLE
+Scenes      : 2989  |  Features (11): chair, window, door, cabinet, shelf, box, picture, book, paper, lamp, sofa
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            7.079270                  7.090318   +0.0110    0.0200  <- CHOSEN k
+   3            6.897575                  6.890010   -0.0076    0.0260
+   4            6.723074                  6.715021   -0.0081    0.0417
+   5            6.605893                  6.589654   -0.0162    0.0381
+   6            6.511196                  6.458164   -0.0530    0.0395
+   7            6.378592                  6.321326   -0.0573    0.0347
+   8            6.307230                  6.211486   -0.0957    0.0469
+   9            6.192452                  6.091357   -0.1011    0.0465
+  10            6.075763                  5.981289   -0.0945    0.0703
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0110  >=  Gap(3)-sk(3)=-0.0336  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=-0.0076  >=  Gap(4)-sk(4)=-0.0498  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=-0.0081  >=  Gap(5)-sk(5)=-0.0543  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=-0.0162  >=  Gap(6)-sk(6)=-0.0925  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=-0.0530  >=  Gap(7)-sk(7)=-0.0919  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=-0.0573  >=  Gap(8)-sk(8)=-0.1426  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=-0.0957  >=  Gap(9)-sk(9)=-0.1476  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.1011  >=  Gap(10)-sk(10)=-0.1648  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  7.090318
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  6.890010
+    log(W_2)  [real data]                          =  7.079270
+    log(W_3)  [real data]                          =  6.897575
+    Gap(2) = 7.090318 - 7.079270 = +0.011048
+    Gap(3) = 6.890010 - 6.897575 = -0.007566
+    sk(3)                                          =  0.026031
+    Gap(3) - sk(3)                              =  -0.033596
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS: WINDOW   [SKIPPED — only 30 scenes, need >= 80]
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : DOOR
+Scenes      : 108  |  Features (7): chair, table, window, cabinet, shelf, box, picture
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            3.864182                  3.868822   +0.0046    0.1284  <- CHOSEN k
+   3            3.573707                  3.612377   +0.0387    0.1157
+   4            3.301895                  3.381560   +0.0797    0.0870
+   5            3.041247                  3.172454   +0.1312    0.1667
+   6            2.809442                  2.937987   +0.1285    0.2072
+   7            2.636524                  2.824194   +0.1877    0.1998  <- argmax Gap
+   8            2.423611                  2.491013   +0.0674    0.2567
+   9            2.298925                  2.371019   +0.0721    0.1873
+  10            2.159437                  2.114905   -0.0445    0.2831
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0046  >=  Gap(3)-sk(3)=-0.0771  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=+0.0387  >=  Gap(4)-sk(4)=-0.0073  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=+0.0797  >=  Gap(5)-sk(5)=-0.0355  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.1312  >=  Gap(6)-sk(6)=-0.0787  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.1285  >=  Gap(7)-sk(7)=-0.0121  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.1877  >=  Gap(8)-sk(8)=-0.1893  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=+0.0674  >=  Gap(9)-sk(9)=-0.1152  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=+0.0721  >=  Gap(10)-sk(10)=-0.3277  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  3.868822
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  3.612377
+    log(W_2)  [real data]                          =  3.864182
+    log(W_3)  [real data]                          =  3.573707
+    Gap(2) = 3.868822 - 3.864182 = +0.004639
+    Gap(3) = 3.612377 - 3.573707 = +0.038670
+    sk(3)                                          =  0.115741
+    Gap(3) - sk(3)                              =  -0.077071
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : CABINET
+Scenes      : 563  |  Features (13): chair, table, window, door, shelf, box, picture, book, paper, bottle, bag, counter, cup
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            5.752437                  5.812425   +0.0600    0.0371  <- CHOSEN k
+   3            5.512330                  5.591599   +0.0793    0.0625  <- argmax Gap
+   4            5.349242                  5.417769   +0.0685    0.0464
+   5            5.223045                  5.252403   +0.0294    0.0668
+   6            5.116117                  5.138168   +0.0221    0.0614
+   7            5.035709                  5.082674   +0.0470    0.0661
+   8            4.956183                  4.952491   -0.0037    0.0744
+   9            4.856778                  4.891467   +0.0347    0.0962
+  10            4.815710                  4.854660   +0.0389    0.0759
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0600  >=  Gap(3)-sk(3)=+0.0168  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=+0.0793  >=  Gap(4)-sk(4)=+0.0221  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=+0.0685  >=  Gap(5)-sk(5)=-0.0374  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.0294  >=  Gap(6)-sk(6)=-0.0394  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.0221  >=  Gap(7)-sk(7)=-0.0191  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.0470  >=  Gap(8)-sk(8)=-0.0781  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=-0.0037  >=  Gap(9)-sk(9)=-0.0615  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=+0.0347  >=  Gap(10)-sk(10)=-0.0369  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  5.812425
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  5.591599
+    log(W_2)  [real data]                          =  5.752437
+    log(W_3)  [real data]                          =  5.512330
+    Gap(2) = 5.812425 - 5.752437 = +0.059988
+    Gap(3) = 5.591599 - 5.512330 = +0.079269
+    sk(3)                                          =  0.062475
+    Gap(3) - sk(3)                              =  +0.016794
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : SHELF
+Scenes      : 799  |  Features (9): chair, table, window, door, cabinet, box, picture, book, paper
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            6.087900                  6.131672   +0.0438    0.0373  <- CHOSEN k
+   3            5.823995                  5.837977   +0.0140    0.0481
+   4            5.633369                  5.643264   +0.0099    0.0446
+   5            5.462525                  5.468402   +0.0059    0.0446
+   6            5.337477                  5.320601   -0.0169    0.0801
+   7            5.216058                  5.246986   +0.0309    0.0637
+   8            5.135686                  5.090175   -0.0455    0.0760
+   9            5.002643                  4.989239   -0.0134    0.0606
+  10            4.904526                  4.890142   -0.0144    0.0911
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0438  >=  Gap(3)-sk(3)=-0.0341  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=+0.0140  >=  Gap(4)-sk(4)=-0.0347  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=+0.0099  >=  Gap(5)-sk(5)=-0.0387  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.0059  >=  Gap(6)-sk(6)=-0.0970  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=-0.0169  >=  Gap(7)-sk(7)=-0.0328  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.0309  >=  Gap(8)-sk(8)=-0.1215  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=-0.0455  >=  Gap(9)-sk(9)=-0.0740  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.0134  >=  Gap(10)-sk(10)=-0.1055  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  6.131672
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  5.837977
+    log(W_2)  [real data]                          =  6.087900
+    log(W_3)  [real data]                          =  5.823995
+    Gap(2) = 6.131672 - 6.087900 = +0.043772
+    Gap(3) = 5.837977 - 5.823995 = +0.013982
+    sk(3)                                          =  0.048101
+    Gap(3) - sk(3)                              =  -0.034119
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : DESK
+Scenes      : 1384  |  Features (7): chair, window, box, book, paper, monitor, keyboard
+Chosen k    : 3  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            6.367619                  6.388949   +0.0213    0.0230
+   3            6.030597                  6.084661   +0.0541    0.0280  <- CHOSEN k
+   4            5.805733                  5.814109   +0.0084    0.0402
+   5            5.606674                  5.584424   -0.0223    0.0632
+   6            5.475154                  5.394048   -0.0811    0.0833
+   7            5.362090                  5.250381   -0.1117    0.0657
+   8            5.220487                  5.065385   -0.1551    0.0715
+   9            5.118290                  4.898044   -0.2202    0.0854
+  10            5.002211                  4.758253   -0.2440    0.0673
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0213  >=  Gap(3)-sk(3)=+0.0261  =>  False
+  k=3: Gap(3)=+0.0541  >=  Gap(4)-sk(4)=-0.0318  =>  True   <- CHOSEN HERE
+  k=4: Gap(4)=+0.0084  >=  Gap(5)-sk(5)=-0.0854  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=-0.0223  >=  Gap(6)-sk(6)=-0.1644  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=-0.0811  >=  Gap(7)-sk(7)=-0.1775  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=-0.1117  >=  Gap(8)-sk(8)=-0.2266  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=-0.1551  >=  Gap(9)-sk(9)=-0.3056  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.2202  >=  Gap(10)-sk(10)=-0.3113  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=3 vs k=4):
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  6.084661
+    mean_b[ log(W_4^(b)) ]  [null avg at k=4]  =  5.814109
+    log(W_3)  [real data]                          =  6.030597
+    log(W_4)  [real data]                          =  5.805733
+    Gap(3) = 6.084661 - 6.030597 = +0.054065
+    Gap(4) = 5.814109 - 5.805733 = +0.008376
+    sk(4)                                          =  0.040170
+    Gap(4) - sk(4)                              =  -0.031793
+    Gap(3) >= Gap(4) - sk(4)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : BOX
+Scenes      : 503  |  Features (11): chair, table, door, cabinet, shelf, desk, picture, book, paper, bottle, bag
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            6.187621                  6.223461   +0.0358    0.0273  <- CHOSEN k
+   3            6.006588                  6.072143   +0.0656    0.0502
+   4            5.888701                  6.000221   +0.1115    0.0421  <- argmax Gap
+   5            5.795890                  5.877701   +0.0818    0.0245
+   6            5.743290                  5.800336   +0.0570    0.0430
+   7            5.631576                  5.737059   +0.1055    0.0443
+   8            5.545718                  5.655924   +0.1102    0.0510
+   9            5.473506                  5.578454   +0.1049    0.0442
+  10            5.405267                  5.511627   +0.1064    0.0698
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0358  >=  Gap(3)-sk(3)=+0.0154  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=+0.0656  >=  Gap(4)-sk(4)=+0.0694  =>  False
+  k=4: Gap(4)=+0.1115  >=  Gap(5)-sk(5)=+0.0573  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.0818  >=  Gap(6)-sk(6)=+0.0141  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.0570  >=  Gap(7)-sk(7)=+0.0612  =>  False
+  k=7: Gap(7)=+0.1055  >=  Gap(8)-sk(8)=+0.0592  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=+0.1102  >=  Gap(9)-sk(9)=+0.0607  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=+0.1049  >=  Gap(10)-sk(10)=+0.0366  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  6.223461
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  6.072143
+    log(W_2)  [real data]                          =  6.187621
+    log(W_3)  [real data]                          =  6.006588
+    Gap(2) = 6.223461 - 6.187621 = +0.035840
+    Gap(3) = 6.072143 - 6.006588 = +0.065555
+    sk(3)                                          =  0.050189
+    Gap(3) - sk(3)                              =  +0.015366
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : PICTURE
+Scenes      : 180  |  Features (14): chair, table, window, door, cabinet, shelf, box, book, paper, lamp, sofa, pillow, bed, bag
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            5.526367                  5.571353   +0.0450    0.0345  <- CHOSEN k
+   3            5.388668                  5.474905   +0.0862    0.0435
+   4            5.230991                  5.368845   +0.1379    0.0356
+   5            5.144670                  5.320733   +0.1761    0.0413
+   6            5.088608                  5.258610   +0.1700    0.0440
+   7            5.060751                  5.220527   +0.1598    0.0567
+   8            4.981139                  5.161805   +0.1807    0.0645
+   9            4.911902                  5.135351   +0.2234    0.0414  <- argmax Gap
+  10            4.866984                  5.062409   +0.1954    0.0632
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0450  >=  Gap(3)-sk(3)=+0.0428  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=+0.0862  >=  Gap(4)-sk(4)=+0.1022  =>  False
+  k=4: Gap(4)=+0.1379  >=  Gap(5)-sk(5)=+0.1347  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.1761  >=  Gap(6)-sk(6)=+0.1260  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.1700  >=  Gap(7)-sk(7)=+0.1031  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.1598  >=  Gap(8)-sk(8)=+0.1162  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=+0.1807  >=  Gap(9)-sk(9)=+0.1821  =>  False
+  k=9: Gap(9)=+0.2234  >=  Gap(10)-sk(10)=+0.1322  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  5.571353
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  5.474905
+    log(W_2)  [real data]                          =  5.526367
+    log(W_3)  [real data]                          =  5.388668
+    Gap(2) = 5.571353 - 5.526367 = +0.044987
+    Gap(3) = 5.474905 - 5.388668 = +0.086237
+    sk(3)                                          =  0.043477
+    Gap(3) - sk(3)                              =  +0.042760
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : BOOK
+Scenes      : 229  |  Features (13): chair, table, cabinet, shelf, desk, box, picture, paper, lamp, pillow, monitor, bottle, bag
+Chosen k    : 3  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            5.827410                  5.856367   +0.0290    0.0328
+   3            5.706676                  5.765630   +0.0590    0.0221  <- CHOSEN k
+   4            5.619724                  5.697690   +0.0780    0.0370
+   5            5.548271                  5.623867   +0.0756    0.0359
+   6            5.492711                  5.576382   +0.0837    0.0405
+   7            5.413211                  5.529965   +0.1168    0.0546
+   8            5.362207                  5.482501   +0.1203    0.0411  <- argmax Gap
+   9            5.325788                  5.438351   +0.1126    0.0502
+  10            5.297564                  5.402335   +0.1048    0.0625
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0290  >=  Gap(3)-sk(3)=+0.0369  =>  False
+  k=3: Gap(3)=+0.0590  >=  Gap(4)-sk(4)=+0.0410  =>  True   <- CHOSEN HERE
+  k=4: Gap(4)=+0.0780  >=  Gap(5)-sk(5)=+0.0397  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.0756  >=  Gap(6)-sk(6)=+0.0432  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.0837  >=  Gap(7)-sk(7)=+0.0622  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.1168  >=  Gap(8)-sk(8)=+0.0792  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=+0.1203  >=  Gap(9)-sk(9)=+0.0624  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=+0.1126  >=  Gap(10)-sk(10)=+0.0422  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=3 vs k=4):
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  5.765630
+    mean_b[ log(W_4^(b)) ]  [null avg at k=4]  =  5.697690
+    log(W_3)  [real data]                          =  5.706676
+    log(W_4)  [real data]                          =  5.619724
+    Gap(3) = 5.765630 - 5.706676 = +0.058954
+    Gap(4) = 5.697690 - 5.619724 = +0.077965
+    sk(4)                                          =  0.036962
+    Gap(4) - sk(4)                              =  +0.041003
+    Gap(3) >= Gap(4) - sk(4)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : PAPER
+Scenes      : 206  |  Features (14): chair, table, window, cabinet, shelf, desk, box, picture, book, monitor, bottle, bag, keyboard, cup
+Chosen k    : 3  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            5.489628                  5.515734   +0.0261    0.0419
+   3            5.318431                  5.436568   +0.1181    0.0386  <- CHOSEN k
+   4            5.230098                  5.333004   +0.1029    0.0558
+   5            5.136720                  5.255611   +0.1189    0.0443
+   6            5.113432                  5.183042   +0.0696    0.0666
+   7            5.019884                  5.139053   +0.1192    0.0505
+   8            4.942965                  5.070307   +0.1273    0.0621  <- argmax Gap
+   9            4.890907                  5.017801   +0.1269    0.0592
+  10            4.856008                  4.967183   +0.1112    0.0745
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0261  >=  Gap(3)-sk(3)=+0.0795  =>  False
+  k=3: Gap(3)=+0.1181  >=  Gap(4)-sk(4)=+0.0471  =>  True   <- CHOSEN HERE
+  k=4: Gap(4)=+0.1029  >=  Gap(5)-sk(5)=+0.0746  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.1189  >=  Gap(6)-sk(6)=+0.0030  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.0696  >=  Gap(7)-sk(7)=+0.0687  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.1192  >=  Gap(8)-sk(8)=+0.0652  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=+0.1273  >=  Gap(9)-sk(9)=+0.0677  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=+0.1269  >=  Gap(10)-sk(10)=+0.0366  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=3 vs k=4):
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  5.436568
+    mean_b[ log(W_4^(b)) ]  [null avg at k=4]  =  5.333004
+    log(W_3)  [real data]                          =  5.318431
+    log(W_4)  [real data]                          =  5.230098
+    Gap(3) = 5.436568 - 5.318431 = +0.118137
+    Gap(4) = 5.333004 - 5.230098 = +0.102905
+    sk(4)                                          =  0.055820
+    Gap(4) - sk(4)                              =  +0.047085
+    Gap(3) >= Gap(4) - sk(4)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : LAMP
+Scenes      : 556  |  Features (8): table, picture, book, sofa, pillow, bed, curtain, mirror
+Chosen k    : 4  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            6.082678                  6.162582   +0.0799    0.0345
+   3            5.832164                  5.978598   +0.1464    0.0314
+   4            5.632200                  5.842244   +0.2100    0.0438  <- CHOSEN k
+   5            5.461055                  5.693399   +0.2323    0.0465
+   6            5.380344                  5.627105   +0.2468    0.0544
+   7            5.278735                  5.523973   +0.2452    0.0580
+   8            5.179125                  5.425218   +0.2461    0.0319
+   9            5.083952                  5.338947   +0.2550    0.0563
+  10            4.988769                  5.248730   +0.2600    0.0640  <- argmax Gap
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0799  >=  Gap(3)-sk(3)=+0.1150  =>  False
+  k=3: Gap(3)=+0.1464  >=  Gap(4)-sk(4)=+0.1662  =>  False
+  k=4: Gap(4)=+0.2100  >=  Gap(5)-sk(5)=+0.1859  =>  True   <- CHOSEN HERE
+  k=5: Gap(5)=+0.2323  >=  Gap(6)-sk(6)=+0.1923  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.2468  >=  Gap(7)-sk(7)=+0.1872  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.2452  >=  Gap(8)-sk(8)=+0.2142  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=+0.2461  >=  Gap(9)-sk(9)=+0.1987  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=+0.2550  >=  Gap(10)-sk(10)=+0.1959  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=4 vs k=5):
+    mean_b[ log(W_4^(b)) ]  [null avg at k=4]  =  5.842244
+    mean_b[ log(W_5^(b)) ]  [null avg at k=5]  =  5.693399
+    log(W_4)  [real data]                          =  5.632200
+    log(W_5)  [real data]                          =  5.461055
+    Gap(4) = 5.842244 - 5.632200 = +0.210044
+    Gap(5) = 5.693399 - 5.461055 = +0.232345
+    sk(5)                                          =  0.046476
+    Gap(5) - sk(5)                              =  +0.185869
+    Gap(4) >= Gap(5) - sk(5)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : SOFA
+Scenes      : 795  |  Features (6): chair, table, window, picture, lamp, pillow
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            6.091330                  6.115790   +0.0245    0.0242  <- CHOSEN k
+   3            5.800595                  5.818551   +0.0180    0.0282
+   4            5.535276                  5.572101   +0.0368    0.0414
+   5            5.242324                  5.344520   +0.1022    0.0560
+   6            5.033100                  5.179674   +0.1466    0.0420  <- argmax Gap
+   7            4.868442                  4.959238   +0.0908    0.0797
+   8            4.701061                  4.798361   +0.0973    0.0796
+   9            4.535960                  4.577887   +0.0419    0.0651
+  10            4.369732                  4.372617   +0.0029    0.1143
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0245  >=  Gap(3)-sk(3)=-0.0102  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=+0.0180  >=  Gap(4)-sk(4)=-0.0045  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=+0.0368  >=  Gap(5)-sk(5)=+0.0462  =>  False
+  k=5: Gap(5)=+0.1022  >=  Gap(6)-sk(6)=+0.1046  =>  False
+  k=6: Gap(6)=+0.1466  >=  Gap(7)-sk(7)=+0.0111  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.0908  >=  Gap(8)-sk(8)=+0.0177  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=+0.0973  >=  Gap(9)-sk(9)=-0.0231  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=+0.0419  >=  Gap(10)-sk(10)=-0.1114  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  6.115790
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  5.818551
+    log(W_2)  [real data]                          =  6.091330
+    log(W_3)  [real data]                          =  5.800595
+    Gap(2) = 6.115790 - 6.091330 = +0.024460
+    Gap(3) = 5.818551 - 5.800595 = +0.017956
+    sk(3)                                          =  0.028169
+    Gap(3) - sk(3)                              =  -0.010213
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : PILLOW
+Scenes      : 578  |  Features (7): picture, book, lamp, sofa, bed, curtain, mirror
+Chosen k    : 3  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            5.757151                  5.947632   +0.1905    0.0296
+   3            5.403934                  5.739194   +0.3353    0.0371  <- CHOSEN k
+   4            5.204017                  5.526722   +0.3227    0.0528
+   5            4.970389                  5.321845   +0.3515    0.0684  <- argmax Gap
+   6            4.831088                  5.174168   +0.3431    0.0495
+   7            4.703016                  4.981244   +0.2782    0.0902
+   8            4.560805                  4.847386   +0.2866    0.0689
+   9            4.453025                  4.749638   +0.2966    0.0716
+  10            4.331640                  4.618238   +0.2866    0.0748
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.1905  >=  Gap(3)-sk(3)=+0.2981  =>  False
+  k=3: Gap(3)=+0.3353  >=  Gap(4)-sk(4)=+0.2699  =>  True   <- CHOSEN HERE
+  k=4: Gap(4)=+0.3227  >=  Gap(5)-sk(5)=+0.2830  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.3515  >=  Gap(6)-sk(6)=+0.2936  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.3431  >=  Gap(7)-sk(7)=+0.1881  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.2782  >=  Gap(8)-sk(8)=+0.2177  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=+0.2866  >=  Gap(9)-sk(9)=+0.2251  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=+0.2966  >=  Gap(10)-sk(10)=+0.2118  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=3 vs k=4):
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  5.739194
+    mean_b[ log(W_4^(b)) ]  [null avg at k=4]  =  5.526722
+    log(W_3)  [real data]                          =  5.403934
+    log(W_4)  [real data]                          =  5.204017
+    Gap(3) = 5.739194 - 5.403934 = +0.335260
+    Gap(4) = 5.526722 - 5.204017 = +0.322705
+    sk(4)                                          =  0.052785
+    Gap(4) - sk(4)                              =  +0.269919
+    Gap(3) >= Gap(4) - sk(4)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : BED
+Scenes      : 848  |  Features (5): picture, lamp, pillow, curtain, mirror
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            5.572963                  5.669637   +0.0967    0.0368  <- CHOSEN k
+   3            5.179917                  5.173627   -0.0063    0.0721
+   4            4.628295                  4.668128   +0.0398    0.0957
+   5            4.398655                  4.423598   +0.0249    0.0902
+   6            4.183545                  4.247214   +0.0637    0.1124
+   7            3.905827                  3.996047   +0.0902    0.0983
+   8            3.654100                  3.771550   +0.1175    0.1296
+   9            3.440173                  3.505801   +0.0656    0.1271
+  10            3.232198                  3.356138   +0.1239    0.1953  <- argmax Gap
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0967  >=  Gap(3)-sk(3)=-0.0784  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=-0.0063  >=  Gap(4)-sk(4)=-0.0559  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=+0.0398  >=  Gap(5)-sk(5)=-0.0653  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.0249  >=  Gap(6)-sk(6)=-0.0488  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.0637  >=  Gap(7)-sk(7)=-0.0081  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.0902  >=  Gap(8)-sk(8)=-0.0121  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=+0.1175  >=  Gap(9)-sk(9)=-0.0614  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=+0.0656  >=  Gap(10)-sk(10)=-0.0713  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  5.669637
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  5.173627
+    log(W_2)  [real data]                          =  5.572963
+    log(W_3)  [real data]                          =  5.179917
+    Gap(2) = 5.669637 - 5.572963 = +0.096674
+    Gap(3) = 5.173627 - 5.179917 = -0.006289
+    sk(3)                                          =  0.072137
+    Gap(3) - sk(3)                              =  -0.078427
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : MONITOR
+Scenes      : 440  |  Features (5): chair, desk, book, paper, keyboard
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            5.236151                  5.273178   +0.0370    0.0505  <- CHOSEN k
+   3            4.835761                  4.880416   +0.0447    0.0607  <- argmax Gap
+   4            4.551433                  4.578704   +0.0273    0.0797
+   5            4.273605                  4.283425   +0.0098    0.0869
+   6            4.055859                  4.066192   +0.0103    0.1268
+   7            3.832640                  3.833477   +0.0008    0.1173
+   8            3.658495                  3.592904   -0.0656    0.1754
+   9            3.463311                  3.368601   -0.0947    0.2201
+  10            3.279581                  3.143460   -0.1361    0.1463
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0370  >=  Gap(3)-sk(3)=-0.0160  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=+0.0447  >=  Gap(4)-sk(4)=-0.0524  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=+0.0273  >=  Gap(5)-sk(5)=-0.0771  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.0098  >=  Gap(6)-sk(6)=-0.1165  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.0103  >=  Gap(7)-sk(7)=-0.1165  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=+0.0008  >=  Gap(8)-sk(8)=-0.2410  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=-0.0656  >=  Gap(9)-sk(9)=-0.3148  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.0947  >=  Gap(10)-sk(10)=-0.2824  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  5.273178
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  4.880416
+    log(W_2)  [real data]                          =  5.236151
+    log(W_3)  [real data]                          =  4.835761
+    Gap(2) = 5.273178 - 5.236151 = +0.037027
+    Gap(3) = 4.880416 - 4.835761 = +0.044655
+    sk(3)                                          =  0.060672
+    Gap(3) - sk(3)                              =  -0.016018
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : CURTAIN
+Scenes      : 182  |  Features (3): lamp, pillow, bed
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            3.953161                  4.033548   +0.0804    0.0684  <- CHOSEN k
+   3            3.558476                  3.453602   -0.1049    0.1077
+   4            3.204645                  2.809881   -0.3948    0.1973
+   5            2.485812                  2.214421   -0.2714    0.2639
+   6            1.801329                  1.458980   -0.3423    0.4734
+   7            0.836248                 -3.223128   -4.0594    8.5311
+   8          -23.025851                -23.025851   -0.0000    0.0000
+   9          -23.025851                -23.025851   -0.0000    0.0000
+  10          -23.025851                -23.025851   -0.0000    0.0000
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0804  >=  Gap(3)-sk(3)=-0.2125  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=-0.1049  >=  Gap(4)-sk(4)=-0.5921  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=-0.3948  >=  Gap(5)-sk(5)=-0.5353  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=-0.2714  >=  Gap(6)-sk(6)=-0.8158  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=-0.3423  >=  Gap(7)-sk(7)=-12.5905  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=-4.0594  >=  Gap(8)-sk(8)=-0.0000  =>  False
+  k=8: Gap(8)=-0.0000  >=  Gap(9)-sk(9)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.0000  >=  Gap(10)-sk(10)=-0.0000  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  4.033548
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  3.453602
+    log(W_2)  [real data]                          =  3.953161
+    log(W_3)  [real data]                          =  3.558476
+    Gap(2) = 4.033548 - 3.953161 = +0.080387
+    Gap(3) = 3.453602 - 3.558476 = -0.104874
+    sk(3)                                          =  0.107661
+    Gap(3) - sk(3)                              =  -0.212535
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : BOTTLE
+Scenes      : 159  |  Features (7): cabinet, box, book, paper, bag, counter, cup
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            4.006501                  3.983821   -0.0227    0.1489  <- CHOSEN k
+   3            3.736544                  3.713977   -0.0226    0.1352  <- argmax Gap
+   4            3.589633                  3.424297   -0.1653    0.1269
+   5            3.381773                  3.210071   -0.1717    0.1352
+   6            3.181561                  2.923068   -0.2585    0.2036
+   7            2.941209                  2.709903   -0.2313    0.2254
+   8            2.728381                  2.537305   -0.1911    0.2619
+   9            2.517590                  2.352133   -0.1655    0.3484
+  10            2.369341                  2.094019   -0.2753    0.3598
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=-0.0227  >=  Gap(3)-sk(3)=-0.1577  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=-0.0226  >=  Gap(4)-sk(4)=-0.2922  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=-0.1653  >=  Gap(5)-sk(5)=-0.3069  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=-0.1717  >=  Gap(6)-sk(6)=-0.4621  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=-0.2585  >=  Gap(7)-sk(7)=-0.4567  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=-0.2313  >=  Gap(8)-sk(8)=-0.4529  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=-0.1911  >=  Gap(9)-sk(9)=-0.5139  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.1655  >=  Gap(10)-sk(10)=-0.6351  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  3.983821
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  3.713977
+    log(W_2)  [real data]                          =  4.006501
+    log(W_3)  [real data]                          =  3.736544
+    Gap(2) = 3.983821 - 4.006501 = -0.022680
+    Gap(3) = 3.713977 - 3.736544 = -0.022567
+    sk(3)                                          =  0.135156
+    Gap(3) - sk(3)                              =  -0.157723
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : BAG
+Scenes      : 147  |  Features (7): cabinet, box, picture, book, paper, bottle, counter
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            3.896160                  3.835240   -0.0609    0.0807  <- CHOSEN k
+   3            3.449844                  3.470412   +0.0206    0.1804
+   4            3.149506                  3.186134   +0.0366    0.1686
+   5            2.866432                  2.937113   +0.0707    0.1906  <- argmax Gap
+   6            2.660753                  2.600888   -0.0599    0.1999
+   7            2.452736                  2.410465   -0.0423    0.2189
+   8            2.259031                  2.123658   -0.1354    0.3939
+   9            2.035698                  1.819543   -0.2162    0.4045
+  10            1.785290                  1.573408   -0.2119    0.3472
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=-0.0609  >=  Gap(3)-sk(3)=-0.1598  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=+0.0206  >=  Gap(4)-sk(4)=-0.1320  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=+0.0366  >=  Gap(5)-sk(5)=-0.1199  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=+0.0707  >=  Gap(6)-sk(6)=-0.2597  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=-0.0599  >=  Gap(7)-sk(7)=-0.2612  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=-0.0423  >=  Gap(8)-sk(8)=-0.5293  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=-0.1354  >=  Gap(9)-sk(9)=-0.6207  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.2162  >=  Gap(10)-sk(10)=-0.5591  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  3.835240
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  3.470412
+    log(W_2)  [real data]                          =  3.896160
+    log(W_3)  [real data]                          =  3.449844
+    Gap(2) = 3.835240 - 3.896160 = -0.060920
+    Gap(3) = 3.470412 - 3.449844 = +0.020568
+    sk(3)                                          =  0.180377
+    Gap(3) - sk(3)                              =  -0.159809
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : MIRROR
+Scenes      : 144  |  Features (3): lamp, pillow, bed
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            3.220303                  3.827090   +0.6068    0.0826  <- CHOSEN k
+   3            2.643421                  3.285570   +0.6421    0.1306
+   4            2.196675                  2.731217   +0.5345    0.2583
+   5            1.256004                  2.096353   +0.8403    0.2301
+   6            0.492476                  1.503611   +1.0111    0.3104
+   7          -23.025851                 -4.511885  +18.5140    9.4912  <- argmax Gap
+   8          -23.025851                -23.025851   -0.0000    0.0000
+   9          -23.025851                -23.025851   -0.0000    0.0000
+  10          -23.025851                -23.025851   -0.0000    0.0000
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.6068  >=  Gap(3)-sk(3)=+0.5115  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=+0.6421  >=  Gap(4)-sk(4)=+0.2762  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=+0.5345  >=  Gap(5)-sk(5)=+0.6103  =>  False
+  k=5: Gap(5)=+0.8403  >=  Gap(6)-sk(6)=+0.7007  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+1.0111  >=  Gap(7)-sk(7)=+9.0227  =>  False
+  k=7: Gap(7)=+18.5140  >=  Gap(8)-sk(8)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=-0.0000  >=  Gap(9)-sk(9)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.0000  >=  Gap(10)-sk(10)=-0.0000  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  3.827090
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  3.285570
+    log(W_2)  [real data]                          =  3.220303
+    log(W_3)  [real data]                          =  2.643421
+    Gap(2) = 3.827090 - 3.220303 = +0.606786
+    Gap(3) = 3.285570 - 2.643421 = +0.642149
+    sk(3)                                          =  0.130640
+    Gap(3) - sk(3)                              =  +0.511510
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : COUNTER
+Scenes      : 200  |  Features (4): cabinet, bottle, bag, cup
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            1.089151                 -0.107023   -1.1962    5.4039  <- CHOSEN k
+   3           -0.005731                -11.386583  -11.3809   11.9314
+   4          -23.025851                -17.343652   +5.6822   10.0863  <- argmax Gap
+   5          -23.025851                -23.025851   -0.0000    0.0000
+   6          -23.025851                -23.025851   -0.0000    0.0000
+   7          -23.025851                -23.025851   -0.0000    0.0000
+   8          -23.025851                -23.025851   -0.0000    0.0000
+   9          -23.025851                -23.025851   -0.0000    0.0000
+  10          -23.025851                -23.025851   -0.0000    0.0000
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=-1.1962  >=  Gap(3)-sk(3)=-23.3123  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=-11.3809  >=  Gap(4)-sk(4)=-4.4041  =>  False
+  k=4: Gap(4)=+5.6822  >=  Gap(5)-sk(5)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=-0.0000  >=  Gap(6)-sk(6)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=-0.0000  >=  Gap(7)-sk(7)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=-0.0000  >=  Gap(8)-sk(8)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=-0.0000  >=  Gap(9)-sk(9)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.0000  >=  Gap(10)-sk(10)=-0.0000  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  -0.107023
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  -11.386583
+    log(W_2)  [real data]                          =  1.089151
+    log(W_3)  [real data]                          =  -0.005731
+    Gap(2) = -0.107023 - 1.089151 = -1.196175
+    Gap(3) = -11.386583 - -0.005731 = -11.380853
+    sk(3)                                          =  11.931408
+    Gap(3) - sk(3)                              =  -23.312261
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : KEYBOARD
+Scenes      : 300  |  Features (3): desk, paper, monitor
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            4.510844                  4.531697   +0.0209    0.0539  <- CHOSEN k
+   3            3.851369                  3.930827   +0.0795    0.0856  <- argmax Gap
+   4            3.092130                  3.117943   +0.0258    0.1776
+   5            2.477938                  2.380921   -0.0970    0.2411
+   6            1.753750                  1.760386   +0.0066    0.3015
+   7            0.934309                 -0.517967   -1.4523    5.2971
+   8          -23.025851                -23.025851   -0.0000    0.0000
+   9          -23.025851                -23.025851   -0.0000    0.0000
+  10          -23.025851                -23.025851   -0.0000    0.0000
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0209  >=  Gap(3)-sk(3)=-0.0062  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=+0.0795  >=  Gap(4)-sk(4)=-0.1518  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=+0.0258  >=  Gap(5)-sk(5)=-0.3381  =>  True   (also True, ignored — already chosen above)
+  k=5: Gap(5)=-0.0970  >=  Gap(6)-sk(6)=-0.2949  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+0.0066  >=  Gap(7)-sk(7)=-6.7494  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=-1.4523  >=  Gap(8)-sk(8)=-0.0000  =>  False
+  k=8: Gap(8)=-0.0000  >=  Gap(9)-sk(9)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.0000  >=  Gap(10)-sk(10)=-0.0000  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  4.531697
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  3.930827
+    log(W_2)  [real data]                          =  4.510844
+    log(W_3)  [real data]                          =  3.851369
+    Gap(2) = 4.531697 - 4.510844 = +0.020853
+    Gap(3) = 3.930827 - 3.851369 = +0.079458
+    sk(3)                                          =  0.085609
+    Gap(3) - sk(3)                              =  -0.006151
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS: LIGHT   [SKIPPED — only 34 scenes, need >= 80]
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS : CUP
+Scenes      : 107  |  Features (4): cabinet, paper, bottle, counter
+Chosen k    : 2  (by Tibshirani 1-SE rule)
+
+   k    log(W_k)  [real]  mean_b[log(W_k^(b))]  [null avg]    Gap(k)        sk  note
+  ··················································································
+   2            2.557907                  2.586360   +0.0285    0.1964  <- CHOSEN k
+   3            1.959462                  1.500626   -0.4588    0.6209
+   4            0.405465                 -3.001226   -3.4067    8.6323
+   5          -23.025851                -11.479470  +11.5464   11.8349  <- argmax Gap
+   6          -23.025851                -20.752034   +2.2738    6.9899
+   7          -23.025851                -23.025851   -0.0000    0.0000
+   8          -23.025851                -23.025851   -0.0000    0.0000
+   9          -23.025851                -23.025851   -0.0000    0.0000
+  10          -23.025851                -23.025851   -0.0000    0.0000
+
+  1-SE rule: pick SMALLEST k where Gap(k) >= Gap(k+1) - sk(k+1)
+  ··········································································
+  k=2: Gap(2)=+0.0285  >=  Gap(3)-sk(3)=-1.0797  =>  True   <- CHOSEN HERE
+  k=3: Gap(3)=-0.4588  >=  Gap(4)-sk(4)=-12.0390  =>  True   (also True, ignored — already chosen above)
+  k=4: Gap(4)=-3.4067  >=  Gap(5)-sk(5)=-0.2885  =>  False
+  k=5: Gap(5)=+11.5464  >=  Gap(6)-sk(6)=-4.7161  =>  True   (also True, ignored — already chosen above)
+  k=6: Gap(6)=+2.2738  >=  Gap(7)-sk(7)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=7: Gap(7)=-0.0000  >=  Gap(8)-sk(8)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=8: Gap(8)=-0.0000  >=  Gap(9)-sk(9)=-0.0000  =>  True   (also True, ignored — already chosen above)
+  k=9: Gap(9)=-0.0000  >=  Gap(10)-sk(10)=-0.0000  =>  True   (also True, ignored — already chosen above)
+
+  DECISIVE COMPARISON  (k=2 vs k=3):
+    mean_b[ log(W_2^(b)) ]  [null avg at k=2]  =  2.586360
+    mean_b[ log(W_3^(b)) ]  [null avg at k=3]  =  1.500626
+    log(W_2)  [real data]                          =  2.557907
+    log(W_3)  [real data]                          =  1.959462
+    Gap(2) = 2.586360 - 2.557907 = +0.028453
+    Gap(3) = 1.500626 - 1.959462 = -0.458835
+    sk(3)                                          =  0.620867
+    Gap(3) - sk(3)                              =  -1.079702
+    Gap(2) >= Gap(3) - sk(3)?               =  True
+
+──────────────────────────────────────────────────────────────────────────────────────────
+FOCAL CLASS: SIGN   [SKIPPED — only 16 scenes, need >= 80]
+
+==========================================================================================
+SUMMARY ACROSS ALL FOCAL CLASSES
+==========================================================================================
+  Focal class      Scenes   Features   Chosen k   Gap at chosen k   Argmax k   Rule fired early?
+  ───────────────────────────────────────────────────────────────────────────────────
+  chair              4416         12          3           +0.1168          3    No (used argmax)
+  table              2989         11          2           +0.0110          2    No (used argmax)
+  door                108          7          2           +0.0046          7  Yes (Occams razor)
+  cabinet             563         13          2           +0.0600          3  Yes (Occams razor)
+  shelf               799          9          2           +0.0438          2    No (used argmax)
+  desk               1384          7          3           +0.0541          3    No (used argmax)
+  box                 503         11          2           +0.0358          4  Yes (Occams razor)
+  picture             180         14          2           +0.0450          9  Yes (Occams razor)
+  book                229         13          3           +0.0590          8  Yes (Occams razor)
+  paper               206         14          3           +0.1181          8  Yes (Occams razor)
+  lamp                556          8          4           +0.2100         10  Yes (Occams razor)
+  sofa                795          6          2           +0.0245          6  Yes (Occams razor)
+  pillow              578          7          3           +0.3353          5  Yes (Occams razor)
+  bed                 848          5          2           +0.0967         10  Yes (Occams razor)
+  monitor             440          5          2           +0.0370          3  Yes (Occams razor)
+  curtain             182          3          2           +0.0804          2    No (used argmax)
+  bottle              159          7          2           -0.0227          3  Yes (Occams razor)
+  bag                 147          7          2           -0.0609          5  Yes (Occams razor)
+  mirror              144          3          2           +0.6068          7  Yes (Occams razor)
+  counter             200          4          2           -1.1962          4  Yes (Occams razor)
+  keyboard            300          3          2           +0.0209          3  Yes (Occams razor)
+  cup                 107          4          2           +0.0285          5  Yes (Occams razor)
+
+Saved to: C:\sunrgbd-exploration\03_clustering\gap_diagnostic_full.txt
