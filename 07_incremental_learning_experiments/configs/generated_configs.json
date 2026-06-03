@@ -1,0 +1,15 @@
+{
+ "3stage": [
+  "/data3/ryan/tr3d/configs/tr3d_incremental_v4/3stage/stage1.py",
+  "/data3/ryan/tr3d/configs/tr3d_incremental_v4/3stage/stage2.py",
+  "/data3/ryan/tr3d/configs/tr3d_incremental_v4/3stage/stage3.py"
+ ],
+ "6stage": [
+  "/data3/ryan/tr3d/configs/tr3d_incremental_v4/6stage/stage1.py",
+  "/data3/ryan/tr3d/configs/tr3d_incremental_v4/6stage/stage2.py",
+  "/data3/ryan/tr3d/configs/tr3d_incremental_v4/6stage/stage3.py",
+  "/data3/ryan/tr3d/configs/tr3d_incremental_v4/6stage/stage4.py",
+  "/data3/ryan/tr3d/configs/tr3d_incremental_v4/6stage/stage5.py",
+  "/data3/ryan/tr3d/configs/tr3d_incremental_v4/6stage/stage6.py"
+ ]
+}

@@ -31,6 +31,13 @@ The dataset itself is **not included** in this repo. Download it from the [offic
     archive/                     Superseded v1 script + outputs
     results/                     All v2 outputs — use the bestorder files (see below)
 06_preprocessing/              Depth-to-point-cloud pipeline documentation
+07_incremental_learning_experiments/  Class-incremental TR3D training (naive / pseudo-label / distillation)
+    data_prep/                   Step A/B: build 3D-box splits, carve pkls, generate configs
+    split_outputs/               the resulting 3-stage & 6-stage schedule definitions
+    step_c_tools/                Step C: head expansion, pseudo-labels, run + analyze scripts
+    model_code/                  modified TR3D source (distill detector + empty-batch fix)
+    configs/                     generated per-stage TR3D configs
+    results/                     3-way comparison + extracted per-stage AP tables
 pipeline/                      TR3D detection pipeline trace (CPU, no MinkowskiEngine)
 validation/                    Cross-checks against independently computed incidence counts
 ```
@@ -121,6 +128,23 @@ Full analysis: [`05_incremental_splits/results/split_analysis_report_v2_bestorde
 ### 06 — Preprocessing
 
 Documentation of the depth-to-point-cloud pipeline used upstream of the detector.
+
+---
+
+### 07 — Incremental Learning Experiments
+
+Where the splits become an actual experiment. **TR3D** (sparse-voxel 3D detector) is adapted into a
+**class-incremental** setup — learning new object classes in stages, each stage seeing labels for only its
+own new classes — using **SDCoT** as the structural reference. Two schedules are built from **3D-box** counts
+(correcting the 2D-presence signal used in `05_`): a 3-stage and a 6-stage class ordering. Three training
+variants are compared: **naive fine-tuning** (baseline), **pseudo-labeling** (re-label old classes with the
+previous stage's model), and **distillation** (keep a frozen teacher's old-class logits).
+
+**Headline:** pseudo-labeling roughly halves forgetting and lifts old-class mAP ~15× over naive on the
+3-stage schedule; distillation helps a little more only on the harder 6-stage tail.
+
+Full writeup: [`07_incremental_learning_experiments/README.md`](07_incremental_learning_experiments/README.md)
+· results: [`07_incremental_learning_experiments/results/RESULTS.md`](07_incremental_learning_experiments/results/RESULTS.md)
 
 ---
 
