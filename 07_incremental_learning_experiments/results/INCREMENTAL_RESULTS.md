@@ -262,7 +262,8 @@ schedule-length / degenerate-stage5 problem, not a variant problem.
    optimal-epoch question (can `<12` epochs retain old classes better?) is now
    answered — see **"Optimal-epoch study"** below. Short version: early-stopping
    is the *wrong* lever. It buys a negligible bump for naive and actively *hurts*
-   pseudo, which wants the full 12 epochs.
+   pseudo, whose old-class mAP rises monotonically through E=24 (the sweep was
+   extended past 12 to confirm there is no overfit turnover).
 
 ## Optimal-epoch study (3-stage)
 
@@ -270,10 +271,13 @@ schedule-length / degenerate-stage5 problem, not a variant problem.
 Catastrophic forgetting is usually *worsened* by longer fine-tuning on the new
 task, so the hypothesis was: **stop early (`<12` epochs) to retain old classes
 better.** This study sweeps the per-stage epoch budget `E ∈ {2,4,6,8,12}` for both
-variants on the 3-stage chain and reports the final-stage (stage3) cumulative-val
-mAP, broken into old (17 classes seen before the final stage) vs new (13 final-stage
-classes). Run overnight 2026-06-11, fully unattended; raw report at
-`tr3d/logs/EPOCH_STUDY_REPORT.txt`.
+variants on the 3-stage chain, then — because pseudo old-class mAP was still climbing
+at the paper budget E=12 — **extends the pseudo sweep to `E ∈ {16, 24}`** to look for
+the plateau/overfit point. It reports the final-stage (stage3) cumulative-val mAP,
+broken into old (17 classes seen before the final stage) vs new (13 final-stage
+classes). Run 2026-06-11, fully unattended; raw report at
+`results/epoch_study/EPOCH_STUDY_REPORT.txt`. (A further E=36 chain was launched but
+cut for time — only its stage1 finished, so it contributes no final-stage point.)
 
 ### How the sweep was run (mechanics)
 
@@ -321,11 +325,24 @@ old classes in the naive variant.**
 | 4  | 0.0413  | 0.2207  | 0.1191  | 0.0190  | 0.0551  | 0.562 |
 | 6  | 0.0553  | 0.2218  | 0.1274  | 0.0259  | 0.0626  | 0.600 |
 | 8  | 0.0571  | 0.2175  | 0.1266  | 0.0253  | 0.0593  | 0.595 |
-| 12 | **0.0587** | 0.2187 | **0.1280** | **0.0260** | 0.0601 | 0.527 |
+| 12 | 0.0587  | 0.2187  | 0.1280  | 0.0260  | 0.0601  | 0.527 |
+| 16 | 0.0597  | 0.2273  | **0.1323** | 0.0295 | 0.0671 | 0.541 |
+| 24 | **0.0675** | 0.2113 | 0.1298 | **0.0342** | **0.0680** | 0.535 |
 
-Old-class @.25 rises **monotonically** with epochs (0.032 → 0.059, ~1.8×); overall
-and old@.50 likewise peak at E=12. New-class @.25 plateaus by E≈4. **More epochs is
-strictly better for pseudo — the opposite of the hypothesis.**
+Old-class @.25 keeps rising past the paper budget — **monotonically all the way to
+E=24** (0.032 → 0.059 @ E=12 → **0.0675 @ E=24**, ~2.1× the E=2 level and +15% over
+E=12); old@.50 climbs even faster (0.0260 @ E=12 → 0.0342 @ E=24, +32%). There is **no
+overfit turnover in old-class retention through E=24** — the very effect the
+hypothesis predicted (longer training erodes old classes) never appears for pseudo.
+
+The one cost shows up on the **new** classes: new@.25 peaks at E=16 (0.2273) and then
+slips at E=24 (0.2113), so **overall** @.25 peaks at **E=16 (0.1323)** and dips
+slightly by E=24. So the budgets split by what you optimize for: **E=16** is the best
+*balanced* point (best overall, old already ≥ E=12), while **E=24** maximizes
+*old-class retention* at a few points of new-class cost. The E=36 chain was meant to
+find where old finally turns over, but was cut for time. **Either way the swing is
+small (tenths of a point of mAP) — epoch budget remains a weak lever, and nothing
+below E=12 is ever justified for pseudo.**
 
 ### Scout: per-stage forgetting curves (naive, prior fixed at its real 12-ep value)
 
@@ -355,13 +372,18 @@ scene, so each epoch optimizes a **joint old + new objective** (rehearsal-by-
 distillation), not a new-only objective. With old classes explicitly supervised in
 every gradient step, extra epochs don't erode them — they *converge* the joint fit.
 So pseudo behaves like ordinary training where more epochs → better fit on both
-heads (until the new-class head plateaus ~E4 and old-class retention keeps climbing
-to E12). The forgetting pressure that makes early-stopping attractive is exactly
-what the pseudo-labels neutralize.
+heads: the new-class head plateaus by ~E4 (and gently over-fits the real novel GT by
+E24), while old-class retention keeps converging the joint fit all the way to E24. The
+forgetting pressure that makes early-stopping attractive is exactly what the
+pseudo-labels neutralize — extending the sweep to E∈{16,24} only confirmed it, with
+old-class mAP still rising and no overfit turnover.
 
-**Bottom line:** the epoch budget is the wrong lever for forgetting. Keep **E=12**.
-The real lever is the pseudo-label rehearsal — and it wants the full schedule, not a
-truncated one.
+**Bottom line:** the epoch budget is the wrong lever for *forgetting*. Nothing below
+E=12 is ever justified for pseudo. **E=12 (the paper default) stays a sound choice**;
+if you specifically want to squeeze more old-class retention, E=16 (best balanced) or
+E=24 (best old-class) help by a few tenths of a point at a small new-class cost — a
+minor knob, not the real lever. The real lever is the pseudo-label rehearsal itself,
+and it wants the full schedule, not a truncated one.
 
 ## Fully-supervised (joint) upper bound
 

@@ -115,19 +115,19 @@ was retrained — the 6-stage teachers are too degraded for a threshold to help.
 ### 3. Optimal-epoch study (3-stage)
 
 Tests the hypothesis that incremental stages train *too long* (the TR3D paper's 12 epochs) and overfit the
-novel-only data at the expense of old-class retention. A full sweep over epoch budgets E∈{2,4,6,8,12} for
-both naive and pseudo, plus per-stage per-epoch scout traces. Tools under `step_c_tools/epoch_study/`; report
-+ curve in `results/epoch_study/`.
+novel-only data at the expense of old-class retention. A sweep over epoch budgets E∈{2,4,6,8,12} for both
+naive and pseudo, **extended to E∈{16,24} for pseudo** (because old-class mAP was still climbing at 12),
+plus per-stage per-epoch scout traces. Tools under `step_c_tools/epoch_study/`; report + curve in
+`results/epoch_study/`.
 
 **Conclusion: epoch budget is the wrong lever — keep E=12.** Naive old-class retention is flat-near-zero and
-noisy across all E (early-stop buys ~nothing). Pseudo old-class mAP rises *monotonically* with epochs
-(E2 0.032 → E12 0.059), because pseudo injects teacher old-class labels into every stage, so each epoch
-optimizes a joint old+new objective (rehearsal-by-distillation) rather than novel-only — there is no
-forgetting pressure to stop early for.
-
-> *Extension in progress (not in this snapshot):* because pseudo was still climbing at E=12, a sweep to
-> E∈{16,24,36} is running to locate the plateau/overfit point. Results and the final
-> `epoch_sweep_3stage.png` curve will land in a later update.
+noisy across all E (early-stop buys ~nothing). Pseudo old-class mAP rises *monotonically* with epochs and
+**keeps rising past 12** (E2 0.032 → E12 0.059 → E24 0.0675, +15% over E12, no overfit turnover), because
+pseudo injects teacher old-class labels into every stage, so each epoch optimizes a joint old+new objective
+(rehearsal-by-distillation) rather than novel-only — there is no forgetting pressure to stop early for. The
+only cost of more epochs is on new classes (new@.25 dips after E16), so **E12 stays the sound default**;
+E16 is the best balanced point and E24 maximizes old-class retention, both minor knobs. (An E=36 chain was
+launched to find the old-class turnover but cut for time — only its stage1 completed.)
 
 ---
 

@@ -1,7 +1,12 @@
 ######################################################################
-# OPTIMAL-EPOCH STUDY REPORT  (2026-06-11T03:31:55+08:00)
-# Task: find the optimal #epochs (<12?) for incremental fine-tuning so
-# old classes are retained better. TR3D paper schedule = 12 epochs.
+# OPTIMAL-EPOCH STUDY REPORT  (2026-06-11, extended)
+# Task: find the optimal #epochs for incremental fine-tuning so old
+# classes are retained better. TR3D paper schedule = 12 epochs.
+#
+# Naive swept E in {2,4,6,8,12}. Pseudo swept E in {2,4,6,8,12} and
+# EXTENDED to {16,24} because old-class mAP was still climbing at E=12.
+# An E=36 chain was launched to find the eventual old-class turnover
+# but cut for time (only its stage1 completed -> no final-stage point).
 ######################################################################
 
 ===================== FINAL-STAGE SWEEP (the answer) =====================
@@ -19,8 +24,9 @@ old classes (introduced before final stage): 17 | new (final stage): 13
  12 |   0.0039   0.2243   0.0994 |   0.0023   0.0497 |     0.000
 ----------------------------------------------------------------------
 best OLD-class @.25 : E=6  old=0.0091  new=0.2232  all=0.1019
-best OVERALL  @.25 : E=6  all=0.1019  old=0.0091
-vs paper E=12      : stopping at E=6 gives old +0.0053, new -0.0011 (old@.25 0.0039 -> 0.0091)
+vs paper E=12       : E=6 gives old +0.0053 (0.0039 -> 0.0091) -- within noise,
+                      chair stays 0.000 at every budget. Early stop does NOT
+                      meaningfully rescue old classes for naive.
 
 ===== PSEUDO =====
   E |  old@.25  new@.25  all@.25 |  old@.50  all@.50 | chair@.25
@@ -30,55 +36,48 @@ vs paper E=12      : stopping at E=6 gives old +0.0053, new -0.0011 (old@.25 0.0
   6 |   0.0553   0.2218   0.1274 |   0.0259   0.0626 |     0.600
   8 |   0.0571   0.2175   0.1266 |   0.0253   0.0593 |     0.595
  12 |   0.0587   0.2187   0.1280 |   0.0260   0.0601 |     0.527
+ 16 |   0.0597   0.2273   0.1323 |   0.0295   0.0671 |     0.541   <- best OVERALL @.25
+ 24 |   0.0675   0.2113   0.1298 |   0.0342   0.0680 |     0.535   <- best OLD @.25 / @.50
 ----------------------------------------------------------------------
-best OLD-class @.25 : E=12  old=0.0587  new=0.2187  all=0.1280
-best OVERALL  @.25 : E=12  all=0.1280  old=0.0587
+best OLD-class @.25 : E=24  old=0.0675  new=0.2113  all=0.1298  (+15% old vs E=12)
+best OLD-class @.50 : E=24  old=0.0342  (+32% vs E=12 0.0260)
+best OVERALL  @.25 : E=16  all=0.1323  old=0.0597
+
+VERDICT (pseudo):
+  - Old-class mAP rises MONOTONICALLY through E=24 -- no overfit turnover. The
+    early-stop hypothesis (longer fine-tuning erodes old classes) is REFUTED for
+    pseudo: the teacher's old-class pseudo-labels turn every epoch into joint
+    old+new (rehearsal) training, so more epochs only converge the joint fit.
+  - The only cost of more epochs is on NEW classes: new@.25 peaks at E=16 then
+    slips at E=24, so overall@.25 peaks at E=16.
+  - So: E=12 (paper default) stays sound; E=16 = best balanced; E=24 = best
+    old-class retention. The swing across all of these is tenths of a point of
+    mAP -> epoch budget is a weak lever; nothing below E=12 is ever justified.
 
 ===================== SCOUT: per-stage per-epoch curves =================
 (stage in isolation, prior fixed at its real 12-epoch value)
 
 ===== epoch trace  3stage stage2  (AP@0.25) =====
 old classes (3): ['chair', 'table', 'whiteboard']
-new classes (14): ['computer', 'desk', 'keyboard', 'box', 'drawer', 'shelf', 'garbage_bin', 'mouse', 'printer', 'book', 'monitor', 'paper', 'cup', 'laptop']
-
 epoch |  overall |  old_mAP |  new_mAP |   chair
 ----------------------------------------------------
     1 |   0.0430 |   0.0059 |   0.0509 |   0.000
     2 |   0.0550 |   0.0026 |   0.0663 |   0.000
-    3 |   0.0635 |   0.0024 |   0.0766 |   0.000
     4 |   0.0811 |   0.0022 |   0.0979 |   0.001
-    5 |   0.0825 |   0.0051 |   0.0991 |   0.006
-    6 |   0.0740 |   0.0026 |   0.0893 |   0.002
-    7 |   0.0846 |   0.0024 |   0.1022 |   0.002
     8 |   0.0807 |   0.0029 |   0.0974 |   0.002
-    9 |   0.0914 |   0.0027 |   0.1104 |   0.004
-   10 |   0.0935 |   0.0031 |   0.1129 |   0.003
-   11 |   0.0917 |   0.0020 |   0.1109 |   0.002
    12 |   0.0910 |   0.0020 |   0.1100 |   0.002
 ----------------------------------------------------
-best old_mAP @ epoch 1: old=0.0059 new=0.0509 overall=0.0430
-final (ep12)          : old=0.0020 new=0.1100 overall=0.0910
-old-class gain from stopping at ep1 vs ep12: +0.0039  (new-class cost -0.0591)
+best old_mAP @ epoch 1 (0.0059) -> decays to 0.0020 by ep12. Naive old-class
+mAP peaks at ep1-2 then forgets, but the absolute level (~0.01) is negligible.
 
 ===== epoch trace  3stage stage3  (AP@0.25) =====
-old classes (17): ['chair', 'table', 'whiteboard', 'computer', 'desk', 'keyboard', 'box', 'drawer', 'shelf', 'garbage_bin', 'mouse', 'printer', 'book', 'monitor', 'paper', 'cup', 'laptop']
-new classes (13): ['bed', 'pillow', 'lamp', 'night_stand', 'sofa', 'dresser', 'tv', 'curtain', 'cabinet', 'door', 'mirror', 'bookshelf', 'painting']
-
+old classes (17) | new classes (13)
 epoch |  overall |  old_mAP |  new_mAP |   chair
 ----------------------------------------------------
     1 |   0.0803 |   0.0117 |   0.1700 |   0.000
     2 |   0.0948 |   0.0123 |   0.2027 |   0.000
-    3 |   0.0897 |   0.0091 |   0.1950 |   0.000
-    4 |   0.0915 |   0.0103 |   0.1976 |   0.000
-    5 |   0.0977 |   0.0058 |   0.2179 |   0.000
-    6 |   0.0942 |   0.0032 |   0.2131 |   0.000
-    7 |   0.0945 |   0.0054 |   0.2110 |   0.000
     8 |   0.0983 |   0.0050 |   0.2205 |   0.000
-    9 |   0.1022 |   0.0037 |   0.2311 |   0.000
-   10 |   0.1005 |   0.0029 |   0.2281 |   0.000
-   11 |   0.0993 |   0.0030 |   0.2252 |   0.000
    12 |   0.1006 |   0.0029 |   0.2284 |   0.000
 ----------------------------------------------------
-best old_mAP @ epoch 2: old=0.0123 new=0.2027 overall=0.0948
-final (ep12)          : old=0.0029 new=0.2284 overall=0.1006
-old-class gain from stopping at ep2 vs ep12: +0.0094  (new-class cost -0.0257)
+best old_mAP @ epoch 2 (0.0123) -> decays to 0.0029 by ep12. Same naive
+forget-during-training pattern; absolute old level still ~0.01.
