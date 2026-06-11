@@ -69,6 +69,10 @@ step_c_tools/         Step C: the training + evaluation scripts
   run_pseudo_v4.sh                 variant 2: pseudo-labeling
   run_distill_v4.sh                variant 3: pseudo-labeling + logit distillation
   analyze_incremental.py           parse eval logs -> per-stage old/new mAP + forgetting
+  verify_pseudo_quality.py         proxy precision/recall/F1 of teacher pseudo-labels vs threshold
+  run_pseudo_v4_thr045.sh          pseudo retrain at the tuned 0.45 confidence threshold
+  run_joint_v4.sh                  fully-supervised (joint) upper-bound run
+  epoch_study/                     optimal-epoch study: epoch-budget sweep + per-epoch scout traces
   archive/                         earlier harness skeletons
 
 model_code/           modified TR3D / mmdet3d source (see model_code/README.md for the diffs)
@@ -77,9 +81,14 @@ model_code/           modified TR3D / mmdet3d source (see model_code/README.md f
   detectors__init__.py             registers the new detector
 
 configs/              generated per-stage configs (3stage/, 6stage/, generated_configs.json)
+                      + joint.py (the fully-supervised upper-bound config) per schedule
 
-results/              RESULTS.md (the 3-way comparison) + eval_logs/ (27 extracted per-stage AP tables)
+results/              RESULTS.md (3-way comparison) + INCREMENTAL_RESULTS.md (comprehensive report)
+  eval_logs/                       extracted per-stage AP tables (naive/pseudo/distill + joint + thr045)
+  epoch_study/                     optimal-epoch report + sweep curve
 ```
+
+The `data_prep/build_joint_pkl.py` script builds the joint (all-labels) train pkls for the upper-bound run.
 
 ---
 
@@ -99,6 +108,12 @@ bash step_c_tools/run_distill_v4.sh 3stage 0   # optional 3rd variant
 
 # Analyze
 python step_c_tools/analyze_incremental.py --root work_dirs/incremental_v4_pseudo --sched 3stage --metric 0.25
+
+# Follow-up experiments
+python data_prep/build_joint_pkl.py                          # build joint (all-labels) train pkls
+bash   step_c_tools/run_joint_v4.sh         3stage 0         # fully-supervised upper bound
+bash   step_c_tools/run_pseudo_v4_thr045.sh 3stage 0         # pseudo at the tuned 0.45 threshold
+bash   step_c_tools/epoch_study/run_epoch_study_all.sh       # optimal-epoch sweep (3stage)
 ```
 
 ---
@@ -107,4 +122,12 @@ python step_c_tools/analyze_incremental.py --root work_dirs/incremental_v4_pseud
 
 Pseudo-labeling is the workhorse — on the clean 3-stage schedule it roughly **halves forgetting** and lifts
 old-class mAP ~**15×** over naive fine-tuning. Distillation adds only a small extra margin, and only on the
-harder 6-stage tail where it was designed to help. Full numbers in [`results/RESULTS.md`](results/RESULTS.md).
+harder 6-stage tail where it was designed to help. Full numbers in [`results/RESULTS.md`](results/RESULTS.md),
+with the comprehensive report (joint upper bound, threshold tuning, epoch study) in
+[`results/INCREMENTAL_RESULTS.md`](results/INCREMENTAL_RESULTS.md).
+
+**Follow-up findings.** The 3-stage incremental result reaches **~66%** of its fully-supervised ceiling
+(0.1366 vs joint 0.2062 mAP@0.25); 6-stage only ~15%, confirming its collapse is a schedule artefact, not a
+data limit. Tuning the pseudo-label confidence threshold to **0.45** lifts old-class mAP +35% and cuts
+forgetting ~20%. An optimal-epoch study shows the paper's **12 epochs is already right** for incremental
+stages — epoch budget is not the lever for forgetting.
