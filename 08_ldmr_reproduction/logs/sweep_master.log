@@ -1,0 +1,39 @@
+=== sweep start Thu 23 Jul 2026 01:28:02 AM +08 : 18 jobs over 2 GPUs ===
+[gpu0] START eval_3stage_s01 01:28:02
+[gpu1] START eval_3stage_s02 01:28:02
+[gpu0] END   eval_3stage_s01 rc=0 01:34:37
+[gpu0] SKIP eval_3stage_s03 (already has results)
+[gpu0] START eval_5stage_s02 01:34:37
+[gpu1] END   eval_3stage_s02 rc=0 01:35:03
+[gpu1] START eval_5stage_s01 01:35:03
+[gpu1] END   eval_5stage_s01 rc=0 01:39:27
+[gpu1] START eval_5stage_s03 01:39:27
+[gpu0] END   eval_5stage_s02 rc=0 01:40:35
+[gpu0] START eval_5stage_s04 01:40:35
+[gpu1] END   eval_5stage_s03 rc=0 01:45:53
+[gpu1] SKIP eval_5stage_s05 (already has results)
+[gpu1] START eval_10stage_s02 01:45:53
+[gpu0] END   eval_5stage_s04 rc=0 01:48:13
+[gpu0] START eval_10stage_s01 01:48:13
+[gpu1] END   eval_10stage_s02 rc=0 01:50:23
+[gpu1] START eval_10stage_s04 01:50:23
+[gpu0] END   eval_10stage_s01 rc=0 01:52:02
+[gpu0] START eval_10stage_s03 01:52:02
+[gpu1] END   eval_10stage_s04 rc=0 01:55:58
+[gpu1] START eval_10stage_s06 01:55:58
+[gpu0] END   eval_10stage_s03 rc=0 01:57:31
+[gpu0] START eval_10stage_s05 01:57:31
+[gpu1] END   eval_10stage_s06 rc=0 02:02:13
+[gpu1] START eval_10stage_s08 02:02:13
+[gpu0] END   eval_10stage_s05 rc=0 02:03:43
+[gpu0] START eval_10stage_s07 02:03:43
+[gpu1] END   eval_10stage_s08 rc=0 02:08:48
+[gpu1] START eval_10stage_s10 02:08:48
+[gpu0] END   eval_10stage_s07 rc=0 02:10:28
+[gpu0] START eval_10stage_s09 02:10:28
+[gpu1] END   eval_10stage_s10 rc=0 02:15:58
+[gpu1] worker finished
+[gpu0] END   eval_10stage_s09 rc=0 02:17:30
+[gpu0] worker finished
+=== all evals done Thu 23 Jul 2026 02:17:30 AM +08 ===
+=== report written Thu 23 Jul 2026 02:17:30 AM +08 ===
