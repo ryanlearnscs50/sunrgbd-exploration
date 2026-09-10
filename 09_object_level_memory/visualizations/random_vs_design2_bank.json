@@ -1,0 +1,28 @@
+{
+  "random": {
+    "objects": 800,
+    "total_points": 3000371,
+    "median_points": 1687.0,
+    "distinct_sources": 701,
+    "duplicate_assignments": 99,
+    "sparse": {
+      "20": 9,
+      "50": 22,
+      "100": 43,
+      "500": 175
+    }
+  },
+  "design2": {
+    "objects": 800,
+    "total_points": 2542744,
+    "median_points": 1430.0,
+    "distinct_sources": 725,
+    "duplicate_assignments": 75,
+    "sparse": {
+      "20": 3,
+      "50": 19,
+      "100": 35,
+      "500": 189
+    }
+  }
+}

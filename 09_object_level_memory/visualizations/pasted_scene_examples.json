@@ -1,0 +1,59 @@
+[
+  {
+    "scene_index": 0,
+    "scene_id": "5051",
+    "class_id": 0,
+    "class_name": "chair",
+    "source_scene_id": "9658",
+    "source_object_idx": 5,
+    "point_count": 3091,
+    "source_floor_offset": 0.09003847718238833,
+    "placed_box_bottom_center": [
+      1.0415297746658325,
+      5.743373870849609,
+      -1.4410102367401123,
+      0.6213759779930115,
+      0.5400959849357605,
+      0.766539990901947,
+      -1.0054371356964111
+    ]
+  },
+  {
+    "scene_index": 9,
+    "scene_id": "5060",
+    "class_id": 8,
+    "class_name": "lamp",
+    "source_scene_id": "7542",
+    "source_object_idx": 7,
+    "point_count": 1296,
+    "source_floor_offset": 0.6497868514060974,
+    "placed_box_bottom_center": [
+      0.3269614279270172,
+      5.558584690093994,
+      -0.6715800762176514,
+      0.5126280188560486,
+      0.5756440162658691,
+      0.75,
+      -1.1811083555221558
+    ]
+  },
+  {
+    "scene_index": 23,
+    "scene_id": "5074",
+    "class_id": 27,
+    "class_name": "toilet",
+    "source_scene_id": "9018",
+    "source_object_idx": 0,
+    "point_count": 6914,
+    "source_floor_offset": 0.03388148784637446,
+    "placed_box_bottom_center": [
+      -2.7916877269744873,
+      6.957624435424805,
+      -1.3010839223861694,
+      0.702534019947052,
+      0.4155060052871704,
+      0.8727279901504517,
+      -1.7529642581939697
+    ]
+  }
+]

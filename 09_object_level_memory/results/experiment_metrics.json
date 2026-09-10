@@ -1,0 +1,19 @@
+{
+  "dataset": "SUN RGB-D 40-class",
+  "protocol": "five-stage 8x5 frequency order",
+  "seed": 201,
+  "metric": "mAP@0.25",
+  "stage_2_to_5": {
+    "no_memory": [0.1704, 0.0982, 0.0869, 0.0314],
+    "object_floor_heavy": [0.1891, 0.1091, 0.1065, 0.0682],
+    "object_height_aware_heavy": [0.2017, 0.1173, 0.1251, 0.0803],
+    "object_height_aware_one_crop": [0.1957, 0.1344, 0.1257, 0.0808],
+    "scene_random_matched": [0.3492, 0.2676, 0.2369, 0.1929],
+    "object_design2_reviewing": [0.1793, 0.1103, 0.1064, 0.0632]
+  },
+  "matched_stage1_final": {
+    "random_object": {"mAP_0.25": 0.0931, "mAP_0.50": 0.0450},
+    "design2_object": {"mAP_0.25": 0.0667, "mAP_0.50": 0.0251},
+    "design2_reviewing_object": {"mAP_0.25": 0.0632, "mAP_0.50": 0.0257}
+  }
+}

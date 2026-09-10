@@ -38,6 +38,8 @@ The dataset itself is **not included** in this repo. Download it from the [offic
     model_code/                  modified TR3D source (distill detector + empty-batch fix)
     configs/                     generated per-stage TR3D configs
     results/                     3-way comparison + extracted per-stage AP tables
+08_ldmr_reproduction/          Reproduction of released LDMR SUN RGB-D checkpoints
+09_object_level_memory/        Self-contained object-memory replay for LDMR
 pipeline/                      TR3D detection pipeline trace (CPU, no MinkowskiEngine)
 validation/                    Cross-checks against independently computed incidence counts
 ```
@@ -145,6 +147,27 @@ previous stage's model), and **distillation** (keep a frozen teacher's old-class
 
 Full writeup: [`07_incremental_learning_experiments/README.md`](07_incremental_learning_experiments/README.md)
 · results: [`07_incremental_learning_experiments/results/RESULTS.md`](07_incremental_learning_experiments/results/RESULTS.md)
+
+---
+
+### 08 — LDMR Reproduction
+
+All released SUN RGB-D checkpoints for LDMR's 3-, 5-, and 10-stage protocols
+were evaluated. The final results reproduce the reported values within .0023
+mAP@0.25. See [`08_ldmr_reproduction/README.md`](08_ldmr_reproduction/README.md).
+
+---
+
+### 09 — Object-Level Memory Replay
+
+LDMR's full-scene memory is replaced with self-contained 3D object crops that
+are pasted into current-stage SUN RGB-D scenes. Height-aware, one-crop replay
+raises final mAP@0.25 from **.0314** without memory to **.0808**. A matched
+scene-replay control reaches **.1929**, showing that crop replay's main weakness
+is old-class retention. Matched Design-2 and reviewing ablations are included,
+together with bank audits and real before/after insertion views.
+
+Full report: [`09_object_level_memory/README.md`](09_object_level_memory/README.md)
 
 ---
 
