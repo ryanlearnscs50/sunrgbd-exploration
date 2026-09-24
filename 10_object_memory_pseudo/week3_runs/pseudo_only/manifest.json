@@ -1,0 +1,19 @@
+{
+  "mode": "pseudo_only",
+  "gpu": 0,
+  "seed": 201,
+  "start_stage": 2,
+  "end_stage": 5,
+  "checkpoint": "/data3/ryan/ldmr_exploration/checkpoints/sunrgbd_5stage/stage_01.pth",
+  "checkpoint_sha256": "8ff54ab599834f58477e3511d10af0252d206a9b42d8c12e4aa796b07b55ed96",
+  "config": "tr3d_dynamic_head_8x5_pseudo_only_matched_52211.py",
+  "command": [
+    "nohup",
+    "bash",
+    "/data3/ryan/ldmr_exploration/run_week3_experiment.sh",
+    "pseudo_only"
+  ],
+  "work_dir_stem": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_only_s201",
+  "launched_at": "2026-09-23T05:12:45.226725+00:00",
+  "supervisor_pid": 2831720
+}

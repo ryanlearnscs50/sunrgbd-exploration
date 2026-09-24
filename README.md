@@ -40,6 +40,7 @@ The dataset itself is **not included** in this repo. Download it from the [offic
     results/                     3-way comparison + extracted per-stage AP tables
 08_ldmr_reproduction/          Reproduction of released LDMR SUN RGB-D checkpoints
 09_object_level_memory/        Self-contained object-memory replay for LDMR
+10_object_memory_pseudo/       Pseudo supervision, replay dose and LR ablations
 pipeline/                      TR3D detection pipeline trace (CPU, no MinkowskiEngine)
 validation/                    Cross-checks against independently computed incidence counts
 ```
@@ -168,6 +169,18 @@ is old-class retention. Matched Design-2 and reviewing ablations are included,
 together with bank audits and real before/after insertion views.
 
 Full report: [`09_object_level_memory/README.md`](09_object_level_memory/README.md)
+
+---
+
+### 10 — Object Memory with Pseudo Supervision
+
+Old-class pseudo labels raise the matched object baseline from **8.08% to 22.82%**
+final mAP@0.25. Reducing replay attempts to 25% adds **0.975 percentage points**
+over pseudo-only across three continuation seeds under the original schedule.
+Cosine improves final mAP@0.50 in both tested seeds; its interaction with replay
+at mAP@0.25 is mixed. Twelve valid runs, diagnostics, configs and code are included.
+
+Full report: [`10_object_memory_pseudo/README.md`](10_object_memory_pseudo/README.md)
 
 ---
 

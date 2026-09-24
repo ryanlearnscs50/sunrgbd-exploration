@@ -1,0 +1,22 @@
+{
+  "mode": "dose25_cosine_v2",
+  "run_id": "dose25_cosine_v2_s202",
+  "gpu": 1,
+  "seed": 202,
+  "start_stage": 2,
+  "end_stage": 5,
+  "checkpoint": "/data3/ryan/ldmr_exploration/checkpoints/sunrgbd_5stage/stage_01.pth",
+  "checkpoint_sha256": "8ff54ab599834f58477e3511d10af0252d206a9b42d8c12e4aa796b07b55ed96",
+  "config": "tr3d_dynamic_head_8x5_object_memory_pseudo_dose25_cosine_52211.py",
+  "command": [
+    "nohup",
+    "bash",
+    "/data3/ryan/ldmr_exploration/run_week3_experiment.sh",
+    "dose25_cosine_v2",
+    "202"
+  ],
+  "config_sha256": "1c9a10def996a3d4b133b0d8e4a855bbd52339a8dc496d7567579fd1b66feb81",
+  "work_dir_stem": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_cosine_v2_s202",
+  "launched_at": "2026-09-24T05:39:24.506893+00:00",
+  "supervisor_pid": 2902674
+}

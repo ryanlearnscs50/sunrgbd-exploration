@@ -1,0 +1,943 @@
+{
+  "updated_at": "2026-09-24T05:31:46.925981+00:00",
+  "runs": {
+    "pseudo_only": {
+      "mode": "pseudo_only",
+      "policy": "pseudo_only",
+      "seed": 201,
+      "status": "completed",
+      "invalid_ablation": null,
+      "exit_code": 0,
+      "trainer_pid": 2831728,
+      "supervisor_pid": 2831720,
+      "gpu": 0,
+      "run_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_only_s201_sunrgbd40_s5_freqorder_20260923_131248",
+      "console": "/data3/ryan/ldmr_exploration/week3_runs/pseudo_only/console.log",
+      "metrics": [
+        {
+          "stage": 2,
+          "map25": 0.39617,
+          "map50": 0.27004,
+          "old_map25": 0.51757875,
+          "new_map25": 0.274755,
+          "historical_object_no_pseudo": 0.19572
+        },
+        {
+          "stage": 3,
+          "map25": 0.33255,
+          "map50": 0.21134,
+          "old_map25": 0.36612999999999996,
+          "new_map25": 0.26541000000000003,
+          "historical_object_no_pseudo": 0.13439
+        },
+        {
+          "stage": 4,
+          "map25": 0.30435,
+          "map50": 0.18733,
+          "old_map25": 0.3118954166666667,
+          "new_map25": 0.2817075,
+          "historical_object_no_pseudo": 0.12571
+        },
+        {
+          "stage": 5,
+          "map25": 0.23521,
+          "map50": 0.13286,
+          "old_map25": 0.268540625,
+          "new_map25": 0.10187499999999998,
+          "historical_object_no_pseudo": 0.08083
+        }
+      ],
+      "pseudo": [
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_only_s201_sunrgbd40_s5_freqorder_20260923_131248/pseudo_labels/stage_2_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 2,
+            "previous_stage_id": 1,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/checkpoints/sunrgbd_5stage/stage_01.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1760,
+            "scenes_processed": 1760,
+            "scenes_with_pseudo": 1277,
+            "total_detections": 3584,
+            "avg_dets_per_scene_with_pseudo": 2.806577916992952,
+            "per_class_counts": {
+              "0": 1428,
+              "1": 351,
+              "2": 728,
+              "3": 251,
+              "4": 120,
+              "5": 425,
+              "6": 175,
+              "7": 106
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_only_s201_sunrgbd40_s5_freqorder_20260923_131248/pseudo_labels/stage_3_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 3,
+            "previous_stage_id": 2,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_only_s201_sunrgbd40_s5_freqorder_20260923_131248/checkpoints/stage_2/latest.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1120,
+            "scenes_processed": 1120,
+            "scenes_with_pseudo": 855,
+            "total_detections": 2593,
+            "avg_dets_per_scene_with_pseudo": 3.032748538011696,
+            "per_class_counts": {
+              "0": 640,
+              "1": 105,
+              "2": 397,
+              "3": 226,
+              "4": 45,
+              "5": 188,
+              "6": 202,
+              "7": 136,
+              "8": 209,
+              "9": 30,
+              "10": 61,
+              "11": 77,
+              "12": 62,
+              "13": 20,
+              "14": 110,
+              "15": 85
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_only_s201_sunrgbd40_s5_freqorder_20260923_131248/pseudo_labels/stage_4_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 4,
+            "previous_stage_id": 3,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_only_s201_sunrgbd40_s5_freqorder_20260923_131248/checkpoints/stage_3/latest.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1045,
+            "scenes_processed": 1045,
+            "scenes_with_pseudo": 733,
+            "total_detections": 2134,
+            "avg_dets_per_scene_with_pseudo": 2.911323328785812,
+            "per_class_counts": {
+              "0": 937,
+              "1": 84,
+              "2": 142,
+              "3": 135,
+              "4": 38,
+              "5": 75,
+              "6": 75,
+              "7": 123,
+              "8": 68,
+              "9": 7,
+              "10": 87,
+              "11": 26,
+              "12": 12,
+              "13": 7,
+              "14": 34,
+              "15": 28,
+              "16": 59,
+              "17": 14,
+              "18": 17,
+              "19": 31,
+              "20": 32,
+              "22": 94,
+              "23": 9
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_only_s201_sunrgbd40_s5_freqorder_20260923_131248/pseudo_labels/stage_5_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 5,
+            "previous_stage_id": 4,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_only_s201_sunrgbd40_s5_freqorder_20260923_131248/checkpoints/stage_4/epoch_1.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 644,
+            "scenes_processed": 644,
+            "scenes_with_pseudo": 473,
+            "total_detections": 1218,
+            "avg_dets_per_scene_with_pseudo": 2.5750528541226214,
+            "per_class_counts": {
+              "0": 471,
+              "1": 41,
+              "2": 125,
+              "3": 51,
+              "4": 15,
+              "5": 50,
+              "6": 41,
+              "7": 67,
+              "8": 50,
+              "9": 7,
+              "10": 29,
+              "11": 14,
+              "12": 5,
+              "13": 4,
+              "14": 23,
+              "15": 14,
+              "16": 45,
+              "17": 7,
+              "18": 3,
+              "19": 2,
+              "20": 16,
+              "22": 42,
+              "23": 3,
+              "24": 20,
+              "26": 11,
+              "27": 31,
+              "28": 6,
+              "29": 10,
+              "30": 5,
+              "31": 10
+            }
+          }
+        }
+      ]
+    },
+    "dose25": {
+      "mode": "dose25",
+      "policy": "dose25",
+      "seed": 201,
+      "status": "completed",
+      "invalid_ablation": null,
+      "exit_code": 0,
+      "trainer_pid": 2855479,
+      "supervisor_pid": 2855471,
+      "gpu": 0,
+      "run_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_s201_sunrgbd40_s5_freqorder_20260923_230836",
+      "console": "/data3/ryan/ldmr_exploration/week3_runs/dose25/console.log",
+      "metrics": [
+        {
+          "stage": 2,
+          "map25": 0.39847,
+          "map50": 0.27487,
+          "old_map25": 0.51242875,
+          "new_map25": 0.28451875,
+          "historical_object_no_pseudo": 0.19572
+        },
+        {
+          "stage": 3,
+          "map25": 0.33118,
+          "map50": 0.20736,
+          "old_map25": 0.37189500000000003,
+          "new_map25": 0.24974625,
+          "historical_object_no_pseudo": 0.13439
+        },
+        {
+          "stage": 4,
+          "map25": 0.29761,
+          "map50": 0.18601,
+          "old_map25": 0.31029333333333337,
+          "new_map25": 0.25957625,
+          "historical_object_no_pseudo": 0.12571
+        },
+        {
+          "stage": 5,
+          "map25": 0.24612,
+          "map50": 0.14031,
+          "old_map25": 0.281843125,
+          "new_map25": 0.10322625,
+          "historical_object_no_pseudo": 0.08083
+        }
+      ],
+      "pseudo": [
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_s201_sunrgbd40_s5_freqorder_20260923_230836/pseudo_labels/stage_2_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 2,
+            "previous_stage_id": 1,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/checkpoints/sunrgbd_5stage/stage_01.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1760,
+            "scenes_processed": 1760,
+            "scenes_with_pseudo": 1277,
+            "total_detections": 3585,
+            "avg_dets_per_scene_with_pseudo": 2.807361002349256,
+            "per_class_counts": {
+              "0": 1428,
+              "1": 351,
+              "2": 729,
+              "3": 251,
+              "4": 120,
+              "5": 425,
+              "6": 175,
+              "7": 106
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_s201_sunrgbd40_s5_freqorder_20260923_230836/pseudo_labels/stage_3_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 3,
+            "previous_stage_id": 2,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_s201_sunrgbd40_s5_freqorder_20260923_230836/checkpoints/stage_2/latest.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1120,
+            "scenes_processed": 1120,
+            "scenes_with_pseudo": 852,
+            "total_detections": 2641,
+            "avg_dets_per_scene_with_pseudo": 3.0997652582159625,
+            "per_class_counts": {
+              "0": 665,
+              "1": 138,
+              "2": 443,
+              "3": 210,
+              "4": 35,
+              "5": 194,
+              "6": 207,
+              "7": 127,
+              "8": 209,
+              "9": 36,
+              "10": 64,
+              "11": 56,
+              "12": 46,
+              "13": 23,
+              "14": 103,
+              "15": 85
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_s201_sunrgbd40_s5_freqorder_20260923_230836/pseudo_labels/stage_4_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 4,
+            "previous_stage_id": 3,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_s201_sunrgbd40_s5_freqorder_20260923_230836/checkpoints/stage_3/latest.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1045,
+            "scenes_processed": 1045,
+            "scenes_with_pseudo": 764,
+            "total_detections": 2241,
+            "avg_dets_per_scene_with_pseudo": 2.933246073298429,
+            "per_class_counts": {
+              "0": 926,
+              "1": 123,
+              "2": 156,
+              "3": 118,
+              "4": 27,
+              "5": 75,
+              "6": 82,
+              "7": 130,
+              "8": 86,
+              "9": 9,
+              "10": 136,
+              "11": 19,
+              "12": 10,
+              "13": 3,
+              "14": 32,
+              "15": 35,
+              "16": 55,
+              "17": 19,
+              "18": 17,
+              "19": 50,
+              "20": 29,
+              "21": 4,
+              "22": 90,
+              "23": 10
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_s201_sunrgbd40_s5_freqorder_20260923_230836/pseudo_labels/stage_5_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 5,
+            "previous_stage_id": 4,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_s201_sunrgbd40_s5_freqorder_20260923_230836/checkpoints/stage_4/epoch_1.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 644,
+            "scenes_processed": 644,
+            "scenes_with_pseudo": 475,
+            "total_detections": 1230,
+            "avg_dets_per_scene_with_pseudo": 2.5894736842105264,
+            "per_class_counts": {
+              "0": 495,
+              "1": 53,
+              "2": 120,
+              "3": 38,
+              "4": 10,
+              "5": 48,
+              "6": 45,
+              "7": 59,
+              "8": 64,
+              "9": 1,
+              "10": 27,
+              "11": 4,
+              "12": 5,
+              "13": 1,
+              "14": 28,
+              "15": 13,
+              "16": 53,
+              "17": 6,
+              "18": 11,
+              "19": 10,
+              "20": 18,
+              "22": 52,
+              "24": 12,
+              "26": 9,
+              "27": 24,
+              "28": 5,
+              "29": 9,
+              "30": 6,
+              "31": 4
+            }
+          }
+        }
+      ]
+    },
+    "dose25_cosine_v2": {
+      "mode": "dose25_cosine_v2",
+      "policy": "dose25_cosine_v2",
+      "seed": 201,
+      "status": "completed",
+      "invalid_ablation": null,
+      "exit_code": 0,
+      "trainer_pid": 2887245,
+      "supervisor_pid": 2887238,
+      "gpu": 1,
+      "run_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609",
+      "console": "/data3/ryan/ldmr_exploration/week3_runs/dose25_cosine_v2/console.log",
+      "metrics": [
+        {
+          "stage": 2,
+          "map25": 0.40751,
+          "map50": 0.28074,
+          "old_map25": 0.5309849999999999,
+          "new_map25": 0.28403875000000006,
+          "historical_object_no_pseudo": 0.19572
+        },
+        {
+          "stage": 3,
+          "map25": 0.34606,
+          "map50": 0.22471,
+          "old_map25": 0.38769562500000004,
+          "new_map25": 0.26278375,
+          "historical_object_no_pseudo": 0.13439
+        },
+        {
+          "stage": 4,
+          "map25": 0.311,
+          "map50": 0.19763,
+          "old_map25": 0.325155,
+          "new_map25": 0.2685225,
+          "historical_object_no_pseudo": 0.12571
+        },
+        {
+          "stage": 5,
+          "map25": 0.25157,
+          "map50": 0.15251,
+          "old_map25": 0.285979375,
+          "new_map25": 0.11391124999999999,
+          "historical_object_no_pseudo": 0.08083
+        }
+      ],
+      "pseudo": [
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/pseudo_labels/stage_2_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 2,
+            "previous_stage_id": 1,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/checkpoints/sunrgbd_5stage/stage_01.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1760,
+            "scenes_processed": 1760,
+            "scenes_with_pseudo": 1277,
+            "total_detections": 3584,
+            "avg_dets_per_scene_with_pseudo": 2.806577916992952,
+            "per_class_counts": {
+              "0": 1428,
+              "1": 350,
+              "2": 729,
+              "3": 251,
+              "4": 120,
+              "5": 425,
+              "6": 175,
+              "7": 106
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/pseudo_labels/stage_3_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 3,
+            "previous_stage_id": 2,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/checkpoints/stage_2/latest.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1120,
+            "scenes_processed": 1120,
+            "scenes_with_pseudo": 840,
+            "total_detections": 2600,
+            "avg_dets_per_scene_with_pseudo": 3.0952380952380953,
+            "per_class_counts": {
+              "0": 676,
+              "1": 144,
+              "2": 432,
+              "3": 226,
+              "4": 45,
+              "5": 204,
+              "6": 215,
+              "7": 149,
+              "8": 185,
+              "9": 8,
+              "10": 59,
+              "11": 31,
+              "12": 55,
+              "13": 5,
+              "14": 107,
+              "15": 59
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/pseudo_labels/stage_4_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 4,
+            "previous_stage_id": 3,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/checkpoints/stage_3/latest.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1045,
+            "scenes_processed": 1045,
+            "scenes_with_pseudo": 747,
+            "total_detections": 2206,
+            "avg_dets_per_scene_with_pseudo": 2.9531459170013385,
+            "per_class_counts": {
+              "0": 974,
+              "1": 134,
+              "2": 140,
+              "3": 135,
+              "4": 32,
+              "5": 75,
+              "6": 88,
+              "7": 145,
+              "8": 78,
+              "10": 120,
+              "11": 8,
+              "12": 6,
+              "14": 41,
+              "15": 27,
+              "16": 30,
+              "17": 8,
+              "18": 30,
+              "19": 23,
+              "20": 31,
+              "21": 5,
+              "22": 65,
+              "23": 11
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/pseudo_labels/stage_5_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 5,
+            "previous_stage_id": 4,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_dose25_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/checkpoints/stage_4/epoch_1.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 644,
+            "scenes_processed": 644,
+            "scenes_with_pseudo": 472,
+            "total_detections": 1226,
+            "avg_dets_per_scene_with_pseudo": 2.597457627118644,
+            "per_class_counts": {
+              "0": 508,
+              "1": 64,
+              "2": 120,
+              "3": 53,
+              "4": 9,
+              "5": 56,
+              "6": 50,
+              "7": 76,
+              "8": 62,
+              "10": 18,
+              "11": 6,
+              "12": 1,
+              "14": 29,
+              "15": 10,
+              "16": 27,
+              "18": 18,
+              "19": 2,
+              "20": 19,
+              "22": 29,
+              "23": 2,
+              "24": 18,
+              "26": 5,
+              "27": 23,
+              "28": 1,
+              "29": 10,
+              "30": 7,
+              "31": 3
+            }
+          }
+        }
+      ]
+    },
+    "pseudo_cosine_v2": {
+      "mode": "pseudo_cosine_v2",
+      "policy": "pseudo_cosine_v2",
+      "seed": 201,
+      "status": "completed",
+      "invalid_ablation": null,
+      "exit_code": 0,
+      "trainer_pid": 2887242,
+      "supervisor_pid": 2887236,
+      "gpu": 0,
+      "run_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609",
+      "console": "/data3/ryan/ldmr_exploration/week3_runs/pseudo_cosine_v2/console.log",
+      "metrics": [
+        {
+          "stage": 2,
+          "map25": 0.40409,
+          "map50": 0.28195,
+          "old_map25": 0.5316662499999999,
+          "new_map25": 0.27651,
+          "historical_object_no_pseudo": 0.19572
+        },
+        {
+          "stage": 3,
+          "map25": 0.33904,
+          "map50": 0.22026,
+          "old_map25": 0.3822937500000001,
+          "new_map25": 0.2525325,
+          "historical_object_no_pseudo": 0.13439
+        },
+        {
+          "stage": 4,
+          "map25": 0.29967,
+          "map50": 0.18961,
+          "old_map25": 0.3133366666666667,
+          "new_map25": 0.25866125,
+          "historical_object_no_pseudo": 0.12571
+        },
+        {
+          "stage": 5,
+          "map25": 0.23635,
+          "map50": 0.14394,
+          "old_map25": 0.26949125,
+          "new_map25": 0.103805,
+          "historical_object_no_pseudo": 0.08083
+        }
+      ],
+      "pseudo": [
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/pseudo_labels/stage_2_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 2,
+            "previous_stage_id": 1,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/checkpoints/sunrgbd_5stage/stage_01.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1760,
+            "scenes_processed": 1760,
+            "scenes_with_pseudo": 1277,
+            "total_detections": 3585,
+            "avg_dets_per_scene_with_pseudo": 2.807361002349256,
+            "per_class_counts": {
+              "0": 1429,
+              "1": 351,
+              "2": 728,
+              "3": 251,
+              "4": 120,
+              "5": 425,
+              "6": 175,
+              "7": 106
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/pseudo_labels/stage_3_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 3,
+            "previous_stage_id": 2,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/checkpoints/stage_2/latest.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1120,
+            "scenes_processed": 1120,
+            "scenes_with_pseudo": 837,
+            "total_detections": 2581,
+            "avg_dets_per_scene_with_pseudo": 3.08363201911589,
+            "per_class_counts": {
+              "0": 676,
+              "1": 149,
+              "2": 438,
+              "3": 226,
+              "4": 51,
+              "5": 205,
+              "6": 209,
+              "7": 144,
+              "8": 174,
+              "9": 8,
+              "10": 53,
+              "11": 36,
+              "12": 46,
+              "13": 3,
+              "14": 103,
+              "15": 60
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/pseudo_labels/stage_4_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 4,
+            "previous_stage_id": 3,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/checkpoints/stage_3/latest.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 1045,
+            "scenes_processed": 1045,
+            "scenes_with_pseudo": 726,
+            "total_detections": 2150,
+            "avg_dets_per_scene_with_pseudo": 2.961432506887052,
+            "per_class_counts": {
+              "0": 970,
+              "1": 145,
+              "2": 151,
+              "3": 133,
+              "4": 46,
+              "5": 78,
+              "6": 81,
+              "7": 122,
+              "8": 67,
+              "10": 80,
+              "11": 8,
+              "12": 8,
+              "14": 39,
+              "15": 17,
+              "16": 38,
+              "17": 9,
+              "18": 26,
+              "19": 21,
+              "20": 29,
+              "21": 2,
+              "22": 67,
+              "23": 13
+            }
+          }
+        },
+        {
+          "path": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/pseudo_labels/stage_5_pseudo_only_conf50_pseudo_labels_stats.json",
+          "stats": {
+            "dataset": "sunrgbd",
+            "stage_id": 5,
+            "previous_stage_id": 4,
+            "checkpoint_used": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_cosine_v2_s201_sunrgbd40_s5_freqorder_20260924_105609/checkpoints/stage_4/epoch_1.pth",
+            "train_ann_file": "data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+            "confidence_threshold": 0.5,
+            "nms_iou_thr": 0.3,
+            "max_pseudo_per_scene": 100,
+            "max_scenes": null,
+            "seed": 0,
+            "scenes_considered": 644,
+            "scenes_processed": 644,
+            "scenes_with_pseudo": 477,
+            "total_detections": 1216,
+            "avg_dets_per_scene_with_pseudo": 2.549266247379455,
+            "per_class_counts": {
+              "0": 510,
+              "1": 70,
+              "2": 130,
+              "3": 53,
+              "4": 17,
+              "5": 55,
+              "6": 44,
+              "7": 66,
+              "8": 53,
+              "10": 12,
+              "11": 7,
+              "12": 3,
+              "14": 31,
+              "15": 6,
+              "16": 33,
+              "17": 1,
+              "18": 13,
+              "20": 15,
+              "22": 28,
+              "23": 5,
+              "24": 12,
+              "26": 4,
+              "27": 26,
+              "28": 1,
+              "29": 11,
+              "30": 6,
+              "31": 4
+            }
+          }
+        }
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "base": "pseudo_only",
+      "cosine": "pseudo_cosine_v2",
+      "stage": 2,
+      "deltas": {
+        "map25": 0.007919999999999983,
+        "old_map25": 0.01408749999999992,
+        "new_map25": 0.001754999999999951,
+        "map50": 0.011909999999999976
+      }
+    },
+    {
+      "base": "pseudo_only",
+      "cosine": "pseudo_cosine_v2",
+      "stage": 3,
+      "deltas": {
+        "map25": 0.006489999999999996,
+        "old_map25": 0.016163750000000143,
+        "new_map25": -0.012877500000000042,
+        "map50": 0.008920000000000011
+      }
+    },
+    {
+      "base": "pseudo_only",
+      "cosine": "pseudo_cosine_v2",
+      "stage": 4,
+      "deltas": {
+        "map25": -0.0046800000000000175,
+        "old_map25": 0.001441250000000005,
+        "new_map25": -0.02304624999999999,
+        "map50": 0.0022800000000000042
+      }
+    },
+    {
+      "base": "pseudo_only",
+      "cosine": "pseudo_cosine_v2",
+      "stage": 5,
+      "deltas": {
+        "map25": 0.0011400000000000021,
+        "old_map25": 0.0009506250000000382,
+        "new_map25": 0.001930000000000015,
+        "map50": 0.011080000000000007
+      }
+    },
+    {
+      "base": "dose25",
+      "cosine": "dose25_cosine_v2",
+      "stage": 2,
+      "deltas": {
+        "map25": 0.009039999999999992,
+        "old_map25": 0.01855624999999994,
+        "new_map25": -0.00047999999999992493,
+        "map50": 0.005869999999999986
+      }
+    },
+    {
+      "base": "dose25",
+      "cosine": "dose25_cosine_v2",
+      "stage": 3,
+      "deltas": {
+        "map25": 0.014880000000000004,
+        "old_map25": 0.015800625000000013,
+        "new_map25": 0.01303749999999998,
+        "map50": 0.017350000000000004
+      }
+    },
+    {
+      "base": "dose25",
+      "cosine": "dose25_cosine_v2",
+      "stage": 4,
+      "deltas": {
+        "map25": 0.013390000000000013,
+        "old_map25": 0.014861666666666662,
+        "new_map25": 0.008946249999999989,
+        "map50": 0.011619999999999991
+      }
+    },
+    {
+      "base": "dose25",
+      "cosine": "dose25_cosine_v2",
+      "stage": 5,
+      "deltas": {
+        "map25": 0.00545000000000001,
+        "old_map25": 0.0041362499999999525,
+        "new_map25": 0.010684999999999986,
+        "map50": 0.012200000000000016
+      }
+    }
+  ]
+}

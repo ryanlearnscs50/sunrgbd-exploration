@@ -1,0 +1,65 @@
+{
+  "updated_at": "2026-09-24T05:22:34.601045+00:00",
+  "deadline": "2026-09-24T16:45:00+08:00",
+  "runs": {
+    "pseudo_cosine_v2": {
+      "exit_code": 0,
+      "lr": {
+        "2": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 66,
+          "decaying": true
+        },
+        "3": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 42,
+          "decaying": true
+        },
+        "4": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 19,
+          "decaying": true
+        },
+        "5": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 12,
+          "decaying": true
+        }
+      }
+    },
+    "dose25_cosine_v2": {
+      "exit_code": 0,
+      "lr": {
+        "2": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 66,
+          "decaying": true
+        },
+        "3": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 42,
+          "decaying": true
+        },
+        "4": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 19,
+          "decaying": true
+        },
+        "5": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 12,
+          "decaying": true
+        }
+      }
+    }
+  },
+  "state": "finished"
+}

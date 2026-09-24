@@ -695,6 +695,11 @@ def prepare_stage_config(base_cfg, stage_definition, stage_idx, stage_definition
     """
     stage_cfg = copy.deepcopy(base_cfg)
 
+    # The incremental config owns stage-time scheduler overrides. Otherwise a
+    # top-level schedule is silently replaced by the detector base schedule.
+    if incremental_cfg is not None and 'lr_config' in incremental_cfg:
+        stage_cfg.lr_config = copy.deepcopy(incremental_cfg.lr_config)
+
     # Copy evaluation config from incremental_cfg if available
     # This ensures --cfg-options evaluation.interval works properly
     if incremental_cfg and hasattr(incremental_cfg, 'evaluation'):
@@ -868,7 +873,7 @@ def prepare_stage_config(base_cfg, stage_definition, stage_idx, stage_definition
 
 
 def _get_debug_mode_info(args, stage_definitions):
-    """Get debug mode information for display to users and AI assistants.
+    """Return debug mode information for runtime diagnostics.
 
     Returns comprehensive information about what debug mode is active,
     estimated timing, and what each mode is suitable for testing.

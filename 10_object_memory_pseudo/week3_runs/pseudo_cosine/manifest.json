@@ -1,0 +1,22 @@
+{
+  "mode": "pseudo_cosine",
+  "run_id": "pseudo_cosine",
+  "gpu": 0,
+  "seed": 201,
+  "start_stage": 2,
+  "end_stage": 5,
+  "checkpoint": "/data3/ryan/ldmr_exploration/checkpoints/sunrgbd_5stage/stage_01.pth",
+  "checkpoint_sha256": "8ff54ab599834f58477e3511d10af0252d206a9b42d8c12e4aa796b07b55ed96",
+  "config": "tr3d_dynamic_head_8x5_pseudo_only_cosine_52211.py",
+  "command": [
+    "nohup",
+    "bash",
+    "/data3/ryan/ldmr_exploration/run_week3_experiment.sh",
+    "pseudo_cosine",
+    "201"
+  ],
+  "config_sha256": "6b97b77cd2d57355db6fb626a3ca71844b9b8a34afb73131139da06ca821cb75",
+  "work_dir_stem": "/data3/ryan/ldmr_exploration/incremental_logs/week3_pseudo_cosine_s201",
+  "launched_at": "2026-09-24T01:13:09.898858+00:00",
+  "supervisor_pid": 2882073
+}

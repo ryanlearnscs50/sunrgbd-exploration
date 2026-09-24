@@ -1,0 +1,18 @@
+{
+  "seeds": [
+    202,
+    203
+  ],
+  "policies": [
+    "pseudo_only",
+    "dose25"
+  ],
+  "gpus": [
+    0,
+    1
+  ],
+  "starting_checkpoint": "checkpoints/sunrgbd_5stage/stage_01.pth",
+  "expected_hours": 5,
+  "deadline_hours": 8,
+  "stop_on_failure": true
+}

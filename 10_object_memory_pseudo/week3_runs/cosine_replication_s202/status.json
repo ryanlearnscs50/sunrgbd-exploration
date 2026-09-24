@@ -1,0 +1,447 @@
+{
+  "updated_at": "2026-09-24T08:06:53.625394+00:00",
+  "runs": {
+    "dose25_cosine_v2": {
+      "exit_code": 0,
+      "lr": {
+        "2": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 66,
+          "decaying": true
+        },
+        "3": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 42,
+          "decaying": true
+        },
+        "4": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 19,
+          "decaying": true
+        },
+        "5": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 12,
+          "decaying": true
+        }
+      },
+      "verified": true
+    },
+    "dose25_cosine_v2_s202": {
+      "exit_code": 0,
+      "lr": {
+        "2": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 66,
+          "decaying": true
+        },
+        "3": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 42,
+          "decaying": true
+        },
+        "4": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 19,
+          "decaying": true
+        },
+        "5": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 12,
+          "decaying": true
+        }
+      },
+      "verified": true
+    },
+    "pseudo_cosine_v2": {
+      "exit_code": 0,
+      "lr": {
+        "2": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 66,
+          "decaying": true
+        },
+        "3": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 42,
+          "decaying": true
+        },
+        "4": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 19,
+          "decaying": true
+        },
+        "5": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 12,
+          "decaying": true
+        }
+      },
+      "verified": true
+    },
+    "pseudo_cosine_v2_s202": {
+      "exit_code": 0,
+      "lr": {
+        "2": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 66,
+          "decaying": true
+        },
+        "3": {
+          "first": 0.001,
+          "last": 0.0001,
+          "count": 42,
+          "decaying": true
+        },
+        "4": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 19,
+          "decaying": true
+        },
+        "5": {
+          "first": 0.00099,
+          "last": 0.0001,
+          "count": 12,
+          "decaying": true
+        }
+      },
+      "verified": true
+    }
+  },
+  "comparisons": [
+    {
+      "run": "dose25_cosine_v2",
+      "seed": 201,
+      "stage": 2,
+      "metrics": {
+        "stage": 2,
+        "map25": 0.40751,
+        "map50": 0.28074,
+        "old_map25": 0.5309849999999999,
+        "new_map25": 0.28403875000000006,
+        "historical_object_no_pseudo": 0.19572
+      },
+      "baseline": "dose25",
+      "delta": {
+        "map25": 0.009039999999999992,
+        "old_map25": 0.01855624999999994,
+        "new_map25": -0.00047999999999992493,
+        "map50": 0.005869999999999986
+      }
+    },
+    {
+      "run": "dose25_cosine_v2",
+      "seed": 201,
+      "stage": 3,
+      "metrics": {
+        "stage": 3,
+        "map25": 0.34606,
+        "map50": 0.22471,
+        "old_map25": 0.38769562500000004,
+        "new_map25": 0.26278375,
+        "historical_object_no_pseudo": 0.13439
+      },
+      "baseline": "dose25",
+      "delta": {
+        "map25": 0.014880000000000004,
+        "old_map25": 0.015800625000000013,
+        "new_map25": 0.01303749999999998,
+        "map50": 0.017350000000000004
+      }
+    },
+    {
+      "run": "dose25_cosine_v2",
+      "seed": 201,
+      "stage": 4,
+      "metrics": {
+        "stage": 4,
+        "map25": 0.311,
+        "map50": 0.19763,
+        "old_map25": 0.325155,
+        "new_map25": 0.2685225,
+        "historical_object_no_pseudo": 0.12571
+      },
+      "baseline": "dose25",
+      "delta": {
+        "map25": 0.013390000000000013,
+        "old_map25": 0.014861666666666662,
+        "new_map25": 0.008946249999999989,
+        "map50": 0.011619999999999991
+      }
+    },
+    {
+      "run": "dose25_cosine_v2",
+      "seed": 201,
+      "stage": 5,
+      "metrics": {
+        "stage": 5,
+        "map25": 0.25157,
+        "map50": 0.15251,
+        "old_map25": 0.285979375,
+        "new_map25": 0.11391124999999999,
+        "historical_object_no_pseudo": 0.08083
+      },
+      "baseline": "dose25",
+      "delta": {
+        "map25": 0.00545000000000001,
+        "old_map25": 0.0041362499999999525,
+        "new_map25": 0.010684999999999986,
+        "map50": 0.012200000000000016
+      }
+    },
+    {
+      "run": "dose25_cosine_v2_s202",
+      "seed": 202,
+      "stage": 2,
+      "metrics": {
+        "stage": 2,
+        "map25": 0.40756,
+        "map50": 0.28367,
+        "old_map25": 0.52682875,
+        "new_map25": 0.28828625,
+        "historical_object_no_pseudo": 0.19572
+      },
+      "baseline": "dose25_s202",
+      "delta": {
+        "map25": 0.00985999999999998,
+        "old_map25": 0.007404999999999995,
+        "new_map25": 0.012322500000000014,
+        "map50": 0.008389999999999953
+      }
+    },
+    {
+      "run": "dose25_cosine_v2_s202",
+      "seed": 202,
+      "stage": 3,
+      "metrics": {
+        "stage": 3,
+        "map25": 0.34727,
+        "map50": 0.22669,
+        "old_map25": 0.38599749999999994,
+        "new_map25": 0.26981249999999996,
+        "historical_object_no_pseudo": 0.13439
+      },
+      "baseline": "dose25_s202",
+      "delta": {
+        "map25": 0.015920000000000045,
+        "old_map25": 0.02090499999999995,
+        "new_map25": 0.005954999999999933,
+        "map50": 0.016750000000000015
+      }
+    },
+    {
+      "run": "dose25_cosine_v2_s202",
+      "seed": 202,
+      "stage": 4,
+      "metrics": {
+        "stage": 4,
+        "map25": 0.3055,
+        "map50": 0.19538,
+        "old_map25": 0.3177533333333333,
+        "new_map25": 0.26873625,
+        "historical_object_no_pseudo": 0.12571
+      },
+      "baseline": "dose25_s202",
+      "delta": {
+        "map25": -0.005379999999999996,
+        "old_map25": 0.004237500000000005,
+        "new_map25": -0.03422249999999999,
+        "map50": 0.007940000000000003
+      }
+    },
+    {
+      "run": "dose25_cosine_v2_s202",
+      "seed": 202,
+      "stage": 5,
+      "metrics": {
+        "stage": 5,
+        "map25": 0.24867,
+        "map50": 0.15182,
+        "old_map25": 0.285246875,
+        "new_map25": 0.10235,
+        "historical_object_no_pseudo": 0.08083
+      },
+      "baseline": "dose25_s202",
+      "delta": {
+        "map25": -0.0005799999999999972,
+        "old_map25": 0.0018090625000000138,
+        "new_map25": -0.010135000000000005,
+        "map50": 0.007790000000000019
+      }
+    },
+    {
+      "run": "pseudo_cosine_v2",
+      "seed": 201,
+      "stage": 2,
+      "metrics": {
+        "stage": 2,
+        "map25": 0.40409,
+        "map50": 0.28195,
+        "old_map25": 0.5316662499999999,
+        "new_map25": 0.27651,
+        "historical_object_no_pseudo": 0.19572
+      },
+      "baseline": "pseudo_only",
+      "delta": {
+        "map25": 0.007919999999999983,
+        "old_map25": 0.01408749999999992,
+        "new_map25": 0.001754999999999951,
+        "map50": 0.011909999999999976
+      }
+    },
+    {
+      "run": "pseudo_cosine_v2",
+      "seed": 201,
+      "stage": 3,
+      "metrics": {
+        "stage": 3,
+        "map25": 0.33904,
+        "map50": 0.22026,
+        "old_map25": 0.3822937500000001,
+        "new_map25": 0.2525325,
+        "historical_object_no_pseudo": 0.13439
+      },
+      "baseline": "pseudo_only",
+      "delta": {
+        "map25": 0.006489999999999996,
+        "old_map25": 0.016163750000000143,
+        "new_map25": -0.012877500000000042,
+        "map50": 0.008920000000000011
+      }
+    },
+    {
+      "run": "pseudo_cosine_v2",
+      "seed": 201,
+      "stage": 4,
+      "metrics": {
+        "stage": 4,
+        "map25": 0.29967,
+        "map50": 0.18961,
+        "old_map25": 0.3133366666666667,
+        "new_map25": 0.25866125,
+        "historical_object_no_pseudo": 0.12571
+      },
+      "baseline": "pseudo_only",
+      "delta": {
+        "map25": -0.0046800000000000175,
+        "old_map25": 0.001441250000000005,
+        "new_map25": -0.02304624999999999,
+        "map50": 0.0022800000000000042
+      }
+    },
+    {
+      "run": "pseudo_cosine_v2",
+      "seed": 201,
+      "stage": 5,
+      "metrics": {
+        "stage": 5,
+        "map25": 0.23635,
+        "map50": 0.14394,
+        "old_map25": 0.26949125,
+        "new_map25": 0.103805,
+        "historical_object_no_pseudo": 0.08083
+      },
+      "baseline": "pseudo_only",
+      "delta": {
+        "map25": 0.0011400000000000021,
+        "old_map25": 0.0009506250000000382,
+        "new_map25": 0.001930000000000015,
+        "map50": 0.011080000000000007
+      }
+    },
+    {
+      "run": "pseudo_cosine_v2_s202",
+      "seed": 202,
+      "stage": 2,
+      "metrics": {
+        "stage": 2,
+        "map25": 0.41021,
+        "map50": 0.28436,
+        "old_map25": 0.53339,
+        "new_map25": 0.28703875,
+        "historical_object_no_pseudo": 0.19572
+      },
+      "baseline": "pseudo_only_s202",
+      "delta": {
+        "map25": 0.008709999999999996,
+        "old_map25": 0.0087512500000001,
+        "new_map25": 0.008673750000000036,
+        "map50": 0.010170000000000012
+      }
+    },
+    {
+      "run": "pseudo_cosine_v2_s202",
+      "seed": 202,
+      "stage": 3,
+      "metrics": {
+        "stage": 3,
+        "map25": 0.34362,
+        "map50": 0.22482,
+        "old_map25": 0.38567312499999995,
+        "new_map25": 0.25950874999999995,
+        "historical_object_no_pseudo": 0.13439
+      },
+      "baseline": "pseudo_only_s202",
+      "delta": {
+        "map25": 0.006659999999999999,
+        "old_map25": 0.012650625000000026,
+        "new_map25": -0.0053275000000000405,
+        "map50": 0.012550000000000006
+      }
+    },
+    {
+      "run": "pseudo_cosine_v2_s202",
+      "seed": 202,
+      "stage": 4,
+      "metrics": {
+        "stage": 4,
+        "map25": 0.31107,
+        "map50": 0.19186,
+        "old_map25": 0.32223166666666664,
+        "new_map25": 0.27757875,
+        "historical_object_no_pseudo": 0.12571
+      },
+      "baseline": "pseudo_only_s202",
+      "delta": {
+        "map25": 0.006360000000000032,
+        "old_map25": 0.011975833333333352,
+        "new_map25": -0.010485000000000078,
+        "map50": -0.0009800000000000086
+      }
+    },
+    {
+      "run": "pseudo_cosine_v2_s202",
+      "seed": 202,
+      "stage": 5,
+      "metrics": {
+        "stage": 5,
+        "map25": 0.24867,
+        "map50": 0.14816,
+        "old_map25": 0.2852390625,
+        "new_map25": 0.10239999999999999,
+        "historical_object_no_pseudo": 0.08083
+      },
+      "baseline": "pseudo_only_s202",
+      "delta": {
+        "map25": 0.010030000000000011,
+        "old_map25": 0.013049687500000018,
+        "new_map25": -0.0020375000000000115,
+        "map50": 0.011449999999999988
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "repo/tools/train_incremental_scene.py": "f3bf355aac8fc8c31cd2349b850d5d85653d44bcd039c0f80da790fc41448a48",
+  "launch_week3_experiments.py": "889ac6aa8bcbcf0e26db08d274390e4b9538dbaf906be766e197adde7d54887e",
+  "run_week3_experiment.sh": "6c9ac9466a0ea5730a1abebf756fa69c79381b2ea20e86074646aa36e9568cb6",
+  "monitor_week3_cutoff.py": "3ec12aac52678f4449db17dae49ed86888ccee20b766c79693910abac19615f0",
+  "repo/tests/test_incremental_stage_lr_config.py": "8761865e7de5c9e6210bd9555972efddf11d412eb9208c0c315379da45082233",
+  "repo/configs/incremental/sunrgbd/tr3d_dynamic_head_8x5_object_memory_pseudo_dose25_cosine_52211.py": "1c9a10def996a3d4b133b0d8e4a855bbd52339a8dc496d7567579fd1b66feb81",
+  "repo/configs/incremental/sunrgbd/tr3d_dynamic_head_8x5_pseudo_only_cosine_52211.py": "6b97b77cd2d57355db6fb626a3ca71844b9b8a34afb73131139da06ca821cb75"
+}

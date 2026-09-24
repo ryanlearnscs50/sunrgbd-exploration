@@ -10,6 +10,13 @@ geometric augmentation.
 The implementation is based on LDMR commit `ab67f3d` and targets the SUN RGB-D
 40-class, five-stage 8×5 frequency-order protocol with seed 201.
 
+## Follow-up: pseudo supervision, replay dose and learning rate
+
+The September 23–24 follow-up diagnoses missing old-class supervision and tests
+replay probability and cosine LR across continuation seeds. See
+[`10_object_memory_pseudo`](../10_object_memory_pseudo/README.md). The overlay
+here includes those additions and the stage LR propagation fix.
+
 ## Main result
 
 | Method | Stage 2 | Stage 3 | Stage 4 | Stage 5 mAP@.25 |
@@ -30,7 +37,9 @@ plasticity.
 
 The faithful Design-2 trajectory run required training stage 1 from scratch.
 To avoid confounding selection with a different initial model, the random
-continuation uses exactly the same stage-1 checkpoint and bank.
+continuation uses exactly the same stage-1 checkpoint. The initial banks differ:
+only 2/160 object identities overlap, so this compares whole selection policies
+including the initial bank, rather than subsequent updates alone.
 
 | Continuation after matched stage 1 | Final mAP@.25 | Final mAP@.50 |
 |---|---:|---:|

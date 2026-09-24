@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-09-23T17:47:10.812834+00:00",
+  "state": "completed",
+  "seeds": [
+    202,
+    203
+  ],
+  "policies": [
+    "pseudo_only",
+    "dose25"
+  ],
+  "active_seed": 203,
+  "ended_at": "2026-09-23T22:37:32.844429+00:00"
+}

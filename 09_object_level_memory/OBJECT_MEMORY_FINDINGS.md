@@ -82,9 +82,11 @@ matched experiments below now isolate the first two mechanisms for crops.
 
 The no-review Object Design-2 run completed at .0667 mAP@.25 / .0251 mAP@.50.
 Its random-selection control, resumed from the exact same from-scratch stage-1
-checkpoint and bank, completed at **.0931 mAP@.25 / .0450 mAP@.50**. Design-2
-updates after stage 1 therefore reduce the final result by .0264 in the clean
-matched continuation; the earlier checkpoint confound is resolved.
+checkpoint but with a rebuilt random bank, completed at **.0931 mAP@.25 / .0450
+mAP@.50**. The selection-policy difference is .0264. A September 23 artifact audit
+confirmed that the initial banks share only 2 of 160 object identities, so this
+comparison includes stage-1 bank selection rather than isolating later updates.
+The earlier checkpoint confound is resolved.
 
 The no-pseudo Design-2+reviewing ablation also completed cleanly. Its stage
 2--5 mAP@.25 trajectory is .1793, .1103, .1064, **.0632**. Reviewing does not
@@ -94,10 +96,11 @@ s2=.0132, s3=.0345, s4=.1271, s5=.0969. Review statistics and weighted
 sampling summaries exist at every stage, making this a measured negative
 result rather than a missing mechanism.
 
-The pseudo-label combination is implemented but is not evaluated in this
-report. Its guarded launcher originally expected `epoch_1.pth` while the
-five-segment schedule produces `epoch_5.pth`; that artifact guard has been
-corrected for future execution.
+The pseudo-label combination remains implemented but is intentionally not run
+in the current task window. Its guarded launcher expected `epoch_1.pth` while
+the five-segment schedule produces `epoch_5.pth`; the guard is fixed for future
+use. A new full run would not complete in the remaining task time and is not
+needed to close the object-bank baseline and visualization deliverable.
 
 The completed stage-5 Design-2 bank has also been visualized and audited. It
 contains 800 annotated crops, 20/class, and exactly 20 distinct source scenes

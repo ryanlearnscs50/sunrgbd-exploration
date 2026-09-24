@@ -1,0 +1,12 @@
+{
+  "dose25": {
+    "matches_original_object_pseudo": true,
+    "objects": 160,
+    "bank": "incremental_logs/week3_dose25_s201_sunrgbd40_s5_freqorder_20260923_230836/object_memory_bank/object_memory_bank_stage_1.pkl"
+  },
+  "dose50": {
+    "matches_original_object_pseudo": true,
+    "objects": 160,
+    "bank": "incremental_logs/week3_dose50_s201_sunrgbd40_s5_freqorder_20260923_230836/object_memory_bank/object_memory_bank_stage_1.pkl"
+  }
+}

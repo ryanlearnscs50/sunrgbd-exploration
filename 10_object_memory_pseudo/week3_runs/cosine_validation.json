@@ -1,0 +1,17 @@
+{
+  "config_only_change": "lr_config",
+  "schedule_checks": [
+    {
+      "epochs": 1,
+      "start": 0.001,
+      "mid": 0.00055,
+      "last": 0.00010022204783542078
+    },
+    {
+      "epochs": 2,
+      "start": 0.001,
+      "mid": 0.00055,
+      "last": 0.00010005551538325273
+    }
+  ]
+}

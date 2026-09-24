@@ -1,0 +1,4 @@
+{
+  "reason": "Top-level lr_config was not propagated into stage config; observed LR stayed 0.001. Exclude from cosine comparisons.",
+  "action": "Stopped trainer; preserving artifacts."
+}

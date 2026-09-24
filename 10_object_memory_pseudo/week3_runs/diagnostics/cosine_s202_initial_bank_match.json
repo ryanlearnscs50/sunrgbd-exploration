@@ -1,0 +1,7 @@
+{
+  "runs": [
+    "dose25_s202",
+    "dose25_cosine_v2_s202"
+  ],
+  "full_bank_equal": true
+}
