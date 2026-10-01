@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / 'presentation/week4'
+OUT = ROOT / 'figures/week4'
 
 
 def savefig(fig, name):
@@ -133,8 +133,8 @@ def main():
               '(seed changes −19.482 and −18.859). With equal class weighting over 40 classes, '
               'this contributes −0.4792625 pp to the total −0.9295 pp mAP change. '
               'This is an arithmetic decomposition, not evidence of the mechanism causing the loss.', '',
-              'Artifacts: `presentation/week4/week4_bank_costs.png`, '
-              '`presentation/week4/week4_cohort_and_seed_effects.png`, PDF copies, class/cohort CSV files '
+              'Artifacts: `figures/week4/week4_bank_costs.png`, '
+              '`figures/week4/week4_cohort_and_seed_effects.png`, PDF copies, class/cohort CSV files '
               'and `week4_explanatory_summary.json`. Underlying accuracy comes only from the six audited full runs.', '']
     (ROOT / 'WEEK_4_EXPLANATORY_DIAGNOSTICS.md').write_text('\n'.join(lines))
     print(json.dumps({k: v for k, v in summary.items() if k != 'cohorts'}))

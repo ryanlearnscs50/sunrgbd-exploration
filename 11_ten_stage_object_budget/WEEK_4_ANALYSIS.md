@@ -63,4 +63,4 @@ Two independent full-training seeds are available per completed condition. Equal
 
 Audits verify successful exits and completion markers, all metric class scopes/means, nonempty checkpoints/banks/pseudo files, budget/seed/selector settings, finite logged losses and LR schedules. Pickle/model payloads are not deserialized by the audit.
 
-Machine-readable evidence: `week4_runs/analysis.json` and `week4_runs/week4_per_class.csv`. Exportable figures: `presentation/week4/week4_final_accuracy.png` and `presentation/week4/week4_stage_accuracy.png`, with PDF copies. Failed full selection runs remain excluded. See WEEK_4_SELECTION_RECOVERY.md for the separately scoped diagnostic.
+Machine-readable evidence: `week4_runs/analysis.json` and `week4_runs/week4_per_class.csv`. Exportable figures: `figures/week4/week4_final_accuracy.png` and `figures/week4/week4_stage_accuracy.png`, with PDF copies. Failed full selection runs remain excluded. See WEEK_4_SELECTION_RECOVERY.md for the separately scoped diagnostic.

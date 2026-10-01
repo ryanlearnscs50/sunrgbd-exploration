@@ -28,6 +28,8 @@ The B=20 paired changes are −1.754 and −0.105 pp. B=50 changes are −2.318 
 
 At the provisional 0.5 pp loss tolerance, neither reduced budget passes even on the mean. At 1 pp, both means pass but neither passes in both seeds. At 2 pp, B=20 passes in both seeds. These are descriptive sensitivity checks, not a revised acceptance criterion or an equivalence test. No budget smaller than B=100 has demonstrated retention within 0.5 pp in this study.
 
+![Final accuracy across budgets](figures/week4/week4_final_accuracy.png)
+
 ## What storage and accuracy measurements mean
 
 The 3,979-object final baseline falls below its nominal 4,000 cap because mirror, laptop and towel provide fewer eligible crops. The final bank is written after adding the last cohort; stage-10 training instead uses the stage-9 bank: 3,600 old objects for B=100 and 720 for B=20. These are separate quantities.
@@ -46,6 +48,8 @@ In the bounded stage-2 comparison, largest-point-count selection changes AP25 by
 
 The offline 40-class largest-point-count bank contains 800 crops, 10,990,248 points and 251.70 MiB. It uses 3.60 times the mean bytes of random B=20. Against random B=100 it saves 79.89% of objects but only 23.25% of bytes. This is bank-construction evidence, with no full ten-stage detector score. More points are not by themselves proof of better semantic quality or class representativeness.
 
+![Object, point and storage budgets](figures/week4/week4_bank_costs.png)
+
 ## Relation to the reference work
 
 The retained reference audit establishes the nominal 100-object-per-class budget and the ten-stage class split, but does not identify a verified ten-stage object-memory score to reproduce. The separate 19.38% ten-stage scene-memory result has a different protocol and budget unit. Local box-origin/collision fixes, uniform subset selection, object sampling without replacement and the absence of extra crop yaw remain implementation differences. This is a local ten-stage extension and controlled object-budget study, not a confirmed numerical reproduction.
@@ -61,6 +65,5 @@ Random B=20 is a substantial storage reduction with a measured mean cost of abou
 - [Full numerical analysis](WEEK_4_ANALYSIS.md) and [budget comparison](WEEK_4_BUDGET_COMPARISON.md).
 - [Selection repair and bounded results](WEEK_4_SELECTION_RECOVERY.md).
 - [Storage and class diagnostics](WEEK_4_EXPLANATORY_DIAGNOSTICS.md).
-- [Research slide PDF](presentation/week4/WEEK_4_RESEARCH_SLIDES.pdf) and [speaker notes](presentation/week4/WEEK_4_SPEAKER_NOTES.md).
 - Machine-readable full-run results: `week4_runs/analysis.json`; bounded results: `week4_runs/selection_recovery/audit.json`.
 - Full-run completion audits check exits, class scopes and metric means, bank caps/seed/selector, finite training losses, LR, and nonempty checkpoints/pseudo artifacts. Model payloads are not deserialized by that audit.

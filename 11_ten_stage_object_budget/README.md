@@ -20,14 +20,11 @@ AP values are percentages. SD describes only two runs and is not a confidence
 interval. B=20's paired AP25 changes are −1.754 and −0.105 points; neither
 reduced budget demonstrates retention within 0.5 points.
 
-![Final accuracy by object budget](presentation/week4/week4_final_accuracy.png)
+![Final accuracy by object budget](figures/week4/week4_final_accuracy.png)
 
 | Artifact | Contents |
 |---|---|
 | [Weekly findings](WEEK_4_WRAP_UP.md) | Question, protocol, results, interpretation and limitations |
-| [Eight-slide presentation](presentation/week4/WEEK_4_RESEARCH_SLIDES.pdf) | Group presentation, including charts and selector limitations |
-| [Speaker notes](presentation/week4/WEEK_4_SPEAKER_NOTES.md) | Suggested spoken explanation for each slide |
-| [Briefing](presentation/week4/WEEK_4_RESEARCH_BRIEFING.md) | Short overview |
 | [Full analysis](WEEK_4_ANALYSIS.md) | Paired seeds, old/new AP, forgetting, storage and tolerance sensitivity |
 | [Budget table](WEEK_4_BUDGET_COMPARISON.md) | Per-seed accuracy and actual object counts |
 | [Selection diagnostic](WEEK_4_SELECTION_RECOVERY.md) | Failed full runs, population repair and four stage-2 continuations |

@@ -71,7 +71,6 @@ published stage metrics, paired deltas, bank counts and summary figures.
 The included `week4_*.py` host analyzers additionally require the original
 local run directories, model artifacts and environment. They preserve the
 analysis implementation; they are not substitutes for the portable check.
-`week4_finalize.py` also appends to a local memory file when run on that host.
 
 Before publication, the host re-audited all six full runs and four diagnostic
 runs. Checks covered terminal exits, metric scope/means, finite losses, LR,

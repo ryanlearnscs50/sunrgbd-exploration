@@ -10,7 +10,7 @@ from summarize_week4_budgets import audit
 
 ROOT = Path(__file__).resolve().parent
 STATE = ROOT / 'week4_runs'
-FIGURES = ROOT / 'presentation/week4'
+FIGURES = ROOT / 'figures/week4'
 
 
 def atomic(path, text):
@@ -240,77 +240,11 @@ def main():
               'nonempty checkpoints/banks/pseudo files, budget/seed/selector settings, finite logged losses '
               'and LR schedules. Pickle/model payloads are not deserialized by the audit.', '',
               'Machine-readable evidence: `week4_runs/analysis.json` and `week4_runs/week4_per_class.csv`. '
-              'Exportable figures: `presentation/week4/week4_final_accuracy.png` and '
-              '`presentation/week4/week4_stage_accuracy.png`, with PDF copies. '
+              'Exportable figures: `figures/week4/week4_final_accuracy.png` and '
+              '`figures/week4/week4_stage_accuracy.png`, with PDF copies. '
               'Failed full selection runs remain excluded. See WEEK_4_SELECTION_RECOVERY.md for the separately scoped diagnostic.', '']
     plot(groups)
     atomic(ROOT / 'WEEK_4_ANALYSIS.md', '\n'.join(lines))
-    brief = ['# Week 4 research briefing draft', '',
-             f'Evidence refreshed: {report["updated_at"]}. '
-             + ('All eight planned runs are complete and audited.' if selection_complete else
-                'Six budget runs are complete; both full selection runs failed after stage 1.' if selection_failed else
-                'Six budget runs are complete; two selection runs remain pending.'), '',
-             '## Research question', '',
-             'How far can we reduce the number of stored object crops in ten-stage incremental '
-             '3D detection while retaining performance, and can crop selection improve a small bank?', '',
-             '## What changed this week', '',
-             'We moved from five to ten stages, established a 100-object-per-class baseline, '
-             'and compared 50 and 20 objects per class. Each condition uses two complete training '
-             'runs from scratch with seeds 200 and 201. Replay probability, insertion settings, '
-             'pseudo labels and the training schedule stay fixed across the budget sweep.', '',
-             'The reference repositories establish the nominal object budget and ten-stage split. '
-             'They did not provide a verified ten-stage object score in the retained audit. '
-             'Present this as a local extension and controlled budget study; remaining implementation '
-             'differences are documented in the protocol audit.', '',
-             '## Main measured result', '',
-             'Reducing the final bank from 3,979 to 800 objects saves 79.89% of objects. '
-             'Mean final mAP@.25 changes from 15.6815% to 14.7520%, a loss of 0.9295 percentage '
-             'points. The paired losses are 1.754 and 0.105 pp, so the mean conceals substantial '
-             'variation between the two seeds. The 50-object condition has nearly the same mean '
-             'as the 20-object condition; this small study does not support a smooth accuracy-budget trend.', '',
-             'The 20-object banks occupy about 69–71 MiB versus 327–329 MiB for the baseline. '
-             'Training still takes about 6.7 hours versus 6.8 hours. The main measured saving is '
-             'stored replay data, with little runtime change under this fixed training schedule.', '',
-             '## Selection experiment', '']
-    if selection_complete:
-        pair = groups['Most points B=20']
-        delta = st.mean(r['delta_vs_random20_25_pp'] for r in pair)
-        gap = st.mean(r['delta_vs_baseline25_pp'] for r in pair)
-        brief += [f'Selecting crops with the most points at B=20 gives mean final mAP@.25 '
-                  f'{100*st.mean(r["final_map25"] for r in pair):.4f}%. Its paired change versus '
-                  f'random B=20 is {delta:+.4f} pp on average; the gap to random B=100 is '
-                  f'{gap:+.4f} pp. The individual criterion effects are '
-                  + ' and '.join(f'{r["delta_vs_random20_25_pp"]:+.3f} pp' for r in pair) + '.', '',
-                  'The criterion selects by point count, so compare its point and byte costs '
-                  'alongside accuracy even though the number of stored objects is fixed. '
-                  'See the full analysis for storage, old/new AP and forgetting.']
-    else:
-        brief += [selection_note] if selection_failed else ['Two detached runs test selection by largest crop point count at B=20, '
-                  'with seeds 200 and 201 and all other settings fixed. Hypothesis: denser '
-                  'crops may make a small bank more useful. This is untested until the runs '
-                  'finish; this briefing will refresh automatically after both pass the audit.']
-    brief += ['', '## Claim and decision for discussion', '',
-              'The random B=20 condition demonstrates roughly 80% fewer stored objects at a '
-              'mean cost of 0.93 pp AP25 in this two-seed study. It does not meet the provisional '
-              '0.5 pp tolerance. A 1 pp mean-only tolerance accepts it, but a 1 pp tolerance '
-              'on both seeds does not. Agree on what loss is acceptable before claiming '
-              'performance retention. A third matched seed would improve the variability estimate.', '',
-              'Scene-memory entries and object crops are different units. Do not claim equal '
-              'memory against original scene replay from entry counts, or exact reproduction '
-              'of a reference score that was not identified.', '',
-              '## Suggested presentation sequence', '',
-              '1. State the question and distinguish stored bank size from replay probability.',
-              '2. Explain the ten-stage protocol, fixed settings and two full-training seeds.',
-              '3. Show `week4_final_accuracy.png` and the 3,979-to-800 object reduction.',
-              '4. Show `week4_stage_accuracy.png`; explain why changing class scope differs from forgetting.',
-              '5. Discuss the selection comparison and its point/byte tradeoff once audited.',
-              '6. End with the tolerance decision, seed uncertainty and remaining reference gap.', '',
-              '## Evidence', '',
-              'The full numerical analysis is `../../WEEK_4_ANALYSIS.md`; structured results are '
-              '`../../week4_runs/analysis.json`, with per-class values in '
-              '`../../week4_runs/week4_per_class.csv`. Figures are available here as PNG and PDF. '
-              'This draft is preparation for the final weekly writeup, not an assertion that pending runs succeeded.', '']
-    atomic(FIGURES / 'WEEK_4_RESEARCH_BRIEFING.md', '\n'.join(brief))
     print(f'Audited {len(runs)} runs, wrote analysis, per-class CSV and PNG/PDF figures', flush=True)
 
 

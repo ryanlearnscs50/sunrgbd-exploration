@@ -190,8 +190,8 @@ Full report: [`10_object_memory_pseudo/README.md`](10_object_memory_pseudo/READM
 Six full-training runs compare 100, 50 and 20 objects per class over ten stages.
 The smallest bank saves **79.89% of stored objects** at a mean **0.9295-point
 AP25 loss**, exceeding the provisional 0.5-point retention tolerance. Four
-separate stage-2 selector diagnostics, storage/class analysis, an eight-slide
-presentation and compact reproducibility evidence are included.
+separate stage-2 selector diagnostics, storage/class analysis and compact
+reproducibility evidence are included.
 
 Full report: [`11_ten_stage_object_budget/README.md`](11_ten_stage_object_budget/README.md)
 

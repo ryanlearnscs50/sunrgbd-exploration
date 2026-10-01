@@ -29,4 +29,4 @@ B=20 loses AP25 in both seeds for 11/40 classes and gains in both for 7/40. Othe
 
 The largest mean class loss is recycle_bin: −19.1705 AP25 points (seed changes −19.482 and −18.859). With equal class weighting over 40 classes, this contributes −0.4792625 pp to the total −0.9295 pp mAP change. This is an arithmetic decomposition, not evidence of the mechanism causing the loss.
 
-Artifacts: `presentation/week4/week4_bank_costs.png`, `presentation/week4/week4_cohort_and_seed_effects.png`, PDF copies, class/cohort CSV files and `week4_explanatory_summary.json`. Underlying accuracy comes only from the six audited full runs.
+Artifacts: `figures/week4/week4_bank_costs.png`, `figures/week4/week4_cohort_and_seed_effects.png`, PDF copies, class/cohort CSV files and `week4_explanatory_summary.json`. Underlying accuracy comes only from the six audited full runs.
