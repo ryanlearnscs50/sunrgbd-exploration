@@ -1,0 +1,25 @@
+{
+  "run_id": "object50_s200",
+  "seed": 200,
+  "gpu": 0,
+  "start_stage": 1,
+  "end_stage": 10,
+  "initialization": "scratch; independent full-training seed",
+  "config": "/data3/ryan/ldmr_exploration/repo/configs/incremental/sunrgbd/week4_s10_object50_pseudo.py",
+  "config_sha256": "0d7d1abc74046f379a0e7bfa75841add0ef9d57ab985013cad348a7c9f7b4c56",
+  "budget_per_class": 50,
+  "max_total_exemplars": 2000,
+  "reference_obj_commit": "cd667a180c3cbf4eae29cf779ea907592400266f",
+  "reference_backup_commit": "1c58607f04b86f1b66233b39a07b631f624f201c",
+  "reference_ten_stage_object_score": null,
+  "command": [
+    "nohup",
+    "bash",
+    "/data3/ryan/ldmr_exploration/run_week4_experiment.sh",
+    "200",
+    "50"
+  ],
+  "work_dir_stem": "/data3/ryan/ldmr_exploration/incremental_logs/week4_object50_s200",
+  "launched_at": "2026-09-30T03:01:43.650312+00:00",
+  "supervisor_pid": 3114802
+}

@@ -1,11 +1,11 @@
 """
 no_null_clustering.py
 ---------------------
-Tests the mentor's hypothesis: the 1-SE Occam razor inequality is robust to
+Tests the hypothesis: the 1-SE Occam razor inequality is robust to
 the exact null baseline value, so we can cluster WITHOUT synthetic null data.
 
 ══════════════════════════════════════════════════════════════════════════════
-WHY THE MENTOR IS RIGHT (THE MATHS)
+MATHEMATICAL RATIONALE
 ══════════════════════════════════════════════════════════════════════════════
 
 The 1-SE rule fires at k when:
@@ -207,7 +207,7 @@ WIDE = "=" * 90
 emit(WIDE)
 emit("NO-NULL GAP STATISTIC — SIDE-BY-SIDE COMPARISON")
 emit("With-null (original)  vs  No-null (KMeans restart variance)")
-emit("Testing mentor's hypothesis: 1-SE Occam razor is robust to the exact null baseline")
+emit("Testing the hypothesis: 1-SE Occam razor is robust to the exact null baseline")
 emit(WIDE)
 
 emit()
@@ -340,7 +340,7 @@ emit()
 emit("INTERPRETATION:")
 emit("  Classes where they AGREE: the null baseline was redundant — the Occam razor")
 emit("  fires at the same k regardless, because mean_null ≈ log_W_real for those classes.")
-emit("  This confirms the mentor's hypothesis: for weak-structure binary co-occurrence")
+emit("  This supports the hypothesis: for weak-structure binary co-occurrence")
 emit("  data, the 1-SE rule is driven by sk (the uncertainty floor), not by the exact")
 emit("  null baseline value.")
 emit()

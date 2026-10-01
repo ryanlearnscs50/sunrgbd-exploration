@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "stages": [
+    {
+      "stage": 1,
+      "epochs": 6,
+      "seen_classes": 4,
+      "epoch_lrs": [
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.001,
+        0.0001
+      ]
+    },
+    {
+      "stage": 2,
+      "epochs": 1,
+      "seen_classes": 8,
+      "epoch_lrs": [
+        0.001
+      ]
+    },
+    {
+      "stage": 3,
+      "epochs": 1,
+      "seen_classes": 12,
+      "epoch_lrs": [
+        0.001
+      ]
+    },
+    {
+      "stage": 4,
+      "epochs": 1,
+      "seen_classes": 16,
+      "epoch_lrs": [
+        0.001
+      ]
+    },
+    {
+      "stage": 5,
+      "epochs": 1,
+      "seen_classes": 20,
+      "epoch_lrs": [
+        0.001
+      ]
+    },
+    {
+      "stage": 6,
+      "epochs": 1,
+      "seen_classes": 24,
+      "epoch_lrs": [
+        0.001
+      ]
+    },
+    {
+      "stage": 7,
+      "epochs": 1,
+      "seen_classes": 28,
+      "epoch_lrs": [
+        0.001
+      ]
+    },
+    {
+      "stage": 8,
+      "epochs": 1,
+      "seen_classes": 32,
+      "epoch_lrs": [
+        0.001
+      ]
+    },
+    {
+      "stage": 9,
+      "epochs": 1,
+      "seen_classes": 36,
+      "epoch_lrs": [
+        0.001
+      ]
+    },
+    {
+      "stage": 10,
+      "epochs": 1,
+      "seen_classes": 40,
+      "epoch_lrs": [
+        0.001
+      ]
+    }
+  ],
+  "object_memory_config": {
+    "exemplars_per_class": 100,
+    "max_total_exemplars": 4000,
+    "selection_strategy": "random",
+    "min_points": 20,
+    "crop_margin": 0.0,
+    "floor_percentile": 0.0,
+    "insertion": {
+      "max_exemplars_per_scene": 3,
+      "insertion_probability": 0.7,
+      "collision_threshold": 0.3,
+      "placement_jitter": 1.0,
+      "max_placement_attempts": 10,
+      "floor_offset": 0.0,
+      "floor_percentile": 0.0,
+      "preserve_source_height": false
+    }
+  },
+  "pseudo_label_config": {
+    "use_pregenerated": true,
+    "apply_to_memory_scenes": false,
+    "confidence_threshold": 0.5,
+    "nms_threshold": 0.3,
+    "pseudo_nms_iou_thr": 0.3,
+    "max_pseudo_per_scene": 100,
+    "pseudo_vs_gt_iou_thr": 0.25
+  },
+  "limitation": "CPU stage construction; live GPU training still must be verified"
+}

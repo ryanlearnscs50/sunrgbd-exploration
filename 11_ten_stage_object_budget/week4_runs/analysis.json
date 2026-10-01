@@ -1,0 +1,3638 @@
+{
+  "updated_at": "2026-10-01T05:26:11.699313+00:00",
+  "audited": true,
+  "selection_complete": false,
+  "selection_failed": true,
+  "runs": [
+    {
+      "budget": 100,
+      "seed": 200,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56822,
+          "map50": 0.4312,
+          "stored_objects": 400
+        },
+        {
+          "stage": 2,
+          "map25": 0.49046,
+          "map50": 0.34955,
+          "stored_objects": 800
+        },
+        {
+          "stage": 3,
+          "map25": 0.38717,
+          "map50": 0.26534,
+          "stored_objects": 1200
+        },
+        {
+          "stage": 4,
+          "map25": 0.35074,
+          "map50": 0.24239,
+          "stored_objects": 1600
+        },
+        {
+          "stage": 5,
+          "map25": 0.30592,
+          "map50": 0.19204,
+          "stored_objects": 2000
+        },
+        {
+          "stage": 6,
+          "map25": 0.25386,
+          "map50": 0.15737,
+          "stored_objects": 2400
+        },
+        {
+          "stage": 7,
+          "map25": 0.22064,
+          "map50": 0.13805,
+          "stored_objects": 2800
+        },
+        {
+          "stage": 8,
+          "map25": 0.1973,
+          "map50": 0.1337,
+          "stored_objects": 3200
+        },
+        {
+          "stage": 9,
+          "map25": 0.19111,
+          "map50": 0.12084,
+          "stored_objects": 3600
+        },
+        {
+          "stage": 10,
+          "map25": 0.16363,
+          "map50": 0.09634,
+          "stored_objects": 3979
+        }
+      ],
+      "final_map25": 0.16363,
+      "final_map50": 0.09634,
+      "final_objects": 3979,
+      "stage10_old_objects": 3600,
+      "stage_average_map25": 0.312905,
+      "stage_average_map50": 0.212682,
+      "run_id": "object100_s200",
+      "strategy": "random",
+      "label": "Random B=100",
+      "work_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week4_object100_s200_sunrgbd40_s10_freqorder_split_20260930_023522",
+      "classes": [
+        {
+          "model_idx": 0,
+          "name": "chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.75017,
+          "introduction_ap25": 0.81409,
+          "forgetting25": 0.06391999999999998,
+          "final_ap50": 0.59803,
+          "introduction_ap50": 0.68021,
+          "forgetting50": 0.08218000000000003
+        },
+        {
+          "model_idx": 1,
+          "name": "table",
+          "introduced_stage": 1,
+          "final_ap25": 0.12575,
+          "introduction_ap25": 0.51464,
+          "forgetting25": 0.38888999999999996,
+          "final_ap50": 0.02963,
+          "introduction_ap50": 0.32475,
+          "forgetting50": 0.29512
+        },
+        {
+          "model_idx": 2,
+          "name": "pillow",
+          "introduced_stage": 1,
+          "final_ap25": 0.14566,
+          "introduction_ap25": 0.25756,
+          "forgetting25": 0.1119,
+          "final_ap50": 0.01717,
+          "introduction_ap50": 0.09475,
+          "forgetting50": 0.07758
+        },
+        {
+          "model_idx": 3,
+          "name": "sofa_chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.63081,
+          "introduction_ap25": 0.68661,
+          "forgetting25": 0.05580000000000007,
+          "final_ap50": 0.57618,
+          "introduction_ap50": 0.62507,
+          "forgetting50": 0.04888999999999999
+        },
+        {
+          "model_idx": 4,
+          "name": "desk",
+          "introduced_stage": 2,
+          "final_ap25": 0.05811,
+          "introduction_ap25": 0.27196,
+          "forgetting25": 0.21384999999999998,
+          "final_ap50": 0.00583,
+          "introduction_ap50": 0.10011,
+          "forgetting50": 0.09428
+        },
+        {
+          "model_idx": 5,
+          "name": "bed",
+          "introduced_stage": 2,
+          "final_ap25": 0.81112,
+          "introduction_ap25": 0.85435,
+          "forgetting25": 0.0432300000000001,
+          "final_ap50": 0.48376,
+          "introduction_ap50": 0.6089,
+          "forgetting50": 0.13067999999999996
+        },
+        {
+          "model_idx": 6,
+          "name": "sofa",
+          "introduced_stage": 2,
+          "final_ap25": 0.63885,
+          "introduction_ap25": 0.69325,
+          "forgetting25": 0.054400000000000004,
+          "final_ap50": 0.4947,
+          "introduction_ap50": 0.55019,
+          "forgetting50": 0.055489999999999984
+        },
+        {
+          "model_idx": 7,
+          "name": "computer",
+          "introduced_stage": 2,
+          "final_ap25": 0.02294,
+          "introduction_ap25": 0.04485,
+          "forgetting25": 0.021910000000000002,
+          "final_ap50": 0.01588,
+          "introduction_ap50": 0.0064,
+          "forgetting50": -0.007179999999999999
+        },
+        {
+          "model_idx": 8,
+          "name": "lamp",
+          "introduced_stage": 3,
+          "final_ap25": 0.33686,
+          "introduction_ap25": 0.40969,
+          "forgetting25": 0.07283,
+          "final_ap50": 0.09634,
+          "introduction_ap50": 0.18714,
+          "forgetting50": 0.0908
+        },
+        {
+          "model_idx": 9,
+          "name": "box",
+          "introduced_stage": 3,
+          "final_ap25": 0.00382,
+          "introduction_ap25": 0.03292,
+          "forgetting25": 0.029099999999999997,
+          "final_ap50": 0.00078,
+          "introduction_ap50": 0.00776,
+          "forgetting50": 0.00698
+        },
+        {
+          "model_idx": 10,
+          "name": "garbage_bin",
+          "introduced_stage": 3,
+          "final_ap25": 0.09186,
+          "introduction_ap25": 0.36967,
+          "forgetting25": 0.27781,
+          "final_ap50": 0.04748,
+          "introduction_ap50": 0.24554,
+          "forgetting50": 0.19806
+        },
+        {
+          "model_idx": 11,
+          "name": "cabinet",
+          "introduced_stage": 3,
+          "final_ap25": 0.00755,
+          "introduction_ap25": 0.06175,
+          "forgetting25": 0.0542,
+          "final_ap50": 0.00074,
+          "introduction_ap50": 0.02344,
+          "forgetting50": 0.022699999999999998
+        },
+        {
+          "model_idx": 12,
+          "name": "shelf",
+          "introduced_stage": 4,
+          "final_ap25": 0.0551,
+          "introduction_ap25": 0.14247,
+          "forgetting25": 0.08737,
+          "final_ap50": 0.00604,
+          "introduction_ap50": 0.02216,
+          "forgetting50": 0.01612
+        },
+        {
+          "model_idx": 13,
+          "name": "drawer",
+          "introduced_stage": 4,
+          "final_ap25": 0.00695,
+          "introduction_ap25": 0.0529,
+          "forgetting25": 0.045950000000000005,
+          "final_ap50": 0.00204,
+          "introduction_ap50": 0.01744,
+          "forgetting50": 0.0154
+        },
+        {
+          "model_idx": 14,
+          "name": "night_stand",
+          "introduced_stage": 4,
+          "final_ap25": 0.05488,
+          "introduction_ap25": 0.57335,
+          "forgetting25": 0.51847,
+          "final_ap50": 0.03829,
+          "introduction_ap50": 0.44392,
+          "forgetting50": 0.40563
+        },
+        {
+          "model_idx": 15,
+          "name": "endtable",
+          "introduced_stage": 4,
+          "final_ap25": 0.09279,
+          "introduction_ap25": 0.39704,
+          "forgetting25": 0.30425,
+          "final_ap50": 0.05264,
+          "introduction_ap50": 0.28708,
+          "forgetting50": 0.23444
+        },
+        {
+          "model_idx": 16,
+          "name": "sink",
+          "introduced_stage": 5,
+          "final_ap25": 0.14727,
+          "introduction_ap25": 0.41302,
+          "forgetting25": 0.26575,
+          "final_ap50": 0.03485,
+          "introduction_ap50": 0.08695,
+          "forgetting50": 0.0521
+        },
+        {
+          "model_idx": 17,
+          "name": "picture",
+          "introduced_stage": 5,
+          "final_ap25": 3e-05,
+          "introduction_ap25": 0.00604,
+          "forgetting25": 0.006010000000000001,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.00016,
+          "forgetting50": 0.00016
+        },
+        {
+          "model_idx": 18,
+          "name": "stool",
+          "introduced_stage": 5,
+          "final_ap25": 0.17843,
+          "introduction_ap25": 0.24041,
+          "forgetting25": 0.08408000000000002,
+          "final_ap50": 0.11067,
+          "introduction_ap50": 0.14044,
+          "forgetting50": 0.0647
+        },
+        {
+          "model_idx": 19,
+          "name": "coffee_table",
+          "introduced_stage": 5,
+          "final_ap25": 0.04397,
+          "introduction_ap25": 0.33603,
+          "forgetting25": 0.29206,
+          "final_ap50": 0.01525,
+          "introduction_ap50": 0.20212,
+          "forgetting50": 0.18686999999999998
+        },
+        {
+          "model_idx": 20,
+          "name": "bookshelf",
+          "introduced_stage": 6,
+          "final_ap25": 0.16316,
+          "introduction_ap25": 0.31817,
+          "forgetting25": 0.15501,
+          "final_ap50": 0.04081,
+          "introduction_ap50": 0.0871,
+          "forgetting50": 0.04629
+        },
+        {
+          "model_idx": 21,
+          "name": "painting",
+          "introduced_stage": 6,
+          "final_ap25": 0.00015,
+          "introduction_ap25": 0.04104,
+          "forgetting25": 0.04089,
+          "final_ap50": 1e-05,
+          "introduction_ap50": 0.0042,
+          "forgetting50": 0.00419
+        },
+        {
+          "model_idx": 22,
+          "name": "keyboard",
+          "introduced_stage": 6,
+          "final_ap25": 0.00036,
+          "introduction_ap25": 0.02122,
+          "forgetting25": 0.02086,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.00043,
+          "forgetting50": 0.00043
+        },
+        {
+          "model_idx": 23,
+          "name": "dresser",
+          "introduced_stage": 6,
+          "final_ap25": 0.02448,
+          "introduction_ap25": 0.26754,
+          "forgetting25": 0.24306,
+          "final_ap50": 0.0161,
+          "introduction_ap50": 0.18962,
+          "forgetting50": 0.17352
+        },
+        {
+          "model_idx": 24,
+          "name": "tv",
+          "introduced_stage": 7,
+          "final_ap25": 0.01182,
+          "introduction_ap25": 0.29701,
+          "forgetting25": 0.28519,
+          "final_ap50": 0.00047,
+          "introduction_ap50": 0.10366,
+          "forgetting50": 0.10319
+        },
+        {
+          "model_idx": 25,
+          "name": "whiteboard",
+          "introduced_stage": 7,
+          "final_ap25": 0.0056,
+          "introduction_ap25": 0.08868,
+          "forgetting25": 0.08308,
+          "final_ap50": 0.00018,
+          "introduction_ap50": 0.00136,
+          "forgetting50": 0.00118
+        },
+        {
+          "model_idx": 26,
+          "name": "cpu",
+          "introduced_stage": 7,
+          "final_ap25": 0.00154,
+          "introduction_ap25": 0.09713,
+          "forgetting25": 0.09559,
+          "final_ap50": 0.00025,
+          "introduction_ap50": 0.01661,
+          "forgetting50": 0.01636
+        },
+        {
+          "model_idx": 27,
+          "name": "toilet",
+          "introduced_stage": 7,
+          "final_ap25": 0.85911,
+          "introduction_ap25": 0.87151,
+          "forgetting25": 0.012399999999999967,
+          "final_ap50": 0.57181,
+          "introduction_ap50": 0.63904,
+          "forgetting50": 0.0826
+        },
+        {
+          "model_idx": 28,
+          "name": "paper",
+          "introduced_stage": 8,
+          "final_ap25": 5e-05,
+          "introduction_ap25": 5e-05,
+          "forgetting25": 0.0,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.0,
+          "forgetting50": 0.0
+        },
+        {
+          "model_idx": 29,
+          "name": "ottoman",
+          "introduced_stage": 8,
+          "final_ap25": 0.08902,
+          "introduction_ap25": 0.251,
+          "forgetting25": 0.16198,
+          "final_ap50": 0.0572,
+          "introduction_ap50": 0.16132,
+          "forgetting50": 0.10411999999999999
+        },
+        {
+          "model_idx": 30,
+          "name": "bench",
+          "introduced_stage": 8,
+          "final_ap25": 0.13866,
+          "introduction_ap25": 0.16143,
+          "forgetting25": 0.05693000000000001,
+          "final_ap50": 0.05192,
+          "introduction_ap50": 0.08625,
+          "forgetting50": 0.08150000000000002
+        },
+        {
+          "model_idx": 31,
+          "name": "recycle_bin",
+          "introduced_stage": 8,
+          "final_ap25": 0.44533,
+          "introduction_ap25": 0.52704,
+          "forgetting25": 0.08170999999999995,
+          "final_ap50": 0.32424,
+          "introduction_ap50": 0.44214,
+          "forgetting50": 0.1179
+        },
+        {
+          "model_idx": 32,
+          "name": "monitor",
+          "introduced_stage": 9,
+          "final_ap25": 0.16351,
+          "introduction_ap25": 0.28751,
+          "forgetting25": 0.124,
+          "final_ap50": 0.02501,
+          "introduction_ap50": 0.05068,
+          "forgetting50": 0.025670000000000002
+        },
+        {
+          "model_idx": 33,
+          "name": "printer",
+          "introduced_stage": 9,
+          "final_ap25": 0.18205,
+          "introduction_ap25": 0.29737,
+          "forgetting25": 0.11532000000000003,
+          "final_ap50": 0.08765,
+          "introduction_ap50": 0.16755,
+          "forgetting50": 0.0799
+        },
+        {
+          "model_idx": 34,
+          "name": "plant",
+          "introduced_stage": 9,
+          "final_ap25": 0.06633,
+          "introduction_ap25": 0.08355,
+          "forgetting25": 0.01722,
+          "final_ap50": 0.01155,
+          "introduction_ap50": 0.01285,
+          "forgetting50": 0.0013000000000000008
+        },
+        {
+          "model_idx": 35,
+          "name": "door",
+          "introduced_stage": 9,
+          "final_ap25": 0.00337,
+          "introduction_ap25": 0.00652,
+          "forgetting25": 0.0031499999999999996,
+          "final_ap50": 0.00017,
+          "introduction_ap50": 0.0002,
+          "forgetting50": 2.9999999999999997e-05
+        },
+        {
+          "model_idx": 36,
+          "name": "book",
+          "introduced_stage": 10,
+          "final_ap25": 0.02185,
+          "introduction_ap25": 0.02185,
+          "forgetting25": null,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.0,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 37,
+          "name": "mirror",
+          "introduced_stage": 10,
+          "final_ap25": 0.01879,
+          "introduction_ap25": 0.01879,
+          "forgetting25": null,
+          "final_ap50": 0.00024,
+          "introduction_ap50": 0.00024,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 38,
+          "name": "laptop",
+          "introduced_stage": 10,
+          "final_ap25": 0.06678,
+          "introduction_ap25": 0.06678,
+          "forgetting25": null,
+          "final_ap50": 0.03239,
+          "introduction_ap50": 0.03239,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 39,
+          "name": "towel",
+          "introduced_stage": 10,
+          "final_ap25": 0.08021,
+          "introduction_ap25": 0.08021,
+          "forgetting25": null,
+          "final_ap50": 0.00729,
+          "introduction_ap50": 0.00729,
+          "forgetting50": null
+        }
+      ],
+      "resources": [
+        {
+          "stage": 1,
+          "objects": 400,
+          "points": 1340812,
+          "pickle_bytes": 32259361,
+          "unique_source_scenes": 368
+        },
+        {
+          "stage": 2,
+          "objects": 800,
+          "points": 4621000,
+          "pickle_bytes": 111063804,
+          "unique_source_scenes": 698
+        },
+        {
+          "stage": 3,
+          "objects": 1200,
+          "points": 5654980,
+          "pickle_bytes": 135958257,
+          "unique_source_scenes": 1003
+        },
+        {
+          "stage": 4,
+          "objects": 1600,
+          "points": 6920975,
+          "pickle_bytes": 166421328,
+          "unique_source_scenes": 1257
+        },
+        {
+          "stage": 5,
+          "objects": 2000,
+          "points": 8131587,
+          "pickle_bytes": 195555062,
+          "unique_source_scenes": 1501
+        },
+        {
+          "stage": 6,
+          "objects": 2400,
+          "points": 9724777,
+          "pickle_bytes": 233870778,
+          "unique_source_scenes": 1710
+        },
+        {
+          "stage": 7,
+          "objects": 2800,
+          "points": 11279292,
+          "pickle_bytes": 271258705,
+          "unique_source_scenes": 1947
+        },
+        {
+          "stage": 8,
+          "objects": 3200,
+          "points": 12706847,
+          "pickle_bytes": 305599219,
+          "unique_source_scenes": 2158
+        },
+        {
+          "stage": 9,
+          "objects": 3600,
+          "points": 13763363,
+          "pickle_bytes": 331034650,
+          "unique_source_scenes": 2317
+        },
+        {
+          "stage": 10,
+          "objects": 3979,
+          "points": 14319421,
+          "pickle_bytes": 344454436,
+          "unique_source_scenes": 2452
+        }
+      ],
+      "final_old_map25": 0.17659611111111112,
+      "final_new_map25": 0.046907500000000005,
+      "forgetting25": 0.12467138888888889,
+      "backward_transfer25": -0.12310861111111111,
+      "final_old_map50": 0.10593527777777778,
+      "final_new_map50": 0.009980000000000001,
+      "forgetting50": 0.08081055555555555,
+      "backward_transfer50": -0.07788527777777778,
+      "duration_hours": 6.820833333333334,
+      "peak_logged_memory_mb": 3647,
+      "object_reduction_percent": 0.0,
+      "delta_vs_baseline25_pp": 0.0,
+      "delta_vs_random20_25_pp": 1.754,
+      "delta_vs_baseline50_pp": 0.0,
+      "delta_vs_random20_50_pp": 1.371
+    },
+    {
+      "budget": 100,
+      "seed": 201,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56005,
+          "map50": 0.42405,
+          "stored_objects": 400
+        },
+        {
+          "stage": 2,
+          "map25": 0.49446,
+          "map50": 0.35027,
+          "stored_objects": 800
+        },
+        {
+          "stage": 3,
+          "map25": 0.38224,
+          "map50": 0.25607,
+          "stored_objects": 1200
+        },
+        {
+          "stage": 4,
+          "map25": 0.34364,
+          "map50": 0.23241,
+          "stored_objects": 1600
+        },
+        {
+          "stage": 5,
+          "map25": 0.29497,
+          "map50": 0.18857,
+          "stored_objects": 2000
+        },
+        {
+          "stage": 6,
+          "map25": 0.24196,
+          "map50": 0.15564,
+          "stored_objects": 2400
+        },
+        {
+          "stage": 7,
+          "map25": 0.20608,
+          "map50": 0.12749,
+          "stored_objects": 2800
+        },
+        {
+          "stage": 8,
+          "map25": 0.19778,
+          "map50": 0.12581,
+          "stored_objects": 3200
+        },
+        {
+          "stage": 9,
+          "map25": 0.17821,
+          "map50": 0.11305,
+          "stored_objects": 3600
+        },
+        {
+          "stage": 10,
+          "map25": 0.15,
+          "map50": 0.09032,
+          "stored_objects": 3979
+        }
+      ],
+      "final_map25": 0.15,
+      "final_map50": 0.09032,
+      "final_objects": 3979,
+      "stage10_old_objects": 3600,
+      "stage_average_map25": 0.304939,
+      "stage_average_map50": 0.206368,
+      "run_id": "object100_s201",
+      "strategy": "random",
+      "label": "Random B=100",
+      "work_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week4_object100_s201_sunrgbd40_s10_freqorder_split_20260930_023522",
+      "classes": [
+        {
+          "model_idx": 0,
+          "name": "chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.68493,
+          "introduction_ap25": 0.81517,
+          "forgetting25": 0.1302399999999999,
+          "final_ap50": 0.53338,
+          "introduction_ap50": 0.6838,
+          "forgetting50": 0.15042
+        },
+        {
+          "model_idx": 1,
+          "name": "table",
+          "introduced_stage": 1,
+          "final_ap25": 0.17379,
+          "introduction_ap25": 0.51059,
+          "forgetting25": 0.3368,
+          "final_ap50": 0.05118,
+          "introduction_ap50": 0.32055,
+          "forgetting50": 0.26937
+        },
+        {
+          "model_idx": 2,
+          "name": "pillow",
+          "introduced_stage": 1,
+          "final_ap25": 0.09623,
+          "introduction_ap25": 0.25122,
+          "forgetting25": 0.15499000000000002,
+          "final_ap50": 0.01966,
+          "introduction_ap50": 0.09066,
+          "forgetting50": 0.07100000000000001
+        },
+        {
+          "model_idx": 3,
+          "name": "sofa_chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.5337,
+          "introduction_ap25": 0.66322,
+          "forgetting25": 0.12952000000000008,
+          "final_ap50": 0.4862,
+          "introduction_ap50": 0.60118,
+          "forgetting50": 0.11498000000000003
+        },
+        {
+          "model_idx": 4,
+          "name": "desk",
+          "introduced_stage": 2,
+          "final_ap25": 0.0813,
+          "introduction_ap25": 0.29636,
+          "forgetting25": 0.21506000000000003,
+          "final_ap50": 0.01418,
+          "introduction_ap50": 0.11487,
+          "forgetting50": 0.10069
+        },
+        {
+          "model_idx": 5,
+          "name": "bed",
+          "introduced_stage": 2,
+          "final_ap25": 0.78545,
+          "introduction_ap25": 0.85929,
+          "forgetting25": 0.07384000000000002,
+          "final_ap50": 0.44636,
+          "introduction_ap50": 0.57198,
+          "forgetting50": 0.16780000000000006
+        },
+        {
+          "model_idx": 6,
+          "name": "sofa",
+          "introduced_stage": 2,
+          "final_ap25": 0.6006,
+          "introduction_ap25": 0.67164,
+          "forgetting25": 0.07103999999999999,
+          "final_ap50": 0.4837,
+          "introduction_ap50": 0.54371,
+          "forgetting50": 0.06001000000000001
+        },
+        {
+          "model_idx": 7,
+          "name": "computer",
+          "introduced_stage": 2,
+          "final_ap25": 0.00226,
+          "introduction_ap25": 0.05064,
+          "forgetting25": 0.04838,
+          "final_ap50": 0.00028,
+          "introduction_ap50": 0.01523,
+          "forgetting50": 0.01495
+        },
+        {
+          "model_idx": 8,
+          "name": "lamp",
+          "introduced_stage": 3,
+          "final_ap25": 0.38394,
+          "introduction_ap25": 0.39636,
+          "forgetting25": 0.023249999999999993,
+          "final_ap50": 0.17036,
+          "introduction_ap50": 0.15741,
+          "forgetting50": 0.03708
+        },
+        {
+          "model_idx": 9,
+          "name": "box",
+          "introduced_stage": 3,
+          "final_ap25": 0.00384,
+          "introduction_ap25": 0.02871,
+          "forgetting25": 0.02487,
+          "final_ap50": 0.00073,
+          "introduction_ap50": 0.00638,
+          "forgetting50": 0.0056500000000000005
+        },
+        {
+          "model_idx": 10,
+          "name": "garbage_bin",
+          "introduced_stage": 3,
+          "final_ap25": 0.04527,
+          "introduction_ap25": 0.35566,
+          "forgetting25": 0.31039,
+          "final_ap50": 0.02284,
+          "introduction_ap50": 0.21151,
+          "forgetting50": 0.18867
+        },
+        {
+          "model_idx": 11,
+          "name": "cabinet",
+          "introduced_stage": 3,
+          "final_ap25": 0.00997,
+          "introduction_ap25": 0.06206,
+          "forgetting25": 0.05209,
+          "final_ap50": 0.00192,
+          "introduction_ap50": 0.02209,
+          "forgetting50": 0.020169999999999997
+        },
+        {
+          "model_idx": 12,
+          "name": "shelf",
+          "introduced_stage": 4,
+          "final_ap25": 0.0375,
+          "introduction_ap25": 0.13818,
+          "forgetting25": 0.10067999999999999,
+          "final_ap50": 0.00621,
+          "introduction_ap50": 0.02012,
+          "forgetting50": 0.013909999999999999
+        },
+        {
+          "model_idx": 13,
+          "name": "drawer",
+          "introduced_stage": 4,
+          "final_ap25": 0.00672,
+          "introduction_ap25": 0.04583,
+          "forgetting25": 0.039110000000000006,
+          "final_ap50": 0.00317,
+          "introduction_ap50": 0.0217,
+          "forgetting50": 0.01853
+        },
+        {
+          "model_idx": 14,
+          "name": "night_stand",
+          "introduced_stage": 4,
+          "final_ap25": 0.01462,
+          "introduction_ap25": 0.63034,
+          "forgetting25": 0.61572,
+          "final_ap50": 0.00908,
+          "introduction_ap50": 0.50374,
+          "forgetting50": 0.49466
+        },
+        {
+          "model_idx": 15,
+          "name": "endtable",
+          "introduced_stage": 4,
+          "final_ap25": 0.07758,
+          "introduction_ap25": 0.42489,
+          "forgetting25": 0.34731,
+          "final_ap50": 0.04821,
+          "introduction_ap50": 0.27156,
+          "forgetting50": 0.22335000000000002
+        },
+        {
+          "model_idx": 16,
+          "name": "sink",
+          "introduced_stage": 5,
+          "final_ap25": 0.02032,
+          "introduction_ap25": 0.45033,
+          "forgetting25": 0.43001,
+          "final_ap50": 0.00366,
+          "introduction_ap50": 0.09943,
+          "forgetting50": 0.09577000000000001
+        },
+        {
+          "model_idx": 17,
+          "name": "picture",
+          "introduced_stage": 5,
+          "final_ap25": 0.0,
+          "introduction_ap25": 0.00508,
+          "forgetting25": 0.00508,
+          "final_ap50": 0.0,
+          "introduction_ap50": 7e-05,
+          "forgetting50": 7e-05
+        },
+        {
+          "model_idx": 18,
+          "name": "stool",
+          "introduced_stage": 5,
+          "final_ap25": 0.15712,
+          "introduction_ap25": 0.27621,
+          "forgetting25": 0.12635,
+          "final_ap50": 0.07706,
+          "introduction_ap50": 0.15058,
+          "forgetting50": 0.10817999999999998
+        },
+        {
+          "model_idx": 19,
+          "name": "coffee_table",
+          "introduced_stage": 5,
+          "final_ap25": 0.02249,
+          "introduction_ap25": 0.2864,
+          "forgetting25": 0.26391,
+          "final_ap50": 0.00857,
+          "introduction_ap50": 0.20363,
+          "forgetting50": 0.19506
+        },
+        {
+          "model_idx": 20,
+          "name": "bookshelf",
+          "introduced_stage": 6,
+          "final_ap25": 0.16479,
+          "introduction_ap25": 0.30962,
+          "forgetting25": 0.14483000000000001,
+          "final_ap50": 0.04738,
+          "introduction_ap50": 0.08293,
+          "forgetting50": 0.049080000000000006
+        },
+        {
+          "model_idx": 21,
+          "name": "painting",
+          "introduced_stage": 6,
+          "final_ap25": 3e-05,
+          "introduction_ap25": 0.04996,
+          "forgetting25": 0.049929999999999995,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.00125,
+          "forgetting50": 0.00125
+        },
+        {
+          "model_idx": 22,
+          "name": "keyboard",
+          "introduced_stage": 6,
+          "final_ap25": 0.00288,
+          "introduction_ap25": 0.02957,
+          "forgetting25": 0.02669,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.00032,
+          "forgetting50": 0.00032
+        },
+        {
+          "model_idx": 23,
+          "name": "dresser",
+          "introduced_stage": 6,
+          "final_ap25": 0.01633,
+          "introduction_ap25": 0.24996,
+          "forgetting25": 0.23362999999999998,
+          "final_ap50": 0.0082,
+          "introduction_ap50": 0.17234,
+          "forgetting50": 0.16413999999999998
+        },
+        {
+          "model_idx": 24,
+          "name": "tv",
+          "introduced_stage": 7,
+          "final_ap25": 0.00709,
+          "introduction_ap25": 0.29497,
+          "forgetting25": 0.28788,
+          "final_ap50": 0.00038,
+          "introduction_ap50": 0.04671,
+          "forgetting50": 0.04633
+        },
+        {
+          "model_idx": 25,
+          "name": "whiteboard",
+          "introduced_stage": 7,
+          "final_ap25": 0.00551,
+          "introduction_ap25": 0.04864,
+          "forgetting25": 0.04313,
+          "final_ap50": 4e-05,
+          "introduction_ap50": 0.00269,
+          "forgetting50": 0.00265
+        },
+        {
+          "model_idx": 26,
+          "name": "cpu",
+          "introduced_stage": 7,
+          "final_ap25": 0.00281,
+          "introduction_ap25": 0.09402,
+          "forgetting25": 0.09121000000000001,
+          "final_ap50": 0.00034,
+          "introduction_ap50": 0.00266,
+          "forgetting50": 0.00232
+        },
+        {
+          "model_idx": 27,
+          "name": "toilet",
+          "introduced_stage": 7,
+          "final_ap25": 0.80301,
+          "introduction_ap25": 0.873,
+          "forgetting25": 0.06999,
+          "final_ap50": 0.5451,
+          "introduction_ap50": 0.65708,
+          "forgetting50": 0.11197999999999997
+        },
+        {
+          "model_idx": 28,
+          "name": "paper",
+          "introduced_stage": 8,
+          "final_ap25": 3e-05,
+          "introduction_ap25": 0.00053,
+          "forgetting25": 0.0005,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.0,
+          "forgetting50": 0.0
+        },
+        {
+          "model_idx": 29,
+          "name": "ottoman",
+          "introduced_stage": 8,
+          "final_ap25": 0.05008,
+          "introduction_ap25": 0.22762,
+          "forgetting25": 0.17753999999999998,
+          "final_ap50": 0.03022,
+          "introduction_ap50": 0.15493,
+          "forgetting50": 0.12471000000000002
+        },
+        {
+          "model_idx": 30,
+          "name": "bench",
+          "introduced_stage": 8,
+          "final_ap25": 0.13988,
+          "introduction_ap25": 0.198,
+          "forgetting25": 0.061700000000000005,
+          "final_ap50": 0.07041,
+          "introduction_ap50": 0.13017,
+          "forgetting50": 0.05976000000000001
+        },
+        {
+          "model_idx": 31,
+          "name": "recycle_bin",
+          "introduced_stage": 8,
+          "final_ap25": 0.51769,
+          "introduction_ap25": 0.59855,
+          "forgetting25": 0.08086000000000004,
+          "final_ap50": 0.36342,
+          "introduction_ap50": 0.46696,
+          "forgetting50": 0.10353999999999997
+        },
+        {
+          "model_idx": 32,
+          "name": "monitor",
+          "introduced_stage": 9,
+          "final_ap25": 0.13834,
+          "introduction_ap25": 0.2572,
+          "forgetting25": 0.11886,
+          "final_ap50": 0.0254,
+          "introduction_ap50": 0.0573,
+          "forgetting50": 0.0319
+        },
+        {
+          "model_idx": 33,
+          "name": "printer",
+          "introduced_stage": 9,
+          "final_ap25": 0.07215,
+          "introduction_ap25": 0.26093,
+          "forgetting25": 0.18878,
+          "final_ap50": 0.05171,
+          "introduction_ap50": 0.16289,
+          "forgetting50": 0.11118
+        },
+        {
+          "model_idx": 34,
+          "name": "plant",
+          "introduced_stage": 9,
+          "final_ap25": 0.13532,
+          "introduction_ap25": 0.08668,
+          "forgetting25": -0.04864,
+          "final_ap50": 0.00668,
+          "introduction_ap50": 0.03902,
+          "forgetting50": 0.03234
+        },
+        {
+          "model_idx": 35,
+          "name": "door",
+          "introduced_stage": 9,
+          "final_ap25": 0.0037,
+          "introduction_ap25": 0.00956,
+          "forgetting25": 0.005860000000000001,
+          "final_ap50": 0.00012,
+          "introduction_ap50": 0.00035,
+          "forgetting50": 0.00023
+        },
+        {
+          "model_idx": 36,
+          "name": "book",
+          "introduced_stage": 10,
+          "final_ap25": 0.03702,
+          "introduction_ap25": 0.03702,
+          "forgetting25": null,
+          "final_ap50": 0.00506,
+          "introduction_ap50": 0.00506,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 37,
+          "name": "mirror",
+          "introduced_stage": 10,
+          "final_ap25": 0.01471,
+          "introduction_ap25": 0.01471,
+          "forgetting25": null,
+          "final_ap50": 0.0013,
+          "introduction_ap50": 0.0013,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 38,
+          "name": "laptop",
+          "introduced_stage": 10,
+          "final_ap25": 0.09275,
+          "introduction_ap25": 0.09275,
+          "forgetting25": null,
+          "final_ap50": 0.06476,
+          "introduction_ap50": 0.06476,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 39,
+          "name": "towel",
+          "introduced_stage": 10,
+          "final_ap25": 0.0584,
+          "introduction_ap25": 0.0584,
+          "forgetting25": null,
+          "final_ap50": 0.00566,
+          "introduction_ap50": 0.00566,
+          "forgetting50": null
+        }
+      ],
+      "resources": [
+        {
+          "stage": 1,
+          "objects": 400,
+          "points": 1429557,
+          "pickle_bytes": 34389190,
+          "unique_source_scenes": 363
+        },
+        {
+          "stage": 2,
+          "objects": 800,
+          "points": 4530748,
+          "pickle_bytes": 108897742,
+          "unique_source_scenes": 688
+        },
+        {
+          "stage": 3,
+          "objects": 1200,
+          "points": 5640444,
+          "pickle_bytes": 135609281,
+          "unique_source_scenes": 993
+        },
+        {
+          "stage": 4,
+          "objects": 1600,
+          "points": 6979013,
+          "pickle_bytes": 167814195,
+          "unique_source_scenes": 1247
+        },
+        {
+          "stage": 5,
+          "objects": 2000,
+          "points": 8093324,
+          "pickle_bytes": 194636521,
+          "unique_source_scenes": 1484
+        },
+        {
+          "stage": 6,
+          "objects": 2400,
+          "points": 9602881,
+          "pickle_bytes": 230945005,
+          "unique_source_scenes": 1692
+        },
+        {
+          "stage": 7,
+          "objects": 2800,
+          "points": 11285126,
+          "pickle_bytes": 271398474,
+          "unique_source_scenes": 1937
+        },
+        {
+          "stage": 8,
+          "objects": 3200,
+          "points": 12707828,
+          "pickle_bytes": 305622531,
+          "unique_source_scenes": 2144
+        },
+        {
+          "stage": 9,
+          "objects": 3600,
+          "points": 13711353,
+          "pickle_bytes": 329786108,
+          "unique_source_scenes": 2311
+        },
+        {
+          "stage": 10,
+          "objects": 3979,
+          "points": 14271624,
+          "pickle_bytes": 343307048,
+          "unique_source_scenes": 2439
+        }
+      ],
+      "final_old_map25": 0.16103527777777776,
+      "final_new_map25": 0.05072,
+      "forgetting25": 0.13976083333333333,
+      "backward_transfer25": -0.1391588888888889,
+      "final_old_map50": 0.09822638888888889,
+      "final_new_map50": 0.019195,
+      "forgetting50": 0.08866805555555556,
+      "backward_transfer50": -0.08476805555555555,
+      "duration_hours": 6.838611111111111,
+      "peak_logged_memory_mb": 3638,
+      "object_reduction_percent": 0.0,
+      "delta_vs_baseline25_pp": 0.0,
+      "delta_vs_random20_25_pp": 0.10499999999999954,
+      "delta_vs_baseline50_pp": 0.0,
+      "delta_vs_random20_50_pp": -0.2140000000000003
+    },
+    {
+      "budget": 50,
+      "seed": 200,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56115,
+          "map50": 0.41948,
+          "stored_objects": 200
+        },
+        {
+          "stage": 2,
+          "map25": 0.48185,
+          "map50": 0.34805,
+          "stored_objects": 400
+        },
+        {
+          "stage": 3,
+          "map25": 0.37904,
+          "map50": 0.25397,
+          "stored_objects": 600
+        },
+        {
+          "stage": 4,
+          "map25": 0.33182,
+          "map50": 0.22802,
+          "stored_objects": 800
+        },
+        {
+          "stage": 5,
+          "map25": 0.28438,
+          "map50": 0.17939,
+          "stored_objects": 1000
+        },
+        {
+          "stage": 6,
+          "map25": 0.21557,
+          "map50": 0.13616,
+          "stored_objects": 1200
+        },
+        {
+          "stage": 7,
+          "map25": 0.20991,
+          "map50": 0.12462,
+          "stored_objects": 1400
+        },
+        {
+          "stage": 8,
+          "map25": 0.19184,
+          "map50": 0.11666,
+          "stored_objects": 1600
+        },
+        {
+          "stage": 9,
+          "map25": 0.17396,
+          "map50": 0.10507,
+          "stored_objects": 1800
+        },
+        {
+          "stage": 10,
+          "map25": 0.14045,
+          "map50": 0.08622,
+          "stored_objects": 2000
+        }
+      ],
+      "final_map25": 0.14045,
+      "final_map50": 0.08622,
+      "final_objects": 2000,
+      "stage10_old_objects": 1800,
+      "stage_average_map25": 0.296997,
+      "stage_average_map50": 0.199764,
+      "run_id": "object50_s200",
+      "strategy": "random",
+      "label": "Random B=50",
+      "work_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week4_object50_s200_sunrgbd40_s10_freqorder_split_20260930_110146",
+      "classes": [
+        {
+          "model_idx": 0,
+          "name": "chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.71108,
+          "introduction_ap25": 0.81165,
+          "forgetting25": 0.10056999999999994,
+          "final_ap50": 0.57252,
+          "introduction_ap50": 0.67582,
+          "forgetting50": 0.10329999999999995
+        },
+        {
+          "model_idx": 1,
+          "name": "table",
+          "introduced_stage": 1,
+          "final_ap25": 0.12851,
+          "introduction_ap25": 0.51577,
+          "forgetting25": 0.38725999999999994,
+          "final_ap50": 0.03059,
+          "introduction_ap50": 0.31922,
+          "forgetting50": 0.28863
+        },
+        {
+          "model_idx": 2,
+          "name": "pillow",
+          "introduced_stage": 1,
+          "final_ap25": 0.08552,
+          "introduction_ap25": 0.25543,
+          "forgetting25": 0.16991,
+          "final_ap50": 0.01892,
+          "introduction_ap50": 0.08445,
+          "forgetting50": 0.06553
+        },
+        {
+          "model_idx": 3,
+          "name": "sofa_chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.5623,
+          "introduction_ap25": 0.66175,
+          "forgetting25": 0.09944999999999993,
+          "final_ap50": 0.49815,
+          "introduction_ap50": 0.59842,
+          "forgetting50": 0.10026999999999997
+        },
+        {
+          "model_idx": 4,
+          "name": "desk",
+          "introduced_stage": 2,
+          "final_ap25": 0.08079,
+          "introduction_ap25": 0.2898,
+          "forgetting25": 0.20901,
+          "final_ap50": 0.01193,
+          "introduction_ap50": 0.11354,
+          "forgetting50": 0.10161
+        },
+        {
+          "model_idx": 5,
+          "name": "bed",
+          "introduced_stage": 2,
+          "final_ap25": 0.76124,
+          "introduction_ap25": 0.83644,
+          "forgetting25": 0.07519999999999993,
+          "final_ap50": 0.54641,
+          "introduction_ap50": 0.61826,
+          "forgetting50": 0.07185000000000008
+        },
+        {
+          "model_idx": 6,
+          "name": "sofa",
+          "introduced_stage": 2,
+          "final_ap25": 0.55032,
+          "introduction_ap25": 0.68033,
+          "forgetting25": 0.13000999999999996,
+          "final_ap50": 0.44468,
+          "introduction_ap50": 0.54701,
+          "forgetting50": 0.10232999999999998
+        },
+        {
+          "model_idx": 7,
+          "name": "computer",
+          "introduced_stage": 2,
+          "final_ap25": 0.00056,
+          "introduction_ap25": 0.05055,
+          "forgetting25": 0.04999,
+          "final_ap50": 0.0001,
+          "introduction_ap50": 0.01378,
+          "forgetting50": 0.013680000000000001
+        },
+        {
+          "model_idx": 8,
+          "name": "lamp",
+          "introduced_stage": 3,
+          "final_ap25": 0.35825,
+          "introduction_ap25": 0.43372,
+          "forgetting25": 0.07546999999999998,
+          "final_ap50": 0.16282,
+          "introduction_ap50": 0.17303,
+          "forgetting50": 0.02952000000000002
+        },
+        {
+          "model_idx": 9,
+          "name": "box",
+          "introduced_stage": 3,
+          "final_ap25": 0.00236,
+          "introduction_ap25": 0.03417,
+          "forgetting25": 0.03181,
+          "final_ap50": 0.00032,
+          "introduction_ap50": 0.0075,
+          "forgetting50": 0.00718
+        },
+        {
+          "model_idx": 10,
+          "name": "garbage_bin",
+          "introduced_stage": 3,
+          "final_ap25": 0.03518,
+          "introduction_ap25": 0.34904,
+          "forgetting25": 0.31386000000000003,
+          "final_ap50": 0.01438,
+          "introduction_ap50": 0.22732,
+          "forgetting50": 0.21294
+        },
+        {
+          "model_idx": 11,
+          "name": "cabinet",
+          "introduced_stage": 3,
+          "final_ap25": 0.00515,
+          "introduction_ap25": 0.071,
+          "forgetting25": 0.06584999999999999,
+          "final_ap50": 0.00079,
+          "introduction_ap50": 0.0199,
+          "forgetting50": 0.019110000000000002
+        },
+        {
+          "model_idx": 12,
+          "name": "shelf",
+          "introduced_stage": 4,
+          "final_ap25": 0.03225,
+          "introduction_ap25": 0.13593,
+          "forgetting25": 0.10368,
+          "final_ap50": 0.00495,
+          "introduction_ap50": 0.01121,
+          "forgetting50": 0.009080000000000001
+        },
+        {
+          "model_idx": 13,
+          "name": "drawer",
+          "introduced_stage": 4,
+          "final_ap25": 0.00281,
+          "introduction_ap25": 0.04393,
+          "forgetting25": 0.04112,
+          "final_ap50": 0.00104,
+          "introduction_ap50": 0.01499,
+          "forgetting50": 0.01395
+        },
+        {
+          "model_idx": 14,
+          "name": "night_stand",
+          "introduced_stage": 4,
+          "final_ap25": 0.012,
+          "introduction_ap25": 0.60946,
+          "forgetting25": 0.59746,
+          "final_ap50": 0.00706,
+          "introduction_ap50": 0.47496,
+          "forgetting50": 0.4679
+        },
+        {
+          "model_idx": 15,
+          "name": "endtable",
+          "introduced_stage": 4,
+          "final_ap25": 0.02596,
+          "introduction_ap25": 0.3949,
+          "forgetting25": 0.36894,
+          "final_ap50": 0.01556,
+          "introduction_ap50": 0.2944,
+          "forgetting50": 0.27884
+        },
+        {
+          "model_idx": 16,
+          "name": "sink",
+          "introduced_stage": 5,
+          "final_ap25": 0.08299,
+          "introduction_ap25": 0.47359,
+          "forgetting25": 0.3906,
+          "final_ap50": 0.00764,
+          "introduction_ap50": 0.10239,
+          "forgetting50": 0.09475
+        },
+        {
+          "model_idx": 17,
+          "name": "picture",
+          "introduced_stage": 5,
+          "final_ap25": 0.0,
+          "introduction_ap25": 0.00533,
+          "forgetting25": 0.00533,
+          "final_ap50": 0.0,
+          "introduction_ap50": 4e-05,
+          "forgetting50": 4e-05
+        },
+        {
+          "model_idx": 18,
+          "name": "stool",
+          "introduced_stage": 5,
+          "final_ap25": 0.24684,
+          "introduction_ap25": 0.27952,
+          "forgetting25": 0.03267999999999999,
+          "final_ap50": 0.14349,
+          "introduction_ap50": 0.14305,
+          "forgetting50": 0.04124
+        },
+        {
+          "model_idx": 19,
+          "name": "coffee_table",
+          "introduced_stage": 5,
+          "final_ap25": 0.0286,
+          "introduction_ap25": 0.34567,
+          "forgetting25": 0.31706999999999996,
+          "final_ap50": 0.01057,
+          "introduction_ap50": 0.21507,
+          "forgetting50": 0.20450000000000002
+        },
+        {
+          "model_idx": 20,
+          "name": "bookshelf",
+          "introduced_stage": 6,
+          "final_ap25": 0.14393,
+          "introduction_ap25": 0.28871,
+          "forgetting25": 0.16488999999999998,
+          "final_ap50": 0.02181,
+          "introduction_ap50": 0.07125,
+          "forgetting50": 0.051430000000000003
+        },
+        {
+          "model_idx": 21,
+          "name": "painting",
+          "introduced_stage": 6,
+          "final_ap25": 4e-05,
+          "introduction_ap25": 0.03762,
+          "forgetting25": 0.03758,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.00148,
+          "forgetting50": 0.00148
+        },
+        {
+          "model_idx": 22,
+          "name": "keyboard",
+          "introduced_stage": 6,
+          "final_ap25": 3e-05,
+          "introduction_ap25": 0.01285,
+          "forgetting25": 0.01282,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.00017,
+          "forgetting50": 0.00017
+        },
+        {
+          "model_idx": 23,
+          "name": "dresser",
+          "introduced_stage": 6,
+          "final_ap25": 0.027,
+          "introduction_ap25": 0.2492,
+          "forgetting25": 0.2222,
+          "final_ap50": 0.01709,
+          "introduction_ap50": 0.19076,
+          "forgetting50": 0.17367000000000002
+        },
+        {
+          "model_idx": 24,
+          "name": "tv",
+          "introduced_stage": 7,
+          "final_ap25": 0.00377,
+          "introduction_ap25": 0.31513,
+          "forgetting25": 0.31136,
+          "final_ap50": 0.00037,
+          "introduction_ap50": 0.04903,
+          "forgetting50": 0.048659999999999995
+        },
+        {
+          "model_idx": 25,
+          "name": "whiteboard",
+          "introduced_stage": 7,
+          "final_ap25": 0.00125,
+          "introduction_ap25": 0.07012,
+          "forgetting25": 0.06887,
+          "final_ap50": 2e-05,
+          "introduction_ap50": 0.00339,
+          "forgetting50": 0.0033699999999999997
+        },
+        {
+          "model_idx": 26,
+          "name": "cpu",
+          "introduced_stage": 7,
+          "final_ap25": 0.0006,
+          "introduction_ap25": 0.08297,
+          "forgetting25": 0.08237,
+          "final_ap50": 5e-05,
+          "introduction_ap50": 0.0063,
+          "forgetting50": 0.00625
+        },
+        {
+          "model_idx": 27,
+          "name": "toilet",
+          "introduced_stage": 7,
+          "final_ap25": 0.81117,
+          "introduction_ap25": 0.85857,
+          "forgetting25": 0.04740000000000011,
+          "final_ap50": 0.53102,
+          "introduction_ap50": 0.56232,
+          "forgetting50": 0.031299999999999994
+        },
+        {
+          "model_idx": 28,
+          "name": "paper",
+          "introduced_stage": 8,
+          "final_ap25": 1e-05,
+          "introduction_ap25": 0.00011,
+          "forgetting25": 0.0001,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.0,
+          "forgetting50": 0.0
+        },
+        {
+          "model_idx": 29,
+          "name": "ottoman",
+          "introduced_stage": 8,
+          "final_ap25": 0.08041,
+          "introduction_ap25": 0.19182,
+          "forgetting25": 0.11141,
+          "final_ap50": 0.05442,
+          "introduction_ap50": 0.13689,
+          "forgetting50": 0.08247000000000002
+        },
+        {
+          "model_idx": 30,
+          "name": "bench",
+          "introduced_stage": 8,
+          "final_ap25": 0.06451,
+          "introduction_ap25": 0.18582,
+          "forgetting25": 0.12131000000000002,
+          "final_ap50": 0.02761,
+          "introduction_ap50": 0.09718,
+          "forgetting50": 0.06957
+        },
+        {
+          "model_idx": 31,
+          "name": "recycle_bin",
+          "introduced_stage": 8,
+          "final_ap25": 0.25354,
+          "introduction_ap25": 0.40461,
+          "forgetting25": 0.15107000000000004,
+          "final_ap50": 0.16197,
+          "introduction_ap50": 0.2906,
+          "forgetting50": 0.12863000000000002
+        },
+        {
+          "model_idx": 32,
+          "name": "monitor",
+          "introduced_stage": 9,
+          "final_ap25": 0.19342,
+          "introduction_ap25": 0.31026,
+          "forgetting25": 0.11683999999999997,
+          "final_ap50": 0.01097,
+          "introduction_ap50": 0.05562,
+          "forgetting50": 0.04465
+        },
+        {
+          "model_idx": 33,
+          "name": "printer",
+          "introduced_stage": 9,
+          "final_ap25": 0.13888,
+          "introduction_ap25": 0.26544,
+          "forgetting25": 0.12656,
+          "final_ap50": 0.08451,
+          "introduction_ap50": 0.13366,
+          "forgetting50": 0.04915
+        },
+        {
+          "model_idx": 34,
+          "name": "plant",
+          "introduced_stage": 9,
+          "final_ap25": 0.02436,
+          "introduction_ap25": 0.05844,
+          "forgetting25": 0.03408,
+          "final_ap50": 0.00344,
+          "introduction_ap50": 0.01071,
+          "forgetting50": 0.00727
+        },
+        {
+          "model_idx": 35,
+          "name": "door",
+          "introduced_stage": 9,
+          "final_ap25": 0.00329,
+          "introduction_ap25": 0.01974,
+          "forgetting25": 0.01645,
+          "final_ap50": 6e-05,
+          "introduction_ap50": 0.00024,
+          "forgetting50": 0.00018
+        },
+        {
+          "model_idx": 36,
+          "name": "book",
+          "introduced_stage": 10,
+          "final_ap25": 0.02235,
+          "introduction_ap25": 0.02235,
+          "forgetting25": null,
+          "final_ap50": 0.00139,
+          "introduction_ap50": 0.00139,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 37,
+          "name": "mirror",
+          "introduced_stage": 10,
+          "final_ap25": 0.03213,
+          "introduction_ap25": 0.03213,
+          "forgetting25": null,
+          "final_ap50": 0.00492,
+          "introduction_ap50": 0.00492,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 38,
+          "name": "laptop",
+          "introduced_stage": 10,
+          "final_ap25": 0.03658,
+          "introduction_ap25": 0.03658,
+          "forgetting25": null,
+          "final_ap50": 0.01368,
+          "introduction_ap50": 0.01368,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 39,
+          "name": "towel",
+          "introduced_stage": 10,
+          "final_ap25": 0.068,
+          "introduction_ap25": 0.068,
+          "forgetting25": null,
+          "final_ap50": 0.02336,
+          "introduction_ap50": 0.02336,
+          "forgetting50": null
+        }
+      ],
+      "resources": [
+        {
+          "stage": 1,
+          "objects": 200,
+          "points": 693249,
+          "pickle_bytes": 16678237,
+          "unique_source_scenes": 192
+        },
+        {
+          "stage": 2,
+          "objects": 400,
+          "points": 2358200,
+          "pickle_bytes": 56677034,
+          "unique_source_scenes": 375
+        },
+        {
+          "stage": 3,
+          "objects": 600,
+          "points": 2831261,
+          "pickle_bytes": 68069980,
+          "unique_source_scenes": 543
+        },
+        {
+          "stage": 4,
+          "objects": 800,
+          "points": 3432465,
+          "pickle_bytes": 82538475,
+          "unique_source_scenes": 697
+        },
+        {
+          "stage": 5,
+          "objects": 1000,
+          "points": 4043734,
+          "pickle_bytes": 97248490,
+          "unique_source_scenes": 849
+        },
+        {
+          "stage": 6,
+          "objects": 1200,
+          "points": 4909249,
+          "pickle_bytes": 118060481,
+          "unique_source_scenes": 986
+        },
+        {
+          "stage": 7,
+          "objects": 1400,
+          "points": 5750385,
+          "pickle_bytes": 138287566,
+          "unique_source_scenes": 1136
+        },
+        {
+          "stage": 8,
+          "objects": 1600,
+          "points": 6459770,
+          "pickle_bytes": 155352463,
+          "unique_source_scenes": 1280
+        },
+        {
+          "stage": 9,
+          "objects": 1800,
+          "points": 7002577,
+          "pickle_bytes": 168419450,
+          "unique_source_scenes": 1402
+        },
+        {
+          "stage": 10,
+          "objects": 2000,
+          "points": 7299944,
+          "pickle_bytes": 175595573,
+          "unique_source_scenes": 1520
+        }
+      ],
+      "final_old_map25": 0.15163666666666667,
+      "final_new_map25": 0.039765,
+      "forgetting25": 0.14418277777777777,
+      "backward_transfer25": -0.14362416666666666,
+      "final_old_map50": 0.09459055555555555,
+      "final_new_map50": 0.0108375,
+      "forgetting50": 0.0812361111111111,
+      "backward_transfer50": -0.07940833333333333,
+      "duration_hours": 6.735833333333333,
+      "peak_logged_memory_mb": 3651,
+      "object_reduction_percent": 49.73611460165871,
+      "delta_vs_baseline25_pp": -2.3180000000000005,
+      "delta_vs_random20_25_pp": -0.5640000000000006,
+      "delta_vs_baseline50_pp": -1.0119999999999991,
+      "delta_vs_random20_50_pp": 0.359000000000001
+    },
+    {
+      "budget": 50,
+      "seed": 201,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56709,
+          "map50": 0.43166,
+          "stored_objects": 200
+        },
+        {
+          "stage": 2,
+          "map25": 0.49297,
+          "map50": 0.35159,
+          "stored_objects": 400
+        },
+        {
+          "stage": 3,
+          "map25": 0.38661,
+          "map50": 0.25925,
+          "stored_objects": 600
+        },
+        {
+          "stage": 4,
+          "map25": 0.34533,
+          "map50": 0.23144,
+          "stored_objects": 800
+        },
+        {
+          "stage": 5,
+          "map25": 0.30115,
+          "map50": 0.18543,
+          "stored_objects": 1000
+        },
+        {
+          "stage": 6,
+          "map25": 0.22797,
+          "map50": 0.13929,
+          "stored_objects": 1200
+        },
+        {
+          "stage": 7,
+          "map25": 0.20467,
+          "map50": 0.12835,
+          "stored_objects": 1400
+        },
+        {
+          "stage": 8,
+          "map25": 0.19412,
+          "map50": 0.12559,
+          "stored_objects": 1600
+        },
+        {
+          "stage": 9,
+          "map25": 0.17739,
+          "map50": 0.1147,
+          "stored_objects": 1800
+        },
+        {
+          "stage": 10,
+          "map25": 0.1544,
+          "map50": 0.09146,
+          "stored_objects": 2000
+        }
+      ],
+      "final_map25": 0.1544,
+      "final_map50": 0.09146,
+      "final_objects": 2000,
+      "stage10_old_objects": 1800,
+      "stage_average_map25": 0.30517,
+      "stage_average_map50": 0.205876,
+      "run_id": "object50_s201",
+      "strategy": "random",
+      "label": "Random B=50",
+      "work_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week4_object50_s201_sunrgbd40_s10_freqorder_split_20260930_110146",
+      "classes": [
+        {
+          "model_idx": 0,
+          "name": "chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.67292,
+          "introduction_ap25": 0.81479,
+          "forgetting25": 0.14187000000000005,
+          "final_ap50": 0.53906,
+          "introduction_ap50": 0.68588,
+          "forgetting50": 0.14682000000000006
+        },
+        {
+          "model_idx": 1,
+          "name": "table",
+          "introduced_stage": 1,
+          "final_ap25": 0.12256,
+          "introduction_ap25": 0.5156,
+          "forgetting25": 0.39303999999999994,
+          "final_ap50": 0.02861,
+          "introduction_ap50": 0.31774,
+          "forgetting50": 0.28913
+        },
+        {
+          "model_idx": 2,
+          "name": "pillow",
+          "introduced_stage": 1,
+          "final_ap25": 0.13835,
+          "introduction_ap25": 0.2615,
+          "forgetting25": 0.12315000000000001,
+          "final_ap50": 0.0303,
+          "introduction_ap50": 0.0956,
+          "forgetting50": 0.0653
+        },
+        {
+          "model_idx": 3,
+          "name": "sofa_chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.58162,
+          "introduction_ap25": 0.67647,
+          "forgetting25": 0.09484999999999999,
+          "final_ap50": 0.54735,
+          "introduction_ap50": 0.62742,
+          "forgetting50": 0.08006999999999997
+        },
+        {
+          "model_idx": 4,
+          "name": "desk",
+          "introduced_stage": 2,
+          "final_ap25": 0.09054,
+          "introduction_ap25": 0.30419,
+          "forgetting25": 0.21365,
+          "final_ap50": 0.01645,
+          "introduction_ap50": 0.10622,
+          "forgetting50": 0.08976999999999999
+        },
+        {
+          "model_idx": 5,
+          "name": "bed",
+          "introduced_stage": 2,
+          "final_ap25": 0.78429,
+          "introduction_ap25": 0.86171,
+          "forgetting25": 0.07741999999999993,
+          "final_ap50": 0.56133,
+          "introduction_ap50": 0.62032,
+          "forgetting50": 0.061980000000000035
+        },
+        {
+          "model_idx": 6,
+          "name": "sofa",
+          "introduced_stage": 2,
+          "final_ap25": 0.59672,
+          "introduction_ap25": 0.68208,
+          "forgetting25": 0.08535999999999999,
+          "final_ap50": 0.46151,
+          "introduction_ap50": 0.5573,
+          "forgetting50": 0.09579000000000004
+        },
+        {
+          "model_idx": 7,
+          "name": "computer",
+          "introduced_stage": 2,
+          "final_ap25": 0.01426,
+          "introduction_ap25": 0.0448,
+          "forgetting25": 0.030539999999999998,
+          "final_ap50": 0.00112,
+          "introduction_ap50": 0.01147,
+          "forgetting50": 0.01035
+        },
+        {
+          "model_idx": 8,
+          "name": "lamp",
+          "introduced_stage": 3,
+          "final_ap25": 0.34121,
+          "introduction_ap25": 0.41252,
+          "forgetting25": 0.07130999999999998,
+          "final_ap50": 0.14225,
+          "introduction_ap50": 0.16992,
+          "forgetting50": 0.04149
+        },
+        {
+          "model_idx": 9,
+          "name": "box",
+          "introduced_stage": 3,
+          "final_ap25": 0.00401,
+          "introduction_ap25": 0.03203,
+          "forgetting25": 0.028020000000000003,
+          "final_ap50": 0.00073,
+          "introduction_ap50": 0.00735,
+          "forgetting50": 0.00662
+        },
+        {
+          "model_idx": 10,
+          "name": "garbage_bin",
+          "introduced_stage": 3,
+          "final_ap25": 0.0704,
+          "introduction_ap25": 0.39536,
+          "forgetting25": 0.32495999999999997,
+          "final_ap50": 0.02968,
+          "introduction_ap50": 0.25311,
+          "forgetting50": 0.22343
+        },
+        {
+          "model_idx": 11,
+          "name": "cabinet",
+          "introduced_stage": 3,
+          "final_ap25": 0.01129,
+          "introduction_ap25": 0.07182,
+          "forgetting25": 0.060529999999999994,
+          "final_ap50": 0.00137,
+          "introduction_ap50": 0.02005,
+          "forgetting50": 0.01868
+        },
+        {
+          "model_idx": 12,
+          "name": "shelf",
+          "introduced_stage": 4,
+          "final_ap25": 0.06634,
+          "introduction_ap25": 0.13289,
+          "forgetting25": 0.06655000000000001,
+          "final_ap50": 0.01118,
+          "introduction_ap50": 0.03553,
+          "forgetting50": 0.024349999999999997
+        },
+        {
+          "model_idx": 13,
+          "name": "drawer",
+          "introduced_stage": 4,
+          "final_ap25": 0.0066,
+          "introduction_ap25": 0.05299,
+          "forgetting25": 0.04639,
+          "final_ap50": 0.00075,
+          "introduction_ap50": 0.01845,
+          "forgetting50": 0.0177
+        },
+        {
+          "model_idx": 14,
+          "name": "night_stand",
+          "introduced_stage": 4,
+          "final_ap25": 0.02603,
+          "introduction_ap25": 0.64636,
+          "forgetting25": 0.62033,
+          "final_ap50": 0.01871,
+          "introduction_ap50": 0.4788,
+          "forgetting50": 0.46009
+        },
+        {
+          "model_idx": 15,
+          "name": "endtable",
+          "introduced_stage": 4,
+          "final_ap25": 0.07571,
+          "introduction_ap25": 0.39242,
+          "forgetting25": 0.31671,
+          "final_ap50": 0.05153,
+          "introduction_ap50": 0.27139,
+          "forgetting50": 0.21986000000000003
+        },
+        {
+          "model_idx": 16,
+          "name": "sink",
+          "introduced_stage": 5,
+          "final_ap25": 0.05739,
+          "introduction_ap25": 0.46577,
+          "forgetting25": 0.40838,
+          "final_ap50": 0.01092,
+          "introduction_ap50": 0.07227,
+          "forgetting50": 0.06135
+        },
+        {
+          "model_idx": 17,
+          "name": "picture",
+          "introduced_stage": 5,
+          "final_ap25": 0.0,
+          "introduction_ap25": 0.00184,
+          "forgetting25": 0.00184,
+          "final_ap50": 0.0,
+          "introduction_ap50": 3e-05,
+          "forgetting50": 3e-05
+        },
+        {
+          "model_idx": 18,
+          "name": "stool",
+          "introduced_stage": 5,
+          "final_ap25": 0.21992,
+          "introduction_ap25": 0.2672,
+          "forgetting25": 0.06491999999999998,
+          "final_ap50": 0.13953,
+          "introduction_ap50": 0.172,
+          "forgetting50": 0.046270000000000006
+        },
+        {
+          "model_idx": 19,
+          "name": "coffee_table",
+          "introduced_stage": 5,
+          "final_ap25": 0.02358,
+          "introduction_ap25": 0.33323,
+          "forgetting25": 0.30965000000000004,
+          "final_ap50": 0.00749,
+          "introduction_ap50": 0.18704,
+          "forgetting50": 0.17955000000000002
+        },
+        {
+          "model_idx": 20,
+          "name": "bookshelf",
+          "introduced_stage": 6,
+          "final_ap25": 0.22374,
+          "introduction_ap25": 0.29789,
+          "forgetting25": 0.07415,
+          "final_ap50": 0.05371,
+          "introduction_ap50": 0.07102,
+          "forgetting50": 0.022170000000000002
+        },
+        {
+          "model_idx": 21,
+          "name": "painting",
+          "introduced_stage": 6,
+          "final_ap25": 0.00011,
+          "introduction_ap25": 0.04057,
+          "forgetting25": 0.04046,
+          "final_ap50": 1e-05,
+          "introduction_ap50": 0.00315,
+          "forgetting50": 0.00314
+        },
+        {
+          "model_idx": 22,
+          "name": "keyboard",
+          "introduced_stage": 6,
+          "final_ap25": 0.00021,
+          "introduction_ap25": 0.02186,
+          "forgetting25": 0.021650000000000003,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.00074,
+          "forgetting50": 0.00074
+        },
+        {
+          "model_idx": 23,
+          "name": "dresser",
+          "introduced_stage": 6,
+          "final_ap25": 0.04282,
+          "introduction_ap25": 0.25392,
+          "forgetting25": 0.21109999999999998,
+          "final_ap50": 0.03027,
+          "introduction_ap50": 0.17003,
+          "forgetting50": 0.13976
+        },
+        {
+          "model_idx": 24,
+          "name": "tv",
+          "introduced_stage": 7,
+          "final_ap25": 0.00916,
+          "introduction_ap25": 0.24723,
+          "forgetting25": 0.23807,
+          "final_ap50": 0.0009,
+          "introduction_ap50": 0.05243,
+          "forgetting50": 0.05153
+        },
+        {
+          "model_idx": 25,
+          "name": "whiteboard",
+          "introduced_stage": 7,
+          "final_ap25": 0.00262,
+          "introduction_ap25": 0.03908,
+          "forgetting25": 0.03646,
+          "final_ap50": 4e-05,
+          "introduction_ap50": 0.00106,
+          "forgetting50": 0.0010199999999999999
+        },
+        {
+          "model_idx": 26,
+          "name": "cpu",
+          "introduced_stage": 7,
+          "final_ap25": 0.00272,
+          "introduction_ap25": 0.09356,
+          "forgetting25": 0.09084,
+          "final_ap50": 0.00057,
+          "introduction_ap50": 0.01366,
+          "forgetting50": 0.013090000000000001
+        },
+        {
+          "model_idx": 27,
+          "name": "toilet",
+          "introduced_stage": 7,
+          "final_ap25": 0.81939,
+          "introduction_ap25": 0.84475,
+          "forgetting25": 0.02536000000000005,
+          "final_ap50": 0.46879,
+          "introduction_ap50": 0.65721,
+          "forgetting50": 0.18841999999999998
+        },
+        {
+          "model_idx": 28,
+          "name": "paper",
+          "introduced_stage": 8,
+          "final_ap25": 4e-05,
+          "introduction_ap25": 0.00042,
+          "forgetting25": 0.00038,
+          "final_ap50": 0.0,
+          "introduction_ap50": 1e-05,
+          "forgetting50": 1e-05
+        },
+        {
+          "model_idx": 29,
+          "name": "ottoman",
+          "introduced_stage": 8,
+          "final_ap25": 0.15531,
+          "introduction_ap25": 0.21519,
+          "forgetting25": 0.05987999999999999,
+          "final_ap50": 0.09491,
+          "introduction_ap50": 0.13972,
+          "forgetting50": 0.044810000000000016
+        },
+        {
+          "model_idx": 30,
+          "name": "bench",
+          "introduced_stage": 8,
+          "final_ap25": 0.14233,
+          "introduction_ap25": 0.2269,
+          "forgetting25": 0.08456999999999998,
+          "final_ap50": 0.07123,
+          "introduction_ap50": 0.14275,
+          "forgetting50": 0.07151999999999999
+        },
+        {
+          "model_idx": 31,
+          "name": "recycle_bin",
+          "introduced_stage": 8,
+          "final_ap25": 0.33782,
+          "introduction_ap25": 0.42523,
+          "forgetting25": 0.08740999999999999,
+          "final_ap50": 0.19337,
+          "introduction_ap50": 0.34923,
+          "forgetting50": 0.15586
+        },
+        {
+          "model_idx": 32,
+          "name": "monitor",
+          "introduced_stage": 9,
+          "final_ap25": 0.19781,
+          "introduction_ap25": 0.25189,
+          "forgetting25": 0.05407999999999999,
+          "final_ap50": 0.03087,
+          "introduction_ap50": 0.03756,
+          "forgetting50": 0.0066900000000000015
+        },
+        {
+          "model_idx": 33,
+          "name": "printer",
+          "introduced_stage": 9,
+          "final_ap25": 0.14416,
+          "introduction_ap25": 0.23861,
+          "forgetting25": 0.09444999999999998,
+          "final_ap50": 0.08737,
+          "introduction_ap50": 0.19416,
+          "forgetting50": 0.10679
+        },
+        {
+          "model_idx": 34,
+          "name": "plant",
+          "introduced_stage": 9,
+          "final_ap25": 0.05485,
+          "introduction_ap25": 0.06684,
+          "forgetting25": 0.011989999999999994,
+          "final_ap50": 0.00405,
+          "introduction_ap50": 0.00557,
+          "forgetting50": 0.0015200000000000005
+        },
+        {
+          "model_idx": 35,
+          "name": "door",
+          "introduced_stage": 9,
+          "final_ap25": 0.00375,
+          "introduction_ap25": 0.01217,
+          "forgetting25": 0.00842,
+          "final_ap50": 0.00016,
+          "introduction_ap50": 0.00042,
+          "forgetting50": 0.00026000000000000003
+        },
+        {
+          "model_idx": 36,
+          "name": "book",
+          "introduced_stage": 10,
+          "final_ap25": 0.00907,
+          "introduction_ap25": 0.00907,
+          "forgetting25": null,
+          "final_ap50": 0.00011,
+          "introduction_ap50": 0.00011,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 37,
+          "name": "mirror",
+          "introduced_stage": 10,
+          "final_ap25": 0.0337,
+          "introduction_ap25": 0.0337,
+          "forgetting25": null,
+          "final_ap50": 0.00059,
+          "introduction_ap50": 0.00059,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 38,
+          "name": "laptop",
+          "introduced_stage": 10,
+          "final_ap25": 0.02943,
+          "introduction_ap25": 0.02943,
+          "forgetting25": null,
+          "final_ap50": 0.00919,
+          "introduction_ap50": 0.00919,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 39,
+          "name": "towel",
+          "introduced_stage": 10,
+          "final_ap25": 0.06333,
+          "introduction_ap25": 0.06333,
+          "forgetting25": null,
+          "final_ap50": 0.01227,
+          "introduction_ap50": 0.01227,
+          "forgetting50": null
+        }
+      ],
+      "resources": [
+        {
+          "stage": 1,
+          "objects": 200,
+          "points": 625083,
+          "pickle_bytes": 15042152,
+          "unique_source_scenes": 188
+        },
+        {
+          "stage": 2,
+          "objects": 400,
+          "points": 2193821,
+          "pickle_bytes": 52731860,
+          "unique_source_scenes": 366
+        },
+        {
+          "stage": 3,
+          "objects": 600,
+          "points": 2866255,
+          "pickle_bytes": 68909765,
+          "unique_source_scenes": 541
+        },
+        {
+          "stage": 4,
+          "objects": 800,
+          "points": 3538581,
+          "pickle_bytes": 85085276,
+          "unique_source_scenes": 692
+        },
+        {
+          "stage": 5,
+          "objects": 1000,
+          "points": 4031299,
+          "pickle_bytes": 96950011,
+          "unique_source_scenes": 844
+        },
+        {
+          "stage": 6,
+          "objects": 1200,
+          "points": 4846346,
+          "pickle_bytes": 116550789,
+          "unique_source_scenes": 982
+        },
+        {
+          "stage": 7,
+          "objects": 1400,
+          "points": 5786804,
+          "pickle_bytes": 139161635,
+          "unique_source_scenes": 1133
+        },
+        {
+          "stage": 8,
+          "objects": 1600,
+          "points": 6465061,
+          "pickle_bytes": 155479436,
+          "unique_source_scenes": 1283
+        },
+        {
+          "stage": 9,
+          "objects": 1800,
+          "points": 6967388,
+          "pickle_bytes": 167574813,
+          "unique_source_scenes": 1402
+        },
+        {
+          "stage": 10,
+          "objects": 2000,
+          "points": 7244922,
+          "pickle_bytes": 174274948,
+          "unique_source_scenes": 1505
+        }
+      ],
+      "final_old_map25": 0.16779388888888888,
+      "final_new_map25": 0.0338825,
+      "forgetting25": 0.12829833333333332,
+      "backward_transfer25": -0.12780833333333333,
+      "final_old_map50": 0.10100333333333333,
+      "final_new_map50": 0.00554,
+      "forgetting50": 0.08183222222222222,
+      "backward_transfer50": -0.08084694444444444,
+      "duration_hours": 6.801111111111111,
+      "peak_logged_memory_mb": 3642,
+      "object_reduction_percent": 49.73611460165871,
+      "delta_vs_baseline25_pp": 0.4400000000000015,
+      "delta_vs_random20_25_pp": 0.545000000000001,
+      "delta_vs_baseline50_pp": 0.11400000000000021,
+      "delta_vs_random20_50_pp": -0.10000000000000009
+    },
+    {
+      "budget": 20,
+      "seed": 200,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56696,
+          "map50": 0.42769,
+          "stored_objects": 80
+        },
+        {
+          "stage": 2,
+          "map25": 0.49193,
+          "map50": 0.34633,
+          "stored_objects": 160
+        },
+        {
+          "stage": 3,
+          "map25": 0.37751,
+          "map50": 0.25084,
+          "stored_objects": 240
+        },
+        {
+          "stage": 4,
+          "map25": 0.32624,
+          "map50": 0.21915,
+          "stored_objects": 320
+        },
+        {
+          "stage": 5,
+          "map25": 0.2804,
+          "map50": 0.17366,
+          "stored_objects": 400
+        },
+        {
+          "stage": 6,
+          "map25": 0.22136,
+          "map50": 0.13658,
+          "stored_objects": 480
+        },
+        {
+          "stage": 7,
+          "map25": 0.20633,
+          "map50": 0.12495,
+          "stored_objects": 560
+        },
+        {
+          "stage": 8,
+          "map25": 0.18561,
+          "map50": 0.11461,
+          "stored_objects": 640
+        },
+        {
+          "stage": 9,
+          "map25": 0.17154,
+          "map50": 0.10135,
+          "stored_objects": 720
+        },
+        {
+          "stage": 10,
+          "map25": 0.14609,
+          "map50": 0.08263,
+          "stored_objects": 800
+        }
+      ],
+      "final_map25": 0.14609,
+      "final_map50": 0.08263,
+      "final_objects": 800,
+      "stage10_old_objects": 720,
+      "stage_average_map25": 0.297397,
+      "stage_average_map50": 0.197779,
+      "run_id": "object20_s200",
+      "strategy": "random",
+      "label": "Random B=20",
+      "work_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week4_object20_s200_sunrgbd40_s10_freqorder_split_20260930_175043",
+      "classes": [
+        {
+          "model_idx": 0,
+          "name": "chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.64547,
+          "introduction_ap25": 0.81551,
+          "forgetting25": 0.17003999999999997,
+          "final_ap50": 0.51412,
+          "introduction_ap50": 0.68105,
+          "forgetting50": 0.16693000000000002
+        },
+        {
+          "model_idx": 1,
+          "name": "table",
+          "introduced_stage": 1,
+          "final_ap25": 0.12167,
+          "introduction_ap25": 0.52106,
+          "forgetting25": 0.39938999999999997,
+          "final_ap50": 0.03027,
+          "introduction_ap50": 0.31949,
+          "forgetting50": 0.28922
+        },
+        {
+          "model_idx": 2,
+          "name": "pillow",
+          "introduced_stage": 1,
+          "final_ap25": 0.17275,
+          "introduction_ap25": 0.26148,
+          "forgetting25": 0.08873,
+          "final_ap50": 0.0208,
+          "introduction_ap50": 0.09563,
+          "forgetting50": 0.07483000000000001
+        },
+        {
+          "model_idx": 3,
+          "name": "sofa_chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.44968,
+          "introduction_ap25": 0.66979,
+          "forgetting25": 0.22010999999999997,
+          "final_ap50": 0.4013,
+          "introduction_ap50": 0.61459,
+          "forgetting50": 0.21328999999999998
+        },
+        {
+          "model_idx": 4,
+          "name": "desk",
+          "introduced_stage": 2,
+          "final_ap25": 0.06409,
+          "introduction_ap25": 0.29866,
+          "forgetting25": 0.23457,
+          "final_ap50": 0.00621,
+          "introduction_ap50": 0.11979,
+          "forgetting50": 0.11357999999999999
+        },
+        {
+          "model_idx": 5,
+          "name": "bed",
+          "introduced_stage": 2,
+          "final_ap25": 0.77564,
+          "introduction_ap25": 0.85804,
+          "forgetting25": 0.08240000000000003,
+          "final_ap50": 0.51157,
+          "introduction_ap50": 0.58862,
+          "forgetting50": 0.07705000000000006
+        },
+        {
+          "model_idx": 6,
+          "name": "sofa",
+          "introduced_stage": 2,
+          "final_ap25": 0.59098,
+          "introduction_ap25": 0.67127,
+          "forgetting25": 0.08029000000000008,
+          "final_ap50": 0.4674,
+          "introduction_ap50": 0.5423,
+          "forgetting50": 0.07490000000000002
+        },
+        {
+          "model_idx": 7,
+          "name": "computer",
+          "introduced_stage": 2,
+          "final_ap25": 0.00514,
+          "introduction_ap25": 0.04808,
+          "forgetting25": 0.04294,
+          "final_ap50": 0.00043,
+          "introduction_ap50": 0.00992,
+          "forgetting50": 0.00949
+        },
+        {
+          "model_idx": 8,
+          "name": "lamp",
+          "introduced_stage": 3,
+          "final_ap25": 0.36552,
+          "introduction_ap25": 0.42021,
+          "forgetting25": 0.05468999999999996,
+          "final_ap50": 0.15316,
+          "introduction_ap50": 0.18019,
+          "forgetting50": 0.05255000000000001
+        },
+        {
+          "model_idx": 9,
+          "name": "box",
+          "introduced_stage": 3,
+          "final_ap25": 0.00196,
+          "introduction_ap25": 0.03341,
+          "forgetting25": 0.031450000000000006,
+          "final_ap50": 0.00019,
+          "introduction_ap50": 0.00714,
+          "forgetting50": 0.00695
+        },
+        {
+          "model_idx": 10,
+          "name": "garbage_bin",
+          "introduced_stage": 3,
+          "final_ap25": 0.05106,
+          "introduction_ap25": 0.35175,
+          "forgetting25": 0.30069,
+          "final_ap50": 0.01819,
+          "introduction_ap50": 0.23028,
+          "forgetting50": 0.21209
+        },
+        {
+          "model_idx": 11,
+          "name": "cabinet",
+          "introduced_stage": 3,
+          "final_ap25": 0.00733,
+          "introduction_ap25": 0.07415,
+          "forgetting25": 0.06681999999999999,
+          "final_ap50": 0.0018,
+          "introduction_ap50": 0.02442,
+          "forgetting50": 0.02262
+        },
+        {
+          "model_idx": 12,
+          "name": "shelf",
+          "introduced_stage": 4,
+          "final_ap25": 0.03812,
+          "introduction_ap25": 0.12624,
+          "forgetting25": 0.08811999999999999,
+          "final_ap50": 0.00572,
+          "introduction_ap50": 0.02529,
+          "forgetting50": 0.01957
+        },
+        {
+          "model_idx": 13,
+          "name": "drawer",
+          "introduced_stage": 4,
+          "final_ap25": 0.00696,
+          "introduction_ap25": 0.04468,
+          "forgetting25": 0.03772,
+          "final_ap50": 0.00481,
+          "introduction_ap50": 0.017,
+          "forgetting50": 0.012190000000000001
+        },
+        {
+          "model_idx": 14,
+          "name": "night_stand",
+          "introduced_stage": 4,
+          "final_ap25": 0.04525,
+          "introduction_ap25": 0.63827,
+          "forgetting25": 0.59302,
+          "final_ap50": 0.03435,
+          "introduction_ap50": 0.46617,
+          "forgetting50": 0.43182
+        },
+        {
+          "model_idx": 15,
+          "name": "endtable",
+          "introduced_stage": 4,
+          "final_ap25": 0.03845,
+          "introduction_ap25": 0.3502,
+          "forgetting25": 0.31175,
+          "final_ap50": 0.01677,
+          "introduction_ap50": 0.24252,
+          "forgetting50": 0.22575
+        },
+        {
+          "model_idx": 16,
+          "name": "sink",
+          "introduced_stage": 5,
+          "final_ap25": 0.07738,
+          "introduction_ap25": 0.46261,
+          "forgetting25": 0.38523,
+          "final_ap50": 0.01353,
+          "introduction_ap50": 0.08389,
+          "forgetting50": 0.07036
+        },
+        {
+          "model_idx": 17,
+          "name": "picture",
+          "introduced_stage": 5,
+          "final_ap25": 0.0,
+          "introduction_ap25": 0.00949,
+          "forgetting25": 0.00949,
+          "final_ap50": 0.0,
+          "introduction_ap50": 1e-05,
+          "forgetting50": 0.0005
+        },
+        {
+          "model_idx": 18,
+          "name": "stool",
+          "introduced_stage": 5,
+          "final_ap25": 0.16109,
+          "introduction_ap25": 0.26219,
+          "forgetting25": 0.10109999999999997,
+          "final_ap50": 0.09655,
+          "introduction_ap50": 0.12944,
+          "forgetting50": 0.03765000000000002
+        },
+        {
+          "model_idx": 19,
+          "name": "coffee_table",
+          "introduced_stage": 5,
+          "final_ap25": 0.09492,
+          "introduction_ap25": 0.40084,
+          "forgetting25": 0.30591999999999997,
+          "final_ap50": 0.0397,
+          "introduction_ap50": 0.2757,
+          "forgetting50": 0.236
+        },
+        {
+          "model_idx": 20,
+          "name": "bookshelf",
+          "introduced_stage": 6,
+          "final_ap25": 0.17539,
+          "introduction_ap25": 0.28347,
+          "forgetting25": 0.10808000000000001,
+          "final_ap50": 0.04476,
+          "introduction_ap50": 0.0847,
+          "forgetting50": 0.039939999999999996
+        },
+        {
+          "model_idx": 21,
+          "name": "painting",
+          "introduced_stage": 6,
+          "final_ap25": 0.00011,
+          "introduction_ap25": 0.03318,
+          "forgetting25": 0.03307,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.00197,
+          "forgetting50": 0.00197
+        },
+        {
+          "model_idx": 22,
+          "name": "keyboard",
+          "introduced_stage": 6,
+          "final_ap25": 2e-05,
+          "introduction_ap25": 0.01087,
+          "forgetting25": 0.01085,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.00011,
+          "forgetting50": 0.00011
+        },
+        {
+          "model_idx": 23,
+          "name": "dresser",
+          "introduced_stage": 6,
+          "final_ap25": 0.05214,
+          "introduction_ap25": 0.24017,
+          "forgetting25": 0.18803,
+          "final_ap50": 0.02998,
+          "introduction_ap50": 0.1642,
+          "forgetting50": 0.13422
+        },
+        {
+          "model_idx": 24,
+          "name": "tv",
+          "introduced_stage": 7,
+          "final_ap25": 0.00834,
+          "introduction_ap25": 0.25482,
+          "forgetting25": 0.24647999999999998,
+          "final_ap50": 0.00126,
+          "introduction_ap50": 0.04866,
+          "forgetting50": 0.047400000000000005
+        },
+        {
+          "model_idx": 25,
+          "name": "whiteboard",
+          "introduced_stage": 7,
+          "final_ap25": 0.00846,
+          "introduction_ap25": 0.03614,
+          "forgetting25": 0.027679999999999996,
+          "final_ap50": 0.00036,
+          "introduction_ap50": 0.00034,
+          "forgetting50": -1.9999999999999998e-05
+        },
+        {
+          "model_idx": 26,
+          "name": "cpu",
+          "introduced_stage": 7,
+          "final_ap25": 0.00137,
+          "introduction_ap25": 0.04802,
+          "forgetting25": 0.04665,
+          "final_ap50": 9e-05,
+          "introduction_ap50": 0.0065,
+          "forgetting50": 0.00641
+        },
+        {
+          "model_idx": 27,
+          "name": "toilet",
+          "introduced_stage": 7,
+          "final_ap25": 0.79592,
+          "introduction_ap25": 0.87288,
+          "forgetting25": 0.07696000000000003,
+          "final_ap50": 0.47975,
+          "introduction_ap50": 0.62993,
+          "forgetting50": 0.15017999999999998
+        },
+        {
+          "model_idx": 28,
+          "name": "paper",
+          "introduced_stage": 8,
+          "final_ap25": 1e-05,
+          "introduction_ap25": 0.00047,
+          "forgetting25": 0.00045999999999999996,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.0,
+          "forgetting50": 0.0
+        },
+        {
+          "model_idx": 29,
+          "name": "ottoman",
+          "introduced_stage": 8,
+          "final_ap25": 0.12338,
+          "introduction_ap25": 0.19862,
+          "forgetting25": 0.07523999999999999,
+          "final_ap50": 0.07257,
+          "introduction_ap50": 0.14188,
+          "forgetting50": 0.06931000000000001
+        },
+        {
+          "model_idx": 30,
+          "name": "bench",
+          "introduced_stage": 8,
+          "final_ap25": 0.14827,
+          "introduction_ap25": 0.17661,
+          "forgetting25": 0.05756999999999998,
+          "final_ap50": 0.05738,
+          "introduction_ap50": 0.07979,
+          "forgetting50": 0.029130000000000003
+        },
+        {
+          "model_idx": 31,
+          "name": "recycle_bin",
+          "introduced_stage": 8,
+          "final_ap25": 0.25051,
+          "introduction_ap25": 0.32596,
+          "forgetting25": 0.07545000000000002,
+          "final_ap50": 0.13356,
+          "introduction_ap50": 0.26006,
+          "forgetting50": 0.1265
+        },
+        {
+          "model_idx": 32,
+          "name": "monitor",
+          "introduced_stage": 9,
+          "final_ap25": 0.11243,
+          "introduction_ap25": 0.29131,
+          "forgetting25": 0.17888,
+          "final_ap50": 0.01224,
+          "introduction_ap50": 0.03903,
+          "forgetting50": 0.02679
+        },
+        {
+          "model_idx": 33,
+          "name": "printer",
+          "introduced_stage": 9,
+          "final_ap25": 0.19059,
+          "introduction_ap25": 0.23847,
+          "forgetting25": 0.04787999999999998,
+          "final_ap50": 0.0882,
+          "introduction_ap50": 0.13275,
+          "forgetting50": 0.044550000000000006
+        },
+        {
+          "model_idx": 34,
+          "name": "plant",
+          "introduced_stage": 9,
+          "final_ap25": 0.04143,
+          "introduction_ap25": 0.04799,
+          "forgetting25": 0.006559999999999996,
+          "final_ap50": 0.00136,
+          "introduction_ap50": 0.00279,
+          "forgetting50": 0.0014299999999999998
+        },
+        {
+          "model_idx": 35,
+          "name": "door",
+          "introduced_stage": 9,
+          "final_ap25": 0.01061,
+          "introduction_ap25": 0.01016,
+          "forgetting25": -0.000449999999999999,
+          "final_ap50": 0.00011,
+          "introduction_ap50": 0.00071,
+          "forgetting50": 0.0006000000000000001
+        },
+        {
+          "model_idx": 36,
+          "name": "book",
+          "introduced_stage": 10,
+          "final_ap25": 0.02263,
+          "introduction_ap25": 0.02263,
+          "forgetting25": null,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.0,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 37,
+          "name": "mirror",
+          "introduced_stage": 10,
+          "final_ap25": 0.01231,
+          "introduction_ap25": 0.01231,
+          "forgetting25": null,
+          "final_ap50": 0.00047,
+          "introduction_ap50": 0.00047,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 38,
+          "name": "laptop",
+          "introduced_stage": 10,
+          "final_ap25": 0.07708,
+          "introduction_ap25": 0.07708,
+          "forgetting25": null,
+          "final_ap50": 0.02587,
+          "introduction_ap50": 0.02587,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 39,
+          "name": "towel",
+          "introduced_stage": 10,
+          "final_ap25": 0.09935,
+          "introduction_ap25": 0.09935,
+          "forgetting25": null,
+          "final_ap50": 0.02042,
+          "introduction_ap50": 0.02042,
+          "forgetting50": null
+        }
+      ],
+      "resources": [
+        {
+          "stage": 1,
+          "objects": 80,
+          "points": 294981,
+          "pickle_bytes": 7096010,
+          "unique_source_scenes": 79
+        },
+        {
+          "stage": 2,
+          "objects": 160,
+          "points": 1010632,
+          "pickle_bytes": 24287631,
+          "unique_source_scenes": 155
+        },
+        {
+          "stage": 3,
+          "objects": 240,
+          "points": 1184481,
+          "pickle_bytes": 28475811,
+          "unique_source_scenes": 231
+        },
+        {
+          "stage": 4,
+          "objects": 320,
+          "points": 1518601,
+          "pickle_bytes": 36510621,
+          "unique_source_scenes": 303
+        },
+        {
+          "stage": 5,
+          "objects": 400,
+          "points": 1798476,
+          "pickle_bytes": 43243471,
+          "unique_source_scenes": 372
+        },
+        {
+          "stage": 6,
+          "objects": 480,
+          "points": 2130986,
+          "pickle_bytes": 51239587,
+          "unique_source_scenes": 437
+        },
+        {
+          "stage": 7,
+          "objects": 560,
+          "points": 2453028,
+          "pickle_bytes": 58984575,
+          "unique_source_scenes": 514
+        },
+        {
+          "stage": 8,
+          "objects": 640,
+          "points": 2698036,
+          "pickle_bytes": 64880657,
+          "unique_source_scenes": 585
+        },
+        {
+          "stage": 9,
+          "objects": 720,
+          "points": 2960207,
+          "pickle_bytes": 71188659,
+          "unique_source_scenes": 651
+        },
+        {
+          "stage": 10,
+          "objects": 800,
+          "points": 3080035,
+          "pickle_bytes": 74080274,
+          "unique_source_scenes": 713
+        }
+      ],
+      "final_old_map25": 0.15645666666666666,
+      "final_new_map25": 0.0528425,
+      "forgetting25": 0.132885,
+      "backward_transfer25": -0.13207305555555554,
+      "final_old_map50": 0.09051361111111111,
+      "final_new_map50": 0.01169,
+      "forgetting50": 0.08405166666666666,
+      "backward_transfer50": -0.08301027777777778,
+      "duration_hours": 6.6675,
+      "peak_logged_memory_mb": 3648,
+      "object_reduction_percent": 79.89444584066348,
+      "delta_vs_baseline25_pp": -1.754,
+      "delta_vs_random20_25_pp": 0.0,
+      "delta_vs_baseline50_pp": -1.371,
+      "delta_vs_random20_50_pp": 0.0
+    },
+    {
+      "budget": 20,
+      "seed": 201,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56507,
+          "map50": 0.4278,
+          "stored_objects": 80
+        },
+        {
+          "stage": 2,
+          "map25": 0.49511,
+          "map50": 0.35208,
+          "stored_objects": 160
+        },
+        {
+          "stage": 3,
+          "map25": 0.38059,
+          "map50": 0.25202,
+          "stored_objects": 240
+        },
+        {
+          "stage": 4,
+          "map25": 0.34159,
+          "map50": 0.2272,
+          "stored_objects": 320
+        },
+        {
+          "stage": 5,
+          "map25": 0.29431,
+          "map50": 0.18179,
+          "stored_objects": 400
+        },
+        {
+          "stage": 6,
+          "map25": 0.24407,
+          "map50": 0.14589,
+          "stored_objects": 480
+        },
+        {
+          "stage": 7,
+          "map25": 0.21102,
+          "map50": 0.12976,
+          "stored_objects": 560
+        },
+        {
+          "stage": 8,
+          "map25": 0.20101,
+          "map50": 0.12584,
+          "stored_objects": 640
+        },
+        {
+          "stage": 9,
+          "map25": 0.18226,
+          "map50": 0.11152,
+          "stored_objects": 720
+        },
+        {
+          "stage": 10,
+          "map25": 0.14895,
+          "map50": 0.09246,
+          "stored_objects": 800
+        }
+      ],
+      "final_map25": 0.14895,
+      "final_map50": 0.09246,
+      "final_objects": 800,
+      "stage10_old_objects": 720,
+      "stage_average_map25": 0.306398,
+      "stage_average_map50": 0.204636,
+      "run_id": "object20_s201",
+      "strategy": "random",
+      "label": "Random B=20",
+      "work_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week4_object20_s201_sunrgbd40_s10_freqorder_split_20260930_175043",
+      "classes": [
+        {
+          "model_idx": 0,
+          "name": "chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.72719,
+          "introduction_ap25": 0.81627,
+          "forgetting25": 0.08908000000000005,
+          "final_ap50": 0.58593,
+          "introduction_ap50": 0.68202,
+          "forgetting50": 0.09609000000000001
+        },
+        {
+          "model_idx": 1,
+          "name": "table",
+          "introduced_stage": 1,
+          "final_ap25": 0.25169,
+          "introduction_ap25": 0.51551,
+          "forgetting25": 0.26382,
+          "final_ap50": 0.08246,
+          "introduction_ap50": 0.31504,
+          "forgetting50": 0.23257999999999998
+        },
+        {
+          "model_idx": 2,
+          "name": "pillow",
+          "introduced_stage": 1,
+          "final_ap25": 0.15671,
+          "introduction_ap25": 0.24623,
+          "forgetting25": 0.08952000000000002,
+          "final_ap50": 0.02797,
+          "introduction_ap50": 0.08866,
+          "forgetting50": 0.06069000000000001
+        },
+        {
+          "model_idx": 3,
+          "name": "sofa_chair",
+          "introduced_stage": 1,
+          "final_ap25": 0.50147,
+          "introduction_ap25": 0.68226,
+          "forgetting25": 0.18079,
+          "final_ap50": 0.46454,
+          "introduction_ap50": 0.62547,
+          "forgetting50": 0.16092999999999996
+        },
+        {
+          "model_idx": 4,
+          "name": "desk",
+          "introduced_stage": 2,
+          "final_ap25": 0.06889,
+          "introduction_ap25": 0.30282,
+          "forgetting25": 0.23392999999999997,
+          "final_ap50": 0.01053,
+          "introduction_ap50": 0.10905,
+          "forgetting50": 0.09852
+        },
+        {
+          "model_idx": 5,
+          "name": "bed",
+          "introduced_stage": 2,
+          "final_ap25": 0.76916,
+          "introduction_ap25": 0.86475,
+          "forgetting25": 0.09559000000000006,
+          "final_ap50": 0.5452,
+          "introduction_ap50": 0.61287,
+          "forgetting50": 0.06767000000000001
+        },
+        {
+          "model_idx": 6,
+          "name": "sofa",
+          "introduced_stage": 2,
+          "final_ap25": 0.51486,
+          "introduction_ap25": 0.67829,
+          "forgetting25": 0.16342999999999996,
+          "final_ap50": 0.40017,
+          "introduction_ap50": 0.56084,
+          "forgetting50": 0.16066999999999998
+        },
+        {
+          "model_idx": 7,
+          "name": "computer",
+          "introduced_stage": 2,
+          "final_ap25": 0.00055,
+          "introduction_ap25": 0.03986,
+          "forgetting25": 0.03931,
+          "final_ap50": 0.00018,
+          "introduction_ap50": 0.00351,
+          "forgetting50": 0.00356
+        },
+        {
+          "model_idx": 8,
+          "name": "lamp",
+          "introduced_stage": 3,
+          "final_ap25": 0.38139,
+          "introduction_ap25": 0.40168,
+          "forgetting25": 0.041549999999999976,
+          "final_ap50": 0.19054,
+          "introduction_ap50": 0.17056,
+          "forgetting50": 0.010470000000000007
+        },
+        {
+          "model_idx": 9,
+          "name": "box",
+          "introduced_stage": 3,
+          "final_ap25": 0.00738,
+          "introduction_ap25": 0.03704,
+          "forgetting25": 0.029659999999999995,
+          "final_ap50": 0.00335,
+          "introduction_ap50": 0.00669,
+          "forgetting50": 0.0033399999999999997
+        },
+        {
+          "model_idx": 10,
+          "name": "garbage_bin",
+          "introduced_stage": 3,
+          "final_ap25": 0.09538,
+          "introduction_ap25": 0.37203,
+          "forgetting25": 0.27665,
+          "final_ap50": 0.05346,
+          "introduction_ap50": 0.259,
+          "forgetting50": 0.20554
+        },
+        {
+          "model_idx": 11,
+          "name": "cabinet",
+          "introduced_stage": 3,
+          "final_ap25": 0.00625,
+          "introduction_ap25": 0.07129,
+          "forgetting25": 0.06504,
+          "final_ap50": 0.00162,
+          "introduction_ap50": 0.01885,
+          "forgetting50": 0.01723
+        },
+        {
+          "model_idx": 12,
+          "name": "shelf",
+          "introduced_stage": 4,
+          "final_ap25": 0.01338,
+          "introduction_ap25": 0.10924,
+          "forgetting25": 0.09586,
+          "final_ap50": 0.00399,
+          "introduction_ap50": 0.01966,
+          "forgetting50": 0.01567
+        },
+        {
+          "model_idx": 13,
+          "name": "drawer",
+          "introduced_stage": 4,
+          "final_ap25": 0.00391,
+          "introduction_ap25": 0.05882,
+          "forgetting25": 0.05491,
+          "final_ap50": 0.00068,
+          "introduction_ap50": 0.02285,
+          "forgetting50": 0.02217
+        },
+        {
+          "model_idx": 14,
+          "name": "night_stand",
+          "introduced_stage": 4,
+          "final_ap25": 0.04258,
+          "introduction_ap25": 0.66405,
+          "forgetting25": 0.6214700000000001,
+          "final_ap50": 0.02911,
+          "introduction_ap50": 0.49653,
+          "forgetting50": 0.46742
+        },
+        {
+          "model_idx": 15,
+          "name": "endtable",
+          "introduced_stage": 4,
+          "final_ap25": 0.10597,
+          "introduction_ap25": 0.38411,
+          "forgetting25": 0.27814,
+          "final_ap50": 0.07091,
+          "introduction_ap50": 0.24896,
+          "forgetting50": 0.17804999999999999
+        },
+        {
+          "model_idx": 16,
+          "name": "sink",
+          "introduced_stage": 5,
+          "final_ap25": 0.0484,
+          "introduction_ap25": 0.49454,
+          "forgetting25": 0.44614,
+          "final_ap50": 0.00321,
+          "introduction_ap50": 0.09159,
+          "forgetting50": 0.08838
+        },
+        {
+          "model_idx": 17,
+          "name": "picture",
+          "introduced_stage": 5,
+          "final_ap25": 0.0,
+          "introduction_ap25": 0.00243,
+          "forgetting25": 0.00243,
+          "final_ap50": 0.0,
+          "introduction_ap50": 4e-05,
+          "forgetting50": 4e-05
+        },
+        {
+          "model_idx": 18,
+          "name": "stool",
+          "introduced_stage": 5,
+          "final_ap25": 0.19287,
+          "introduction_ap25": 0.23545,
+          "forgetting25": 0.04257999999999998,
+          "final_ap50": 0.142,
+          "introduction_ap50": 0.18501,
+          "forgetting50": 0.04301000000000002
+        },
+        {
+          "model_idx": 19,
+          "name": "coffee_table",
+          "introduced_stage": 5,
+          "final_ap25": 0.06574,
+          "introduction_ap25": 0.32193,
+          "forgetting25": 0.25619,
+          "final_ap50": 0.027,
+          "introduction_ap50": 0.21251,
+          "forgetting50": 0.18551
+        },
+        {
+          "model_idx": 20,
+          "name": "bookshelf",
+          "introduced_stage": 6,
+          "final_ap25": 0.18901,
+          "introduction_ap25": 0.26711,
+          "forgetting25": 0.0781,
+          "final_ap50": 0.05499,
+          "introduction_ap50": 0.05612,
+          "forgetting50": 0.019540000000000002
+        },
+        {
+          "model_idx": 21,
+          "name": "painting",
+          "introduced_stage": 6,
+          "final_ap25": 4e-05,
+          "introduction_ap25": 0.04399,
+          "forgetting25": 0.04395,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.00611,
+          "forgetting50": 0.00611
+        },
+        {
+          "model_idx": 22,
+          "name": "keyboard",
+          "introduced_stage": 6,
+          "final_ap25": 3e-05,
+          "introduction_ap25": 0.02624,
+          "forgetting25": 0.02621,
+          "final_ap50": 0.0,
+          "introduction_ap50": 5e-05,
+          "forgetting50": 5e-05
+        },
+        {
+          "model_idx": 23,
+          "name": "dresser",
+          "introduced_stage": 6,
+          "final_ap25": 0.03132,
+          "introduction_ap25": 0.21691,
+          "forgetting25": 0.18558999999999998,
+          "final_ap50": 0.01945,
+          "introduction_ap50": 0.14382,
+          "forgetting50": 0.12437000000000001
+        },
+        {
+          "model_idx": 24,
+          "name": "tv",
+          "introduced_stage": 7,
+          "final_ap25": 0.0096,
+          "introduction_ap25": 0.23225,
+          "forgetting25": 0.22265000000000001,
+          "final_ap50": 0.00138,
+          "introduction_ap50": 0.04603,
+          "forgetting50": 0.04465
+        },
+        {
+          "model_idx": 25,
+          "name": "whiteboard",
+          "introduced_stage": 7,
+          "final_ap25": 0.00205,
+          "introduction_ap25": 0.07313,
+          "forgetting25": 0.07108,
+          "final_ap50": 5e-05,
+          "introduction_ap50": 0.00466,
+          "forgetting50": 0.00461
+        },
+        {
+          "model_idx": 26,
+          "name": "cpu",
+          "introduced_stage": 7,
+          "final_ap25": 0.00233,
+          "introduction_ap25": 0.07152,
+          "forgetting25": 0.06919,
+          "final_ap50": 0.00012,
+          "introduction_ap50": 0.008,
+          "forgetting50": 0.00788
+        },
+        {
+          "model_idx": 27,
+          "name": "toilet",
+          "introduced_stage": 7,
+          "final_ap25": 0.82286,
+          "introduction_ap25": 0.86595,
+          "forgetting25": 0.04308999999999996,
+          "final_ap50": 0.57938,
+          "introduction_ap50": 0.60269,
+          "forgetting50": 0.03810000000000002
+        },
+        {
+          "model_idx": 28,
+          "name": "paper",
+          "introduced_stage": 8,
+          "final_ap25": 1e-05,
+          "introduction_ap25": 0.00022,
+          "forgetting25": 0.00021,
+          "final_ap50": 0.0,
+          "introduction_ap50": 0.0,
+          "forgetting50": 0.0
+        },
+        {
+          "model_idx": 29,
+          "name": "ottoman",
+          "introduced_stage": 8,
+          "final_ap25": 0.106,
+          "introduction_ap25": 0.25179,
+          "forgetting25": 0.14579000000000003,
+          "final_ap50": 0.07096,
+          "introduction_ap50": 0.17566,
+          "forgetting50": 0.10470000000000002
+        },
+        {
+          "model_idx": 30,
+          "name": "bench",
+          "introduced_stage": 8,
+          "final_ap25": 0.0866,
+          "introduction_ap25": 0.16984,
+          "forgetting25": 0.08324,
+          "final_ap50": 0.02275,
+          "introduction_ap50": 0.10333,
+          "forgetting50": 0.08058000000000001
+        },
+        {
+          "model_idx": 31,
+          "name": "recycle_bin",
+          "introduced_stage": 8,
+          "final_ap25": 0.3291,
+          "introduction_ap25": 0.38317,
+          "forgetting25": 0.09437000000000001,
+          "final_ap50": 0.22899,
+          "introduction_ap50": 0.2791,
+          "forgetting50": 0.08098999999999998
+        },
+        {
+          "model_idx": 32,
+          "name": "monitor",
+          "introduced_stage": 9,
+          "final_ap25": 0.20564,
+          "introduction_ap25": 0.29337,
+          "forgetting25": 0.08773000000000003,
+          "final_ap50": 0.01883,
+          "introduction_ap50": 0.04977,
+          "forgetting50": 0.030940000000000002
+        },
+        {
+          "model_idx": 33,
+          "name": "printer",
+          "introduced_stage": 9,
+          "final_ap25": 0.02695,
+          "introduction_ap25": 0.24402,
+          "forgetting25": 0.21706999999999999,
+          "final_ap50": 0.01385,
+          "introduction_ap50": 0.13376,
+          "forgetting50": 0.11990999999999999
+        },
+        {
+          "model_idx": 34,
+          "name": "plant",
+          "introduced_stage": 9,
+          "final_ap25": 0.00954,
+          "introduction_ap25": 0.08061,
+          "forgetting25": 0.07107,
+          "final_ap50": 0.00043,
+          "introduction_ap50": 0.00217,
+          "forgetting50": 0.00174
+        },
+        {
+          "model_idx": 35,
+          "name": "door",
+          "introduced_stage": 9,
+          "final_ap25": 0.00692,
+          "introduction_ap25": 0.009,
+          "forgetting25": 0.0020799999999999994,
+          "final_ap50": 0.00084,
+          "introduction_ap50": 0.00036,
+          "forgetting50": -0.00048
+        },
+        {
+          "model_idx": 36,
+          "name": "book",
+          "introduced_stage": 10,
+          "final_ap25": 0.00537,
+          "introduction_ap25": 0.00537,
+          "forgetting25": null,
+          "final_ap50": 3e-05,
+          "introduction_ap50": 3e-05,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 37,
+          "name": "mirror",
+          "introduced_stage": 10,
+          "final_ap25": 0.03687,
+          "introduction_ap25": 0.03687,
+          "forgetting25": null,
+          "final_ap50": 0.00058,
+          "introduction_ap50": 0.00058,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 38,
+          "name": "laptop",
+          "introduced_stage": 10,
+          "final_ap25": 0.07022,
+          "introduction_ap25": 0.07022,
+          "forgetting25": null,
+          "final_ap50": 0.02105,
+          "introduction_ap50": 0.02105,
+          "forgetting50": null
+        },
+        {
+          "model_idx": 39,
+          "name": "towel",
+          "introduced_stage": 10,
+          "final_ap25": 0.06376,
+          "introduction_ap25": 0.06376,
+          "forgetting25": null,
+          "final_ap50": 0.02193,
+          "introduction_ap50": 0.02193,
+          "forgetting50": null
+        }
+      ],
+      "resources": [
+        {
+          "stage": 1,
+          "objects": 80,
+          "points": 262197,
+          "pickle_bytes": 6309158,
+          "unique_source_scenes": 76
+        },
+        {
+          "stage": 2,
+          "objects": 160,
+          "points": 882043,
+          "pickle_bytes": 21201488,
+          "unique_source_scenes": 152
+        },
+        {
+          "stage": 3,
+          "objects": 240,
+          "points": 1205253,
+          "pickle_bytes": 28974350,
+          "unique_source_scenes": 228
+        },
+        {
+          "stage": 4,
+          "objects": 320,
+          "points": 1492866,
+          "pickle_bytes": 35892959,
+          "unique_source_scenes": 296
+        },
+        {
+          "stage": 5,
+          "objects": 400,
+          "points": 1688810,
+          "pickle_bytes": 40611448,
+          "unique_source_scenes": 367
+        },
+        {
+          "stage": 6,
+          "objects": 480,
+          "points": 2023875,
+          "pickle_bytes": 48668929,
+          "unique_source_scenes": 437
+        },
+        {
+          "stage": 7,
+          "objects": 560,
+          "points": 2417506,
+          "pickle_bytes": 58132067,
+          "unique_source_scenes": 511
+        },
+        {
+          "stage": 8,
+          "objects": 640,
+          "points": 2680283,
+          "pickle_bytes": 64454601,
+          "unique_source_scenes": 579
+        },
+        {
+          "stage": 9,
+          "objects": 720,
+          "points": 2906673,
+          "pickle_bytes": 69903808,
+          "unique_source_scenes": 638
+        },
+        {
+          "stage": 10,
+          "objects": 800,
+          "points": 3017222,
+          "pickle_bytes": 72572737,
+          "unique_source_scenes": 698
+        }
+      ],
+      "final_old_map25": 0.16060472222222222,
+      "final_new_map25": 0.044055,
+      "forgetting25": 0.13354194444444445,
+      "backward_transfer25": -0.13183194444444446,
+      "final_old_map50": 0.10152416666666667,
+      "final_new_map50": 0.010897500000000001,
+      "forgetting50": 0.07725638888888889,
+      "backward_transfer50": -0.07462416666666667,
+      "duration_hours": 6.704722222222222,
+      "peak_logged_memory_mb": 3636,
+      "object_reduction_percent": 79.89444584066348,
+      "delta_vs_baseline25_pp": -0.10499999999999954,
+      "delta_vs_random20_25_pp": 0.0,
+      "delta_vs_baseline50_pp": 0.2140000000000003,
+      "delta_vs_random20_50_pp": 0.0
+    }
+  ]
+}

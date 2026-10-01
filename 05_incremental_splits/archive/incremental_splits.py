@@ -543,7 +543,7 @@ else:
         print(f"    {spl} | {stage} : {count} scenes")
 
 # ---------------------------------------------------------------------------
-# Final summary table — suitable for sharing with mentor
+# Final summary table — research summary
 # ---------------------------------------------------------------------------
 # PATTERN: build from stage_stats collected during the filter loop above,
 # not from a second pass over presence_df.  Single-pass consistency means

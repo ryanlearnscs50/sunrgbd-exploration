@@ -1,0 +1,33 @@
+{
+  "seed": 201,
+  "gpu": 1,
+  "strategy": "largest_point_count",
+  "start_stage": 2,
+  "end_stage": 2,
+  "budget": 20,
+  "checkpoint": "/data3/ryan/ldmr_exploration/incremental_logs/week4_object20_largest_s201_sunrgbd40_s10_freqorder_split_20261001_005307/checkpoints/stage_1/epoch_6.pth",
+  "checkpoint_sha256": "dd5d0c4ab39c713150275c16d9a044aaf778d2a338c9035271b198ccbb228dbc",
+  "config": "/data3/ryan/ldmr_exploration/repo/configs/incremental/sunrgbd/week4_s10_object20_largest_pseudo.py",
+  "config_sha256": "22490321ea14e31b035dd2700286bf67d5d84bc254fde6ebbc529625ee1b56af",
+  "command": [
+    "/data3/ryan/ldmr_exploration/repo/venv/bin/python",
+    "tools/train_incremental_scene.py",
+    "/data3/ryan/ldmr_exploration/repo/configs/incremental/sunrgbd/week4_s10_object20_largest_pseudo.py",
+    "--work-dir",
+    "/data3/ryan/ldmr_exploration/incremental_logs/week4_selection_recovery_s201_largest_point_count",
+    "--start-stage",
+    "2",
+    "--end-stage",
+    "2",
+    "--checkpoint-path",
+    "/data3/ryan/ldmr_exploration/incremental_logs/week4_object20_largest_s201_sunrgbd40_s10_freqorder_split_20261001_005307/checkpoints/stage_1/epoch_6.pth",
+    "--seed",
+    "201"
+  ],
+  "work_dir_stem": "/data3/ryan/ldmr_exploration/incremental_logs/week4_selection_recovery_s201_largest_point_count",
+  "started_at": "2026-10-01T02:49:31.817258+00:00",
+  "design": "Matched stage-2 continuations; not a ten-stage result or full-training replication",
+  "ended_at": "2026-10-01T03:18:03.497491+00:00",
+  "exit_code": 0,
+  "status": "complete"
+}

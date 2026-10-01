@@ -1,0 +1,368 @@
+{
+  "updated_at": "2026-10-01T05:26:10.560796+00:00",
+  "audited_complete": true,
+  "scope": "Stage 2 only; 8 seen classes; paired checkpoint continuations, not full S10 seeds",
+  "statuses": [
+    {
+      "seed": 200,
+      "strategy": "random",
+      "status": "complete",
+      "code": 0,
+      "at": "2026-10-01T02:49:11.423146+00:00"
+    },
+    {
+      "seed": 200,
+      "strategy": "largest_point_count",
+      "status": "complete",
+      "code": 0,
+      "at": "2026-10-01T03:17:53.528683+00:00"
+    },
+    {
+      "seed": 201,
+      "strategy": "random",
+      "status": "complete",
+      "code": 0,
+      "at": "2026-10-01T02:49:31.450050+00:00"
+    },
+    {
+      "seed": 201,
+      "strategy": "largest_point_count",
+      "status": "complete",
+      "code": 0,
+      "at": "2026-10-01T03:18:03.497080+00:00"
+    }
+  ],
+  "audit_errors": [],
+  "runs": [
+    {
+      "seed": 200,
+      "strategy": "random",
+      "work_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week4_selection_recovery_s200_random_sunrgbd40_s10_freqorder_split_20261001_102147",
+      "checkpoint_sha256": "78b2525432430b5642a57a22e9b0d2ead401e1dc1bf60a38aea5f9e3f0eabf54",
+      "pseudo_sha256": "1058fd05146cdc150eeefe166e605108278dc70852715035de5c75eea14941d0",
+      "map25": 0.48788,
+      "map50": 0.34933,
+      "old25": 0.5083949999999999,
+      "new25": 0.4673725,
+      "classes": [
+        {
+          "model_idx": 0,
+          "name": "chair",
+          "AP_0.25": 0.77792,
+          "AP_0.50": 0.63536
+        },
+        {
+          "model_idx": 1,
+          "name": "table",
+          "AP_0.25": 0.38387,
+          "AP_0.50": 0.21357
+        },
+        {
+          "model_idx": 2,
+          "name": "pillow",
+          "AP_0.25": 0.23935,
+          "AP_0.50": 0.0797
+        },
+        {
+          "model_idx": 3,
+          "name": "sofa_chair",
+          "AP_0.25": 0.63244,
+          "AP_0.50": 0.5773
+        },
+        {
+          "model_idx": 4,
+          "name": "desk",
+          "AP_0.25": 0.29232,
+          "AP_0.50": 0.10566
+        },
+        {
+          "model_idx": 5,
+          "name": "bed",
+          "AP_0.25": 0.84913,
+          "AP_0.50": 0.63103
+        },
+        {
+          "model_idx": 6,
+          "name": "sofa",
+          "AP_0.25": 0.67707,
+          "AP_0.50": 0.54439
+        },
+        {
+          "model_idx": 7,
+          "name": "computer",
+          "AP_0.25": 0.05097,
+          "AP_0.50": 0.00765
+        }
+      ],
+      "resources": [
+        {
+          "stage": 1,
+          "objects": 80,
+          "points": 294981,
+          "pickle_bytes": 7096010
+        },
+        {
+          "stage": 2,
+          "objects": 160,
+          "points": 1010632,
+          "pickle_bytes": 24287631
+        }
+      ],
+      "minutes": 27.436730816666667,
+      "random_bank_matches_original": true,
+      "audited": true
+    },
+    {
+      "seed": 200,
+      "strategy": "largest_point_count",
+      "work_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week4_selection_recovery_s200_largest_point_count_sunrgbd40_s10_freqorder_split_20261001_104934",
+      "checkpoint_sha256": "78b2525432430b5642a57a22e9b0d2ead401e1dc1bf60a38aea5f9e3f0eabf54",
+      "pseudo_sha256": "2a637bedad2c100fdea2d8e70cb222aca73662eeaa88e71f54e5f391e972fb26",
+      "map25": 0.49658,
+      "map50": 0.35137,
+      "old25": 0.529495,
+      "new25": 0.46366999999999997,
+      "classes": [
+        {
+          "model_idx": 0,
+          "name": "chair",
+          "AP_0.25": 0.79556,
+          "AP_0.50": 0.66364
+        },
+        {
+          "model_idx": 1,
+          "name": "table",
+          "AP_0.25": 0.41182,
+          "AP_0.50": 0.22711
+        },
+        {
+          "model_idx": 2,
+          "name": "pillow",
+          "AP_0.25": 0.25094,
+          "AP_0.50": 0.07747
+        },
+        {
+          "model_idx": 3,
+          "name": "sofa_chair",
+          "AP_0.25": 0.65966,
+          "AP_0.50": 0.59931
+        },
+        {
+          "model_idx": 4,
+          "name": "desk",
+          "AP_0.25": 0.2835,
+          "AP_0.50": 0.08939
+        },
+        {
+          "model_idx": 5,
+          "name": "bed",
+          "AP_0.25": 0.84692,
+          "AP_0.50": 0.59389
+        },
+        {
+          "model_idx": 6,
+          "name": "sofa",
+          "AP_0.25": 0.67613,
+          "AP_0.50": 0.55028
+        },
+        {
+          "model_idx": 7,
+          "name": "computer",
+          "AP_0.25": 0.04813,
+          "AP_0.50": 0.00991
+        }
+      ],
+      "resources": [
+        {
+          "stage": 1,
+          "objects": 80,
+          "points": 1786103,
+          "pickle_bytes": 42883334
+        },
+        {
+          "stage": 2,
+          "objects": 160,
+          "points": 4016472,
+          "pickle_bytes": 96428473
+        }
+      ],
+      "minutes": 28.361592283333334,
+      "random_bank_matches_original": null,
+      "audited": true
+    },
+    {
+      "seed": 201,
+      "strategy": "random",
+      "work_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week4_selection_recovery_s201_random_sunrgbd40_s10_freqorder_split_20261001_102147",
+      "checkpoint_sha256": "dd5d0c4ab39c713150275c16d9a044aaf778d2a338c9035271b198ccbb228dbc",
+      "pseudo_sha256": "4183b84bf824e26466c455608eb01d4644e3ea4b1e1a12d697969fc1b4ec45ad",
+      "map25": 0.49194,
+      "map50": 0.35119,
+      "old25": 0.514205,
+      "new25": 0.469675,
+      "classes": [
+        {
+          "model_idx": 0,
+          "name": "chair",
+          "AP_0.25": 0.79147,
+          "AP_0.50": 0.65472
+        },
+        {
+          "model_idx": 1,
+          "name": "table",
+          "AP_0.25": 0.39301,
+          "AP_0.50": 0.21509
+        },
+        {
+          "model_idx": 2,
+          "name": "pillow",
+          "AP_0.25": 0.2383,
+          "AP_0.50": 0.08268
+        },
+        {
+          "model_idx": 3,
+          "name": "sofa_chair",
+          "AP_0.25": 0.63404,
+          "AP_0.50": 0.57662
+        },
+        {
+          "model_idx": 4,
+          "name": "desk",
+          "AP_0.25": 0.28902,
+          "AP_0.50": 0.09805
+        },
+        {
+          "model_idx": 5,
+          "name": "bed",
+          "AP_0.25": 0.86812,
+          "AP_0.50": 0.62039
+        },
+        {
+          "model_idx": 6,
+          "name": "sofa",
+          "AP_0.25": 0.67392,
+          "AP_0.50": 0.54913
+        },
+        {
+          "model_idx": 7,
+          "name": "computer",
+          "AP_0.25": 0.04764,
+          "AP_0.50": 0.01282
+        }
+      ],
+      "resources": [
+        {
+          "stage": 1,
+          "objects": 80,
+          "points": 262197,
+          "pickle_bytes": 6309158
+        },
+        {
+          "stage": 2,
+          "objects": 160,
+          "points": 882043,
+          "pickle_bytes": 21201488
+        }
+      ],
+      "minutes": 27.770097416666665,
+      "random_bank_matches_original": true,
+      "audited": true
+    },
+    {
+      "seed": 201,
+      "strategy": "largest_point_count",
+      "work_dir": "/data3/ryan/ldmr_exploration/incremental_logs/week4_selection_recovery_s201_largest_point_count_sunrgbd40_s10_freqorder_split_20261001_104934",
+      "checkpoint_sha256": "dd5d0c4ab39c713150275c16d9a044aaf778d2a338c9035271b198ccbb228dbc",
+      "pseudo_sha256": "4eeba6419fdd6d6fc07d794191a7cebd6ad33440a11dc588036969a2aa13918c",
+      "map25": 0.50274,
+      "map50": 0.36063,
+      "old25": 0.537575,
+      "new25": 0.4679125,
+      "classes": [
+        {
+          "model_idx": 0,
+          "name": "chair",
+          "AP_0.25": 0.79929,
+          "AP_0.50": 0.66636
+        },
+        {
+          "model_idx": 1,
+          "name": "table",
+          "AP_0.25": 0.43308,
+          "AP_0.50": 0.26076
+        },
+        {
+          "model_idx": 2,
+          "name": "pillow",
+          "AP_0.25": 0.25978,
+          "AP_0.50": 0.09272
+        },
+        {
+          "model_idx": 3,
+          "name": "sofa_chair",
+          "AP_0.25": 0.65815,
+          "AP_0.50": 0.60573
+        },
+        {
+          "model_idx": 4,
+          "name": "desk",
+          "AP_0.25": 0.29201,
+          "AP_0.50": 0.0973
+        },
+        {
+          "model_idx": 5,
+          "name": "bed",
+          "AP_0.25": 0.85854,
+          "AP_0.50": 0.59959
+        },
+        {
+          "model_idx": 6,
+          "name": "sofa",
+          "AP_0.25": 0.67794,
+          "AP_0.50": 0.55383
+        },
+        {
+          "model_idx": 7,
+          "name": "computer",
+          "AP_0.25": 0.04316,
+          "AP_0.50": 0.00875
+        }
+      ],
+      "resources": [
+        {
+          "stage": 1,
+          "objects": 80,
+          "points": 1786103,
+          "pickle_bytes": 42883334
+        },
+        {
+          "stage": 2,
+          "objects": 160,
+          "points": 4016472,
+          "pickle_bytes": 96428473
+        }
+      ],
+      "minutes": 28.528003883333334,
+      "random_bank_matches_original": null,
+      "audited": true
+    }
+  ],
+  "paired_deltas": [
+    {
+      "seed": 200,
+      "delta25_pp": 0.8700000000000041,
+      "delta50_pp": 0.20400000000000418,
+      "delta_old25_pp": 2.110000000000012,
+      "delta_new25_pp": -0.3702500000000053,
+      "pseudo_files_identical": false
+    },
+    {
+      "seed": 201,
+      "delta25_pp": 1.0799999999999976,
+      "delta50_pp": 0.9440000000000004,
+      "delta_old25_pp": 2.337,
+      "delta_new25_pp": -0.17625000000000002,
+      "pseudo_files_identical": false
+    }
+  ]
+}

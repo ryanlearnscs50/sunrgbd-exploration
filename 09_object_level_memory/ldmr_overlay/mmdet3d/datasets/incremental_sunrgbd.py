@@ -15,6 +15,7 @@ Design notes:
 from __future__ import annotations
 
 import copy
+import heapq
 import os.path as osp
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
@@ -1029,10 +1030,10 @@ class IncrementalSUNRGBDDataset(SUNRGBDDataset):
 
         for class_id, objects in class_objects.items():
             if bank.selection_strategy_name not in (
-                    'random', 'learning_dynamics_design2'):
+                    'random', 'largest_point_count', 'learning_dynamics_design2'):
                 raise ValueError(
                     'SUN RGB-D object-memory population currently supports '
-                    "selection_strategy in ['random', "
+                    "selection_strategy in ['random', 'largest_point_count', "
                     "'learning_dynamics_design2'].")
             if bank.selection_strategy_name == 'learning_dynamics_design2':
                 # Rank lightweight metadata first. Loading/cropping every object
@@ -1041,7 +1042,7 @@ class IncrementalSUNRGBDDataset(SUNRGBDDataset):
                 objects = bank.rank_learning_dynamics_design2(
                     objects, class_id, int(self.stage_id),
                     learning_dynamics_design2_payload)
-            else:
+            elif bank.selection_strategy_name == 'random':
                 # Shuffle lightweight metadata, then read one source scene at a
                 # time until enough valid crops exist. Failed/sparse crops are
                 # replaced by later candidates instead of shrinking the bank.
@@ -1051,7 +1052,9 @@ class IncrementalSUNRGBDDataset(SUNRGBDDataset):
                            for index in rng.permutation(len(objects))]
 
             prepared = []
-            for candidate in objects:
+            largest = bank.selection_strategy_name == 'largest_point_count'
+            top_crops = []
+            for candidate_index, candidate in enumerate(objects):
                 obj = dict(candidate)
                 scene = self._load_scene_points(obj['scene_id'])
                 if scene is None:
@@ -1060,14 +1063,30 @@ class IncrementalSUNRGBDDataset(SUNRGBDDataset):
                     scene, obj['bbox'], crop_margin=bank.crop_margin)
                 if len(crop) < bank.min_points:
                     continue
+                # Inspect the entire candidate pool for point-count selection.
+                # Keep only the best K crops in memory; ties retain the earlier
+                # metadata entry, matching the bank's stable ranking.
+                rank = (len(crop), -candidate_index)
+                if largest and len(top_crops) >= bank.exemplars_per_class:
+                    if rank <= top_crops[0][:2]:
+                        continue
                 obj['points'] = crop
                 source_floor = float(np.percentile(
                     scene[:, 2], bank.floor_percentile))
                 obj['source_floor_offset'] = float(
                     obj['bbox'][2] - obj['bbox'][5] * 0.5 - source_floor)
-                prepared.append(obj)
-                if len(prepared) >= bank.exemplars_per_class:
+                if largest:
+                    entry = (rank[0], rank[1], obj)
+                    if len(top_crops) < bank.exemplars_per_class:
+                        heapq.heappush(top_crops, entry)
+                    else:
+                        heapq.heapreplace(top_crops, entry)
+                else:
+                    prepared.append(obj)
+                if not largest and len(prepared) >= bank.exemplars_per_class:
                     break
+            if largest:
+                prepared = [entry[2] for entry in sorted(top_crops, reverse=True)]
             objects = prepared
 
             bank.add_exemplars(

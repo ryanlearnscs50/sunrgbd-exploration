@@ -1,0 +1,164 @@
+{
+  "offline_bank_objects": 800,
+  "offline_bank_points": 10990248,
+  "offline_bank_mib": 251.70216464996338,
+  "offline_byte_reduction_vs_b100_percent": 23.24988963761163,
+  "offline_byte_ratio_vs_random20": 3.5993648845027804,
+  "b20_both_seeds_class_loss_count": 11,
+  "b20_both_seeds_class_gain_count": 7,
+  "largest_mean_class_losses": [
+    {
+      "class_id": 31,
+      "name": "recycle_bin",
+      "cohort": 8,
+      "b100_mean_ap25": 48.150999999999996,
+      "b50_mean_ap25": 29.568,
+      "b50_delta_s200": -19.179000000000002,
+      "b50_delta_s201": -17.987,
+      "b50_mean_delta": -18.583,
+      "b20_mean_ap25": 28.980500000000003,
+      "b20_delta_s200": -19.482,
+      "b20_delta_s201": -18.858999999999998,
+      "b20_mean_delta": -19.170499999999997
+    },
+    {
+      "class_id": 3,
+      "name": "sofa_chair",
+      "cohort": 1,
+      "b100_mean_ap25": 58.2255,
+      "b50_mean_ap25": 57.196000000000005,
+      "b50_delta_s200": -6.8509999999999955,
+      "b50_delta_s201": 4.792000000000007,
+      "b50_mean_delta": -1.0294999999999943,
+      "b20_mean_ap25": 47.557500000000005,
+      "b20_delta_s200": -18.112999999999996,
+      "b20_delta_s201": -3.222999999999998,
+      "b20_mean_delta": -10.667999999999997
+    },
+    {
+      "class_id": 34,
+      "name": "plant",
+      "cohort": 9,
+      "b100_mean_ap25": 10.0825,
+      "b50_mean_ap25": 3.9605,
+      "b50_delta_s200": -4.197,
+      "b50_delta_s201": -8.046999999999999,
+      "b50_mean_delta": -6.122,
+      "b20_mean_ap25": 2.5484999999999998,
+      "b20_delta_s200": -2.4899999999999998,
+      "b20_delta_s201": -12.578,
+      "b20_mean_delta": -7.534
+    },
+    {
+      "class_id": 6,
+      "name": "sofa",
+      "cohort": 2,
+      "b100_mean_ap25": 61.972500000000004,
+      "b50_mean_ap25": 57.352000000000004,
+      "b50_delta_s200": -8.853,
+      "b50_delta_s201": -0.38799999999999946,
+      "b50_mean_delta": -4.6205,
+      "b20_mean_ap25": 55.291999999999994,
+      "b20_delta_s200": -4.787000000000008,
+      "b20_delta_s201": -8.574000000000003,
+      "b20_mean_delta": -6.680500000000006
+    },
+    {
+      "class_id": 0,
+      "name": "chair",
+      "cohort": 1,
+      "b100_mean_ap25": 71.755,
+      "b50_mean_ap25": 69.2,
+      "b50_delta_s200": -3.908999999999996,
+      "b50_delta_s201": -1.2010000000000076,
+      "b50_mean_delta": -2.5550000000000015,
+      "b20_mean_ap25": 68.633,
+      "b20_delta_s200": -10.470000000000002,
+      "b20_delta_s201": 4.225999999999996,
+      "b20_mean_delta": -3.122000000000003
+    }
+  ],
+  "cohorts": [
+    {
+      "cohort": 1,
+      "classes": "chair, table, pillow, sofa_chair",
+      "b100_final_ap25": 39.263,
+      "b50_final_ap25": 37.53575,
+      "b20_final_ap25": 37.832875,
+      "b20_delta": -1.4301249999999968
+    },
+    {
+      "cohort": 2,
+      "classes": "desk, bed, sofa, computer",
+      "b100_final_ap25": 37.507875,
+      "b50_final_ap25": 35.984,
+      "b20_final_ap25": 34.866375,
+      "b20_delta": -2.6415000000000006
+    },
+    {
+      "cohort": 3,
+      "classes": "lamp, box, garbage_bin, cabinet",
+      "b100_final_ap25": 11.038874999999999,
+      "b50_final_ap25": 10.348125,
+      "b20_final_ap25": 11.453375000000001,
+      "b20_delta": 0.4145000000000021
+    },
+    {
+      "cohort": 4,
+      "classes": "shelf, drawer, night_stand, endtable",
+      "b100_final_ap25": 4.32675,
+      "b50_final_ap25": 3.09625,
+      "b20_final_ap25": 3.68275,
+      "b20_delta": -0.6439999999999997
+    },
+    {
+      "cohort": 5,
+      "classes": "sink, picture, stool, coffee_table",
+      "b100_final_ap25": 7.120375,
+      "b50_final_ap25": 8.2415,
+      "b20_final_ap25": 8.005,
+      "b20_delta": 0.8846250000000007
+    },
+    {
+      "cohort": 6,
+      "classes": "bookshelf, painting, keyboard, dresser",
+      "b100_final_ap25": 4.65225,
+      "b50_final_ap25": 5.4735,
+      "b20_final_ap25": 5.60075,
+      "b20_delta": 0.9484999999999992
+    },
+    {
+      "cohort": 7,
+      "classes": "tv, whiteboard, cpu, toilet",
+      "b100_final_ap25": 21.206125,
+      "b50_final_ap25": 20.633499999999998,
+      "b20_final_ap25": 20.636625,
+      "b20_delta": -0.5695000000000014
+    },
+    {
+      "cohort": 8,
+      "classes": "paper, ottoman, bench, recycle_bin",
+      "b100_final_ap25": 17.259249999999998,
+      "b50_final_ap25": 12.924625,
+      "b20_final_ap25": 13.0485,
+      "b20_delta": -4.210749999999997
+    },
+    {
+      "cohort": 9,
+      "classes": "monitor, printer, plant, door",
+      "b100_final_ap25": 9.559624999999999,
+      "b50_final_ap25": 9.5065,
+      "b20_final_ap25": 7.551375,
+      "b20_delta": -2.0082499999999985
+    },
+    {
+      "cohort": 10,
+      "classes": "book, mirror, laptop, towel",
+      "b100_final_ap25": 4.881375,
+      "b50_final_ap25": 3.6823750000000004,
+      "b20_final_ap25": 4.844875,
+      "b20_delta": -0.0365000000000002
+    }
+  ],
+  "limitations": "Descriptive diagnostics, not significance tests. Offline dense banks have no full S10 detector score."
+}

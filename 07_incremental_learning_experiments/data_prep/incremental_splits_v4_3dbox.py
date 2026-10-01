@@ -8,7 +8,7 @@ Faithful to ryan's original `incremental_splits_v2.py` SKELETON:
 The ordering objective is UNCHANGED: maximise the MINIMUM surviving scene
 count per stage (so no stage collapses).
 
-WHAT CHANGED vs v2 (the fixes decided with the mentor):
+WHAT CHANGED vs v2:
   (1) SIGNAL = 3D bounding boxes, not 2D `annotation2Dfinal` presence.
       v2's lift/strict-filter were driven by what is DRAWN in a scene (2D),
       which wildly overstates what has a trainable 3D box (e.g. classroom
@@ -21,7 +21,7 @@ WHAT CHANGED vs v2 (the fixes decided with the mentor):
       classes (true home not among the candidate types) fall below the floor
       and are dropped -- "let the data decide".
 
-Two INDEPENDENT schedules (mentor's call -- different vocabularies):
+Two INDEPENDENT schedules (different vocabularies):
   3-stage : bedroom / office / classroom                          (ryan's original types)
   6-stage : office / bedroom / living_room / bathroom / classroom / kitchen  (data-driven)
 

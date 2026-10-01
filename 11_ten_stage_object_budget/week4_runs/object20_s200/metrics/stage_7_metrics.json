@@ -1,0 +1,177 @@
+{
+  "stage_id": 7,
+  "evaluated_at_stage": 7,
+  "timestamp": "2026-09-30T23:22:18.227739",
+  "mAP_0.25": 0.20633,
+  "mAP_0.50": 0.12495,
+  "classes": [
+    {
+      "model_idx": 0,
+      "name": "chair",
+      "AP_0.25": 0.69871,
+      "AP_0.50": 0.57434
+    },
+    {
+      "model_idx": 1,
+      "name": "table",
+      "AP_0.25": 0.22158,
+      "AP_0.50": 0.08886
+    },
+    {
+      "model_idx": 2,
+      "name": "pillow",
+      "AP_0.25": 0.19879,
+      "AP_0.50": 0.04325
+    },
+    {
+      "model_idx": 3,
+      "name": "sofa_chair",
+      "AP_0.25": 0.49897,
+      "AP_0.50": 0.45711
+    },
+    {
+      "model_idx": 4,
+      "name": "desk",
+      "AP_0.25": 0.0947,
+      "AP_0.50": 0.01628
+    },
+    {
+      "model_idx": 5,
+      "name": "bed",
+      "AP_0.25": 0.78003,
+      "AP_0.50": 0.52233
+    },
+    {
+      "model_idx": 6,
+      "name": "sofa",
+      "AP_0.25": 0.59936,
+      "AP_0.50": 0.48238
+    },
+    {
+      "model_idx": 7,
+      "name": "computer",
+      "AP_0.25": 0.01771,
+      "AP_0.50": 0.00596
+    },
+    {
+      "model_idx": 8,
+      "name": "lamp",
+      "AP_0.25": 0.35734,
+      "AP_0.50": 0.1736
+    },
+    {
+      "model_idx": 9,
+      "name": "box",
+      "AP_0.25": 0.00294,
+      "AP_0.50": 0.0003
+    },
+    {
+      "model_idx": 10,
+      "name": "garbage_bin",
+      "AP_0.25": 0.10357,
+      "AP_0.50": 0.04867
+    },
+    {
+      "model_idx": 11,
+      "name": "cabinet",
+      "AP_0.25": 0.00707,
+      "AP_0.50": 0.00109
+    },
+    {
+      "model_idx": 12,
+      "name": "shelf",
+      "AP_0.25": 0.07508,
+      "AP_0.50": 0.00977
+    },
+    {
+      "model_idx": 13,
+      "name": "drawer",
+      "AP_0.25": 0.00468,
+      "AP_0.50": 0.00114
+    },
+    {
+      "model_idx": 14,
+      "name": "night_stand",
+      "AP_0.25": 0.07842,
+      "AP_0.50": 0.06029
+    },
+    {
+      "model_idx": 15,
+      "name": "endtable",
+      "AP_0.25": 0.07206,
+      "AP_0.50": 0.0436
+    },
+    {
+      "model_idx": 16,
+      "name": "sink",
+      "AP_0.25": 0.14826,
+      "AP_0.50": 0.01368
+    },
+    {
+      "model_idx": 17,
+      "name": "picture",
+      "AP_0.25": 3e-05,
+      "AP_0.50": 0.0
+    },
+    {
+      "model_idx": 18,
+      "name": "stool",
+      "AP_0.25": 0.17328,
+      "AP_0.50": 0.1207
+    },
+    {
+      "model_idx": 19,
+      "name": "coffee_table",
+      "AP_0.25": 0.11977,
+      "AP_0.50": 0.06533
+    },
+    {
+      "model_idx": 20,
+      "name": "bookshelf",
+      "AP_0.25": 0.22793,
+      "AP_0.50": 0.04443
+    },
+    {
+      "model_idx": 21,
+      "name": "painting",
+      "AP_0.25": 0.0004,
+      "AP_0.50": 1e-05
+    },
+    {
+      "model_idx": 22,
+      "name": "keyboard",
+      "AP_0.25": 0.00658,
+      "AP_0.50": 0.0
+    },
+    {
+      "model_idx": 23,
+      "name": "dresser",
+      "AP_0.25": 0.07823,
+      "AP_0.50": 0.04006
+    },
+    {
+      "model_idx": 24,
+      "name": "tv",
+      "AP_0.25": 0.25482,
+      "AP_0.50": 0.04866
+    },
+    {
+      "model_idx": 25,
+      "name": "whiteboard",
+      "AP_0.25": 0.03614,
+      "AP_0.50": 0.00034
+    },
+    {
+      "model_idx": 26,
+      "name": "cpu",
+      "AP_0.25": 0.04802,
+      "AP_0.50": 0.0065
+    },
+    {
+      "model_idx": 27,
+      "name": "toilet",
+      "AP_0.25": 0.87288,
+      "AP_0.50": 0.62993
+    }
+  ]
+}

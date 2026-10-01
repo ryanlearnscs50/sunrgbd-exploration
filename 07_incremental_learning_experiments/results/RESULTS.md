@@ -1,7 +1,7 @@
 # Step C Results — three variants × two schedules
 
 > **See also [`INCREMENTAL_RESULTS.md`](INCREMENTAL_RESULTS.md)** — the comprehensive,
-> mentor-facing report: plain-language glossary, full per-stage *and* per-class tables for both
+> Research report: plain-language glossary, full per-stage *and* per-class tables for both
 > schedules at mAP@0.25 **and** mAP@0.50, the **fully-supervised (joint) upper bound**, the
 > **pseudo@0.45** threshold variant, and the **optimal-epoch study**. The summary below is the
 > original 3-way Step-C comparison; the follow-up experiments added since are described at the

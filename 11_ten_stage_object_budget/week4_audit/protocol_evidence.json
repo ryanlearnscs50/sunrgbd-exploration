@@ -1,0 +1,1005 @@
+{
+  "reference_commit": "cd667a180c3cbf4eae29cf779ea907592400266f",
+  "old_snapshot_verified": [
+    {
+      "path": "OBJBANK_PLAN.md",
+      "remote_git_blob_sha": "b0a6b79e63e4f66aa49dfc8271a681bf2f9cea55",
+      "local_git_blob_sha": "f3cebab6c886677e6541888e7d8d8ff4fe18849e",
+      "sha256": "eb046c911af30c9fe26edcf6cd1057c9b7661a5bf3c844255cf584f976a38bc0",
+      "match": "trailing-newline-only"
+    },
+    {
+      "path": "configs/incremental/sunrgbd/tr3d_objbank_8x5_objbank_masking.py",
+      "remote_git_blob_sha": "4c8f7cc2c917416919cf70e5352e07829968d442",
+      "local_git_blob_sha": "42941d63e60a620eb47fd492a44b7bb732476efc",
+      "sha256": "a2db048211fa1842bf023c79518e9061ee4ba874c7f3ae7c689684c03bdf8a17",
+      "match": "trailing-newline-only"
+    },
+    {
+      "path": "configs/incremental/sunrgbd/tr3d_objbank_8x5_objbank_pseudo.py",
+      "remote_git_blob_sha": "bb74cc36a7e5478fd111ad3668d801cf53ada7a0",
+      "local_git_blob_sha": "f8fb29d284972d00661db837f23040eff9850082",
+      "sha256": "8531a3dfbf140dc4f2cd1a6346a5a67f68e326a74db618cc2174c724f7ff9765",
+      "match": "trailing-newline-only"
+    },
+    {
+      "path": "configs/incremental/sunrgbd/tr3d_objbank_8x5_pseudo_only.py",
+      "remote_git_blob_sha": "bfafeadc0945ac202eb277f597e9092d3c926f8b",
+      "local_git_blob_sha": "1a92debecbee108a06abfbfa2cf55a9eb0d2133a",
+      "sha256": "0dcfe5576b37ad5d15aa7e1c321762a69693cc6e961d7542f2ea21dc62b9a5e6",
+      "match": "trailing-newline-only"
+    },
+    {
+      "path": "mmdet3d/datasets/object_memory_bank/bank.py",
+      "remote_git_blob_sha": "7eab809abecbaa6d4cbb1cf79d44023d2626085f",
+      "local_git_blob_sha": "f023e41f2bfc35d760ef50563334e72fa80d9573",
+      "sha256": "48c523042abe4e490e0ab88889ba898f383735e19efbd521bcb3f4c4a5225803",
+      "match": "trailing-newline-only"
+    },
+    {
+      "path": "mmdet3d/datasets/object_memory_bank/extraction.py",
+      "remote_git_blob_sha": "a8b9f04169665b68c16df6388ac1767be764e6b7",
+      "local_git_blob_sha": "5d5133214c150c115ddf1b0584cbd4344b64d41f",
+      "sha256": "cddcec7b7e7cb63a1185f085b812e607fffc87b4d59baa4804ee0bbd90469101",
+      "match": "trailing-newline-only"
+    },
+    {
+      "path": "mmdet3d/datasets/object_memory_bank/insertion.py",
+      "remote_git_blob_sha": "78a3bd52033bf51c0f00a16cb6db48102295987c",
+      "local_git_blob_sha": "8d64012cc266e1e526ec6a712c4f5646c0f8e8e2",
+      "sha256": "eb9ab2ae6abe1b757d7fffccffb1241a0065876246197aedea80341098c5626c",
+      "match": "trailing-newline-only"
+    },
+    {
+      "path": "scripts/launch_objbank_experiments.sh",
+      "remote_git_blob_sha": "168128b5fabd94a8b9df0c4795b73e0cdedd123b",
+      "local_git_blob_sha": "22b8f8f5523c241de88bd689c990309371bcec7a",
+      "sha256": "e8dc6ff00fd7bc60ff28b504c821bcee7df294c40d22fc380eaf194ac0e9691d",
+      "match": "trailing-newline-only"
+    },
+    {
+      "path": "tools/train_incremental_objbank.py",
+      "remote_git_blob_sha": "012fb0bc159ed1383bcac5c36d271680423c77c3",
+      "local_git_blob_sha": "89ff13dde930e9706ef094067ef72fcf2c575838",
+      "sha256": "5a497ab83655f24be3b3cbb3a6f7a26a024434d63e37552349de1b4fbd71dc1c",
+      "match": "trailing-newline-only"
+    }
+  ],
+  "local_reference_mapping_ast_equal_excluding_module_docstring": true,
+  "detector_base_equal_ignoring_trailing_newlines": true,
+  "resolved_configs": {
+    "local_s10_scene": {
+      "config": "/data3/ryan/ldmr_exploration/repo/configs/incremental/sunrgbd/tr3d_dynamic_head_4x10_scene_memory_random_ratio_6111111111.py",
+      "sha256": "01ace7b0b4a7bcc5a49de6fbe3aeca8f26c809e51f513299cbb58883e8e75ba8",
+      "stage_setting": "sunrgbd40_s10_freqorder_split",
+      "stage_definitions": [
+        {
+          "stage_id": 1,
+          "stage_name": "Stage 1 - Frequency Ordering (Top-40 Raw) [4\u00d710 split]",
+          "class_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "class_names": [
+            "chair",
+            "table",
+            "pillow",
+            "sofa_chair"
+          ],
+          "statistics": {
+            "total_instances_train": 14437
+          },
+          "epochs": 6,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 2,
+          "stage_name": "Stage 2 - Frequency Ordering (Top-40 Raw) [4\u00d710 split]",
+          "class_indices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "class_names": [
+            "desk",
+            "bed",
+            "sofa",
+            "computer"
+          ],
+          "statistics": {
+            "total_instances_train": 3092
+          },
+          "epochs": 1,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 3,
+          "stage_name": "Stage 3 - Frequency Ordering (Top-40 Raw) [4\u00d710 split]",
+          "class_indices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "class_names": [
+            "lamp",
+            "box",
+            "garbage_bin",
+            "cabinet"
+          ],
+          "statistics": {
+            "total_instances_train": 1876
+          },
+          "epochs": 1,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 4,
+          "stage_name": "Stage 4 - Frequency Ordering (Top-40 Raw) [4\u00d710 split]",
+          "class_indices": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "class_names": [
+            "shelf",
+            "drawer",
+            "night_stand",
+            "endtable"
+          ],
+          "statistics": {
+            "total_instances_train": 1192
+          },
+          "epochs": 1,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 5,
+          "stage_name": "Stage 5 - Frequency Ordering (Top-40 Raw) [4\u00d710 split]",
+          "class_indices": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "class_names": [
+            "sink",
+            "picture",
+            "stool",
+            "coffee_table"
+          ],
+          "statistics": {
+            "total_instances_train": 865
+          },
+          "epochs": 1,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 6,
+          "stage_name": "Stage 6 - Frequency Ordering (Top-40 Raw) [4\u00d710 split]",
+          "class_indices": [
+            20,
+            21,
+            22,
+            23
+          ],
+          "class_names": [
+            "bookshelf",
+            "painting",
+            "keyboard",
+            "dresser"
+          ],
+          "statistics": {
+            "total_instances_train": 766
+          },
+          "epochs": 1,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 7,
+          "stage_name": "Stage 7 - Frequency Ordering (Top-40 Raw) [4\u00d710 split]",
+          "class_indices": [
+            24,
+            25,
+            26,
+            27
+          ],
+          "class_names": [
+            "tv",
+            "whiteboard",
+            "cpu",
+            "toilet"
+          ],
+          "statistics": {
+            "total_instances_train": 712
+          },
+          "epochs": 1,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 8,
+          "stage_name": "Stage 8 - Frequency Ordering (Top-40 Raw) [4\u00d710 split]",
+          "class_indices": [
+            28,
+            29,
+            30,
+            31
+          ],
+          "class_names": [
+            "paper",
+            "ottoman",
+            "bench",
+            "recycle_bin"
+          ],
+          "statistics": {
+            "total_instances_train": 575
+          },
+          "epochs": 1,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 9,
+          "stage_name": "Stage 9 - Frequency Ordering (Top-40 Raw) [4\u00d710 split]",
+          "class_indices": [
+            32,
+            33,
+            34,
+            35
+          ],
+          "class_names": [
+            "monitor",
+            "printer",
+            "plant",
+            "door"
+          ],
+          "statistics": {
+            "total_instances_train": 472
+          },
+          "epochs": 1,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 10,
+          "stage_name": "Stage 10 - Frequency Ordering (Top-40 Raw) [4\u00d710 split]",
+          "class_indices": [
+            36,
+            37,
+            38,
+            39
+          ],
+          "class_names": [
+            "book",
+            "mirror",
+            "laptop",
+            "towel"
+          ],
+          "statistics": {
+            "total_instances_train": 390
+          },
+          "epochs": 1,
+          "lr": 0.001
+        }
+      ],
+      "repeat": 15,
+      "samples_per_gpu": 16,
+      "optimizer": {
+        "type": "AdamW",
+        "lr": 0.001,
+        "weight_decay": 0.0001
+      },
+      "inherited_lr_config": {
+        "policy": "step",
+        "warmup": null,
+        "step": [
+          8,
+          11
+        ]
+      },
+      "object_memory_config": null,
+      "scene_memory_config": {
+        "memory_budget_ratio": 0.1,
+        "total_training_scenes": 5285,
+        "selection_strategy": "random",
+        "quota_strategy": "stage_ratio",
+        "min_objects_per_scene": 1,
+        "debug_mode": true,
+        "use_drop_weights": false,
+        "use_current_stage_weights": false,
+        "enforce_current_quota": false,
+        "min_current_stage_quota": 0,
+        "stage_ratio_counts": []
+      },
+      "pseudo_label_config": null,
+      "use_pseudo_labels": false
+    },
+    "local_week3_object": {
+      "config": "/data3/ryan/ldmr_exploration/repo/configs/incremental/sunrgbd/tr3d_dynamic_head_8x5_object_memory_random_pseudo_52211.py",
+      "sha256": "840b8cf3f3016376b92dcd06553dc3783b091712cd924b39b4f6f5fa5762a303",
+      "stage_setting": null,
+      "stage_definitions": [
+        {
+          "stage_id": 1,
+          "stage_name": "Stage 1 - Frequency Ordering (Top-40 Raw)",
+          "class_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "class_names": [
+            "chair",
+            "table",
+            "pillow",
+            "sofa_chair",
+            "desk",
+            "bed",
+            "sofa",
+            "computer"
+          ],
+          "statistics": {
+            "total_instances_train": 17529
+          },
+          "epochs": 5,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 2,
+          "stage_name": "Stage 2 - Frequency Ordering (Top-40 Raw)",
+          "class_indices": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "class_names": [
+            "lamp",
+            "box",
+            "garbage_bin",
+            "cabinet",
+            "shelf",
+            "drawer",
+            "night_stand",
+            "endtable"
+          ],
+          "statistics": {
+            "total_instances_train": 3068
+          },
+          "epochs": 2,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 3,
+          "stage_name": "Stage 3 - Frequency Ordering (Top-40 Raw)",
+          "class_indices": [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "class_names": [
+            "sink",
+            "picture",
+            "stool",
+            "coffee_table",
+            "bookshelf",
+            "painting",
+            "keyboard",
+            "dresser"
+          ],
+          "statistics": {
+            "total_instances_train": 1631
+          },
+          "epochs": 2,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 4,
+          "stage_name": "Stage 4 - Frequency Ordering (Top-40 Raw)",
+          "class_indices": [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "class_names": [
+            "tv",
+            "whiteboard",
+            "cpu",
+            "toilet",
+            "paper",
+            "ottoman",
+            "bench",
+            "recycle_bin"
+          ],
+          "statistics": {
+            "total_instances_train": 1287
+          },
+          "epochs": 1,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 5,
+          "stage_name": "Stage 5 - Frequency Ordering (Top-40 Raw)",
+          "class_indices": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "class_names": [
+            "monitor",
+            "printer",
+            "plant",
+            "door",
+            "book",
+            "mirror",
+            "laptop",
+            "towel"
+          ],
+          "statistics": {
+            "total_instances_train": 862
+          },
+          "epochs": 1,
+          "lr": 0.001
+        }
+      ],
+      "repeat": 15,
+      "samples_per_gpu": 16,
+      "optimizer": {
+        "type": "AdamW",
+        "lr": 0.001,
+        "weight_decay": 0.0001
+      },
+      "inherited_lr_config": {
+        "policy": "step",
+        "warmup": null,
+        "step": [
+          8,
+          11
+        ]
+      },
+      "object_memory_config": {
+        "exemplars_per_class": 20,
+        "max_total_exemplars": 800,
+        "selection_strategy": "random",
+        "min_points": 5,
+        "crop_margin": 0.0,
+        "floor_percentile": 1.0,
+        "insertion": {
+          "max_exemplars_per_scene": 1,
+          "insertion_probability": 1.0,
+          "collision_threshold": 0.0,
+          "placement_jitter": 0.0,
+          "max_placement_attempts": 20,
+          "floor_offset": 0.0,
+          "floor_percentile": 1.0,
+          "preserve_source_height": true
+        }
+      },
+      "scene_memory_config": null,
+      "pseudo_label_config": {
+        "use_pregenerated": true,
+        "apply_to_memory_scenes": false,
+        "confidence_threshold": 0.5,
+        "nms_threshold": 0.3,
+        "pseudo_nms_iou_thr": 0.3,
+        "max_pseudo_per_scene": 100,
+        "pseudo_vs_gt_iou_thr": 0.25
+      },
+      "use_pseudo_labels": true
+    },
+    "reference_s5_object": {
+      "config": "/data3/ryan/ldmr_exploration/week4_audit/reference/configs/incremental/sunrgbd/tr3d_objbank_8x5_objbank_pseudo.py",
+      "sha256": "34757e65e6be21634db77f727d08b5c1b63f2fad9f9fefca2e39650ea1145d08",
+      "stage_setting": "sunrgbd40_s5_freqorder",
+      "stage_definitions": [
+        {
+          "stage_id": 1,
+          "stage_name": "Stage 1 - Frequency Ordering (Top-40 Raw)",
+          "class_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "class_names": [
+            "chair",
+            "table",
+            "pillow",
+            "sofa_chair",
+            "desk",
+            "bed",
+            "sofa",
+            "computer"
+          ],
+          "statistics": {
+            "total_instances_train": 17529
+          },
+          "epochs": 5,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 2,
+          "stage_name": "Stage 2 - Frequency Ordering (Top-40 Raw)",
+          "class_indices": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "class_names": [
+            "lamp",
+            "box",
+            "garbage_bin",
+            "cabinet",
+            "shelf",
+            "drawer",
+            "night_stand",
+            "endtable"
+          ],
+          "statistics": {
+            "total_instances_train": 3068
+          },
+          "epochs": 2,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 3,
+          "stage_name": "Stage 3 - Frequency Ordering (Top-40 Raw)",
+          "class_indices": [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "class_names": [
+            "sink",
+            "picture",
+            "stool",
+            "coffee_table",
+            "bookshelf",
+            "painting",
+            "keyboard",
+            "dresser"
+          ],
+          "statistics": {
+            "total_instances_train": 1631
+          },
+          "epochs": 2,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 4,
+          "stage_name": "Stage 4 - Frequency Ordering (Top-40 Raw)",
+          "class_indices": [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "class_names": [
+            "tv",
+            "whiteboard",
+            "cpu",
+            "toilet",
+            "paper",
+            "ottoman",
+            "bench",
+            "recycle_bin"
+          ],
+          "statistics": {
+            "total_instances_train": 1287
+          },
+          "epochs": 1,
+          "lr": 0.001
+        },
+        {
+          "stage_id": 5,
+          "stage_name": "Stage 5 - Frequency Ordering (Top-40 Raw)",
+          "class_indices": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "class_names": [
+            "monitor",
+            "printer",
+            "plant",
+            "door",
+            "book",
+            "mirror",
+            "laptop",
+            "towel"
+          ],
+          "statistics": {
+            "total_instances_train": 862
+          },
+          "epochs": 1,
+          "lr": 0.001
+        }
+      ],
+      "repeat": 15,
+      "samples_per_gpu": 16,
+      "optimizer": {
+        "type": "AdamW",
+        "lr": 0.001,
+        "weight_decay": 0.0001
+      },
+      "inherited_lr_config": {
+        "policy": "step",
+        "warmup": null,
+        "step": [
+          8,
+          11
+        ]
+      },
+      "object_memory_config": {
+        "budget_per_class": 100,
+        "min_points": 20,
+        "max_exemplars_per_scene": 3,
+        "insertion_probability": 0.7,
+        "collision_iou_thr": 0.3
+      },
+      "scene_memory_config": null,
+      "pseudo_label_config": {
+        "use_pregenerated": true,
+        "apply_to_memory_scenes": false,
+        "confidence_threshold": 0.5,
+        "nms_threshold": 0.3,
+        "max_pseudo_per_scene": 100,
+        "pseudo_vs_gt_iou_thr": 0.25
+      },
+      "use_pseudo_labels": true
+    }
+  },
+  "metadata": {
+    "train": {
+      "path": "/data3/ryan/ldmr_exploration/meta_data/sunrgbd/sunrgbd_infos_train_40class.pkl",
+      "sha256": "c9b42925dcafdfd1e6725765b64bbce80c702889c3a4d2bc6704ccdd0fed5aca",
+      "scene_count": 5285,
+      "per_class_instances": {
+        "chair": 9278,
+        "shelf": 342,
+        "garbage_bin": 470,
+        "printer": 120,
+        "desk": 933,
+        "table": 2539,
+        "sofa_chair": 1056,
+        "bookshelf": 204,
+        "coffee_table": 212,
+        "recycle_bin": 131,
+        "cabinet": 400,
+        "monitor": 129,
+        "computer": 682,
+        "stool": 214,
+        "box": 487,
+        "picture": 217,
+        "laptop": 93,
+        "bed": 771,
+        "lamp": 519,
+        "night_stand": 293,
+        "ottoman": 151,
+        "dresser": 182,
+        "sofa": 706,
+        "tv": 181,
+        "drawer": 297,
+        "whiteboard": 180,
+        "sink": 222,
+        "plant": 112,
+        "pillow": 1564,
+        "towel": 91,
+        "bench": 138,
+        "keyboard": 185,
+        "paper": 155,
+        "door": 111,
+        "cpu": 180,
+        "mirror": 98,
+        "painting": 195,
+        "book": 108,
+        "endtable": 260,
+        "toilet": 171
+      }
+    },
+    "val": {
+      "path": "/data3/ryan/ldmr_exploration/meta_data/sunrgbd/sunrgbd_infos_val_40class.pkl",
+      "sha256": "06919395eb2a90c781bfb87258e12e44fa128bd581f9bcf9e983481e76ce309e",
+      "scene_count": 5050,
+      "per_class_instances": {
+        "bed": 515,
+        "night_stand": 255,
+        "ottoman": 149,
+        "dresser": 218,
+        "lamp": 361,
+        "sofa": 627,
+        "pillow": 856,
+        "cabinet": 386,
+        "sofa_chair": 714,
+        "chair": 10016,
+        "table": 2348,
+        "computer": 95,
+        "monitor": 551,
+        "tv": 116,
+        "box": 631,
+        "book": 66,
+        "coffee_table": 147,
+        "laptop": 87,
+        "shelf": 454,
+        "plant": 74,
+        "desk": 1882,
+        "endtable": 290,
+        "recycle_bin": 170,
+        "garbage_bin": 546,
+        "bench": 104,
+        "printer": 122,
+        "toilet": 145,
+        "sink": 265,
+        "towel": 60,
+        "door": 170,
+        "painting": 208,
+        "drawer": 228,
+        "bookshelf": 282,
+        "keyboard": 191,
+        "paper": 111,
+        "whiteboard": 135,
+        "cpu": 118,
+        "stool": 97,
+        "mirror": 69,
+        "picture": 133
+      }
+    }
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "class_names": [
+        "chair",
+        "table",
+        "pillow",
+        "sofa_chair"
+      ],
+      "natural_scenes_before_pseudo": 3454,
+      "scenes_with_old_gt": 0,
+      "old_gt_instances": 0,
+      "replay_capacity_at_100_per_class": 0,
+      "post_stage_capacity_at_100_per_class": 400
+    },
+    {
+      "stage": 2,
+      "class_names": [
+        "desk",
+        "bed",
+        "sofa",
+        "computer"
+      ],
+      "natural_scenes_before_pseudo": 1857,
+      "scenes_with_old_gt": 1383,
+      "old_gt_instances": 4327,
+      "replay_capacity_at_100_per_class": 400,
+      "post_stage_capacity_at_100_per_class": 800
+    },
+    {
+      "stage": 3,
+      "class_names": [
+        "lamp",
+        "box",
+        "garbage_bin",
+        "cabinet"
+      ],
+      "natural_scenes_before_pseudo": 1246,
+      "scenes_with_old_gt": 901,
+      "old_gt_instances": 3437,
+      "replay_capacity_at_100_per_class": 800,
+      "post_stage_capacity_at_100_per_class": 1200
+    },
+    {
+      "stage": 4,
+      "class_names": [
+        "shelf",
+        "drawer",
+        "night_stand",
+        "endtable"
+      ],
+      "natural_scenes_before_pseudo": 899,
+      "scenes_with_old_gt": 811,
+      "old_gt_instances": 3422,
+      "replay_capacity_at_100_per_class": 1200,
+      "post_stage_capacity_at_100_per_class": 1600
+    },
+    {
+      "stage": 5,
+      "class_names": [
+        "sink",
+        "picture",
+        "stool",
+        "coffee_table"
+      ],
+      "natural_scenes_before_pseudo": 602,
+      "scenes_with_old_gt": 425,
+      "old_gt_instances": 1714,
+      "replay_capacity_at_100_per_class": 1600,
+      "post_stage_capacity_at_100_per_class": 2000
+    },
+    {
+      "stage": 6,
+      "class_names": [
+        "bookshelf",
+        "painting",
+        "keyboard",
+        "dresser"
+      ],
+      "natural_scenes_before_pseudo": 568,
+      "scenes_with_old_gt": 528,
+      "old_gt_instances": 2545,
+      "replay_capacity_at_100_per_class": 2000,
+      "post_stage_capacity_at_100_per_class": 2400
+    },
+    {
+      "stage": 7,
+      "class_names": [
+        "tv",
+        "whiteboard",
+        "cpu",
+        "toilet"
+      ],
+      "natural_scenes_before_pseudo": 621,
+      "scenes_with_old_gt": 496,
+      "old_gt_instances": 2317,
+      "replay_capacity_at_100_per_class": 2400,
+      "post_stage_capacity_at_100_per_class": 2800
+    },
+    {
+      "stage": 8,
+      "class_names": [
+        "paper",
+        "ottoman",
+        "bench",
+        "recycle_bin"
+      ],
+      "natural_scenes_before_pseudo": 455,
+      "scenes_with_old_gt": 389,
+      "old_gt_instances": 1671,
+      "replay_capacity_at_100_per_class": 2800,
+      "post_stage_capacity_at_100_per_class": 3200
+    },
+    {
+      "stage": 9,
+      "class_names": [
+        "monitor",
+        "printer",
+        "plant",
+        "door"
+      ],
+      "natural_scenes_before_pseudo": 358,
+      "scenes_with_old_gt": 338,
+      "old_gt_instances": 1439,
+      "replay_capacity_at_100_per_class": 3200,
+      "post_stage_capacity_at_100_per_class": 3600
+    },
+    {
+      "stage": 10,
+      "class_names": [
+        "book",
+        "mirror",
+        "laptop",
+        "towel"
+      ],
+      "natural_scenes_before_pseudo": 309,
+      "scenes_with_old_gt": 291,
+      "old_gt_instances": 1409,
+      "replay_capacity_at_100_per_class": 3600,
+      "post_stage_capacity_at_100_per_class": 4000
+    }
+  ],
+  "checked_released_checkpoints": [
+    {
+      "stage": 1,
+      "sha256": "1121e81f23fe40d6664b255becb974b67e88ec3e047437f5ebd52e7a119749b8",
+      "bytes": 58770677
+    },
+    {
+      "stage": 2,
+      "sha256": "455119f4ecbf9bf5889eda29622f4ea685825ca5dc1f9c48889bec34a808aa0a",
+      "bytes": 58772725
+    },
+    {
+      "stage": 3,
+      "sha256": "8c9316864815f58021812b4dab096acc7fb5faa2435e8634df249a325b9efe92",
+      "bytes": 58774773
+    },
+    {
+      "stage": 4,
+      "sha256": "204b88cf79b7740c1b3ed66e87a64132a5b9e84f7d07ed89be963e416fdbe7a6",
+      "bytes": 58776885
+    },
+    {
+      "stage": 5,
+      "sha256": "3764be4e798036628f168f599bc4c722b0ecaa2a8727d0e422ac9dc640bd623f",
+      "bytes": 58778933
+    },
+    {
+      "stage": 6,
+      "sha256": "670bc712fead01a24baa6b37acae9420cc063e92dfbd24ee88f4603e58ac25d2",
+      "bytes": 58780981
+    },
+    {
+      "stage": 7,
+      "sha256": "2d43c114d181dd47f9e9d1ed47d17a0a3cd50e9a9f65cdcb049b760154cdd33e",
+      "bytes": 58783029
+    },
+    {
+      "stage": 8,
+      "sha256": "139d02ec7b7204f173e29f7ce47c5e146963a54a52076fefbd119a0efb711895",
+      "bytes": 58785141
+    },
+    {
+      "stage": 9,
+      "sha256": "6d3cc83741ef6204e5285b1bc337b31320bd833bc93a291c58d5612e91d618a8",
+      "bytes": 58787189
+    },
+    {
+      "stage": 10,
+      "sha256": "fa0a9ddfb2547cf1ecad130427e80fcca09a22fa52d30d9696be476d014de351",
+      "bytes": 58789237
+    }
+  ],
+  "released_checkpoint_method": "LDMR scene memory + pseudo + reviewing; not object-bank result",
+  "ten_stage_object_target": null,
+  "proposed_bank_caps": [
+    100,
+    50,
+    20,
+    10,
+    5
+  ],
+  "limitations": [
+    "Annotation counts are before crop support filtering and pseudo-scene filtering.",
+    "Capacity is an upper bound; bank occupancy is not measured.",
+    "Config resolution does not validate runtime stage-config propagation.",
+    "No GPU inference, training, or bank extraction performed."
+  ]
+}

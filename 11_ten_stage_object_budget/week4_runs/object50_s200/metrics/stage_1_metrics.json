@@ -1,0 +1,33 @@
+{
+  "stage_id": 1,
+  "evaluated_at_stage": 1,
+  "timestamp": "2026-09-30T14:18:46.562722",
+  "mAP_0.25": 0.56115,
+  "mAP_0.50": 0.41948,
+  "classes": [
+    {
+      "model_idx": 0,
+      "name": "chair",
+      "AP_0.25": 0.81165,
+      "AP_0.50": 0.67582
+    },
+    {
+      "model_idx": 1,
+      "name": "table",
+      "AP_0.25": 0.51577,
+      "AP_0.50": 0.31922
+    },
+    {
+      "model_idx": 2,
+      "name": "pillow",
+      "AP_0.25": 0.25543,
+      "AP_0.50": 0.08445
+    },
+    {
+      "model_idx": 3,
+      "name": "sofa_chair",
+      "AP_0.25": 0.66175,
+      "AP_0.50": 0.59842
+    }
+  ]
+}

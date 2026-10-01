@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "original_validation": "selection_validation.json",
+  "original_validation_limitation": "missed dataset population; overnight pair failed",
+  "changed_sources": [
+    "repo/mmdet3d/datasets/incremental_sunrgbd.py"
+  ],
+  "current_hash": "4d97b85db5d3ccdff01a61025f0dd4c225fae23df1378efcd565383c49a09343",
+  "focused_tests": 26,
+  "full_pool_classes_verified": 40,
+  "offline_audit": "week4_runs/selection_bank_audit/audit.json",
+  "scope": "Production bank population validated; full ten-stage training not recovered"
+}

@@ -396,6 +396,6 @@ for label, passed in zip(labels, results):
 print()
 if n_pass == 4:
     print("  All 4 checks passed.")
-    print("  Results are SAFE TO SHARE with the mentor.")
+    print("  Results passed the validation checks.")
 else:
     print(f"  {4 - n_pass} check(s) FAILED. Resolve issues above before sharing.")

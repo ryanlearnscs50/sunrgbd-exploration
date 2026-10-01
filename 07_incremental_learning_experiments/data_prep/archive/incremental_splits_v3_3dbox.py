@@ -4,7 +4,7 @@ incremental_splits_v3_3dbox.py
 ------------------------------
 3D-BOX-DRIVEN replacement for incremental_splits_v2.py.
 
-WHY V3 (mentor's direction, 2026-05-31):
+WHY V3 (2026-05-31):
   V2 built its presence matrix / lift / class->stage assignment / strict filter from
   2D annotations (annotation2Dfinal/index.json) -- i.e. what classes are *drawn* in a
   scene's 2D labels. But the incremental experiment trains a 3D detector on 3D boxes.

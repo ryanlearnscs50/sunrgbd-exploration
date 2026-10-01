@@ -1,7 +1,7 @@
 ==========================================================================================
 NO-NULL GAP STATISTIC — SIDE-BY-SIDE COMPARISON
 With-null (original)  vs  No-null (KMeans restart variance)
-Testing mentor's hypothesis: 1-SE Occam razor is robust to the exact null baseline
+Testing the hypothesis: 1-SE Occam razor is robust to the exact null baseline
 ==========================================================================================
 
 MATHS RECAP:
@@ -663,7 +663,7 @@ SUMMARY: WITH-NULL vs NO-NULL K SELECTION
 INTERPRETATION:
   Classes where they AGREE: the null baseline was redundant — the Occam razor
   fires at the same k regardless, because mean_null ≈ log_W_real for those classes.
-  This confirms the mentor's hypothesis: for weak-structure binary co-occurrence
+  This supports the hypothesis: for weak-structure binary co-occurrence
   data, the 1-SE rule is driven by sk (the uncertainty floor), not by the exact
   null baseline value.
 

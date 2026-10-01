@@ -9,7 +9,7 @@ confident detections (which can only be OLD classes - that is all the old head
 knows), and merge them back in as old-class GT. The stage-t model then sees both
 the novel GT *and* a synthetic supervision signal for the old classes.
 
-This script does exactly that, OFFLINE (mentor-preferred: generated once, then a
+This script does exactly that, OFFLINE (generated once, then a
 plain train run consumes the augmented pkl - no teacher in the training loop):
 
   1. Build the stage_{t-1} model from its config + checkpoint.

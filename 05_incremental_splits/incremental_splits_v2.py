@@ -11,7 +11,7 @@ THE MISTAKE IN V1:
   The class-to-room assignments were hand-coded, motivated post-hoc by Jaccard
   co-occurrence values.  The dataset's own room labels were never consulted.
 
-THE FIX (mentor's direction):
+THE FIX:
   Every scene in SUN RGB-D contains a scene.txt file with an official room-type
   label (bedroom, office, classroom, kitchen, etc.).  Work from these labels first:
     1. Select stage scene types directly from the dataset's ground-truth labels.

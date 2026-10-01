@@ -1,0 +1,456 @@
+{
+  "updated_at": "2026-09-30T16:33:10.324868+00:00",
+  "validation": "passed",
+  "runs": [
+    {
+      "budget": 100,
+      "seed": 200,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56822,
+          "map50": 0.4312,
+          "stored_objects": 400
+        },
+        {
+          "stage": 2,
+          "map25": 0.49046,
+          "map50": 0.34955,
+          "stored_objects": 800
+        },
+        {
+          "stage": 3,
+          "map25": 0.38717,
+          "map50": 0.26534,
+          "stored_objects": 1200
+        },
+        {
+          "stage": 4,
+          "map25": 0.35074,
+          "map50": 0.24239,
+          "stored_objects": 1600
+        },
+        {
+          "stage": 5,
+          "map25": 0.30592,
+          "map50": 0.19204,
+          "stored_objects": 2000
+        },
+        {
+          "stage": 6,
+          "map25": 0.25386,
+          "map50": 0.15737,
+          "stored_objects": 2400
+        },
+        {
+          "stage": 7,
+          "map25": 0.22064,
+          "map50": 0.13805,
+          "stored_objects": 2800
+        },
+        {
+          "stage": 8,
+          "map25": 0.1973,
+          "map50": 0.1337,
+          "stored_objects": 3200
+        },
+        {
+          "stage": 9,
+          "map25": 0.19111,
+          "map50": 0.12084,
+          "stored_objects": 3600
+        },
+        {
+          "stage": 10,
+          "map25": 0.16363,
+          "map50": 0.09634,
+          "stored_objects": 3979
+        }
+      ],
+      "final_map25": 0.16363,
+      "final_map50": 0.09634,
+      "final_objects": 3979,
+      "stage10_old_objects": 3600,
+      "stage_average_map25": 0.312905,
+      "stage_average_map50": 0.212682,
+      "object_reduction_percent": 0.0,
+      "delta_final_map25_pp": 0.0,
+      "delta_final_map50_pp": 0.0
+    },
+    {
+      "budget": 100,
+      "seed": 201,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56005,
+          "map50": 0.42405,
+          "stored_objects": 400
+        },
+        {
+          "stage": 2,
+          "map25": 0.49446,
+          "map50": 0.35027,
+          "stored_objects": 800
+        },
+        {
+          "stage": 3,
+          "map25": 0.38224,
+          "map50": 0.25607,
+          "stored_objects": 1200
+        },
+        {
+          "stage": 4,
+          "map25": 0.34364,
+          "map50": 0.23241,
+          "stored_objects": 1600
+        },
+        {
+          "stage": 5,
+          "map25": 0.29497,
+          "map50": 0.18857,
+          "stored_objects": 2000
+        },
+        {
+          "stage": 6,
+          "map25": 0.24196,
+          "map50": 0.15564,
+          "stored_objects": 2400
+        },
+        {
+          "stage": 7,
+          "map25": 0.20608,
+          "map50": 0.12749,
+          "stored_objects": 2800
+        },
+        {
+          "stage": 8,
+          "map25": 0.19778,
+          "map50": 0.12581,
+          "stored_objects": 3200
+        },
+        {
+          "stage": 9,
+          "map25": 0.17821,
+          "map50": 0.11305,
+          "stored_objects": 3600
+        },
+        {
+          "stage": 10,
+          "map25": 0.15,
+          "map50": 0.09032,
+          "stored_objects": 3979
+        }
+      ],
+      "final_map25": 0.15,
+      "final_map50": 0.09032,
+      "final_objects": 3979,
+      "stage10_old_objects": 3600,
+      "stage_average_map25": 0.304939,
+      "stage_average_map50": 0.206368,
+      "object_reduction_percent": 0.0,
+      "delta_final_map25_pp": 0.0,
+      "delta_final_map50_pp": 0.0
+    },
+    {
+      "budget": 50,
+      "seed": 200,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56115,
+          "map50": 0.41948,
+          "stored_objects": 200
+        },
+        {
+          "stage": 2,
+          "map25": 0.48185,
+          "map50": 0.34805,
+          "stored_objects": 400
+        },
+        {
+          "stage": 3,
+          "map25": 0.37904,
+          "map50": 0.25397,
+          "stored_objects": 600
+        },
+        {
+          "stage": 4,
+          "map25": 0.33182,
+          "map50": 0.22802,
+          "stored_objects": 800
+        },
+        {
+          "stage": 5,
+          "map25": 0.28438,
+          "map50": 0.17939,
+          "stored_objects": 1000
+        },
+        {
+          "stage": 6,
+          "map25": 0.21557,
+          "map50": 0.13616,
+          "stored_objects": 1200
+        },
+        {
+          "stage": 7,
+          "map25": 0.20991,
+          "map50": 0.12462,
+          "stored_objects": 1400
+        },
+        {
+          "stage": 8,
+          "map25": 0.19184,
+          "map50": 0.11666,
+          "stored_objects": 1600
+        },
+        {
+          "stage": 9,
+          "map25": 0.17396,
+          "map50": 0.10507,
+          "stored_objects": 1800
+        },
+        {
+          "stage": 10,
+          "map25": 0.14045,
+          "map50": 0.08622,
+          "stored_objects": 2000
+        }
+      ],
+      "final_map25": 0.14045,
+      "final_map50": 0.08622,
+      "final_objects": 2000,
+      "stage10_old_objects": 1800,
+      "stage_average_map25": 0.296997,
+      "stage_average_map50": 0.199764,
+      "object_reduction_percent": 49.73611460165871,
+      "delta_final_map25_pp": -2.3180000000000005,
+      "delta_final_map50_pp": -1.0119999999999991
+    },
+    {
+      "budget": 50,
+      "seed": 201,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56709,
+          "map50": 0.43166,
+          "stored_objects": 200
+        },
+        {
+          "stage": 2,
+          "map25": 0.49297,
+          "map50": 0.35159,
+          "stored_objects": 400
+        },
+        {
+          "stage": 3,
+          "map25": 0.38661,
+          "map50": 0.25925,
+          "stored_objects": 600
+        },
+        {
+          "stage": 4,
+          "map25": 0.34533,
+          "map50": 0.23144,
+          "stored_objects": 800
+        },
+        {
+          "stage": 5,
+          "map25": 0.30115,
+          "map50": 0.18543,
+          "stored_objects": 1000
+        },
+        {
+          "stage": 6,
+          "map25": 0.22797,
+          "map50": 0.13929,
+          "stored_objects": 1200
+        },
+        {
+          "stage": 7,
+          "map25": 0.20467,
+          "map50": 0.12835,
+          "stored_objects": 1400
+        },
+        {
+          "stage": 8,
+          "map25": 0.19412,
+          "map50": 0.12559,
+          "stored_objects": 1600
+        },
+        {
+          "stage": 9,
+          "map25": 0.17739,
+          "map50": 0.1147,
+          "stored_objects": 1800
+        },
+        {
+          "stage": 10,
+          "map25": 0.1544,
+          "map50": 0.09146,
+          "stored_objects": 2000
+        }
+      ],
+      "final_map25": 0.1544,
+      "final_map50": 0.09146,
+      "final_objects": 2000,
+      "stage10_old_objects": 1800,
+      "stage_average_map25": 0.30517,
+      "stage_average_map50": 0.205876,
+      "object_reduction_percent": 49.73611460165871,
+      "delta_final_map25_pp": 0.4400000000000015,
+      "delta_final_map50_pp": 0.11400000000000021
+    },
+    {
+      "budget": 20,
+      "seed": 200,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56696,
+          "map50": 0.42769,
+          "stored_objects": 80
+        },
+        {
+          "stage": 2,
+          "map25": 0.49193,
+          "map50": 0.34633,
+          "stored_objects": 160
+        },
+        {
+          "stage": 3,
+          "map25": 0.37751,
+          "map50": 0.25084,
+          "stored_objects": 240
+        },
+        {
+          "stage": 4,
+          "map25": 0.32624,
+          "map50": 0.21915,
+          "stored_objects": 320
+        },
+        {
+          "stage": 5,
+          "map25": 0.2804,
+          "map50": 0.17366,
+          "stored_objects": 400
+        },
+        {
+          "stage": 6,
+          "map25": 0.22136,
+          "map50": 0.13658,
+          "stored_objects": 480
+        },
+        {
+          "stage": 7,
+          "map25": 0.20633,
+          "map50": 0.12495,
+          "stored_objects": 560
+        },
+        {
+          "stage": 8,
+          "map25": 0.18561,
+          "map50": 0.11461,
+          "stored_objects": 640
+        },
+        {
+          "stage": 9,
+          "map25": 0.17154,
+          "map50": 0.10135,
+          "stored_objects": 720
+        },
+        {
+          "stage": 10,
+          "map25": 0.14609,
+          "map50": 0.08263,
+          "stored_objects": 800
+        }
+      ],
+      "final_map25": 0.14609,
+      "final_map50": 0.08263,
+      "final_objects": 800,
+      "stage10_old_objects": 720,
+      "stage_average_map25": 0.297397,
+      "stage_average_map50": 0.197779,
+      "object_reduction_percent": 79.89444584066348,
+      "delta_final_map25_pp": -1.754,
+      "delta_final_map50_pp": -1.371
+    },
+    {
+      "budget": 20,
+      "seed": 201,
+      "stages": [
+        {
+          "stage": 1,
+          "map25": 0.56507,
+          "map50": 0.4278,
+          "stored_objects": 80
+        },
+        {
+          "stage": 2,
+          "map25": 0.49511,
+          "map50": 0.35208,
+          "stored_objects": 160
+        },
+        {
+          "stage": 3,
+          "map25": 0.38059,
+          "map50": 0.25202,
+          "stored_objects": 240
+        },
+        {
+          "stage": 4,
+          "map25": 0.34159,
+          "map50": 0.2272,
+          "stored_objects": 320
+        },
+        {
+          "stage": 5,
+          "map25": 0.29431,
+          "map50": 0.18179,
+          "stored_objects": 400
+        },
+        {
+          "stage": 6,
+          "map25": 0.24407,
+          "map50": 0.14589,
+          "stored_objects": 480
+        },
+        {
+          "stage": 7,
+          "map25": 0.21102,
+          "map50": 0.12976,
+          "stored_objects": 560
+        },
+        {
+          "stage": 8,
+          "map25": 0.20101,
+          "map50": 0.12584,
+          "stored_objects": 640
+        },
+        {
+          "stage": 9,
+          "map25": 0.18226,
+          "map50": 0.11152,
+          "stored_objects": 720
+        },
+        {
+          "stage": 10,
+          "map25": 0.14895,
+          "map50": 0.09246,
+          "stored_objects": 800
+        }
+      ],
+      "final_map25": 0.14895,
+      "final_map50": 0.09246,
+      "final_objects": 800,
+      "stage10_old_objects": 720,
+      "stage_average_map25": 0.306398,
+      "stage_average_map50": 0.204636,
+      "object_reduction_percent": 79.89444584066348,
+      "delta_final_map25_pp": -0.10499999999999954,
+      "delta_final_map50_pp": 0.2140000000000003
+    }
+  ]
+}

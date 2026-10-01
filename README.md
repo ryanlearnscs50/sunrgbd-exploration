@@ -41,6 +41,7 @@ The dataset itself is **not included** in this repo. Download it from the [offic
 08_ldmr_reproduction/          Reproduction of released LDMR SUN RGB-D checkpoints
 09_object_level_memory/        Self-contained object-memory replay for LDMR
 10_object_memory_pseudo/       Pseudo supervision, replay dose and LR ablations
+11_ten_stage_object_budget/    Week 4 ten-stage object budget and selection study
 pipeline/                      TR3D detection pipeline trace (CPU, no MinkowskiEngine)
 validation/                    Cross-checks against independently computed incidence counts
 ```
@@ -181,6 +182,18 @@ Cosine improves final mAP@0.50 in both tested seeds; its interaction with replay
 at mAP@0.25 is mixed. Twelve valid runs, diagnostics, configs and code are included.
 
 Full report: [`10_object_memory_pseudo/README.md`](10_object_memory_pseudo/README.md)
+
+---
+
+### 11 — Ten Stage Object Memory Budget Study
+
+Six full-training runs compare 100, 50 and 20 objects per class over ten stages.
+The smallest bank saves **79.89% of stored objects** at a mean **0.9295-point
+AP25 loss**, exceeding the provisional 0.5-point retention tolerance. Four
+separate stage-2 selector diagnostics, storage/class analysis, an eight-slide
+presentation and compact reproducibility evidence are included.
+
+Full report: [`11_ten_stage_object_budget/README.md`](11_ten_stage_object_budget/README.md)
 
 ---
 

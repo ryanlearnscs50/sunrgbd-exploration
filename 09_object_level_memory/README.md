@@ -17,6 +17,11 @@ replay probability and cosine LR across continuation seeds. See
 [`10_object_memory_pseudo`](../10_object_memory_pseudo/README.md). The overlay
 here includes those additions and the stage LR propagation fix.
 
+The September 30–October 1 ten-stage follow-up compares stored object budgets
+and audits point-count selection. See [Week 4](../11_ten_stage_object_budget/README.md).
+The overlay now also includes the S10 configs and the SUN RGB-D top-K population
+repair, with a new regression test covering the production population path.
+
 ## Main result
 
 | Method | Stage 2 | Stage 3 | Stage 4 | Stage 5 mAP@.25 |

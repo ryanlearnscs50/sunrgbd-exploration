@@ -1,0 +1,91 @@
+{
+  "scope": "Exact fieldwise comparison of trusted local pseudo-label scene payloads, excluding __meta__. Numeric differences are elementwise in saved order, without detection rematching.",
+  "pairs": [
+    {
+      "seed": 200,
+      "scenes": 1549,
+      "scene_keys_identical": true,
+      "fields": {
+        "gt_boxes_upright_depth": {
+          "differing_scenes": 1549,
+          "shape_mismatches": 1,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 2.1465303897857666
+        },
+        "class": {
+          "differing_scenes": 3,
+          "shape_mismatches": 1,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 3.0
+        },
+        "scores": {
+          "differing_scenes": 1549,
+          "shape_mismatches": 1,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 0.023853182792663574
+        },
+        "gt_num": {
+          "differing_scenes": 1,
+          "shape_mismatches": 0,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "center_type": {
+          "differing_scenes": 0,
+          "shape_mismatches": 0,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "axis_aligned": {
+          "differing_scenes": 0,
+          "shape_mismatches": 0,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 0.0
+        }
+      }
+    },
+    {
+      "seed": 201,
+      "scenes": 1525,
+      "scene_keys_identical": true,
+      "fields": {
+        "gt_boxes_upright_depth": {
+          "differing_scenes": 1525,
+          "shape_mismatches": 1,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 3.1413735151290894
+        },
+        "class": {
+          "differing_scenes": 4,
+          "shape_mismatches": 1,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 2.0
+        },
+        "scores": {
+          "differing_scenes": 1525,
+          "shape_mismatches": 1,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 0.015096783638000488
+        },
+        "gt_num": {
+          "differing_scenes": 1,
+          "shape_mismatches": 0,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "center_type": {
+          "differing_scenes": 0,
+          "shape_mismatches": 0,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "axis_aligned": {
+          "differing_scenes": 0,
+          "shape_mismatches": 0,
+          "dtype_mismatches": 0,
+          "max_absolute_numeric_difference": 0.0
+        }
+      }
+    }
+  ]
+}

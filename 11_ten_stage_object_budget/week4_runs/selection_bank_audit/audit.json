@@ -1,0 +1,373 @@
+{
+  "status": "passed",
+  "scope": "Offline GT bank construction; no detector accuracy measurement",
+  "strategy": "largest_point_count",
+  "seed_independent": true,
+  "classes": [
+    {
+      "class_id": 0,
+      "name": "chair",
+      "valid_candidates": 9083,
+      "selected": 20,
+      "points": 451821,
+      "unique_scenes": 20,
+      "minimum_points": 19286
+    },
+    {
+      "class_id": 1,
+      "name": "table",
+      "valid_candidates": 2470,
+      "selected": 20,
+      "points": 623715,
+      "unique_scenes": 20,
+      "minimum_points": 26405
+    },
+    {
+      "class_id": 2,
+      "name": "pillow",
+      "valid_candidates": 1521,
+      "selected": 20,
+      "points": 110856,
+      "unique_scenes": 18,
+      "minimum_points": 4332
+    },
+    {
+      "class_id": 3,
+      "name": "sofa_chair",
+      "valid_candidates": 1052,
+      "selected": 20,
+      "points": 599711,
+      "unique_scenes": 20,
+      "minimum_points": 25332
+    },
+    {
+      "class_id": 4,
+      "name": "desk",
+      "valid_candidates": 921,
+      "selected": 20,
+      "points": 533295,
+      "unique_scenes": 20,
+      "minimum_points": 22645
+    },
+    {
+      "class_id": 5,
+      "name": "bed",
+      "valid_candidates": 770,
+      "selected": 20,
+      "points": 751287,
+      "unique_scenes": 20,
+      "minimum_points": 33582
+    },
+    {
+      "class_id": 6,
+      "name": "sofa",
+      "valid_candidates": 695,
+      "selected": 20,
+      "points": 750870,
+      "unique_scenes": 20,
+      "minimum_points": 33078
+    },
+    {
+      "class_id": 7,
+      "name": "computer",
+      "valid_candidates": 632,
+      "selected": 20,
+      "points": 194917,
+      "unique_scenes": 20,
+      "minimum_points": 7442
+    },
+    {
+      "class_id": 8,
+      "name": "lamp",
+      "valid_candidates": 505,
+      "selected": 20,
+      "points": 101466,
+      "unique_scenes": 19,
+      "minimum_points": 3253
+    },
+    {
+      "class_id": 9,
+      "name": "box",
+      "valid_candidates": 458,
+      "selected": 20,
+      "points": 134291,
+      "unique_scenes": 19,
+      "minimum_points": 4908
+    },
+    {
+      "class_id": 10,
+      "name": "garbage_bin",
+      "valid_candidates": 461,
+      "selected": 20,
+      "points": 241919,
+      "unique_scenes": 17,
+      "minimum_points": 8523
+    },
+    {
+      "class_id": 11,
+      "name": "cabinet",
+      "valid_candidates": 397,
+      "selected": 20,
+      "points": 582018,
+      "unique_scenes": 20,
+      "minimum_points": 21697
+    },
+    {
+      "class_id": 12,
+      "name": "shelf",
+      "valid_candidates": 340,
+      "selected": 20,
+      "points": 535331,
+      "unique_scenes": 18,
+      "minimum_points": 19708
+    },
+    {
+      "class_id": 13,
+      "name": "drawer",
+      "valid_candidates": 293,
+      "selected": 20,
+      "points": 272549,
+      "unique_scenes": 20,
+      "minimum_points": 8895
+    },
+    {
+      "class_id": 14,
+      "name": "night_stand",
+      "valid_candidates": 279,
+      "selected": 20,
+      "points": 149753,
+      "unique_scenes": 20,
+      "minimum_points": 5116
+    },
+    {
+      "class_id": 15,
+      "name": "endtable",
+      "valid_candidates": 249,
+      "selected": 20,
+      "points": 220268,
+      "unique_scenes": 18,
+      "minimum_points": 6876
+    },
+    {
+      "class_id": 16,
+      "name": "sink",
+      "valid_candidates": 221,
+      "selected": 20,
+      "points": 457028,
+      "unique_scenes": 20,
+      "minimum_points": 14741
+    },
+    {
+      "class_id": 17,
+      "name": "picture",
+      "valid_candidates": 212,
+      "selected": 20,
+      "points": 114309,
+      "unique_scenes": 19,
+      "minimum_points": 3704
+    },
+    {
+      "class_id": 18,
+      "name": "stool",
+      "valid_candidates": 207,
+      "selected": 20,
+      "points": 81363,
+      "unique_scenes": 18,
+      "minimum_points": 2809
+    },
+    {
+      "class_id": 19,
+      "name": "coffee_table",
+      "valid_candidates": 206,
+      "selected": 20,
+      "points": 219447,
+      "unique_scenes": 20,
+      "minimum_points": 7423
+    },
+    {
+      "class_id": 20,
+      "name": "bookshelf",
+      "valid_candidates": 203,
+      "selected": 20,
+      "points": 620741,
+      "unique_scenes": 20,
+      "minimum_points": 21347
+    },
+    {
+      "class_id": 21,
+      "name": "painting",
+      "valid_candidates": 183,
+      "selected": 20,
+      "points": 139204,
+      "unique_scenes": 20,
+      "minimum_points": 3626
+    },
+    {
+      "class_id": 22,
+      "name": "keyboard",
+      "valid_candidates": 163,
+      "selected": 20,
+      "points": 50189,
+      "unique_scenes": 20,
+      "minimum_points": 1776
+    },
+    {
+      "class_id": 23,
+      "name": "dresser",
+      "valid_candidates": 176,
+      "selected": 20,
+      "points": 300368,
+      "unique_scenes": 20,
+      "minimum_points": 10267
+    },
+    {
+      "class_id": 24,
+      "name": "tv",
+      "valid_candidates": 165,
+      "selected": 20,
+      "points": 197824,
+      "unique_scenes": 20,
+      "minimum_points": 7741
+    },
+    {
+      "class_id": 25,
+      "name": "whiteboard",
+      "valid_candidates": 178,
+      "selected": 20,
+      "points": 413817,
+      "unique_scenes": 20,
+      "minimum_points": 15646
+    },
+    {
+      "class_id": 26,
+      "name": "cpu",
+      "valid_candidates": 169,
+      "selected": 20,
+      "points": 135213,
+      "unique_scenes": 18,
+      "minimum_points": 3687
+    },
+    {
+      "class_id": 27,
+      "name": "toilet",
+      "valid_candidates": 170,
+      "selected": 20,
+      "points": 268845,
+      "unique_scenes": 20,
+      "minimum_points": 9798
+    },
+    {
+      "class_id": 28,
+      "name": "paper",
+      "valid_candidates": 146,
+      "selected": 20,
+      "points": 35391,
+      "unique_scenes": 19,
+      "minimum_points": 1122
+    },
+    {
+      "class_id": 29,
+      "name": "ottoman",
+      "valid_candidates": 147,
+      "selected": 20,
+      "points": 207126,
+      "unique_scenes": 20,
+      "minimum_points": 7161
+    },
+    {
+      "class_id": 30,
+      "name": "bench",
+      "valid_candidates": 137,
+      "selected": 20,
+      "points": 458620,
+      "unique_scenes": 19,
+      "minimum_points": 14771
+    },
+    {
+      "class_id": 31,
+      "name": "recycle_bin",
+      "valid_candidates": 128,
+      "selected": 20,
+      "points": 106918,
+      "unique_scenes": 19,
+      "minimum_points": 3650
+    },
+    {
+      "class_id": 32,
+      "name": "monitor",
+      "valid_candidates": 110,
+      "selected": 20,
+      "points": 75297,
+      "unique_scenes": 19,
+      "minimum_points": 1847
+    },
+    {
+      "class_id": 33,
+      "name": "printer",
+      "valid_candidates": 119,
+      "selected": 20,
+      "points": 176811,
+      "unique_scenes": 19,
+      "minimum_points": 5159
+    },
+    {
+      "class_id": 34,
+      "name": "plant",
+      "valid_candidates": 102,
+      "selected": 20,
+      "points": 98501,
+      "unique_scenes": 20,
+      "minimum_points": 2833
+    },
+    {
+      "class_id": 35,
+      "name": "door",
+      "valid_candidates": 103,
+      "selected": 20,
+      "points": 258673,
+      "unique_scenes": 20,
+      "minimum_points": 6866
+    },
+    {
+      "class_id": 36,
+      "name": "book",
+      "valid_candidates": 102,
+      "selected": 20,
+      "points": 50100,
+      "unique_scenes": 17,
+      "minimum_points": 1450
+    },
+    {
+      "class_id": 37,
+      "name": "mirror",
+      "valid_candidates": 98,
+      "selected": 20,
+      "points": 72001,
+      "unique_scenes": 20,
+      "minimum_points": 2207
+    },
+    {
+      "class_id": 38,
+      "name": "laptop",
+      "valid_candidates": 90,
+      "selected": 20,
+      "points": 74687,
+      "unique_scenes": 20,
+      "minimum_points": 1674
+    },
+    {
+      "class_id": 39,
+      "name": "towel",
+      "valid_candidates": 91,
+      "selected": 20,
+      "points": 123708,
+      "unique_scenes": 19,
+      "minimum_points": 3574
+    }
+  ],
+  "objects": 800,
+  "points": 10990248,
+  "pickle_bytes": 263928849,
+  "seconds": 137.35779809951782,
+  "source_sha256": "4d97b85db5d3ccdff01a61025f0dd4c225fae23df1378efcd565383c49a09343"
+}

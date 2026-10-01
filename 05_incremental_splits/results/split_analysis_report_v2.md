@@ -6,7 +6,7 @@
 
 ## What Changed From V1
 
-V1 defined stages by **manually assigning object classes to room types**, motivated post-hoc by Jaccard co-occurrence values. The mentor's correction: the dataset already contains ground-truth room-type labels in `scene.txt` files — work from those labels first, then derive class assignments from the data.
+V1 defined stages by **manually assigning object classes to room types**, motivated post-hoc by Jaccard co-occurrence values. The revised approach uses existing evidence: the dataset already contains ground-truth room-type labels in `scene.txt` files — work from those labels first, then derive class assignments from the data.
 
 **V2 approach:**
 1. Read the ground-truth `scene.txt` label for every scene (45 unique scene types across 10,295 scenes)

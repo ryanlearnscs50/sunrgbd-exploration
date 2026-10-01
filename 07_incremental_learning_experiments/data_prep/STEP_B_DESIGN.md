@@ -1,7 +1,7 @@
 # Step B Design Doc — Class-Incremental TR3D on SUN RGB-D (SDCoT → TR3D)
 
 Status: **Step B complete** (data + scaffolding + this design). Training methods = Step C.
-Author context: mentor's 3-part task ([A] copy+relabel data, [B] this, [C] fine-tune & pseudo-label variants).
+Pipeline context: [A] copy and relabel data, [B] generate stage configurations, [C] fine-tune and compare pseudo-label variants.
 
 ---
 
@@ -41,7 +41,7 @@ Foundation (Step A): `data/sunrgbd_incremental/` — standalone copy, 10335 `poi
 
 **Known data caveat (sparsity):** the scene-type split was built on 2D/scene-level class *presence* +
 stage-size balancing, not on 3D boxes — so some assigned classes are near-empty in 3D (e.g. 3-stage
-stage-1 `sofa`=0/`book`=0/`door`=2 boxes; 6-stage stage-2 = 5 boxes total). Mentor's call: keep the
+stage-1 `sofa`=0/`book`=0/`door`=2 boxes; 6-stage stage-2 = 5 boxes total). Design decision: keep the
 split as designed. Expect thin tail classes in results.
 
 ---
@@ -124,7 +124,7 @@ At step *t* (t = 1..N):
 teacher, no pseudo. This is `run_incremental.sh` as written (plus the head-expand hook). Expected:
 strong forgetting — the control to beat.
 
-**Variant 2 — pseudo-labeling (mentor's priority; prefers offline).**
+**Variant 2 — pseudo-labeling (offline generation).**
 1. `tools_incremental/make_pseudo_labels.py`: load stage t-1 checkpoint, run inference over stage-t
    **train** scenes (`tools/test.py` plumbing / `_get_bboxes`), filter by obj/cls confidence + 3D NMS
    (port SDCoT thresholds: conf≈0.9-0.95, NMS IoU 0.25, drop <5-pt boxes), keep only **old-class** boxes.
@@ -132,7 +132,7 @@ strong forgetting — the control to beat.
    `<ordering>/sunrgbd_infos_train_stage{t}_pseudo.pkl` (same schema; `class`=old gids for pseudo,
    `index` re-enumerated, cap like SDCoT's MAX_NUM_OBJ if needed).
 3. Train stage t on the pseudo-augmented pkl (head-expanded). Offline = simple + fast + reproducible
-   (no base detector in the data loader), exactly as mentor prefers.
+   (no base detector in the data loader).
 4. **Optional add-on:** also enable static-teacher distillation (Section 4) for a "pseudo + distill"
    ablation — closest to full SDCoT.
 
@@ -167,7 +167,7 @@ presence of the distillation/expand hooks differ.
 ## 9. Open questions / risks
 
 - **Sparsity (Section 2):** thin classes (sofa/book/door in 3-stage S1; whole 6-stage S2) may yield
-  near-zero AP regardless of method. May warrant revisiting class→stage assignment with mentor, or
+  near-zero AP regardless of method. May warrant revisiting class→stage assignment, or
   reporting these as known-degenerate.
 - **label2level** is a size heuristic (`max(mean dx,dy)>1.0`); may need per-ordering tuning.
 - **EMA consistency** in a dense voxel head is the least-certain port — keep optional.

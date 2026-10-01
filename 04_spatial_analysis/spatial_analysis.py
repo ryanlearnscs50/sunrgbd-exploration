@@ -38,7 +38,7 @@ Outputs:
   spatial_on_floor_fraction.png    bar chart: % on-floor per class
   spatial_wall_distance.png        side-by-side: centroid vs nearest-edge dist
   spatial_topdown_scatter.png      room-normalised XZ scatter, top-6 classes
-  spatial_summary.md               findings + mentor-idea explanation
+  spatial_summary.md               findings + spatial-prior explanation
 """
 
 import json
@@ -755,9 +755,9 @@ for _, row in summary_df.sort_values("n_objects", ascending=False).iterrows():
 
 md_lines += [
     "",
-    "## What Your Mentor's Idea Is Doing",
+    "## Scene synthesis with learned spatial priors",
     "",
-    "Your mentor's proposal is an instance of **scene synthesis via learned spatial priors**.",
+    "The proposed method is an instance of **scene synthesis via learned spatial priors**.",
     "",
     "A full RGB-D scene is high-dimensional: millions of depth pixels plus colour.",
     "The insight is that most of that information is *redundant given the objects*.",
@@ -787,7 +787,7 @@ md_lines += [
     "- **Object size distributions** → scale priors that prevent physically",
     "  implausible objects",
     "",
-    "The next step for your mentor's direction would be fitting parametric",
+    "The next step would be fitting parametric",
     "distributions (e.g. Gaussian or mixture model) to each of these per-class",
     "empirical distributions, then sampling from them to synthesise new scenes.",
     "This is essentially what models like **PlanIT** (Wang et al., 2019) and",
