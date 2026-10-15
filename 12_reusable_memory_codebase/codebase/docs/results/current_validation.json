@@ -1,0 +1,147 @@
+{
+  "updated_utc": "2026-10-15T01:47:59.292884+00:00",
+  "scene_parity": {
+    "reference_revision": "ab67f3d7a3e6e98c6f66182832bb37e8656cceaa",
+    "real_stages": 10,
+    "seeds": [
+      200,
+      201
+    ],
+    "exact_review_decisions": 32,
+    "reference_source_sha256": {
+      "mmdet3d/utils/learning_dynamics_scoring.py": "67bc9109d57240905df94435d1e241afabb7d8a968b416bc1e49a08e0db5580a",
+      "mmdet3d/datasets/scene_memory_bank.py": "b392befbfd33bd3f3db7455e49988d5334501305e6bff05aa5b347bd705e1f1c",
+      "mmdet3d/datasets/memory_bank/compat_weighting.py": "403e91be43daa6cfa176547ee2f238a5a23820fee6c9d24aa2f698012e35bbda",
+      "mmdet3d/utils/ld_strategy_config.py": "5b31f241eb8ebe1551adf1bd568d818c71824f3d53797a7fd4b5973efeee2aba"
+    }
+  },
+  "sun_ld": {
+    "real_scenes": 5285,
+    "gt_objects": 24377,
+    "exact_cuda_overlap_cases": [
+      {
+        "scene": "points/007334.bin",
+        "predictions": 5,
+        "exact": true
+      },
+      {
+        "scene": "points/007524.bin",
+        "predictions": 3,
+        "exact": true
+      }
+    ]
+  },
+  "scannet_bank_counts": [
+    700,
+    1400,
+    2100,
+    2800,
+    3245
+  ],
+  "sun_bank_counts": [
+    800,
+    1600,
+    2400,
+    3200,
+    3979
+  ],
+  "sun_retained_crops_verified_against_reference": 3979,
+  "real_native_backward": {
+    "status": "passed",
+    "dataset_scenes": 886,
+    "batch_size": 8,
+    "receipts": [
+      {
+        "scene": "scene0191_00",
+        "pseudo": 18,
+        "inserted": 3,
+        "points": 159455
+      },
+      {
+        "scene": "scene0191_01",
+        "pseudo": 14,
+        "inserted": 3,
+        "points": 149150
+      },
+      {
+        "scene": "scene0191_02",
+        "pseudo": 9,
+        "inserted": 3,
+        "points": 131623
+      },
+      {
+        "scene": "scene0119_00",
+        "pseudo": 3,
+        "inserted": 3,
+        "points": 55272
+      },
+      {
+        "scene": "scene0230_00",
+        "pseudo": 21,
+        "inserted": 3,
+        "points": 93442
+      },
+      {
+        "scene": "scene0415_00",
+        "pseudo": 7,
+        "inserted": 2,
+        "points": 45711
+      },
+      {
+        "scene": "scene0415_01",
+        "pseudo": 7,
+        "inserted": 2,
+        "points": 58280
+      },
+      {
+        "scene": "scene0415_02",
+        "pseudo": 7,
+        "inserted": 3,
+        "points": 44101
+      }
+    ],
+    "loss": 12.037992477416992,
+    "finite_gradient_tensors": 223,
+    "nonzero_unet_gradients": 136,
+    "nonzero_classifier_gradients": 4,
+    "peak_cuda_memory_bytes": 4813858816,
+    "supervision_preserved_after_loss": true,
+    "checkpoint_sha256": "d12e0a4b2b69fd0f9145fab24982b9af98032cc79dc48b1ced024186142e5a8c",
+    "scope": "Real point clouds, reference .5 teacher filter, corrected 700-crop bank, native loss/backward; not an accuracy experiment."
+  },
+  "regression_suite": {
+    "passed": 611,
+    "warnings": 16,
+    "seconds": 66.53
+  },
+  "remaining": [
+    "Full-sequence accuracy for revised 180-pass recipes is unmeasured.",
+    "Exact interrupted-stage resume, distributed execution and a fresh-machine install remain outside verified scope."
+  ],
+  "scope": "Current implementation checks; full-schedule accuracy pending.",
+  "sun_crops": {
+    "total_annotations": 24377,
+    "valid_annotation_count": 24375,
+    "invalid_zero_height_annotations": 2,
+    "valid_reference_eligible": 23870,
+    "valid_corrected_point_count_mismatches": 0
+  },
+  "host_rich_crops": {
+    "status": "passed",
+    "source_scenes": 1201,
+    "retained": 700,
+    "distinct_crop_scenes": 216,
+    "reference_point_rows_exact": true,
+    "source_instance_semantic_superpoint_rows_exact": true,
+    "crop_tolerance": 0.01,
+    "per_class": {
+      "0": 100,
+      "1": 100,
+      "2": 100,
+      "3": 100,
+      "4": 100,
+      "5": 100,
+      "6": 100
+    }
+  }
+}

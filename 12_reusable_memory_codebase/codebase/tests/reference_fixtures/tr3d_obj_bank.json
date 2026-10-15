@@ -1,0 +1,156 @@
+{
+  "reference_revision": "cd667a180c3cbf4eae29cf779ea907592400266f",
+  "source_sha256": "48c523042abe4e490e0ab88889ba898f383735e19efbd521bcb3f4c4a5225803",
+  "replacement": [
+    {
+      "class_id": 0,
+      "object_idx": 43
+    },
+    {
+      "class_id": 0,
+      "object_idx": 41
+    },
+    {
+      "class_id": 0,
+      "object_idx": 45
+    },
+    {
+      "class_id": 0,
+      "object_idx": 37
+    },
+    {
+      "class_id": 0,
+      "object_idx": 44
+    },
+    {
+      "class_id": 0,
+      "object_idx": 46
+    },
+    {
+      "class_id": 0,
+      "object_idx": 42
+    }
+  ],
+  "draws": [
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 1,
+      "object_idx": 3
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 1,
+      "object_idx": 0
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 1,
+      "object_idx": 3
+    },
+    {
+      "class_id": 1,
+      "object_idx": 4
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 1,
+      "object_idx": 5
+    },
+    {
+      "class_id": 1,
+      "object_idx": 2
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 1,
+      "object_idx": 1
+    },
+    {
+      "class_id": 1,
+      "object_idx": 5
+    },
+    {
+      "class_id": 1,
+      "object_idx": 0
+    },
+    {
+      "class_id": 1,
+      "object_idx": 8
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 1,
+      "object_idx": 3
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    },
+    {
+      "class_id": 1,
+      "object_idx": 7
+    },
+    {
+      "class_id": 1,
+      "object_idx": 2
+    },
+    {
+      "class_id": 1,
+      "object_idx": 5
+    },
+    {
+      "class_id": 0,
+      "object_idx": 0
+    }
+  ]
+}

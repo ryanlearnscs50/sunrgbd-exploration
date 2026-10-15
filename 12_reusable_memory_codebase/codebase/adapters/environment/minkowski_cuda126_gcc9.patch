@@ -1,0 +1,34 @@
+diff --git a/setup.py b/setup.py
+index 452ea57..59b2ae1 100644
+--- a/setup.py
++++ b/setup.py
+@@ -148,8 +148,8 @@ Extension = CUDAExtension
+ extra_link_args = []
+ include_dirs = []
+ libraries = []
+-CC_FLAGS = []
+-NVCC_FLAGS = []
++CC_FLAGS = ["-DNVTX_DISABLE"]
++NVCC_FLAGS = ["-DNVTX_DISABLE"]
+ 
+ if CPU_ONLY:
+     print("--------------------------------")
+diff --git a/src/coordinate_map_gpu.cuh b/src/coordinate_map_gpu.cuh
+index 15228c4..ee6f0a4 100644
+--- a/src/coordinate_map_gpu.cuh
++++ b/src/coordinate_map_gpu.cuh
+@@ -136,9 +136,13 @@ public:
+       LOG_DEBUG("Reserve map of",
+                 compute_hash_table_size(size, m_hashtable_occupancy),
+                 "for concurrent_unordered_map of size", size);
+-      m_map = map_type::create(
++      auto new_map = map_type::create(
+           compute_hash_table_size(size, m_hashtable_occupancy),
+           m_unused_element, m_unused_key, m_hasher, m_equal, m_map_allocator);
++      // Avoid GCC 9 / CUDA 12.6 ADL ambiguity in unique_ptr -> shared_ptr.
++      // Preserve the factory's custom GPU allocation deleter.
++      auto deleter = new_map.get_deleter();
++      m_map.reset(new_map.release(), std::move(deleter));
+       LOG_DEBUG("Done concurrent_unordered_map creation");
+       CUDA_TRY(cudaStreamSynchronize(0));
+       m_capacity = size;

@@ -1,0 +1,16 @@
+# Tested target: Linux x86_64, Python 3.9, CUDA 11.3, PyTorch 1.12.1.
+# Install torch before building native packages or installing this repository.
+--extra-index-url https://download.pytorch.org/whl/cu113
+--find-links https://download.openmmlab.com/mmcv/dist/cu113/torch1.12.0/index.html
+torch==1.12.1+cu113
+torchvision==0.13.1+cu113
+mmcv-full==1.6.0
+mmdet==2.24.1
+mmsegmentation==0.24.1
+mmcls==0.25.0
+-r runtime.txt
+# MMCV 1.6 calls FormatCode(verify=...), removed in later YAPF releases.
+yapf==0.40.1
+# Legacy TensorBoard uses the pre-4 protobuf API.
+protobuf==3.20.3
+pytest==8.4.2

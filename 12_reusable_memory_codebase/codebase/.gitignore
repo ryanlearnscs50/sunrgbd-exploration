@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+venv/
+.venv/
+work_dirs/
+incremental_logs/
+memory_bank_logs/
+*.pth
+*.pkl
+*.whl

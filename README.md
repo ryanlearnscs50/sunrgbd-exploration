@@ -42,6 +42,7 @@ The dataset itself is **not included** in this repo. Download it from the [offic
 09_object_level_memory/        Self-contained object-memory replay for LDMR
 10_object_memory_pseudo/       Pseudo supervision, replay dose and LR ablations
 11_ten_stage_object_budget/    Week 4 ten-stage object budget and selection study
+12_reusable_memory_codebase/   Week 5 shared LDMR scene/object implementation and UniDet3D adapter
 pipeline/                      TR3D detection pipeline trace (CPU, no MinkowskiEngine)
 validation/                    Cross-checks against independently computed incidence counts
 ```
@@ -227,3 +228,9 @@ python 03_clustering/cooccurrence_clustering_v3.py
 python 04_spatial_analysis/spatial_analysis.py
 python 05_incremental_splits/incremental_splits_v2.py
 ```
+
+## Reusable memory codebase
+
+The [Week 5 implementation](12_reusable_memory_codebase/README.md) provides the
+current complete source snapshot, method definitions, setup instructions and
+validation scope for scene/object memory with TR3D and UniDet3D.

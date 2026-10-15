@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-15",
+  "scope": "Validation of the exported source snapshot using existing separate legacy/host environments on the current machine.",
+  "legacy_suite": {
+    "passed": 611,
+    "warnings": 16,
+    "seconds": 67.57
+  },
+  "native_cuda_host_suite": {
+    "passed": 63,
+    "warnings": 266,
+    "seconds": 129.34
+  },
+  "python_files_parsed": 576,
+  "runtime_source_files": "Byte-identical to maintained source for Python, requirements, config text and native patch files.",
+  "links": "All relative Markdown file targets resolve.",
+  "publication_scope": "Code, tests, setup guides, method definitions, current implementation evidence and source hashes.",
+  "excluded": "Presentation materials, private working notes, datasets, model weights, native wheels, environments and runtime output.",
+  "remaining": [
+    "Full-schedule accuracy of the named recipes",
+    "Exact within-stage recovery",
+    "Distributed execution",
+    "Fresh-machine installation"
+  ],
+  "log_sha256": {
+    "legacy_release_tests.log": "d3564c635eeb51c15ba99c36cddf4b3f5c3986d3c6d998ae83065af6a300297b",
+    "host_release_tests.log": "d9c8ffe01e76e2591d5b5d1858ae05972bdc718a4be880bae2bc23188468571e"
+  },
+  "formatting": "Upstream source whitespace is preserved to retain exact source identity."
+}

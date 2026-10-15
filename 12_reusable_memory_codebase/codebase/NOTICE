@@ -1,0 +1,62 @@
+LDMR — Learning-Dynamics-driven Memory and Review
+Copyright (c) 2026 Peisheng Qian, Jie Xu, Xulei Yang, Na Zhao
+
+This repository is a derivative work. It is distributed under the
+Creative Commons Attribution-NonCommercial 4.0 International license
+(CC BY-NC 4.0, see LICENSE), inherited from TR3D.
+
+
+Upstream projects
+-----------------
+
+1. TR3D — https://github.com/filaPro/tr3d
+   (originally SamsungLabs/tr3d, since removed)
+   Licensed under CC BY-NC 4.0. LDMR takes its detector, backbone and
+   training recipes from TR3D and adds class-incremental machinery.
+
+2. mmdetection3d — https://github.com/open-mmlab/mmdetection3d
+   Copyright (c) OpenMMLab. Licensed under the Apache License, Version 2.0.
+   A copy of that license is available at
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   246 source files under mmdet3d/ retain their "Copyright (c) OpenMMLab"
+   headers. The Apache-2.0 terms continue to govern those files and their
+   copyright notices are retained as required by section 4 of that license.
+
+3. MinkowskiEngine — https://github.com/NVIDIA/MinkowskiEngine
+   Copyright (c) NVIDIA. Licensed under the MIT license. Native binaries are not included in this source snapshot.
+   Build from the pinned source using docs/legacy_install.md.
+
+4. SDCoT — https://github.com/Na-Z/SDCoT
+   The class-incremental stage protocols follow SDCoT.
+
+
+Statement of changes (Apache-2.0 section 4b)
+--------------------------------------------
+
+Relative to mmdetection3d v1.0.0rc3, this repository:
+
+  - adds the incremental training pipeline (tools/train_incremental_scene.py,
+    tools/incremental_scene/, tools/eval_incremental.py);
+  - adds learning-dynamics scoring, the scene memory bank and the intra-stage
+    review sampler (mmdet3d/utils/learning_dynamics_scoring.py,
+    mmdet3d/datasets/scene_memory_bank.py, mmdet3d/utils/ld_strategy_config.py);
+  - adds incremental dataset wrappers and pseudo-label generation
+    (mmdet3d/datasets/incremental_*.py, mmdet3d/datasets/pseudo_label_*.py);
+  - adds 40-class ScanNet and SUN RGB-D data converters
+    (tools/data_converter/*_40class.py, scannet_correct_class_ids.py);
+  - modifies mmdet3d/models/dense_heads/tr3d_head.py for dynamic head expansion;
+  - removes components of mmdetection3d not used by this work.
+
+
+Datasets
+--------
+
+ScanNetV2 (http://www.scan-net.org/) and SUN RGB-D
+(https://rgbd.cs.princeton.edu/) are not redistributed here. Obtain them from
+their maintainers and comply with their respective terms of use.
+
+
+Week 5 extension: selectable object memory, shared policy configuration,
+validated crop geometry/state handling, and a UniDet3D integration adapter.
+Original source notices and license terms are retained.
