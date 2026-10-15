@@ -23,7 +23,21 @@ and reproducible validation.
 | Object extension | Self-contained crops, bounded replacement, reference replay settings and geometry |
 | UniDet3D integration | Original ScanNet-35 S5 vocabulary/stages, rich crops, explicit box targets and classifier expansion |
 | Data and state integrity | Point/mask alignment, checkpoint validation, source manifests and completed-stage continuation |
+| Efficiency | Bounded source-cloud caching, bounded object replacement, and early stopping of unused object-ranking work while preserving selection |
 | Reuse | Separate environment guides, command examples, regression suites and source notices |
+
+The bank lifecycle includes versioned state, atomic checkpoint replacement,
+capacity and class-coverage checks, and explicit compatibility checks on restore.
+Scene banks preserve annotation visibility; object banks retain self-contained
+crops with source identity and coordinate-frame metadata. Stage transitions
+preserve sparse-layer metadata and copy learned classifier rows by class name.
+
+Training entry points validate settings and protect existing output directories.
+The host sequence records source/data identities, validates train/validation
+separation, manages child-process cleanup, and checks completed-stage artifacts
+before continuing. Teacher boxes and pasted-object geometry reach the native
+loss through explicit box targets. Evaluation supports seen-class scope and
+machine-readable metrics, with checkpoint and metric auditing tools included.
 
 ## What is validated
 
