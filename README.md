@@ -232,5 +232,11 @@ python 05_incremental_splits/incremental_splits_v2.py
 ## Reusable memory codebase
 
 The [Week 5 implementation](12_reusable_memory_codebase/README.md) provides the
-current complete source snapshot, method definitions, setup instructions and
+Week 5 source snapshot, method definitions, setup guidance and
 validation scope for scene/object memory with TR3D and UniDet3D.
+
+## Week 6 incremental detection
+
+[Full training results and six-domain progress](13_incremental_detection_week6/README.md)
+collect the October 22 research snapshot, including completed class results,
+intermediate forgetting curves, protocol details and selected evidence.

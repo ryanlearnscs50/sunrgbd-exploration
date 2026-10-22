@@ -1,0 +1,10 @@
+{
+  "snapshot": "2026-10-22 13:55 Asia/Singapore",
+  "description": "Selected metric and checkpoint-audit fields; original evidence remains local. SHA256 values identify original source files, not these extracts. No checkpoint binaries or datasets included.",
+  "source_sha256": {
+    "week6_runs/unidet3d_scannet35_s5_ldmr_seed201_audit_metrics.json": "dbba750188ebbba00c3538070cb51d64a0ad39147b5edc25c7826c3608994cf0",
+    "week6_runs/tr3d_sun40_s5_ldmr_seed200_evaluation.json": "6fe124238684dc51825ea15536185b0215a7346d95753e875fe4ee1b743c5b2a",
+    "week6_runs/unidet3d_scannet35_s5_ldmr_seed201_audit_checkpoints.json": "c5c71ba455dc4e41b82256b41a59fbfb78749b0577d54250f2e5972c4dd9907c",
+    "week6_audit/continuation_20261022_1355/live_validation_curves.json": "2872af69d72298b9816984d31e5fb0213d88a172992b628ea652ac568d9bbb84"
+  }
+}
