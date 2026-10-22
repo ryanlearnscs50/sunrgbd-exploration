@@ -1,6 +1,6 @@
-# Week 6 incremental detection progress
+# Week 6 codebase reliability and training results
 
-Research snapshot through October 22, 2026, 13:55 Singapore time. Week 6 is the project week label. Two full class-incremental runs are complete; six-domain fine-tuning is in progress. The main advance is a measured full-schedule result alongside a broader, auditable cross-dataset training pipeline.
+Research snapshot through October 22, 2026, 13:55 Singapore time. Week 6 is the project week label. Two full class-incremental runs are complete; six-domain fine-tuning is in progress. This continues the reusable memory codebase validation: measured full-schedule results now complement component checks and a broader cross-dataset training pipeline.
 
 ## Completed training results
 
@@ -57,4 +57,4 @@ The next useful milestone is completion of ARKit and continued all-seen-domain e
 
 ## Reading order
 
-Start with the completed results, then the intermediate forgetting table and plot. Use [PROTOCOL.md](PROTOCOL.md) for implementation and validation details, and the evidence files for exact values. This folder is a research report and evidence snapshot, not a replacement training distribution. The previous [codebase release](../12_reusable_memory_codebase/README.md) is historical and does not include all Week 6 additions.
+Start with the completed results, then the intermediate forgetting table and plot. Use [PROTOCOL.md](PROTOCOL.md) for implementation and validation details, and the evidence files for exact values. This folder is a research report and evidence snapshot, not a replacement training distribution. The previous [codebase release](../../README.md) is historical and does not include all Week 6 additions.
